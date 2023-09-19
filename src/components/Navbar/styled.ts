@@ -86,6 +86,12 @@ export const Infos = styled.div`
       }
     }
   }
+  
+  @media screen and (max-width: 768px) {
+    ul {
+      display: none;
+    }
+  }
 `
 
 export const Notification = styled.div`

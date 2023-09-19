@@ -15,6 +15,12 @@ export const Content = styled.div`
   &:hover{
     /* cursor: pointer; */
   }
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+  }
 `
 export const Leftdiv = styled.div`
   display: flex;
@@ -74,12 +80,23 @@ export const Leftdiv = styled.div`
       }
     }
   }
+  
+  @media screen and (max-width: 1000px) {
+    /* background-color: red; */
+    margin: auto;
+    height: 350px;
+    /* max-width: 100%; */
+  }
 `
 export const Rightdiv = styled.div`
   align-items: end;
   position: relative;
+  max-width: 640px;
   img{
-    height: 400px;
+    width: 100%;
   }
-  
+  @media screen and (max-width: 1000px) {
+    /* height: 100vw; */
+    margin: auto;
+  }
 `
