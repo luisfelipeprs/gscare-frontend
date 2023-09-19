@@ -1,4 +1,4 @@
-import { Action, Contact, Container, Infos, Logo, Navbar } from './styled';
+import { Action, Contact, Container, Infos, Logo, Navbar, Notification } from './styled';
 
 function index() {
     return (
@@ -22,6 +22,11 @@ function index() {
               </Action>
           </Navbar>
         </Container>
+        <Notification>
+          <h2>
+            Acompanhe a magia do Dreamforce, ao vivo no Salesforce+, de 12 a 14 de  setembro.
+          </h2>
+        </Notification>
       </>
     )
 }

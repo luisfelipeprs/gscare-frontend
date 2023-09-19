@@ -40,15 +40,38 @@ export const Leftdiv = styled.div`
     gap: 50px;
 
     button{
-      border: none;
-      border-radius: 10px;
-      height: 50px;
-      color: white;
-      margin: auto;
-      background-color: #0176D3;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: bold;
-      padding: 5px 15px;
+      &:first-child {
+        border: none;
+        border-radius: 5px;
+        height: 50px;
+        color: white;
+        margin: auto;
+        background-color: #0176D3;
+        border: solid 2px #0176D3;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 5px 15px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &:last-child {
+        border: none;
+        border-radius: 5px;
+        height: 50px;
+        color: white;
+        margin: auto;
+        color: #0176D3;
+        background-color: #ffffff;
+        border: solid 2px #0176D3;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 5px 15px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 `

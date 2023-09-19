@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   text-align: center;
-  background-color: #4047d0;
+  background-color: #fff;
+  padding: 10px 0;
+  /* background-color: #4047d0; */
 `
 
 export const Navbar = styled.nav`
@@ -30,12 +32,12 @@ export const Contact = styled.div`
 
   a {
     font-size: 0.9rem;
-    color: aliceblue;
+    color: #2f368c;
   }
 
   p {
     font-size: 1rem;
-    color: #bcbcbc;
+    color: #2f368c;
   }
 `
 
@@ -66,13 +68,15 @@ export const Infos = styled.div`
   display: flex;
 
   ul{
+    padding-left: 20px;
     margin: auto;
     display: flex;
     position: relative;
     list-style: none;
 
     li{
-      color: #e4e4e4;
+      color: #2f368c;
+      font-weight: bold;
       font-size: 1.2rem;
       padding: 0px 10px;
       justify-content: space-between;
@@ -81,5 +85,15 @@ export const Infos = styled.div`
         cursor: pointer;
       }
     }
+  }
+`
+
+export const Notification = styled.div`
+  background-color: #2C31B0;
+  text-align: center;
+  font-size: 0.8rem;
+  h2 {
+    padding: 10px 0;
+    color: #fff;
   }
 `
