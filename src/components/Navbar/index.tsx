@@ -6,7 +6,7 @@ function index() {
         <Container>
           <Navbar>
               <Infos>
-                <Logo src='https://c1.sfdcstatic.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg'/>
+                <a href="https://www.salesforce.com/br/"><Logo src='https://c1.sfdcstatic.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg'/></a>
                 <ul>
                   <li>Suporte</li>
                   <li>Empresa</li>

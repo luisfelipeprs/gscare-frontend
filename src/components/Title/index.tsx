@@ -1,4 +1,4 @@
-import { Container } from './styled';
+import { Container,Content } from './styled';
 import Button from '../Button';
 
 
@@ -11,9 +11,11 @@ interface IProps{
 function Title({title,description,textButton,typeButton='withBg'}: IProps) {
   return (
     <Container>
-      <h1>{title}</h1>
-      {description && <p>{description}</p>}
-      {textButton && <Button textButton={textButton} typeButton={typeButton}/>}
+      <Content>
+        <h1>{title}</h1>
+        {description && <p>{description}</p>}
+        {textButton && <Button textButton={textButton} typeButton={typeButton}/>}
+      </Content>
     </Container>
   )
 }

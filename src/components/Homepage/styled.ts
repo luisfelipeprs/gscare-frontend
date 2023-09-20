@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 50px;
+  padding: 50px 0px;
   width: 100%;
   text-align: center;
   background-color: #ffff;
