@@ -10,30 +10,25 @@ export const Container = styled.section`
     img{
         border-top-right-radius: 12px;
         border-top-left-radius: 12px;
-        width: 250px;
-        height: 250px;
+        width: 370px;
+        height: 208px;
     }
-
     div{
         height: 150px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin: 20px;
-
         a{
             &:first-child {
                 font-size: 20px;
                 text-decoration: none;
                 color: #032d60;
             }
-
             &:last-child{
                 color: #032d60;
             }
     }
-
     }
-
     
 `;
