@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from './styled';
+import Button from '../Button';
 
 
 interface IProps{
@@ -13,7 +14,7 @@ function Title({title,description,textButton,typeButton}: IProps) {
     <Container>
       <h1>{title}</h1>
       <p>{description}</p>
-      <button></button>
+      <Button textButton={textButton} typeButton={typeButton}/>
     </Container>
   )
 }
