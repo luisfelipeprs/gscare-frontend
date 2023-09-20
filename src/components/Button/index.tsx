@@ -3,7 +3,7 @@ import { ContainerButton } from './styled'
 
 
 interface IProps{
-  textButton: String;
+  textButton: string;
   typeButton: "withBorder"|"withBg"
 }
 function Button({textButton,typeButton}: IProps) {

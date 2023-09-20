@@ -3,9 +3,9 @@ import Button from '../Button';
 
 
 interface IProps{
-  title: String;
-  description?: String;
-  textButton?: String;
+  title: string;
+  description?: string;
+  textButton?: string;
   typeButton?: "withBorder"|"withBg"
 }
 function Title({title,description,textButton,typeButton='withBg'}: IProps) {
