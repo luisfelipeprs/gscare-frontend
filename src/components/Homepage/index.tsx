@@ -1,3 +1,4 @@
+import Button from '../Button'
 import {Container, Content, Leftdiv, Rightdiv } from './styled'
 
 export default function index() {
