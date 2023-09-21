@@ -32,7 +32,10 @@ export const ContainerAction = styled.div`
   box-sizing: border-box;
 
   div {
+    padding: 10%;
     h1 {
+      width: 100%;
+      color: #032D60;
       font-size: 2.5rem;
     }
   }

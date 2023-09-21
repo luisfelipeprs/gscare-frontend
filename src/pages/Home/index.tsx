@@ -4,17 +4,17 @@ import Footer from "../../components/Footer";
 import Homepage from "../../components/Homepage";
 import Navbar from "../../components/Navbar";
 import QuestionCard from "../../components/QuestionCard";
+import { HomeContainer } from "./styled";
 
 function Home() {
   return (
       <>
         <Navbar/>
-          <Homepage/>
-          <BoxInfo/>
-          <QuestionCard />
-          {/* 
-            // * Perguntas? Vamos colocá-lo no caminho certo.
-          */}
+          <HomeContainer>
+            <Homepage/>
+            <BoxInfo/>
+            <QuestionCard />
+          </HomeContainer>
         <Footer />
       </>
     )

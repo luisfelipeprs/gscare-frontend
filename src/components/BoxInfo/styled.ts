@@ -20,7 +20,7 @@ export const CardsContainer = styled.div`
   display: flex;
   margin: auto;
 
-  section {
+  section:nth-child(2) {
     margin: 0 15px;
   }
   
@@ -29,12 +29,16 @@ export const CardsContainer = styled.div`
     /* margin: auto; */
     padding: 20px;
     position: relative;
+    
+    section:nth-child(2) {
+      margin: 30px 0;
+    }
 
     section {
-      margin: 0;
+      /* margin: 0px; */
       width: 100%;
       max-width: 768px;
-      margin-bottom: 30px;
+      /* margin-bottom: 30px; */
     }
   }
 `
