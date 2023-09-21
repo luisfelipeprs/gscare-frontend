@@ -19,16 +19,22 @@ export const CardsContainer = styled.div`
   width: 100%;
   display: flex;
   margin: auto;
-  gap: 30px;
 
   section {
-    /* margin: 10px; */
+    margin: 0 15px;
   }
   
   @media screen and (max-width: 768px) {
-    width: 100%;
     flex-direction: column;
-    margin: auto;
+    /* margin: auto; */
+    padding: 20px;
     position: relative;
+
+    section {
+      margin: 0;
+      width: 100%;
+      max-width: 768px;
+      margin-bottom: 30px;
+    }
   }
 `

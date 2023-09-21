@@ -12,22 +12,22 @@ function BoxInfo() {
         />
         <CardsContainer>
           <Card
-            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto laborum quaerat odio sapiente consectetur magnam quia doloremque.'
+            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
             img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
             link='/'
-            title='title'
+            title='Conheça o Flow'
           />
           <Card
-            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto laborum quaerat odio sapiente consectetur magnam quia doloremque.'
+            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
             img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
             link='/'
-            title='title'
+            title='Conheça o Flow'
           />
           <Card
-            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto laborum quaerat odio sapiente consectetur magnam quia doloremque.'
+            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
             img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
             link='/'
-            title='title'
+            title='Conheça o Flow'
           />
         </CardsContainer>
       </Content>
