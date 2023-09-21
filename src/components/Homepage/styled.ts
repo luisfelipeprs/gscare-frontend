@@ -6,6 +6,11 @@ export const Container = styled.div`
   text-align: center;
   background-color: #ffff;
   height: 100%;
+  padding-bottom: 50px;
+  
+  @media screen and (max-width: 320px) {
+    padding: 100px 0px;
+  }
 `
 export const Content = styled.div`
   display: flex;
@@ -18,17 +23,28 @@ export const Content = styled.div`
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
-    gap: 30px;
+    /* gap: 30px; */
+    gap: 50px;
     position: relative;
+  }
+  @media screen and (max-width: 425px) {
+    /* flex-direction: column; */
+    /* gap: 30px; */
+    gap: 70px;
+    /* position: relative; */
+  }
+  @media screen and (max-width: 425px) {
+    gap: 100px;
   }
 `
 export const Leftdiv = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 768px;
   align-items: start;
   justify-content: space-around;
   margin: 20px 0;
+  padding-left: 15px;
 
   h1{
     text-align: start;
@@ -79,13 +95,32 @@ export const Leftdiv = styled.div`
         }
       }
     }
+    
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
   }
   
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1280px) {
     /* background-color: red; */
     margin: auto;
     height: 350px;
     /* max-width: 100%; */
+    padding: 0 20px;
+  }
+  
+  @media screen and (max-width: 320px) {
+    /* background-color: red; */
+    margin: auto;
+    height: 350px;
+    /* max-width: 100%; */
+    padding: 0 20px;
   }
 `
 export const Rightdiv = styled.div`
@@ -95,8 +130,12 @@ export const Rightdiv = styled.div`
   img{
     width: 100%;
   }
-  @media screen and (max-width: 1000px) {
-    /* height: 100vw; */
+  
+  @media screen and (max-width: 1280px) {
+    /* background-color: red; */
     margin: auto;
+    height: 350px;
+    /* max-width: 100%; */
+    padding: 0 20px;
   }
 `

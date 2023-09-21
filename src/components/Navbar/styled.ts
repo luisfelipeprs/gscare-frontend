@@ -8,7 +8,7 @@ export const Container = styled.div`
   /* background-color: #4047d0; */
 `
 
-export const Navbar = styled.nav`
+export const Navigationbar = styled.nav`
   display: flex;
   justify-content: space-between;
   max-width: 1280px;
@@ -16,6 +16,10 @@ export const Navbar = styled.nav`
 
   &:hover{
     /* cursor: pointer; */
+  }
+  
+  @media screen and (max-width: 1280px) {
+    padding: 0 15px;
   }
 `
 
@@ -38,6 +42,10 @@ export const Contact = styled.div`
   p {
     font-size: 1rem;
     color: #2f368c;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `
 
@@ -101,5 +109,11 @@ export const Notification = styled.div`
   h2 {
     padding: 10px 0;
     color: #fff;
+  }
+  @media screen and (max-width: 1280px) {
+    /* background-color: red; */
+    margin: auto;
+    /* max-width: 100%; */
+    padding: 0 20px;
   }
 `

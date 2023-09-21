@@ -1,10 +1,10 @@
-import { Action, Contact, Container, Infos, Logo, Navbar, Notification } from './styled';
+import { Action, Contact, Container, Infos, Logo, Navigationbar, Notification } from './styled';
 
-function index() {
+function Navbar() {
     return (
       <>
         <Container>
-          <Navbar>
+          <Navigationbar>
               <Infos>
                 <a href="https://www.salesforce.com/br/"><Logo src='https://c1.sfdcstatic.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg'/></a>
                 <ul>
@@ -20,7 +20,7 @@ function index() {
                 </Contact>
                 <button>Teste gratis</button>
               </Action>
-          </Navbar>
+          </Navigationbar>
         </Container>
         <Notification>
           <h2>
@@ -30,4 +30,4 @@ function index() {
       </>
     )
 }
-export default index;
+export default Navbar;
