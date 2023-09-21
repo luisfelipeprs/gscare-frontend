@@ -14,7 +14,9 @@ export const Content = styled.div`
 
 export const Copyright = styled.div`
   font-size: 0.9rem;
-
+  a{
+    color: #00a1e0;
+  }
 `
 
 export const FooterLinks = styled.div`
