@@ -26,6 +26,7 @@ export const Content = styled.div`
     /* gap: 30px; */
     gap: 50px;
     position: relative;
+    margin-bottom: 50px;
   }
   @media screen and (max-width: 425px) {
     /* flex-direction: column; */
@@ -43,7 +44,8 @@ export const Leftdiv = styled.div`
   max-width: 768px;
   align-items: start;
   justify-content: space-around;
-  margin: 20px 0;
+  gap: 20px;
+  margin: 40px 0;
   /* padding-left: 15px; */
 
   h1{
@@ -95,6 +97,10 @@ export const Leftdiv = styled.div`
         }
       }
     }
+
+    /* @media screen and (max-width: 1000px) {
+      
+    } */
     
     @media screen and (max-width: 768px) {
       flex-direction: column;
@@ -110,7 +116,7 @@ export const Leftdiv = styled.div`
   @media screen and (max-width: 1280px) {
     /* background-color: red; */
     margin: auto;
-    height: 350px;
+    height: 100%;
     /* max-width: 100%; */
     /* padding: 0 20px; */
   }
@@ -134,7 +140,7 @@ export const Rightdiv = styled.div`
   @media screen and (max-width: 1280px) {
     /* background-color: red; */
     margin: auto;
-    height: 350px;
+    /* height: 350px; */
     /* max-width: 100%; */
     /* padding: 0 20px; */
   }

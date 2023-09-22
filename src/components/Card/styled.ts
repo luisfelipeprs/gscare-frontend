@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-    max-width: 370px;
+    max-width: calc(1280px / 4);
+    width: 100%;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.30);

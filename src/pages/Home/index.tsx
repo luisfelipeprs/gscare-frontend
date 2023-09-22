@@ -1,11 +1,12 @@
 // import BoxInfo from "../../components/BoxInfo";
-import BoxInfo from "../../components/BoxInfo";
+import BoxCardsNewTools from "../../components/BoxCardsNewTools";
 import Footer from "../../components/Footer";
 import PreFooter from "../../components/PreFooter";
 import Homepage from "../../components/Homepage";
 import Navbar from "../../components/Navbar";
 import QuestionCard from "../../components/QuestionCard";
 import { HomeContainer } from "./styled";
+import BoxCardsTools from "../../components/BoxCardsTools";
 
 function Home() {
   return (
@@ -13,7 +14,8 @@ function Home() {
         <Navbar/>
           <HomeContainer>
             <Homepage/>
-            <BoxInfo/>
+            <BoxCardsNewTools/>
+            <BoxCardsTools/>
             <QuestionCard />
           </HomeContainer>
         <PreFooter />

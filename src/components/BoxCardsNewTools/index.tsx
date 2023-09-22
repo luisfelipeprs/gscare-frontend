@@ -2,13 +2,12 @@ import Card from '../Card';
 import Title from '../Title';
 import { CardsContainer, Container, Content } from './styled';
 
-function BoxInfo() {
+function BoxCardsNewTools() {
   return (
     <Container>
       <Content>
         <Title
-          title={'Encontre inovações para qualquer setor de indústria.'} 
-          // typeButton='withBorder'
+          title={'Encontre as próximas inovações que terão em nosso sistema.'} 
         />
         <CardsContainer>
           <Card
@@ -34,4 +33,4 @@ function BoxInfo() {
     </Container>
     )
 }
-export default BoxInfo;
+export default BoxCardsNewTools;
