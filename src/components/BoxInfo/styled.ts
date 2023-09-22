@@ -27,7 +27,7 @@ export const CardsContainer = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     /* margin: auto; */
-    padding: 20px;
+    /* padding: 20px; */
     position: relative;
     
     section:nth-child(2) {

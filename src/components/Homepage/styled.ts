@@ -44,7 +44,7 @@ export const Leftdiv = styled.div`
   align-items: start;
   justify-content: space-around;
   margin: 20px 0;
-  padding-left: 15px;
+  /* padding-left: 15px; */
 
   h1{
     text-align: start;
@@ -112,7 +112,7 @@ export const Leftdiv = styled.div`
     margin: auto;
     height: 350px;
     /* max-width: 100%; */
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
   
   @media screen and (max-width: 320px) {
@@ -120,7 +120,7 @@ export const Leftdiv = styled.div`
     margin: auto;
     height: 350px;
     /* max-width: 100%; */
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
 `
 export const Rightdiv = styled.div`
@@ -136,6 +136,6 @@ export const Rightdiv = styled.div`
     margin: auto;
     height: 350px;
     /* max-width: 100%; */
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
 `
