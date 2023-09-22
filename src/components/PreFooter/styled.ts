@@ -5,6 +5,10 @@ export const Container = styled.div`
   justify-content: center;
   background-color: white;
   color: black;
+  
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
 `
 export const Content = styled.div`
   display: flex;
@@ -13,6 +17,7 @@ export const Content = styled.div`
   padding-bottom: 100px;
   margin: auto;
   gap: 50px;
+  width: 100%;
   p{
     font-weight: bold;
   }
@@ -40,25 +45,26 @@ export const Content = styled.div`
 export const FooterContact = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 5px;
+  /* margin: 5px; */
+  gap: 30px;
   img{
     width: 100px;
-    margin: 30px;
-    margin-top: 0;
+    /* margin: 30px; */
+    /* margin-top: 0; */
   }
   p{
     font-size: 1rem;
     color: #444444;
-    margin: 30px;
+    /* margin: 30px; */
   } 
 `
 export const Logos = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: 230px ;
-  margin: 10px 20px;
-
+  /* margin: 10px 20px; */
 `
+
 export const Demo = styled.div`
   p{
     max-width: 200px;
