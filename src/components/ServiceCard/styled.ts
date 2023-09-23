@@ -1,0 +1,39 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+    *{
+        box-sizing: border-box;
+    }
+
+    width: 259px;
+    height: 370px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
+    
+    img {
+        width: 100%;
+        height: 145px;
+        border-radius: 12px 12px  0 0;
+    }
+
+`;
+
+export const ContainerText = styled.div`
+    width: 100%;
+    height: 132px;
+    padding: 24px;
+
+    a{
+        text-decoration: none;
+        color: #032D60;
+    }
+
+    p{
+        margin-top: 16px;
+    }
+`;
+
+export const TextSolucion = styled.div`
+    padding-top: 12px;
+    text-align: center;
+`;
