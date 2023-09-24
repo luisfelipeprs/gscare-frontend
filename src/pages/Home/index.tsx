@@ -7,6 +7,7 @@ import Navbar from "../../components/Navbar";
 import QuestionCard from "../../components/QuestionCard";
 import { HomeContainer } from "./styled";
 import BoxCardsTools from "../../components/BoxCardsTools";
+import BoxCardsServices from "../../components/BoxCardsServices";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
             <Homepage/>
             <BoxCardsNewTools/>
             <BoxCardsTools/>
+            <BoxCardsServices />
             <QuestionCard />
           </HomeContainer>
         <PreFooter />
