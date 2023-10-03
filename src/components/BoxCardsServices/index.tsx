@@ -16,6 +16,13 @@ function BoxCardsServices() {
             link="/"
             title="adsdasdas"
           />
+          
+          <ServiceCard
+            description="test"
+            img="https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png"
+            link="/"
+            title="adsdasdas"
+          />
 
           <ServiceCard
             description="test"

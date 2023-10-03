@@ -19,26 +19,25 @@ export const CardsContainer = styled.div`
   width: 100%;
   display: flex;
   margin: auto;
+  gap: 32px;
 
-  section:nth-child(2) {
-    margin: 0 15px;
-  }
   
+  @media screen and (max-width: 1000px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    section {
+      max-width: calc(50% - 32px);
+      min-width: calc(50% - 32px);
+    }
+  }
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    /* margin: auto; */
-    /* padding: 20px; */
     position: relative;
-    
-    section:nth-child(2) {
-      margin: 30px 0;
-    }
-
     section {
-      /* margin: 0px; */
       width: 100%;
-      max-width: 768px;
-      /* margin-bottom: 30px; */
+      max-width: 100%;
+      /* padding: 50px 0; */
     }
   }
 `

@@ -11,31 +11,31 @@ function BoxCardsTools() {
         />
         <CardsContainer>
           <ClientCard
-            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
+            description='Fortaleça.'
+            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/sumup-customers-home.jpg?resize=150,150'
             link='/'
-            title='Conheça o Flow'
+            title='Conheça'
             type='empresa'
           />
           <ClientCard
-            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
+            description='Fortaleça.'
+            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/gympass-customers-home.jpg?resize=150,150'
             link='/'
-            title='Conheça o Flow'
+            title='Conheça'
             type='empresa'
           />
           <ClientCard
-            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
+            description='Fortaleça.'
+            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/vipal-customers-home.jpg?resize=150,150'
             link='/'
-            title='Conheça o Flow'
+            title='Conheça'
             type='empresa'
           />
           <ClientCard
-            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
+            description='Fortaleça.'
+            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/tigre-customers-home.jpg?resize=150,150'
             link='/'
-            title='Conheça o Flow'
+            title='Conheça'
             type='empresa'
           />
         </CardsContainer>
