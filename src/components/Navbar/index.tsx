@@ -1,3 +1,4 @@
+import ButtonLink from '../ButtonLink';
 import { Action, Contact, Container, Infos, Logo, Navigationbar, Notification } from './styled';
 
 function Navbar() {
@@ -18,7 +19,7 @@ function Navbar() {
                   <a href="">Entre em contato</a>
                   <p>40 2809 9022</p>
                 </Contact>
-                <button>Teste gratis</button>
+                <ButtonLink link='/form' textButton='Teste Gratis' typeButton='withBg'/>
               </Action>
           </Navigationbar>
         </Container>
