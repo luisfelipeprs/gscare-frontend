@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
       {
         path: "/admin/feedback/:id",
         element: <FeedbackDetails/>
+      },
+      {
+        path: '/admin/oldadmin',
+        // ? redirecionamento
+        element: <Navigate to="/admin"/>
       }
     ]
   }
