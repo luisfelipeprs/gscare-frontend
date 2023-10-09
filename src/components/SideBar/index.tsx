@@ -22,7 +22,7 @@ const Sidebar = () => {
             
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Saas Care</h1>
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
                        <List onClick={toggle}/>
                    </div>
@@ -30,35 +30,35 @@ const Sidebar = () => {
 
                 <NavLink to="/admin/" className="link">
                     <div className="icon">
-                        <House size={12}/>
+                        <House size={24}/>
                     </div>
                     <div style={{display: isOpen ? "block" : "none"}} className="link_text">House</div>
                 </NavLink>
 
                 <NavLink to="/admin/calendar/" className="link">
                     <div className="icon">
-                        <Calendar size={12}/>
+                        <Calendar size={24}/>
                     </div>
                     <div style={{display: isOpen ? "block" : "none"}} className="link_text">Calendar</div>
                 </NavLink>
 
                 <NavLink to="/admin/employee/" className="link">
                     <div className="icon">
-                        <IdentificationCard size={12}/>
+                        <IdentificationCard size={24}/>
                     </div>
                     <div style={{display: isOpen ? "block" : "none"}} className="link_text">Employee</div>
                 </NavLink>
 
                 <NavLink to="/admin/patients/" className="link">
                     <div className="icon">
-                        <UsersThree size={12}/>
+                        <UsersThree size={24}/>
                     </div>
                     <div style={{display: isOpen ? "block" : "none"}} className="link_text">Patients</div>
                 </NavLink>
 
                 <NavLink to="/admin/feedback/" className="link">
                     <div className="icon">
-                        <Chats size={12}/>
+                        <Chats size={24}/>
                     </div>
                     <div style={{display: isOpen ? "block" : "none"}} className="link_text">Feedbacks</div>
                 </NavLink>
