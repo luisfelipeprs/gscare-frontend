@@ -39,6 +39,18 @@ const router = createBrowserRouter([
         element: <Feedback/>
       },
       {
+        path: "/admin/employee",
+        element: <Feedback/>
+      },
+      {
+        path: "/admin/patients",
+        element: <Feedback/>
+      },
+      {
+        path: "/admin/calendar",
+        element: <Feedback/>
+      },
+      {
         path: "/admin/feedback/:id",
         element: <FeedbackDetails/>
       },
