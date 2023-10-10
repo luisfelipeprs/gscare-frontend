@@ -1,18 +1,10 @@
 import './App.css'
-// import Home from './pages/Home'
-import { Outlet } from 'react-router-dom'
-import Sidebar from './components/SideBar'
+import AdminPage from './templates/AdminPage'
 
 function App() {
 
   return (
-    <>
-      {/* <Home /> */}
-      <Sidebar/>
-      <h1>topbar</h1>
-      <Outlet />
-      <h1>footer</h1>
-    </>
+    <AdminPage/>
   )
 }
 export default App
