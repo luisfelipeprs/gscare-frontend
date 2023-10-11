@@ -9,8 +9,8 @@ interface IisOpen{
 export const SidebarContainer = styled.div<IisOpen>`
   width: ${(props) => (props.isOpen ? '200px' : '50px')};
   height: 100vh;
-  background-color: #333; /* Cor de fundo da sidebar */
-  color: #fff; /* Cor do texto */
+  background-color: #333; 
+  color: #fff;
   transition: width 0.3s ease-in-out;
 `;
 
@@ -45,6 +45,6 @@ export const NavLinkStyled = styled(NavLink)`
   transition: background-color 0.2s ease-in-out;
 
   &:hover {
-    background-color: #555; /* Cor de fundo do link ao passar o mouse */
+    background-color: #555;
   }
 `;

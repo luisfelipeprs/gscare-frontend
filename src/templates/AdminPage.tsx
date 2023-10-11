@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import Sidebar from "../components/SideBar"
 import { Container } from "./styled"
+import FloatingMenu from "../components/FloatingMenu"
 
 
 function AdminPage() {
@@ -8,7 +9,7 @@ function AdminPage() {
   return (
     <Container>
       <Sidebar/>
-      <h1>topbar</h1>
+      <FloatingMenu/>
       <Outlet />
      
     </Container>
