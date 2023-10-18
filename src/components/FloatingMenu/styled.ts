@@ -4,7 +4,7 @@ export const StyledFloatingMenu = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  padding: 5px;
+  padding: 0px;
   width: 100%;
   height: 100%;
   margin: 10px;
@@ -15,10 +15,10 @@ export const StyledFloatingMenu = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 60px;
+  width: 50px;
   border: 1px solid black;
   border-radius: 40px;
-  margin: 10px 10px;
+  margin: 10px;
   margin-left: 10px;
 `
 export const Infos = styled.div`
@@ -29,15 +29,13 @@ export const Infos = styled.div`
   
   p{
     display: flex;
-    
-    margin: 5px;
-    flex: 2;
-    
+    font-size: 14px;
+    margin: 3px;    
   }
 `
 
 export const SignOutInfo = styled.div`
-  margin: 20px;
+  margin: 15px;
 `
 export const Container = styled.div`
 width: 100%;
