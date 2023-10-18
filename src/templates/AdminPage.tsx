@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 import Sidebar from "../components/SideBar"
-import { Container } from "./styled"
+import { Container, Content } from "./styled"
 import FloatingMenu from "../components/FloatingMenu"
 
 
@@ -9,8 +9,10 @@ function AdminPage() {
   return (
     <Container>
       <Sidebar/>
-      <FloatingMenu/>
-      <Outlet />
+      <Content>
+        <FloatingMenu/>
+        <Outlet />
+      </Content>
      
     </Container>
    
