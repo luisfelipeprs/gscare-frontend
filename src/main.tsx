@@ -15,9 +15,9 @@ import AdminHome from './pages/AdminHome/index.tsx';
 import ErrorPage from './pages/ErrorPage/index.tsx';
 import FeedbackDetails from './pages/FeedbackDetails/index.tsx';
 import Feedback from './pages/Feedback/index.tsx';
-import Employee from './pages/Employee/index.tsx';
 import Patients from './pages/Patients/index.tsx';
 import Calendar from './pages/Calendar/index.tsx';
+import EmployeeList from './components/EmployeeList/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/admin/employee",
-        element: <Employee/>
+        element: <EmployeeList/>
       },
       {
         path: "/admin/patients",
