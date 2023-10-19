@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, EmployeeTable, Modal } from './styled';
+import { Button, Container, EmployeeTable, Modal, Background } from './styled';
 
 const EmployeeList: React.FC = () => {
   const [employees, setEmployees] = useState<any[]>([]);
@@ -9,8 +9,8 @@ const EmployeeList: React.FC = () => {
     email: '',
     jobTitle: '',
     phone: '',
-    imageUrl: '',
     employeeCode: '',
+    location:''
   });
 
   const openModal = () => {
@@ -29,8 +29,8 @@ const EmployeeList: React.FC = () => {
       email: '',
       jobTitle: '',
       phone: '',
-      imageUrl: '',
       employeeCode: '',
+      location:''
     });
   };
 
@@ -39,6 +39,7 @@ const EmployeeList: React.FC = () => {
     <h1>Lista de Funcionários</h1>
     <Button onClick={openModal}>Adicionar Funcionário</Button>
     {isModalOpen && (
+      <Background>
       <Modal>
           <h2>Adicionar Funcionário</h2>
           <input
@@ -46,40 +47,44 @@ const EmployeeList: React.FC = () => {
             placeholder="Nome"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          />
+            />
           <input
             type="text"
             placeholder="Email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          />
-          <input
-            type="text"
-            placeholder="Cargo"
+            />
+          <select
             value={formData.jobTitle}
-            onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
-          />
+            onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}>
+            <option value="">Selecione um cargo</option>
+            <option value="Gerente">Gerente</option>
+            <option value="Desenvolvedor">Desenvolvedor</option>
+            <option value="Designer">Designer</option>
+            <option value="Analista">Analista</option>
+          </select>
           <input
             type="text"
             placeholder="Telefone"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          />
-          <input
-            type="text"
-            placeholder="URL da Imagem"
-            value={formData.imageUrl}
-            onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
-          />
+            />
           <input
             type="text"
             placeholder="Código do Funcionário"
             value={formData.employeeCode}
             onChange={(e) => setFormData({ ...formData, employeeCode: e.target.value })}
-          />
+            />
+          <input
+            type="text"
+            placeholder="Endereço"
+            value={formData.location}
+            onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+            />
           <button onClick={handleSave}>Salvar</button>
           <button onClick={closeModal}>Cancelar</button>
         </Modal>
+            </Background>
       )}
       <EmployeeTable>
         <thead>
@@ -88,8 +93,8 @@ const EmployeeList: React.FC = () => {
             <th>Email</th>
             <th>Cargo</th>
             <th>Telefone</th>
-            <th>Imagem</th>
             <th>Código</th>
+            <th>Endereço</th>
           </tr>
         </thead>
         <tbody>
@@ -99,8 +104,8 @@ const EmployeeList: React.FC = () => {
               <td>{employee.email}</td>
               <td>{employee.jobTitle}</td>
               <td>{employee.phone}</td>
-              <td>{employee.imageUrl}</td>
               <td>{employee.employeeCode}</td>
+              <td>{employee.location}</td>
             </tr>
           ))}
         </tbody>
