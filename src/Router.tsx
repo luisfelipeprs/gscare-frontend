@@ -9,6 +9,9 @@ import FeedbackDetails from './pages/FeedbackDetails/index.tsx';
 import Feedback from './pages/Feedback/index.tsx';
 import Login from './pages/Login/index.tsx';
 import Register from './pages/Register/index.tsx';
+import Calendar from "./pages/Calendar/index.tsx";
+import Employee from "./pages/Employee/index.tsx";
+import Patients from "./pages/Patients/index.tsx";
 
 
 export function Router() {
@@ -22,6 +25,9 @@ export function Router() {
             <Route path="/admin" element={<DefaultLayout />}>
                 <Route path="/admin/" element={<AdminHome/>} />
                 <Route path="/admin/feedback" element={<Feedback/>} />
+                <Route path="/admin/calendar" element={<Calendar/>} />
+                <Route path="/admin/employee" element={<Employee/>} />
+                <Route path="/admin/patients" element={<Patients/>} />
                 <Route path="/admin/feedback/:id" element={<FeedbackDetails/>} />
                 <Route path='/admin/oldadmin' element={<Navigate to="/admin"/>} />
             </Route>

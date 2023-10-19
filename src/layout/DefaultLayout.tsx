@@ -1,11 +1,18 @@
 import { Outlet } from "react-router-dom";
+import { Container, Content } from "./styled";
+import FloatingMenu from "../components/FloatingMenu";
+import Sidebar from "../components/SideBar";
 
 export function DefaultLayout() {
   return (
     <>
-      <h1>sidebar</h1>
-      <h1>topbar</h1>
-      <Outlet />
+    <Container>
+      <Sidebar/>
+      <Content>
+        <FloatingMenu/>
+        <Outlet />
+      </Content>
+    </Container>
     </>
   )
 }
