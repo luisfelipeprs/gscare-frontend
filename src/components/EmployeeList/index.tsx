@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Button, Container, EmployeeTable, Modal, Background } from './styled';
+import {
+  Button,
+  Container,
+  Modal,
+  Background,
+  EmployeeCard,
+  EmployeeCardContainer,
+  EmployeeImageContainer,
+} from './styled';
 
 const EmployeeList: React.FC = () => {
   const [employees, setEmployees] = useState<any[]>([]);
@@ -10,7 +18,7 @@ const EmployeeList: React.FC = () => {
     jobTitle: '',
     phone: '',
     employeeCode: '',
-    location:''
+    location: '',
   });
 
   const openModal = () => {
@@ -30,9 +38,10 @@ const EmployeeList: React.FC = () => {
       jobTitle: '',
       phone: '',
       employeeCode: '',
-      location:''
+      location: '',
     });
   };
+
 
   return (
     <Container>
@@ -86,32 +95,29 @@ const EmployeeList: React.FC = () => {
         </Modal>
             </Background>
       )}
-      <EmployeeTable>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Cargo</th>
-            <th>Telefone</th>
-            <th>Código</th>
-            <th>Endereço</th>
-          </tr>
-        </thead>
-        <tbody>
-          {employees.map((employee, index) => (
-            <tr key={index}>
-              <td>{employee.name}</td>
-              <td>{employee.email}</td>
-              <td>{employee.jobTitle}</td>
-              <td>{employee.phone}</td>
-              <td>{employee.employeeCode}</td>
-              <td>{employee.location}</td>
-            </tr>
-          ))}
-        </tbody>
-      </EmployeeTable>
+      <EmployeeCardContainer>
+        {employees.map((employee, index) => (
+         <EmployeeCard key={index}>
+            <EmployeeImageContainer>
+              <img src="https://i.pinimg.com/564x/85/71/72/8571727e081f426167ac04b819ce8dbf.jpg" />
+            </EmployeeImageContainer>
+            <p><strong>Nome:</strong> {employee.name}</p>
+            <p><strong>Email:</strong> {employee.email}</p>
+            <p><strong>Cargo:</strong> {employee.jobTitle}</p>
+            <p><strong>Telefone:</strong> {employee.phone}</p>
+            <p><strong>Código do Funcionário:</strong> {employee.employeeCode}</p>
+            <p><strong>Endereço:</strong> {employee.location}</p>
+       </EmployeeCard>
+        ))}
+      </EmployeeCardContainer>
     </Container>
   );
 };
 
 export default EmployeeList;
+
+
+
+
+
+
