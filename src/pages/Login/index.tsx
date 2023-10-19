@@ -1,15 +1,22 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 import { Container } from "./styled";
 
 import logoImg from "./../../assets/logo.svg";
 import { Link } from "react-router-dom";
 
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
+  const navigate = useNavigate();
 
-  function handleSignIn() {
+  function handleSignIn(e: React.MouseEvent) {
+    e.preventDefault();
     console.log(email, password);
+    navigate('/admin');
   }
 
   return (

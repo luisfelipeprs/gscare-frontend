@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo.svg";
 import { Container } from "./styled";
 
-export function Register() {
+function Register() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -78,3 +78,5 @@ export function Register() {
     </Container>
   );
 }
+
+export default Register;
