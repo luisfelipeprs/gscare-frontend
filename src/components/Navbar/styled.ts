@@ -54,23 +54,27 @@ export const Action = styled.div`
   position: relative;
   gap: 20px;
 
-  button{
+  .linkButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 10px;
     height: 50px;
     color: white;
-    margin: auto;
     background-color: #137d00;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding: 5px 15px;
+    text-decoration: none;
+    margin: auto;
 
     &:hover {
       cursor: pointer;
       background-color: #238615;
       color: #e5e5e5;
     }
-}
+  }
 `
 export const Infos = styled.div`
   display: flex;

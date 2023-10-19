@@ -15,6 +15,8 @@ import AdminHome from './pages/AdminHome/index.tsx';
 import ErrorPage from './pages/ErrorPage/index.tsx';
 import FeedbackDetails from './pages/FeedbackDetails/index.tsx';
 import Feedback from './pages/Feedback/index.tsx';
+import Login from './pages/Login/index.tsx';
+import { Register } from './pages/Register/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
   {
     path: "/form",
     element: <FormLeads />
+  },
+  {
+    path: "/login",
+    element: <Login />
+  },
+  {
+    path: "/register",
+    element: <Register />
   },
   {
     path: "/admin",

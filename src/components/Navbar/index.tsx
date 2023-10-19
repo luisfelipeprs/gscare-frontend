@@ -1,4 +1,4 @@
-import ButtonLink from '../ButtonLink';
+import { Link } from 'react-router-dom';
 import { Action, Contact, Container, Infos, Logo, Navigationbar, Notification } from './styled';
 
 function Navbar() {
@@ -19,7 +19,9 @@ function Navbar() {
                   <a href="">Entre em contato</a>
                   <p>40 2809 9022</p>
                 </Contact>
-                <ButtonLink link='/form' textButton='Teste Gratis' typeButton='withBg'/>
+                <Link className='linkButton' to="/form">
+                  Teste Gratis
+                </Link>
               </Action>
           </Navigationbar>
         </Container>
