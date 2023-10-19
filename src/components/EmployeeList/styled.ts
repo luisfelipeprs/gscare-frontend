@@ -145,3 +145,6 @@ export const Background = styled.div`
   justify-content: center;
   align-items: center;
 `;
+export const GenderRadius = styled.div`
+  display: flex;
+`
