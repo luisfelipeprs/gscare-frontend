@@ -130,9 +130,6 @@ const EmployeeList: React.FC = () => {
             <p><strong>Telefone:</strong> {employee.phone}</p>
             <p><strong>Código do Funcionário:</strong> {employee.employeeCode}</p>
             <p><strong>Endereço:</strong> {employee.location}</p>
-            
-    <img id="employeeImage" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Imagem do Funcionário" />
-
        </EmployeeCard>
         ))}
       </EmployeeCardContainer>

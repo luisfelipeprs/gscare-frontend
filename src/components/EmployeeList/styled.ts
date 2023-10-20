@@ -78,7 +78,8 @@ export const EmployeeCard = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 20px auto; /* Centraliza o card na horizontal */
-  max-width: 100%;
+  max-width: 550px;
+  max-height: 550px;
   width: 90%; /* Ajusta a largura para 90% da tela no modo mobile */
   height: auto; /* Define a altura automática para ajustar ao conteúdo */
   text-align: center;
