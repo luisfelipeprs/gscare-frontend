@@ -1,10 +1,16 @@
 import React from 'react';
-import { Container, Img, Infos, SignOutInfo, StyledFloatingMenu } from './styled';
+import { Container, Img, Infos, SidebarMenu, SignOutInfo, StyledFloatingMenu } from './styled';
 import { SignOut } from 'phosphor-react';
+import Sidebar from '../SideBar';
+import MenuHamburguer from '../MenuHamburguer';
+
 
 const FloatingMenu: React.FC = () => {
   return (
     <StyledFloatingMenu>
+      <SidebarMenu>
+        <Sidebar/>
+      </SidebarMenu>
       <Img src='https://i.pinimg.com/564x/85/71/72/8571727e081f426167ac04b819ce8dbf.jpg'></Img>
       <Container>
         <Infos>

@@ -8,7 +8,6 @@ function AdminPage() {
 
   return (
     <Container>
-      <Sidebar/>
       <Content>
         <FloatingMenu/>
         <Outlet />

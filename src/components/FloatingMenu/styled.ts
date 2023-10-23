@@ -16,7 +16,6 @@ export const Img = styled.img`
   border: 1px solid black;
   border-radius: 40px;
   margin: 10px;
-  margin-left: 10px;
 `
 export const Infos = styled.div`
   display: flex;
@@ -39,6 +38,9 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+`
+export const SidebarMenu = styled.div`
+  margin-bottom: 20px;
 `
 
 
