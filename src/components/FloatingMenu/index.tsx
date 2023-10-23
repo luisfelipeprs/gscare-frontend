@@ -1,16 +1,19 @@
 import React from 'react';
 import { Container, Img, Infos, SidebarMenu, SignOutInfo, StyledFloatingMenu } from './styled';
-import { SignOut } from 'phosphor-react';
+import { List, SignOut } from 'phosphor-react';
 import Sidebar from '../SideBar';
 import MenuHamburguer from '../MenuHamburguer';
 
+interface IProps{
+  handleIsOpen: () => void;
+}
 
-const FloatingMenu: React.FC = () => {
+function FloatingMenu({handleIsOpen}:IProps){
   return (
     <StyledFloatingMenu>
-      <SidebarMenu>
-        <Sidebar/>
-      </SidebarMenu>
+        <button onClick={handleIsOpen}>
+          <List size={32} />
+          </button>
       <Img src='https://i.pinimg.com/564x/85/71/72/8571727e081f426167ac04b819ce8dbf.jpg'></Img>
       <Container>
         <Infos>
