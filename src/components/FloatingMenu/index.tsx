@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Img, Infos, SidebarMenu, SignOutInfo, StyledFloatingMenu } from './styled';
 import { List, SignOut } from 'phosphor-react';
 import Sidebar from '../SideBar';
-import MenuHamburguer from '../MenuHamburguer';
 
 interface IProps{
   handleIsOpen: () => void;

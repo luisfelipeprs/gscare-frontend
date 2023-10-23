@@ -66,24 +66,14 @@ const DropdownMenu = ({ isOpen, closeMenu }: any) => {
   );
 };
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+interface IProps{
+  isOpenSideBar: boolean
+}
+const Sidebar = ({isOpenSideBar}:IProps) => {
+  const isMenuOpen = isOpenSideBar;
 
   return (
     <>
-      <Menu>
-        <List
-          size={32}
-          onClick={() => {
-            toggle();
-            toggleMenu(); // Alterna o ícone do menu hambúrguer
-          }}
-        />
-      </Menu>
       <DropdownMenu isOpen={isMenuOpen} />
     </>
   );

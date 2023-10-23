@@ -18,7 +18,7 @@ function AdminPage() {
   }
   return (
     <Container>
-      <Sidebar />
+      <Sidebar isOpenSideBar={isOpenSideBar}/>
       <Content>
         <FloatingMenu handleIsOpen={handleOpenSideBar}/>
         <Outlet />
