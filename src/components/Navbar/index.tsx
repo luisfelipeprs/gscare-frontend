@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Action, Contact, Container, Infos, Logo, Navigationbar, Notification } from './styled';
+import { Action, Contact, Container, ImageIconLogo, ImageLogo, Infos, Navigationbar, Notification } from './styled';
+import { User } from 'phosphor-react';
+import logo from './../../assets/logo.svg'
+import iconLogo from './../../assets/iconLogo.png'
 
 function Navbar() {
     return (
@@ -7,7 +10,12 @@ function Navbar() {
         <Container>
           <Navigationbar>
               <Infos>
-                <a href="https://www.salesforce.com/br/"><Logo src='https://c1.sfdcstatic.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg'/></a>
+                <ImageLogo>
+                  <img src={logo} alt="logo" width='200px' />
+                </ImageLogo>
+                <ImageIconLogo>
+                  <img src={iconLogo} alt="icone Logo" height='50px' />
+                </ImageIconLogo>
                 <ul>
                   <li>Suporte</li>
                   <li>Empresa</li>
@@ -19,6 +27,10 @@ function Navbar() {
                   <a href="">Entre em contato</a>
                   <p>40 2809 9022</p>
                 </Contact>
+                <Link className='gotoLoginButton' to="/login">
+                  <User size={24} />
+                  Login
+                </Link>
                 <Link className='linkButton' to="/form">
                   Teste Gratis
                 </Link>
@@ -27,7 +39,7 @@ function Navbar() {
         </Container>
         <Notification>
           <h2>
-            Acompanhe a magia do Dreamforce, ao vivo no Salesforce+, de 12 a 14 de  setembro.
+            Conheça a empresa que vai revolucinar a sua empresa de homecare.
           </h2>
         </Notification>
       </>

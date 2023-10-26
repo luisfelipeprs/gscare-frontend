@@ -1,30 +1,32 @@
 import Card from '../Card';
 import Title from '../Title';
 import { CardsContainer, Container, Content } from './styled';
+import screenTelaAdm from './../../assets/screenAdm.png'
 
 function BoxCardsNewTools() {
   return (
     <Container>
       <Content>
         <Title
-          title={'Encontre as próximas inovações que terão em nosso sistema.'} 
+          title={'As melhores ferramentas para sua empresa ter mais agilidade nos processos internos.'} 
+          description={'Apresentamos o RevolutionCare, uma plataforma completa que transforma a gestão de cuidados domiciliares.'}
         />
         <CardsContainer>
           <Card
-            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
+            description='Calendário de agendamentos que facilita a gestao de atendimento entre atendente e paciente.'
+            img={screenTelaAdm}
+            link='/'
+            title='Conheça nosso Calendário'
+          />
+          <Card
+            description='Recebimento de Feedbacks, Relatórios diários e Avisos de acontecimentos inesperados do dia.'
+            img={screenTelaAdm}
             link='/'
             title='Conheça o Flow'
           />
           <Card
-            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
-            link='/'
-            title='Conheça o Flow'
-          />
-          <Card
-            description='Fortaleça a empresa do seu cliente com dados unificados e em tempo real.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png'
+            description='Defina nescessidades e caracteristicas dos paciente. Agilizando o processo de reconhecimento por parte do funcionário.'
+            img={screenTelaAdm}
             link='/'
             title='Conheça o Flow'
           />

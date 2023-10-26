@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Button,
   Container,
@@ -8,19 +8,32 @@ import {
   EmployeeCardContainer,
   EmployeeImageContainer,
   GenderRadius,
-} from './styled';
+} from "./styled";
+
+import cartoonHomen from "../../assets/cartoonHomen.png";
+import cartoonMulher from "../../assets/cartoonMulher.png";
+
+interface IEmployees {
+  name: string,
+  email: string,
+  jobTitle: string,
+  phone: string,
+  employeeCode: string,
+  location: string,
+  gender: string,
+}
 
 const EmployeeList: React.FC = () => {
-  const [employees, setEmployees] = useState<any[]>([]);
+  const [employees, setEmployees] = useState<IEmployees[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    jobTitle: '',
-    phone: '',
-    employeeCode: '',
-    location: '',
-    gender:''
+    name: "",
+    email: "",
+    jobTitle: "",
+    phone: "",
+    employeeCode: "",
+    location: "",
+    gender: "",
   });
 
   const openModal = () => {
@@ -35,116 +48,156 @@ const EmployeeList: React.FC = () => {
     setEmployees([...employees, formData]);
     closeModal();
     setFormData({
-      name: '',
-      email: '',
-      jobTitle: '',
-      phone: '',
-      employeeCode: '',
-      location: '',
-      gender:''
+      name: "",
+      email: "",
+      jobTitle: "",
+      phone: "",
+      employeeCode: "",
+      location: "",
+      gender: "",
     });
   };
-  function setGender(e:any){
-    setFormData({ ...formData, gender: e.target.value })
+  function setGender(e: React.ChangeEvent<HTMLInputElement>) {
+    setFormData({ ...formData, gender: e.target.value });
   }
 
   return (
     <Container>
-    <h1>Lista de Funcionários</h1>
-    <Button onClick={openModal}>Adicionar Funcionário</Button>
-    {isModalOpen && (
-      <Background>
-      <Modal>
-          <h2>Adicionar Funcionário</h2>
-          <input
-            type="text"
-            placeholder="Nome"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+      <h1>Lista de Funcionários</h1>
+      <Button onClick={openModal}>Adicionar Funcionário</Button>
+      {isModalOpen && (
+        <Background>
+          <Modal>
+            <h2>Adicionar Funcionário</h2>
+            <input
+              type="text"
+              placeholder="Nome"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
             />
-          <input
-            type="text"
-            placeholder="Email"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            <input
+              type="text"
+              placeholder="Email"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
             />
-          <select
-            value={formData.jobTitle}
-            onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}>
-            <option value="">Selecione um cargo</option>
-            <option value="Gerente">Gerente</option>
-            <option value="Desenvolvedor">Desenvolvedor</option>
-            <option value="Designer">Designer</option>
-            <option value="Analista">Analista</option>
-          </select>
-          <input
-            type="text"
-            placeholder="Telefone"
-            value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            <select
+              value={formData.jobTitle}
+              onChange={(e) =>
+                setFormData({ ...formData, jobTitle: e.target.value })
+              }
+            >
+              <option value="">Selecione um cargo</option>
+              <option value="Gerente">Gerente</option>
+              <option value="Desenvolvedor">Desenvolvedor</option>
+              <option value="Designer">Designer</option>
+              <option value="Analista">Analista</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Telefone"
+              value={formData.phone}
+              onChange={(e) =>
+                setFormData({ ...formData, phone: e.target.value })
+              }
             />
-          <input
-            type="text"
-            placeholder="Código do Funcionário"
-            value={formData.employeeCode}
-            onChange={(e) => setFormData({ ...formData, employeeCode: e.target.value })}
+            <input
+              type="text"
+              placeholder="Código do Funcionário"
+              value={formData.employeeCode}
+              onChange={(e) =>
+                setFormData({ ...formData, employeeCode: e.target.value })
+              }
             />
-          <input
-            type="text"
-            placeholder="Endereço"
-            value={formData.location}
-            onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+            <input
+              type="text"
+              placeholder="Endereço"
+              value={formData.location}
+              onChange={(e) =>
+                setFormData({ ...formData, location: e.target.value })
+              }
             />
             <GenderRadius>
+              <label>Gênero:</label>
               <label>
-                Gênero:
-              </label>
-              <label>
-                <input type="checkbox" id="masculinoCheckbox" value="masculino" name="gender" onClick={setGender}/>
+                <input
+                  type="checkbox"
+                  id="masculinoCheckbox"
+                  value="masculino"
+                  name="gender"
+                  onChange={setGender}
+                />
                 <span>Masculino</span>
               </label>
               <label>
-                <input type="checkbox" id="femininoCheckbox" value="feminino" name="gender" onClick={setGender}/>
+                <input
+                  type="checkbox"
+                  id="femininoCheckbox"
+                  value="feminino"
+                  name="gender"
+                  onChange={setGender}
+                />
                 <span>Feminino</span>
               </label>
               <label>
-                <input type="checkbox" id="outrosCheckbox" value="outros" name="gender" onClick={setGender}/>
+                <input
+                  type="checkbox"
+                  id="outrosCheckbox"
+                  value="outros"
+                  name="gender"
+                  onChange={setGender}
+                />
                 <span>Outros</span>
               </label>
             </GenderRadius>
 
-          <button onClick={handleSave}>Salvar</button>
-          <button onClick={closeModal}>Cancelar</button>
-        </Modal>
-            </Background>
+            <button onClick={handleSave}>Salvar</button>
+            <button onClick={closeModal}>Cancelar</button>
+          </Modal>
+        </Background>
       )}
       <EmployeeCardContainer>
         {employees.map((employee, index) => (
-         <EmployeeCard key={index}>
+          <EmployeeCard key={index}>
             <EmployeeImageContainer>
-            <img id="employeeImage" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Imagem do Funcionário" />
+              <img
+                id="employeeImage"
+                src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                alt="Imagem do Funcionário"
+              />
             </EmployeeImageContainer>
-            <p><strong>Nome:</strong> {employee.name}</p>
-            <p><strong>Email:</strong> {employee.email}</p>
-            <p><strong>Cargo:</strong> {employee.jobTitle}</p>
-            <p><strong>Telefone:</strong> {employee.phone}</p>
-            <p><strong>Código do Funcionário:</strong> {employee.employeeCode}</p>
-            <p><strong>Endereço:</strong> {employee.location}</p>
-            
-    <img id="employeeImage" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Imagem do Funcionário" />
-
-       </EmployeeCard>
+            <p>
+              <strong>Nome:</strong> {employee.name}
+            </p>
+            <p>
+              <strong>Email:</strong> {employee.email}
+            </p>
+            <p>
+              <strong>Cargo:</strong> {employee.jobTitle}
+            </p>
+            <p>
+              <strong>Telefone:</strong> {employee.phone}
+            </p>
+            <p>
+              <strong>Código do Funcionário:</strong> {employee.employeeCode}
+            </p>
+            <p>
+              <strong>Endereço:</strong> {employee.location}
+            </p>
+            {employee.gender == "masculino" ? (
+              <img width="120px" id="employeeImage" src={cartoonHomen} />
+            ) : (
+              <img width="120px" id="employeeImage" src={cartoonMulher} />
+            )}
+          </EmployeeCard>
         ))}
       </EmployeeCardContainer>
     </Container>
   );
 };
 
-
 export default EmployeeList;
-
-
-
-
-
-

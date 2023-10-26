@@ -1,8 +1,8 @@
+import EmployeeList from "../../components/EmployeeList";
+
 function Employee(){
   return (
-    <>
-    Employee Works!
-    </>
+    <EmployeeList />
   );
 }
 

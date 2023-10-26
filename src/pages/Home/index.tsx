@@ -13,13 +13,13 @@ function Home() {
   return (
       <>
         <Navbar/>
-          <HomeContainer>
-            <Homepage/>
-            <BoxCardsNewTools/>
-            <BoxCardsTools/>
-            <BoxCardsServices />
-            <QuestionCard />
-          </HomeContainer>
+        <HomeContainer>
+          <Homepage/>
+          <BoxCardsNewTools/>
+          <BoxCardsTools/>
+          <BoxCardsServices />
+          <QuestionCard />
+        </HomeContainer>
         <PreFooter />
         <Footer />
       </>

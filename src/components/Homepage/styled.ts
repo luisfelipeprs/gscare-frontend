@@ -38,6 +38,22 @@ export const Content = styled.div`
     gap: 100px;
   }
 `
+
+export const Functionalities = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: none;
+  span {
+    color: #00000090;
+    svg {
+      
+    transform: translateY(20%);
+    margin-right: 2px;
+    }
+  }
+`
+
 export const Leftdiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -50,7 +66,7 @@ export const Leftdiv = styled.div`
 
   h1{
     text-align: start;
-    color: #032D60;
+    color: #FFA500;
     font-size: 2.7rem;
   }
   p{
@@ -58,60 +74,6 @@ export const Leftdiv = styled.div`
     font-size: 1.3rem;
     color: #2d2d2d;
   }  
-  div{
-    display: flex;
-    position: relative;
-    gap: 50px;
-
-    button{
-      &:first-child {
-        border: none;
-        border-radius: 5px;
-        height: 50px;
-        color: white;
-        margin: auto;
-        background-color: #0176D3;
-        border: solid 2px #0176D3;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        padding: 5px 15px;
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
-      &:last-child {
-        border: none;
-        border-radius: 5px;
-        height: 50px;
-        color: white;
-        margin: auto;
-        color: #0176D3;
-        background-color: #ffffff;
-        border: solid 2px #0176D3;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        padding: 5px 15px;
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
-
-    /* @media screen and (max-width: 1000px) {
-      
-    } */
-    
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-      gap: 5px;
-      width: 100%;
-
-      button {
-        width: 100%;
-      }
-    }
-  }
   
   @media screen and (max-width: 1280px) {
     /* background-color: red; */
@@ -129,7 +91,57 @@ export const Leftdiv = styled.div`
     /* padding: 0 20px; */
   }
 `
+export const ContainerButtons = styled.div`
+  display: flex;
+  position: relative;
+  gap: 50px;
+  
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+  }
+`
+
+export const ButtonTesteGratis = styled.button`
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  margin: auto;
+  background-color: #0176D3;
+  border: solid 2px #0176D3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 5px 15px;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+export const ButtonSaibaMais = styled.button`
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  color: white;
+  margin: auto;
+  color: #0176D3;
+  background-color: #ffffff;
+  border: solid 2px #0176D3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 5px 15px;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
 export const Rightdiv = styled.div`
+  margin: auto;
   align-items: end;
   position: relative;
   max-width: 640px;

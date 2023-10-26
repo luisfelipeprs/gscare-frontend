@@ -2,41 +2,50 @@ import ClientCard from '../ClientCard';
 import Title from '../Title';
 import { CardsContainer, Container, Content } from './styled';
 
+
+import func1Atend from './../../assets/func1Atend.png'
+import func2Atend from './../../assets/func2Atend.png'
+import func3Atend from './../../assets/func3Atend.png'
+import func4Atend from './../../assets/func4Atend.png'
+
 function BoxCardsTools() {
   return (
     <Container>
       <Content>
         <Title
-          title={'Nossas inovações lançadas recentemente em nosso sistema.'} 
+          title={'Há beneficios para seus cuidadores tambem! Ferramente que trazem agilidade e eficiencia para seus funcionarios.'} 
+          description='lofsadfasdfasdfasdfasd'
+          textButton='Faça o teste gratis'
+          typeButton='withBorder'
         />
         <CardsContainer>
           <ClientCard
-            description='Fortaleça.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/sumup-customers-home.jpg?resize=150,150'
+            description='relatorio diário e avisos de imprevistos do dia.'
+            img={func1Atend}
             link='/'
-            title='Conheça'
-            type='empresa'
+            title='Relatórios'
+            type='ocorridos'
           />
           <ClientCard
-            description='Fortaleça.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/gympass-customers-home.jpg?resize=150,150'
+            description='patologia, alergias, medicacoes e subrimentos.'
+            img={func2Atend}
             link='/'
-            title='Conheça'
-            type='empresa'
+            title='Informações do Paciente'
+            type='paciente'
           />
           <ClientCard
-            description='Fortaleça.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/vipal-customers-home.jpg?resize=150,150'
+            description='lembretes de consultas e medicacoes .'
+            img={func4Atend}
             link='/'
-            title='Conheça'
-            type='empresa'
+            title='Lembretes'
+            type='avisos'
           />
           <ClientCard
-            description='Fortaleça.'
-            img='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/tigre-customers-home.jpg?resize=150,150'
+            description='Numeros emergencias.'
+            img={func3Atend}
             link='/'
-            title='Conheça'
-            type='empresa'
+            title='Contatos'
+            type='auxilios'
           />
         </CardsContainer>
       </Content>

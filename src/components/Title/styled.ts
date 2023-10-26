@@ -11,7 +11,7 @@ export const Content = styled.div`
   margin: auto;
   h1{
     font-size: 2.2rem;
-    color: #032d60;
+    color: #FFA500;
     max-width: 840px;
   }
   p{

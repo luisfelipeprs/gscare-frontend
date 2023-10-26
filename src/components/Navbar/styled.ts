@@ -23,10 +23,6 @@ export const Navigationbar = styled.nav`
   }
 `
 
-export const Logo = styled.img`
-  width: 100px;
-`
-
 export const Contact = styled.div`
   display: flex;
   flex-direction: column;
@@ -44,7 +40,7 @@ export const Contact = styled.div`
     color: #2f368c;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `
@@ -68,28 +64,70 @@ export const Action = styled.div`
     padding: 5px 15px;
     text-decoration: none;
     margin: auto;
-
+    
     &:hover {
       cursor: pointer;
       background-color: #238615;
       color: #e5e5e5;
     }
   }
+
+  .gotoLoginButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    color: #0000a0;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px 15px;
+    text-decoration: none;
+    margin: auto;
+
+    svg {
+      color:"#0000a0";
+      font-weight: 700;
+    }
+    
+    &:hover {
+      cursor: pointer;
+      background-color: #6fd0ff30;
+      color: #130c69;
+    }
+  }
+
 `
+export const ImageLogo = styled.div`
+  display: block;
+  @media screen and (max-width: 768px) {
+      display: none;
+  }
+`
+
+export const ImageIconLogo = styled.div`
+  display: none;
+  @media screen and (max-width: 768px) {
+      display: block;
+  }
+`
+
 export const Infos = styled.div`
   display: flex;
 
   ul{
-    padding-left: 20px;
+    padding-left: 30px;
     margin: auto;
     display: flex;
     position: relative;
     list-style: none;
 
     li{
-      color: #2f368c;
+      color: #130C69;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       padding: 0px 10px;
       justify-content: space-between;
 
@@ -107,7 +145,7 @@ export const Infos = styled.div`
 `
 
 export const Notification = styled.div`
-  background-color: #2C31B0;
+  background-color: #00a1ff;
   text-align: center;
   font-size: 0.8rem;
   h2 {
