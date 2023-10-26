@@ -48,7 +48,7 @@ export const FooterContact = styled.div`
   /* margin: 5px; */
   gap: 30px;
   img{
-    width: 100px;
+    width: 50px;
     /* margin: 30px; */
     /* margin-top: 0; */
   }

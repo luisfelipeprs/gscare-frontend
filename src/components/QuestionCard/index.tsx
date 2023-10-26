@@ -1,5 +1,6 @@
 import Button from '../Button';
 import { Container, ContainerAction, ContainerImage, Content } from './styled';
+import imageCta from './../../assets/ctaImageLandingPage.png'
 
 function QuestionCard() {
   return (
@@ -7,13 +8,13 @@ function QuestionCard() {
       <Content>
         <ContainerAction>
           <div>
-            <h1>Perguntas? Vamos colocá-lo no caminho certo.</h1>
+            <h1>Perguntas? Entre em contato conosco!</h1>
             <Button textButton='Entre em contato' typeButton='withBg' />
           </div>
         </ContainerAction>
         <ContainerImage>
           <img 
-            src='https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png' 
+            src={imageCta} 
             alt='image questionCard' 
           />
         </ContainerImage>

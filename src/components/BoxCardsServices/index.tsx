@@ -1,41 +1,43 @@
 import ServiceCard from "../ServiceCard";
 import Title from "../Title";
 import { CardsContainer, Container, Content } from "./styled";
+import screenTelaAdm from './../../assets/screenAdm.png'
 
 function BoxCardsServices() {
   return (
     <Container>
       <Content>
         <Title
-          title={"Encontre as próximas inovações que terão em nosso sistema."}
+          title={"Novo plano empresarial a vista!."}
+          description="Tenha não apenas uma gestão de processos e organização, mas também uma gestão financeira da sua empresa."
         />
         <CardsContainer>
           <ServiceCard
-            description="test"
-            img="https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png"
+            img={screenTelaAdm}
             link="/"
-            title="adsdasdas"
+            title="Contas a Pagar/Receber:"
+            description="astreie despesas e receitas para manter controle financeiro."
           />
           
           <ServiceCard
-            description="test"
-            img="https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png"
+            img={screenTelaAdm}
             link="/"
-            title="adsdasdas"
+            title="Gestão de Pagamentos:"
+            description="Calcule e registre pagamentos para cuidadores com facilidade."
           />
 
           <ServiceCard
-            description="test"
-            img="https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png"
+            img={screenTelaAdm}
             link="/"
-            title="adsdasdas"
+            title="Controle de Faturamento:"
+            description="Gere faturas detalhadas para clientes e convênios."
           />
 
           <ServiceCard
-            description="test"
-            img="https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2023/04/data-cloud-card.png"
+            img={screenTelaAdm}
             link="/"
-            title="adsdasdas"
+            title="Relatórios Financeiros:"
+            description="Obtenha insights financeiros com demonstrações e balanços."
           />
         </CardsContainer>
       </Content>

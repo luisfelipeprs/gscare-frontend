@@ -26,6 +26,7 @@ export const ContainerText = styled.div`
     a{
         text-decoration: none;
         color: #032D60;
+        font-size: 0.9rem;
     }
 
     p{

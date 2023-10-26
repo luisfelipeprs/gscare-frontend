@@ -1,6 +1,7 @@
 import React from 'react'
 import { About, Container, Content, Demo, FooterContact, Links, Logos } from './styled'
 import { InstagramLogo } from "phosphor-react";
+import logoSaas from './../../assets/logoPng.png'
 
 
 function PreFooter() {
@@ -8,7 +9,7 @@ function PreFooter() {
     <Container>
       <Content>
         <FooterContact>
-          <img src="https://www.salesforce.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg" alt=""/>
+          <img src={logoSaas}/>
           <Logos> 
             <InstagramLogo size={32}/>
             <InstagramLogo size={32}/>

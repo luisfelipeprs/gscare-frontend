@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  background-color: #032e61;
+  background-color: #FFA500;
   color: white;
   
 `
@@ -15,7 +15,10 @@ export const Content = styled.div`
 export const Copyright = styled.div`
   font-size: 0.9rem;
   a{
-    color: #00a1e0;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    cursor: pointer;
   }
 `
 
@@ -35,7 +38,9 @@ export const FooterLinks = styled.div`
     text-align: -webkit-match-parent;
   }
   a{
-    color: #00a1e0;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #f5f5f5;
     cursor: pointer;
   }
 

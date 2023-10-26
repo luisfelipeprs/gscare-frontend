@@ -1,6 +1,6 @@
 import { Container, Content, Copyright, FooterLinks } from './styled';
 
- function Footer() {
+function Footer() {
   return (
     <Container>
       <Content>
