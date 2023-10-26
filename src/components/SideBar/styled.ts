@@ -13,6 +13,7 @@ export const SidebarContainer = styled.div<IisOpen>`
   color: #fff;
   transition: width 0.3s ease-in-out;
   @media screen and (max-width: 1000px) {
+    display: ${(props) => (props.isOpen ? '' : 'none')};
     width: 100%;
     top: 82px;
     position: fixed;
