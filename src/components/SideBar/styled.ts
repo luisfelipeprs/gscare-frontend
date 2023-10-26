@@ -7,19 +7,16 @@ interface IisOpen{
 }
 
 export const SidebarContainer = styled.div<IisOpen>`
-  display: flex;
-  flex-direction: column;
+  width: ${(props) => (props.isOpen ? '200px' : '50px')};
   height: 100vh;
-  background-color: rgb(35 39 47); ;
+  background-color: #333; 
   color: #fff;
   transition: width 0.3s ease-in-out;
-  position: fixed;
-  display:flex;
-  width:100%;
-  top: 100px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    top: 82px;
+    position: fixed;
+  }
 `;
 
 export const TopSection = styled.div`
@@ -67,6 +64,6 @@ export const Menu = styled.div`
 `
 export const Icons = styled.div`
   margin-left: 15px;
-  margin-top: 25px;
+  margin-top: 5px;
   margin-right: 10px;
 `
