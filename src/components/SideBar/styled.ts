@@ -17,6 +17,7 @@ export const SidebarContainer = styled.div<IisOpen>`
     width: 100%;
     top: 70px;
     position: fixed;
+    text-align: center;
   }
 `;
 
@@ -25,25 +26,39 @@ export const TopSection = styled.div`
   align-items: center;
   padding: 10px;
   margin: 2px;
-
+  @media screen and (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #555;
+    margin: 0 25px;
+  }
 `;
 
 export const Logo = styled.h1<IisOpen>`
   display: ${(props) => (props.isOpen ? 'block' : 'none')};
   font-size: 1.5rem;
   margin: 10px;
+  @media screen and (max-width: 600px) {
+    font-size: 1.8;
+  }
   
 `;
 
 export const LinkIcon = styled.div<IisOpen>`
   font-size: 1.2rem;
   margin-right: 10px;
+    @media screen and (max-width: 1000px) {
+   font-size: 1.8rem;
+  }
 `;
 
 export const LinkText = styled.div<IisOpen>`
   display: ${(props) => (props.isOpen ? 'block' : 'none')};
   font-size: 1.4rem;
   margin-left:5px;
+  @media screen and (max-width: 1000px) {
+   font-size: 1.8rem;
+  }
 `;
 
 export const NavLinkStyled = styled(NavLink)<IisOpen>`
@@ -54,6 +69,19 @@ export const NavLinkStyled = styled(NavLink)<IisOpen>`
   padding: 10px;
   transition: background-color 0.2s ease-in-out;
   margin: 3px;
+  @media screen and (max-width: 600px) {
+    padding: 30px;
+    justify-content: center;
+    font-size: 2rem;
+    div{
+      svg{
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+
+  }
 
   &:hover {
     background-color: #555;
