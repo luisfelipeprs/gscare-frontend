@@ -7,15 +7,15 @@ export const StyledFloatingMenu = styled.div`
   width: 100%;
   background-color: #333;
   color: #fff;
-  border: 1px solid #666;
+  border: none;
   border-radius: 5px;
   button{
-    background-color: #333;
+    background-color: transparent;
     border: none;
     margin-left: 10px;
   }
   @media screen and (max-width: 1000px) {
-    border: none;
+  //  border: none;
     border-radius: 0px;
   }
 

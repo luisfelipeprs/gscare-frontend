@@ -1,4 +1,3 @@
-import  { useState } from 'react';
 import {
   SidebarContainer,
   TopSection,
@@ -17,7 +16,6 @@ import {
 } from 'phosphor-react';
 
 const Sidebar = ({isOpenSideBar}:any) => {
-  const isMenuOpen = isOpenSideBar;
 
   return (
     <SidebarContainer isOpen={isOpenSideBar}>
