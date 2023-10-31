@@ -7,7 +7,7 @@ interface IisOpen{
 }
 
 export const SidebarContainer = styled.div<IisOpen>`
-  width: ${(props) => (props.isOpen ? '200px' : '50px')};
+  width: ${(props) => (props.isOpen ? '300px' : '60px')};
   height: 100vh;
   background-color: #333; 
   color: #fff;
@@ -15,7 +15,7 @@ export const SidebarContainer = styled.div<IisOpen>`
   @media screen and (max-width: 1000px) {
     display: ${(props) => (props.isOpen ? '' : 'none')};
     width: 100%;
-    top: 82px;
+    top: 70px;
     position: fixed;
   }
 `;
@@ -24,13 +24,14 @@ export const TopSection = styled.div`
   display: flex;
   align-items: center;
   padding: 10px;
+  margin: 2px;
 
 `;
 
 export const Logo = styled.h1<IisOpen>`
   display: ${(props) => (props.isOpen ? 'block' : 'none')};
   font-size: 1.5rem;
-  margin: 0;
+  margin: 10px;
   
 `;
 
@@ -41,7 +42,8 @@ export const LinkIcon = styled.div<IisOpen>`
 
 export const LinkText = styled.div<IisOpen>`
   display: ${(props) => (props.isOpen ? 'block' : 'none')};
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  margin-left:5px;
 `;
 
 export const NavLinkStyled = styled(NavLink)<IisOpen>`
@@ -64,7 +66,7 @@ export const Menu = styled.div`
   margin-right: 5px;
 `
 export const Icons = styled.div`
-  margin-left: 15px;
+  margin-left: 5px;
   margin-top: 5px;
   margin-right: 10px;
 `

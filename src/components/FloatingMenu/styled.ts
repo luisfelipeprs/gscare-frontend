@@ -9,6 +9,16 @@ export const StyledFloatingMenu = styled.div`
   color: #fff;
   border: 1px solid #666;
   border-radius: 5px;
+  button{
+    background-color: #333;
+    border: none;
+    margin-left: 10px;
+  }
+  @media screen and (max-width: 1000px) {
+    border: none;
+    border-radius: 0px;
+  }
+
 `;
 
 export const Img = styled.img`

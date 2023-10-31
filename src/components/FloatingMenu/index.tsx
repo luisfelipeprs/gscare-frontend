@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Img, Infos, SidebarMenu, SignOutInfo, StyledFloatingMenu } from './styled';
-import { List, SignOut } from 'phosphor-react';
+import { List, SignOut, X } from 'phosphor-react';
 import Sidebar from '../SideBar';
 
 interface IProps{
@@ -8,10 +8,20 @@ interface IProps{
 }
 
 function FloatingMenu({handleIsOpen}:IProps){
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <StyledFloatingMenu>
         <button onClick={handleIsOpen}>
-          <List size={32} />
+        {isMenuOpen ? (
+          <div onClick={toggleMenu}><X size={35} color="#ffffff"/></div>
+        ) : (
+          <List size={35} color="#ffffff" onClick={toggleMenu} />
+        )}
           </button>
       <Img src='https://i.pinimg.com/564x/85/71/72/8571727e081f426167ac04b819ce8dbf.jpg'></Img>
       <Container>
