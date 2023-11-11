@@ -149,3 +149,16 @@ export const Background = styled.div`
 export const GenderRadius = styled.div`
   display: flex;
 `
+export const Action = styled.div`
+  display: flex;
+  button{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 10px;
+  }
+
+`
