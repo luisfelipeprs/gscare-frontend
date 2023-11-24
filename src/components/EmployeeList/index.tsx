@@ -24,6 +24,7 @@ const EmployeeList: React.FC = () => {
     gender: '',
   });
 
+  
   const [editIndex, setEditIndex] = useState<number | null>(null);
 
   const openModal = (index?: number) => {
@@ -116,10 +117,19 @@ const EmployeeList: React.FC = () => {
       return 'https://bootdey.com/img/Content/avatar/avatar1.png';
     }
   };
-
+  React.useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isModalOpen]);
 
   return (
-<Container>
+    <Container>
       <h1>Lista de Funcionários</h1>
       <Button onClick={() => openModal()}>Adicionar Funcionário</Button>
       {isModalOpen && (
@@ -244,9 +254,3 @@ const EmployeeList: React.FC = () => {
 
 
 export default EmployeeList;
-
-
-
-
-
-
