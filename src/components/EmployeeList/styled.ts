@@ -53,6 +53,7 @@ export const Modal = styled.div`
       color: #212529;
     }
   }
+
   button {
     background-color: #007bff;
     color: #fff;
@@ -77,11 +78,11 @@ export const EmployeeCard = styled.div`
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 20px auto; /* Centraliza o card na horizontal */
+  margin: 20px auto;
   max-width: 550px;
   max-height: 550px;
-  width: 90%; /* Ajusta a largura para 90% da tela no modo mobile */
-  height: auto; /* Define a altura automática para ajustar ao conteúdo */
+  width: 90%; 
+  height: auto; 
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -98,7 +99,6 @@ export const EmployeeCard = styled.div`
     margin: 8px;
   }
 
-  /* Estilize as descrições em negrito */
   strong {
     font-weight: bold;
   }
@@ -110,8 +110,9 @@ export const EmployeeCard = styled.div`
 
 export const EmployeeCardContainer = styled.div`
   display: flex;
-  flex-wrap: wrap; // Permite que os cards quebrem para a próxima linha quando não couberem na tela
-  margin: -10px; // Compensa o espaçamento negativo nos cards internos
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 `;
 
 export const EmployeeImageContainer = styled.div`
@@ -148,10 +149,12 @@ export const Background = styled.div`
 `;
 export const GenderRadius = styled.div`
   display: flex;
-`
+`;
+
 export const Action = styled.div`
   display: flex;
-  button{
+  justify-content: center;
+  button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -160,5 +163,92 @@ export const Action = styled.div`
     cursor: pointer;
     margin: 10px 10px;
   }
+`;
 
-`
+export const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+`;
+
+export const TableRow = styled.tr`
+  &:hover {
+    background-color: #ddd;
+  }
+`;
+
+export const TableCell = styled.td`
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+const DropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+`;
+
+export const Dropdown = styled.div`
+  position: relative;
+  display: inline-block;
+
+  &:hover ${DropdownContent} {
+    display: block;
+  }
+`;
+
+export const DropdownButton = styled.button`
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+export const DropdownItem = styled.button`
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ddd;
+  }
+`;
+
+export const CloseButton = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px;
+`;
