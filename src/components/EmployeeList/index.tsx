@@ -11,6 +11,7 @@ import {
   Table,
   CloseButton,
 } from './styled';
+import Toggle from '../ToggleButton';
 
 const EmployeeList: React.FC = () => {
   const [employees, setEmployees] = useState<any[]>([]);
@@ -198,6 +199,7 @@ const EmployeeList: React.FC = () => {
  <Table>
         <thead>
           <tr>
+            <th>Ativo</th>
             <th>Nome</th>
             <th>Email</th>
             <th>Cargo</th>
@@ -210,6 +212,9 @@ const EmployeeList: React.FC = () => {
         <tbody>
           {employees.map((employee, index) => (
             <TableRow key={index}>
+              <TableCell>
+                  <Toggle/>
+              </TableCell>
               <TableCell>{employee.name}</TableCell>
               <TableCell>{employee.email}</TableCell>
               <TableCell>{employee.jobTitle}</TableCell>
