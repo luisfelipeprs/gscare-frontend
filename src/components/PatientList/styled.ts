@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   text-align: center;
+  max-width: 100%;
 `;
 
 export const Button = styled.button`
@@ -39,6 +40,13 @@ export const Modal = styled.div`
   select:focus {
     box-shadow: 0 0 5px #007bff;
   }
+  textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 16px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+  }
   select {
     background-color: #fff;
     color: #212529;
@@ -53,6 +61,7 @@ export const Modal = styled.div`
       color: #212529;
     }
   }
+
   button {
     background-color: #007bff;
     color: #fff;
@@ -70,18 +79,18 @@ export const Modal = styled.div`
   }
 `;
 
-export const PatientCard = styled.div`
+export const EmployeeCard = styled.div`
   position: relative;
   background: #f5f5f5;
   padding: 0px;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 20px auto; /* Centraliza o card na horizontal */
+  margin: 20px auto;
   max-width: 550px;
   max-height: 550px;
-  width: 90%; /* Ajusta a largura para 90% da tela no modo mobile */
-  height: auto; /* Define a altura automática para ajustar ao conteúdo */
+  width: 90%; 
+  height: auto; 
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -98,7 +107,6 @@ export const PatientCard = styled.div`
     margin: 8px;
   }
 
-  /* Estilize as descrições em negrito */
   strong {
     font-weight: bold;
   }
@@ -108,13 +116,14 @@ export const PatientCard = styled.div`
   background-position: center top;
 `;
 
-export const PatientCardContainer = styled.div`
+export const EmployeeCardContainer = styled.div`
   display: flex;
-  flex-wrap: wrap; // Permite que os cards quebrem para a próxima linha quando não couberem na tela
-  margin: -10px; // Compensa o espaçamento negativo nos cards internos
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 `;
 
-export const PatientImageContainer = styled.div`
+export const EmployeeImageContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -135,24 +144,25 @@ export const PatientImageContainer = styled.div`
 `;
 
 export const Background = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-
 export const GenderRadius = styled.div`
   display: flex;
-`
+`;
+
 export const Action = styled.div`
   display: flex;
-  button{
+  justify-content: center;
+  button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -161,5 +171,127 @@ export const Action = styled.div`
     cursor: pointer;
     margin: 10px 10px;
   }
+`;
 
-`
+export const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+`;
+
+export const TableRow = styled.tr`
+  &:hover {
+    background-color: #ddd;
+  }
+`;
+
+export const TableCell = styled.td`
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+const DropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+`;
+
+export const Dropdown = styled.div`
+  position: relative;
+  display: inline-block;
+
+  &:hover ${DropdownContent} {
+    display: block;
+  }
+`;
+
+export const DropdownButton = styled.button`
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+export const DropdownItem = styled.button`
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ddd;
+  }
+`;
+
+export const CloseButton = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px;
+`;
+
+export const Tabs = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  height: 35px;
+`;
+export const TabsInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+  h2{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+  }
+  p{
+    margin: 10px;
+  }
+`;
+
+export const TableContainer = styled.div`
+  overflow: hidden;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 10px;
+`;

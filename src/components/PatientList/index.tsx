@@ -4,28 +4,41 @@ import {
   Container,
   Modal,
   Background,
-  PatientCard,
-  PatientCardContainer,
-  PatientImageContainer,
   GenderRadius,
   Action,
+  Tabs,
+  TableRow,
+  TableCell,
+  Table,
+  CloseButton,
+  TabsInfo,
+  Content,
+  TableContainer,
 } from './styled';
+
 
 const PatientList: React.FC = () => {
   const [patients, setPatients] = useState<any[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [detailsModalOpen, setDetailsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    patientCode: '',
     title: '',
     phone: '',
-    patientCode: '',
     location: '',
-    gender: '',
+    medications: '',
+    allergies: '',
+    restrictions: '',
+    preferences: '',
+    foodList: '',
+    mealTimings: '',
   });
 
-  
   const [editIndex, setEditIndex] = useState<number | null>(null);
+
+  const [activeTab, setActiveTab] = useState('info');
 
   const openModal = (index?: number) => {
     setIsModalOpen(true);
@@ -39,11 +52,16 @@ const PatientList: React.FC = () => {
       setFormData({
         name: '',
         email: '',
+        patientCode: '',
         title: '',
         phone: '',
-        patientCode: '',
         location: '',
-        gender: '',
+        medications: '',
+        allergies: '',
+        restrictions: '',
+        preferences: '',
+        foodList: '',
+        mealTimings: '',
       });
     }
   };
@@ -54,18 +72,23 @@ const PatientList: React.FC = () => {
     setFormData({
       name: '',
       email: '',
+      patientCode: '',
       title: '',
       phone: '',
-      patientCode: '',
       location: '',
-      gender: '',
+      medications: '',
+      allergies: '',
+      restrictions: '',
+      preferences: '',
+      foodList: '',
+      mealTimings: '',
     });
   };
 
   const handleSave = () => {
     const updatedPatients = [...patients];
     if (editIndex !== null) {
-      updatedPatients [editIndex] = formData;
+      updatedPatients[editIndex] = formData;
     } else {
       updatedPatients.push(formData);
     }
@@ -74,12 +97,28 @@ const PatientList: React.FC = () => {
     closeModal();
   };
 
-  function setGender(e: any) {
-    setFormData({ ...formData, gender: e.target.value });
-  }
-
   const handleEdit = (index: number) => {
     openModal(index);
+  };
+
+  const [detailsFormData, setDetailsFormData] = useState({
+    medications: '',
+    allergies: '',
+    restrictions: '',
+    preferences: '',
+    foodList: '',
+    mealTimings: '',
+  });
+  
+
+  const openDetailsModal = (index: number) => {
+    setEditIndex(index);
+    setDetailsModalOpen(true);
+    setDetailsFormData(patients[index]);
+  };
+
+  const closeDetailsModal = () => {
+    setDetailsModalOpen(false);
   };
 
   const [isDeleteConfirmationOpen, setIsDeleteConfirmationOpen] = useState(false);
@@ -95,10 +134,6 @@ const PatientList: React.FC = () => {
     setIsDeleteConfirmationOpen(false);
   };
 
-  const handleDelete = (index: number) => {
-    openDeleteConfirmation(index);
-  };
-
   const confirmDelete = () => {
     if (deleteConfirmationIndex !== null) {
       const updatedPatients = [...patients];
@@ -108,30 +143,6 @@ const PatientList: React.FC = () => {
     }
   };
 
-  const getPatientImage = (patientsGender: string) => {
-    if (patientsGender === 'masculino') {
-      return 'https://cdn.discordapp.com/attachments/1082474634483601459/1172895849303511101/image.png?ex=6561fb61&is=654f8661&hm=347ce5d922e74f679dac58dfff462aafb90145d2dca21f718423f5fb3f710fb3&';
-    } else if (patientsGender === 'feminino') {
-      return 'https://cdn.discordapp.com/attachments/1082474634483601459/1172895902906724452/image.png?ex=6561fb6e&is=654f866e&hm=9ad02d85c8f3d4e82d0ba2f878986c47be8a12753c0a6eec57fa1ea33e7610e3&';
-    } else {
-      return 'https://bootdey.com/img/Content/avatar/avatar1.png';
-    }
-  };
-  React.useEffect(() => {
-    if (isModalOpen) {
-      // Disable scrolling on the body element
-      document.body.style.overflow = 'hidden';
-    } else {
-      // Enable scrolling on the body element
-      document.body.style.overflow = 'auto';
-    }
-
-    // Clean up the effect when the component unmounts
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isModalOpen]);
-
   return (
     <Container>
       <h1>Lista de Pacientes</h1>
@@ -139,115 +150,155 @@ const PatientList: React.FC = () => {
       {isModalOpen && (
         <Background>
           <Modal>
+            <CloseButton onClick={closeModal}>X</CloseButton>
             <h2>{editIndex !== null ? 'Editar Paciente' : 'Adicionar Paciente'}</h2>
-          <input
-            type="text"
-            placeholder="Nome"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            />
-          <input
-            type="text"
-            placeholder="Email"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            />
-          <select
-            value={formData.title}
-            onChange={(e) => setFormData({ ...formData, title: e.target.value })}>
-            <option value="">Selecione um tipo</option>
-            <option value="Gerente">Gerente</option>
-            <option value="Desenvolvedor">Desenvolvedor</option>
-            <option value="Designer">Designer</option>
-            <option value="Analista">Analista</option>
-          </select>
-          <input
-            type="text"
-            placeholder="Telefone"
-            value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            />
-          <input
-            type="text"
-            placeholder="Código do Paciente"
-            value={formData.patientCode}
-            onChange={(e) => setFormData({ ...formData, patientCode: e.target.value })}
-            />
-          <input
-            type="text"
-            placeholder="Endereço"
-            value={formData.location}
-            onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-            />
-              <GenderRadius>
-              <label>Gênero:</label>
-              <label>
+            <Tabs>
+              <TabsInfo>
+                <p onClick={() => setActiveTab('info')}>Informações Pessoais</p>
+              </TabsInfo>
+              <TabsInfo>
+                <p onClick={() => setActiveTab('details')}>Detalhes Adicionais</p>
+              </TabsInfo>
+            </Tabs>
+            {activeTab === 'info' && (
+              <div>
                 <input
-                  type="checkbox"
-                  id="masculinoCheckbox"
-                  value="masculino"
-                  name="gender"
-                  checked={formData.gender === 'masculino'}
-                  onChange={setGender}
+                  type="text"
+                  placeholder="Nome"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
-                <span>Masculino</span>
-              </label>
-              <label>
                 <input
-                  type="checkbox"
-                  id="femininoCheckbox"
-                  value="feminino"
-                  name="gender"
-                  checked={formData.gender === 'feminino'}
-                  onChange={setGender}
+                  type="text"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
-                <span>Feminino</span>
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  id="outrosCheckbox"
-                  value="outros"
-                  name="gender"
-                  checked={formData.gender === 'outros'}
-                  onChange={setGender}
+                <select
+              value={formData.title}
+              onChange={(e) => setFormData({ ...formData, title: e.target.value })}>
+              <option value="">Selecione um tipo</option>
+              <option value="Risco">Risco</option>
+              <option value="Cadeirante">Cadeirante</option>
+              <option value="Idoso Avançado">Idoso Avançado</option>
+              <option value="Saudável">Saudável</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Telefone"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            />
+            <input
+              type="text"
+              placeholder="Código do Paciente"
+              value={formData.patientCode}
+              onChange={(e) => setFormData({ ...formData, patientCode: e.target.value })}
+            />
+            <input
+              type="text"
+              placeholder="Endereço"
+              value={formData.location}
+              onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+            />
+              </div>
+            )}
+            {activeTab === 'details' && (
+              <div>
+                <textarea
+                  placeholder="Remédios"
+                  value={formData.medications}
+                  onChange={(e) => setFormData({ ...formData, medications: e.target.value })}
                 />
-                <span>Outros</span>
-              </label>
-            </GenderRadius>
-          <button onClick={handleSave}>Salvar</button>
-          <button onClick={closeModal}>Cancelar</button>
-        </Modal>
-            </Background>
+                <textarea
+                  placeholder="Alimentos"
+                  value={formData.foodList}
+                  onChange={(e) => setFormData({ ...formData, foodList: e.target.value })}
+                />
+                 <textarea
+                  placeholder="Restrições"
+                  value={formData.restrictions}
+                  onChange={(e) => setFormData({ ...formData, restrictions: e.target.value })}
+                />
+                <textarea
+                  placeholder="Alergias"
+                  value={formData.allergies}
+                  onChange={(e) => setFormData({ ...formData, allergies: e.target.value })}
+                />
+                <textarea
+                  placeholder="Preferências"
+                  value={formData.preferences}
+                  onChange={(e) => setFormData({ ...formData, preferences: e.target.value })}
+                />
+              </div>
+            )}
+            <button onClick={handleSave}>Salvar</button>
+            {editIndex !== null && (
+              <button onClick={() => openDeleteConfirmation(editIndex)}>Excluir</button>
+            )}
+          </Modal>
+        </Background>
       )}
-       <PatientCardContainer>
-        {patients.map((patient, index) => (
-          <PatientCard key={index}>
-            <PatientImageContainer>
-              <img
-                id="patientImage"
-                src={patient.imageSrc || getPatientImage(patient.gender)}
-                alt="Imagem do Paciente"
-              />
-            </PatientImageContainer>
-            <p><strong>Nome:</strong> {patient.name}</p>
-            <p><strong>Email:</strong> {patient.email}</p>
-            <p><strong>Tipo:</strong> {patient.title}</p>
-            <p><strong>Telefone:</strong> {patient.phone}</p>
-            <p><strong>Código do Paciente:</strong> {patient.patientCode}</p>
-            <p><strong>Endereço:</strong> {patient.location}</p>
-            <Action>
-              <button onClick={() => handleEdit(index)}>Editar</button>
-              <button onClick={() => handleDelete(index)}>Excluir</button>
-            </Action>
-          </PatientCard>
-        ))}
-      </PatientCardContainer>
+      <TableContainer>
+      <Table>
+        <thead>
+          <tr>
+            <th>Ativo</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Tipo</th>
+            <th>Telefone</th>
+            <th>Código do Paciente</th>
+            <th>Endereço</th>
+            <th>Ações</th>
+            <th>Detalhes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {patients.map((patient, index) => (
+            <TableRow key={index}>
+              <TableCell>Toggle button</TableCell>
+              <TableCell>{patient.name}</TableCell>
+              <TableCell>{patient.email}</TableCell>
+              <TableCell>{patient.title}</TableCell>
+              <TableCell>{patient.phone}</TableCell>
+              <TableCell>{patient.patientCode}</TableCell>
+              <TableCell>{patient.location}</TableCell>
+              <TableCell>
+                <Action>
+                  <button onClick={() => handleEdit(index)}>Editar</button>
+                </Action>
+              </TableCell>
+              <TableCell>
+                <Action>
+                  <button onClick={() => openDetailsModal(index)}>Detalhes</button>
+                </Action>
+              </TableCell>
+            </TableRow>
+          ))}
+        </tbody>
+      </Table>
+      </TableContainer>
+      {detailsModalOpen && (
+        <Background>
+          <Modal>
+            <CloseButton onClick={closeDetailsModal}>X</CloseButton>
+            <Content>
+            <h2>Detalhes do Paciente</h2>
+              <p><strong>Remédios:</strong> {detailsFormData.medications}</p>
+              <p><strong>Alimentos:</strong> {detailsFormData.foodList}</p>
+              <p><strong>Restrições:</strong> {detailsFormData.restrictions}</p>
+              <p><strong>Alergias:</strong> {detailsFormData.allergies}</p>
+              <p><strong>Preferências:</strong> {detailsFormData.preferences}</p>
+            </Content>
+          </Modal>
+        </Background>
+      )}
       {isDeleteConfirmationOpen && (
         <Background>
           <Modal>
             <h2>Tem certeza que deseja excluir?</h2>
-            <button onClick={confirmDelete}>Sim</button>
+            <button onClick={() => confirmDelete()}>Sim</button>
             <button onClick={closeDeleteConfirmation}>Cancelar</button>
           </Modal>
         </Background>
@@ -255,6 +306,5 @@ const PatientList: React.FC = () => {
     </Container>
   );
 };
-
 
 export default PatientList;
