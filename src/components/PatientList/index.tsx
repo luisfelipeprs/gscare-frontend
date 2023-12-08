@@ -4,7 +4,6 @@ import {
   Container,
   Modal,
   Background,
-  GenderRadius,
   Action,
   Tabs,
   TableRow,
@@ -14,6 +13,8 @@ import {
   TabsInfo,
   Content,
   TableContainer,
+  ProgressBar,
+  ProgressStep,
 } from './styled';
 
 
@@ -36,9 +37,16 @@ const PatientList: React.FC = () => {
     mealTimings: '',
   });
 
-  const [editIndex, setEditIndex] = useState<number | null>(null);
+  const [activeStep, setActiveStep] = useState(0);
+  const steps = ['Informações Pessoais', 'Detalhes Adicionais'];
 
-  const [activeTab, setActiveTab] = useState('info');
+  const handleNextStep = () => {
+    setActiveStep((prevStep) => prevStep + 1);
+  };
+
+  const handlePreviousStep = () => {
+    setActiveStep((prevStep) => prevStep - 1);
+  };
 
   const openModal = (index?: number) => {
     setIsModalOpen(true);
@@ -47,6 +55,7 @@ const PatientList: React.FC = () => {
       const patientToEdit = patients[index];
       setEditIndex(index);
       setFormData({ ...patientToEdit });
+      setActiveStep(1); // Definir a etapa para a aba de detalhes ao editar
     } else {
       setEditIndex(null);
       setFormData({
@@ -63,9 +72,17 @@ const PatientList: React.FC = () => {
         foodList: '',
         mealTimings: '',
       });
+      setActiveStep(0); // Iniciar na aba de informações pessoais ao adicionar
     }
   };
 
+
+
+  const [editIndex, setEditIndex] = useState<number | null>(null);
+
+  const [activeTab, setActiveTab] = useState('info');
+
+ 
   const closeModal = () => {
     setIsModalOpen(false);
     setEditIndex(null);
@@ -152,15 +169,14 @@ const PatientList: React.FC = () => {
           <Modal>
             <CloseButton onClick={closeModal}>X</CloseButton>
             <h2>{editIndex !== null ? 'Editar Paciente' : 'Adicionar Paciente'}</h2>
-            <Tabs>
-              <TabsInfo>
-                <p onClick={() => setActiveTab('info')}>Informações Pessoais</p>
-              </TabsInfo>
-              <TabsInfo>
-                <p onClick={() => setActiveTab('details')}>Detalhes Adicionais</p>
-              </TabsInfo>
-            </Tabs>
-            {activeTab === 'info' && (
+           <ProgressBar>
+              {steps.map((step, index) => (
+                <ProgressStep key={index} completed={index < activeStep}>
+                  {step}
+                </ProgressStep>
+              ))}
+            </ProgressBar>
+            {activeStep === 0 && (
               <div>
                 <input
                   type="text"
@@ -201,9 +217,10 @@ const PatientList: React.FC = () => {
               value={formData.location}
               onChange={(e) => setFormData({ ...formData, location: e.target.value })}
             />
+              <button onClick={handleNextStep}>Próximo</button>
               </div>
             )}
-            {activeTab === 'details' && (
+            {activeStep === 1 && (
               <div>
                 <textarea
                   placeholder="Remédios"
@@ -230,11 +247,13 @@ const PatientList: React.FC = () => {
                   value={formData.preferences}
                   onChange={(e) => setFormData({ ...formData, preferences: e.target.value })}
                 />
+                <button onClick={handlePreviousStep}>Anterior</button>
+                <button onClick={handleSave}>Salvar</button>
               </div>
             )}
-            <button onClick={handleSave}>Salvar</button>
+            
             {editIndex !== null && (
-              <button onClick={() => openDeleteConfirmation(editIndex)}>Excluir</button>
+                  <button onClick={() => openDeleteConfirmation(editIndex)}>Excluir</button>
             )}
           </Modal>
         </Background>

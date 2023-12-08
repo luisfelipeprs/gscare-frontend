@@ -295,3 +295,41 @@ export const TableContainer = styled.div`
   max-width: 100%;
   margin: 10px;
 `;
+
+export const ProgressBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+export const ProgressStep = styled.div<{ completed: boolean }>`
+  flex: 1;
+  text-align: center;
+  position: relative;
+  margin:20px;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: ${({ completed }) => (completed ? "#007bff" : "#ddd")};
+    position: absolute;
+    top: 35px;
+    left: 0;
+  }
+
+  &:after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: ${({ completed }) => (completed ? "#007bff" : "#fff")};
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+`;
