@@ -8,4 +8,7 @@ export const Content = styled.div`
   width: 100%;
   flex-direction: column;
   margin: 10px;
+  @media screen and (max-width: 1000px) {
+    margin: 0px;
+  }
 `

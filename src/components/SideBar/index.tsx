@@ -1,14 +1,13 @@
-import  { useState } from 'react';
 import {
   SidebarContainer,
   TopSection,
   Logo,
   LinkText,
   NavLinkStyled,
+  Icons,
 } from './styled'; // Importe os estilos do arquivo styled.ts
 
 import {
-  List,
   House,
   Calendar,
   IdentificationCard,
@@ -16,52 +15,51 @@ import {
   Chats,
 } from 'phosphor-react';
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+interface IProps{
+  isOpenSideBar: boolean;
+}
+
+const Sidebar = ({isOpenSideBar}:IProps) => {
 
   return (
-    <SidebarContainer isOpen={isOpen}>
+    <SidebarContainer isOpen={isOpenSideBar}>
       <TopSection>
-        <Logo style={{ display: isOpen ? 'block' : 'none' }} isOpen={isOpen}>Saas Care</Logo>
-        <div style={{ marginLeft: isOpen ? '50px' : '0px' }} className="bars">
-          <List onClick={toggle} />
-        </div>
+        <Logo style={{ display: isOpenSideBar ? 'block' : 'none' }} isOpen={isOpenSideBar}>Saas Care</Logo>
       </TopSection>
 
       <NavLinkStyled to="/admin/" className="link">
-        <div className="icon">
+        <Icons>
           <House size={24} />
-        </div>
-        <LinkText style={{ display: isOpen ? 'block' : 'none' }} isOpen={isOpen}>House</LinkText>
+        </Icons>
+        <LinkText style={{ display: isOpenSideBar ? 'block' : 'none' }} isOpen={isOpenSideBar}>House</LinkText>
       </NavLinkStyled>
 
       <NavLinkStyled to="/admin/calendar/" className="link">
-        <div className="icon">
+        <Icons>
           <Calendar size={24} />
-        </div>
-        <LinkText style={{ display: isOpen ? 'block' : 'none' }} isOpen={isOpen}>Calendar</LinkText>
+        </Icons>
+        <LinkText style={{ display: isOpenSideBar ? 'block' : 'none' }} isOpen={isOpenSideBar}>Calendar</LinkText>
       </NavLinkStyled>
 
       <NavLinkStyled to="/admin/employee/" className="link">
-        <div className="icon">
+        <Icons>
           <IdentificationCard size={24} />
-        </div>
-        <LinkText style={{ display: isOpen ? 'block' : 'none' }} isOpen={isOpen}>Employee</LinkText>
+        </Icons>
+        <LinkText style={{ display: isOpenSideBar ? 'block' : 'none' }} isOpen={isOpenSideBar}>Employee</LinkText>
       </NavLinkStyled>
 
       <NavLinkStyled to="/admin/patients/" className="link">
-        <div className="icon">
+        <Icons>
           <UsersThree size={24} />
-        </div>
-        <LinkText style={{ display: isOpen ? 'block' : 'none' }} isOpen={isOpen}>Patients</LinkText>
+        </Icons>
+        <LinkText style={{ display: isOpenSideBar ? 'block' : 'none' }} isOpen={isOpenSideBar}>Patients</LinkText>
       </NavLinkStyled>
 
       <NavLinkStyled to="/admin/feedback/" className="link">
-        <div className="icon">
+        <Icons>
           <Chats size={24} />
-        </div>
-        <LinkText style={{ display: isOpen ? 'block' : 'none' }} isOpen={isOpen}>Feedbacks</LinkText>
+        </Icons>
+        <LinkText style={{ display: isOpenSideBar ? 'block' : 'none' }} isOpen={isOpenSideBar}>Feedbacks</LinkText>
       </NavLinkStyled>
     </SidebarContainer>
   );

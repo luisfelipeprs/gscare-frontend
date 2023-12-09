@@ -1,13 +1,29 @@
-import React from 'react';
+import { useState } from 'react';
 import { Container, Img, Infos, SignOutInfo, StyledFloatingMenu } from './styled';
-import { SignOut } from 'phosphor-react';
-import { Link } from 'react-router-dom';
+import { List, SignOut, X } from 'phosphor-react';
+// import Sidebar from '../SideBar';
 
-const FloatingMenu: React.FC = () => {
+interface IProps{
+  handleIsOpen: () => void;
+}
+
+function FloatingMenu({handleIsOpen}:IProps){
+  // const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // const toggle = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <StyledFloatingMenu>
-
-      <Link to="/admin/profile"><Img src='https://i.pinimg.com/564x/85/71/72/8571727e081f426167ac04b819ce8dbf.jpg'></Img></Link>
+        <button onClick={handleIsOpen}>
+        {isMenuOpen ? (
+          <div onClick={toggleMenu}><X size={35} color="#ffffff"/></div>
+        ) : (
+          <List size={35} color="#ffffff" onClick={toggleMenu} />
+        )}
+          </button>
+      <Img src='https://i.pinimg.com/564x/85/71/72/8571727e081f426167ac04b819ce8dbf.jpg'></Img>
       <Container>
         <Infos>
           <p>Neymar JR</p>
@@ -19,6 +35,6 @@ const FloatingMenu: React.FC = () => {
       </Container>
     </StyledFloatingMenu>
   );
-};
+}
 
 export default FloatingMenu;

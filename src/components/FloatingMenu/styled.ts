@@ -7,8 +7,18 @@ export const StyledFloatingMenu = styled.div`
   width: 100%;
   background-color: #333;
   color: #fff;
-  border: 1px solid #666;
+  border: none;
   border-radius: 5px;
+  button{
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+  }
+  @media screen and (max-width: 1000px) {
+  //  border: none;
+    border-radius: 0px;
+  }
+
 `;
 
 export const Img = styled.img`
@@ -16,7 +26,6 @@ export const Img = styled.img`
   border: 1px solid black;
   border-radius: 40px;
   margin: 10px;
-  margin-left: 10px;
 `
 export const Infos = styled.div`
   display: flex;
@@ -40,5 +49,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 `
-
+export const SidebarMenu = styled.div`
+  margin-bottom: 20px;
+`
 
