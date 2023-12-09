@@ -10,8 +10,8 @@ import {
   GenderRadius,
 } from "./styled";
 
-import cartoonHomen from "../../assets/cartoonHomen.png";
-import cartoonMulher from "../../assets/cartoonMulher.png";
+// import cartoonHomen from "../../assets/cartoonHomen.png";
+// import cartoonMulher from "../../assets/cartoonMulher.png";
 
 interface IEmployees {
   name: string,
@@ -21,61 +21,144 @@ interface IEmployees {
   employeeCode: string,
   location: string,
   gender: string,
+  imageSrc: string;
 }
 
 const EmployeeList: React.FC = () => {
   const [employees, setEmployees] = useState<IEmployees[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    jobTitle: "",
-    phone: "",
-    employeeCode: "",
-    location: "",
-    gender: "",
+
+    name: '',
+    email: '',
+    jobTitle: '',
+    phone: '',
+    employeeCode: '',
+    location: '',
+    gender: '',
+    imageSrc: ''
   });
 
-  const openModal = () => {
+  
+  const [editIndex, setEditIndex] = useState<number | null>(null);
+
+  const openModal = (index?: number) => {
     setIsModalOpen(true);
+
+    if (index !== undefined) {
+      const employeeToEdit = employees[index];
+      setEditIndex(index);
+      setFormData({ ...employeeToEdit });
+    } else {
+      setEditIndex(null);
+      setFormData({
+        name: '',
+        email: '',
+        jobTitle: '',
+        phone: '',
+        employeeCode: '',
+        location: '',
+        gender: '',
+        imageSrc: ''
+      });
+    }
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setEditIndex(null);
+    setFormData({
+  // function setGender(e: React.ChangeEvent<HTMLInputElement>) {
+      name: '',
+      email: '',
+      jobTitle: '',
+      phone: '',
+      employeeCode: '',
+      location: '',
+      gender: '',
+      imageSrc: ''
+    });
   };
 
   const handleSave = () => {
-    setEmployees([...employees, formData]);
+    const updatedEmployees = [...employees];
+    if (editIndex !== null) {
+      updatedEmployees[editIndex] = formData;
+    } else {
+      updatedEmployees.push(formData);
+    }
+
+    setEmployees(updatedEmployees);
     closeModal();
-    setFormData({
-      name: "",
-      email: "",
-      jobTitle: "",
-      phone: "",
-      employeeCode: "",
-      location: "",
-      gender: "",
-    });
   };
+
   function setGender(e: React.ChangeEvent<HTMLInputElement>) {
     setFormData({ ...formData, gender: e.target.value });
   }
 
+  const handleEdit = (index: number) => {
+    openModal(index);
+  };
+
+  const [isDeleteConfirmationOpen, setIsDeleteConfirmationOpen] = useState(false);
+  const [deleteConfirmationIndex, setDeleteConfirmationIndex] = useState<number | null>(null);
+
+  const openDeleteConfirmation = (index: number) => {
+    setDeleteConfirmationIndex(index);
+    setIsDeleteConfirmationOpen(true);
+  };
+
+  const closeDeleteConfirmation = () => {
+    setDeleteConfirmationIndex(null);
+    setIsDeleteConfirmationOpen(false);
+  };
+
+  const handleDelete = (index: number) => {
+    openDeleteConfirmation(index);
+  };
+
+  const confirmDelete = () => {
+    if (deleteConfirmationIndex !== null) {
+      const updatedEmployees = [...employees];
+      updatedEmployees.splice(deleteConfirmationIndex, 1);
+      setEmployees(updatedEmployees);
+      closeDeleteConfirmation();
+    }
+  };
+
+  const getEmployeeImage = (employeeGender: string) => {
+    if (employeeGender === 'masculino') {
+      return 'https://cdn.discordapp.com/attachments/1082474634483601459/1172895849303511101/image.png?ex=6561fb61&is=654f8661&hm=347ce5d922e74f679dac58dfff462aafb90145d2dca21f718423f5fb3f710fb3&';
+    } else if (employeeGender === 'feminino') {
+      return 'https://cdn.discordapp.com/attachments/1082474634483601459/1172895902906724452/image.png?ex=6561fb6e&is=654f866e&hm=9ad02d85c8f3d4e82d0ba2f878986c47be8a12753c0a6eec57fa1ea33e7610e3&';
+    } else {
+      return 'https://bootdey.com/img/Content/avatar/avatar1.png';
+    }
+  };
+  React.useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isModalOpen]);
+
   return (
     <Container>
       <h1>Lista de Funcionários</h1>
-      <Button onClick={openModal}>Adicionar Funcionário</Button>
+      <Button onClick={() => openModal()}>Adicionar Funcionário</Button>
       {isModalOpen && (
         <Background>
           <Modal>
-            <h2>Adicionar Funcionário</h2>
-            <input
-              type="text"
-              placeholder="Nome"
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
+            <h2>{editIndex !== null ? 'Editar Funcionário' : 'Adicionar Funcionário'}</h2>
+          <input
+            type="text"
+            placeholder="Nome"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             />
             <input
               type="text"
@@ -121,7 +204,7 @@ const EmployeeList: React.FC = () => {
                 setFormData({ ...formData, location: e.target.value })
               }
             />
-            <GenderRadius>
+              <GenderRadius>
               <label>Gênero:</label>
               <label>
                 <input
@@ -129,6 +212,7 @@ const EmployeeList: React.FC = () => {
                   id="masculinoCheckbox"
                   value="masculino"
                   name="gender"
+                  checked={formData.gender === 'masculino'}
                   onChange={setGender}
                 />
                 <span>Masculino</span>
@@ -139,6 +223,7 @@ const EmployeeList: React.FC = () => {
                   id="femininoCheckbox"
                   value="feminino"
                   name="gender"
+                  checked={formData.gender === 'feminino'}
                   onChange={setGender}
                 />
                 <span>Feminino</span>
@@ -149,16 +234,16 @@ const EmployeeList: React.FC = () => {
                   id="outrosCheckbox"
                   value="outros"
                   name="gender"
+                  checked={formData.gender === 'outros'}
                   onChange={setGender}
                 />
                 <span>Outros</span>
               </label>
             </GenderRadius>
-
-            <button onClick={handleSave}>Salvar</button>
-            <button onClick={closeModal}>Cancelar</button>
-          </Modal>
-        </Background>
+          <button onClick={handleSave}>Salvar</button>
+          <button onClick={closeModal}>Cancelar</button>
+        </Modal>
+            </Background>
       )}
       <EmployeeCardContainer>
         {employees.map((employee, index) => (
@@ -166,36 +251,32 @@ const EmployeeList: React.FC = () => {
             <EmployeeImageContainer>
               <img
                 id="employeeImage"
-                src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                src={employee.imageSrc || getEmployeeImage(employee.gender)}
                 alt="Imagem do Funcionário"
               />
             </EmployeeImageContainer>
-            <p>
-              <strong>Nome:</strong> {employee.name}
-            </p>
-            <p>
-              <strong>Email:</strong> {employee.email}
-            </p>
-            <p>
-              <strong>Cargo:</strong> {employee.jobTitle}
-            </p>
-            <p>
-              <strong>Telefone:</strong> {employee.phone}
-            </p>
-            <p>
-              <strong>Código do Funcionário:</strong> {employee.employeeCode}
-            </p>
-            <p>
-              <strong>Endereço:</strong> {employee.location}
-            </p>
-            {employee.gender == "masculino" ? (
-              <img width="120px" id="employeeImage" src={cartoonHomen} />
-            ) : (
-              <img width="120px" id="employeeImage" src={cartoonMulher} />
-            )}
+            <p><strong>Nome:</strong> {employee.name}</p>
+            <p><strong>Email:</strong> {employee.email}</p>
+            <p><strong>Cargo:</strong> {employee.jobTitle}</p>
+            <p><strong>Telefone:</strong> {employee.phone}</p>
+            <p><strong>Código do Funcionário:</strong> {employee.employeeCode}</p>
+            <p><strong>Endereço:</strong> {employee.location}</p>
+            <div>{/* <Action> */}
+              <button onClick={() => handleEdit(index)}>Editar</button>
+              <button onClick={() => handleDelete(index)}>Excluir</button>
+            </div>{/* </Action> */}
           </EmployeeCard>
         ))}
       </EmployeeCardContainer>
+      {isDeleteConfirmationOpen && (
+        <Background>
+          <Modal>
+            <h2>Tem certeza que deseja excluir?</h2>
+            <button onClick={confirmDelete}>Sim</button>
+            <button onClick={closeDeleteConfirmation}>Cancelar</button>
+          </Modal>
+        </Background>
+      )}
     </Container>
   );
 };

@@ -78,7 +78,8 @@ export const EmployeeCard = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 20px auto; /* Centraliza o card na horizontal */
-  max-width: 100%;
+  max-width: 550px;
+  max-height: 550px;
   width: 90%; /* Ajusta a largura para 90% da tela no modo mobile */
   height: auto; /* Define a altura automática para ajustar ao conteúdo */
   text-align: center;
@@ -134,17 +135,31 @@ export const EmployeeImageContainer = styled.div`
 `;
 
 export const Background = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
+
 export const GenderRadius = styled.div`
   display: flex;
+`
+export const Action = styled.div`
+  display: flex;
+  button{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 10px;
+  }
+
 `
