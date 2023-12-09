@@ -8,6 +8,7 @@ import {
   EmployeeCardContainer,
   EmployeeImageContainer,
   GenderRadius,
+  Action,
 } from "./styled";
 
 // import cartoonHomen from "../../assets/cartoonHomen.png";
@@ -261,10 +262,10 @@ const EmployeeList: React.FC = () => {
             <p><strong>Telefone:</strong> {employee.phone}</p>
             <p><strong>Código do Funcionário:</strong> {employee.employeeCode}</p>
             <p><strong>Endereço:</strong> {employee.location}</p>
-            <div>{/* <Action> */}
+            <Action>{/* <Action> */}
               <button onClick={() => handleEdit(index)}>Editar</button>
               <button onClick={() => handleDelete(index)}>Excluir</button>
-            </div>{/* </Action> */}
+            </Action>{/* </Action> */}
           </EmployeeCard>
         ))}
       </EmployeeCardContainer>
