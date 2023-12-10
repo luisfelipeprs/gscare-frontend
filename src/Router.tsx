@@ -11,8 +11,9 @@ import Login from './pages/Login/index.tsx';
 import Register from './pages/Register/index.tsx';
 import Calendar from "./pages/Calendar/index.tsx";
 import Employee from "./pages/Employee/index.tsx";
-import Patients from "./pages/Patients/index.tsx";
+// import Patients from "./pages/Patients/index.tsx";
 import ProfileEdit from "./components/ProfileEdit/index.tsx";
+import PatientList from "./components/PatientList/index.tsx";
 
 
 export function Router() {
@@ -29,7 +30,7 @@ export function Router() {
                 <Route path="/admin/calendar" element={<Calendar/>} />
                 <Route path="/admin/employee" element={<Employee/>} />
                 <Route path="/admin/profile" element={<ProfileEdit/>} />
-                <Route path="/admin/patients" element={<Patients/>} />
+                <Route path="/admin/patients" element={<PatientList/>} />
                 <Route path="/admin/feedback/:id" element={<FeedbackDetails/>} />
                 <Route path='/admin/oldadmin' element={<Navigate to="/admin"/>} />
             </Route>
