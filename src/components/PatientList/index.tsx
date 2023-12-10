@@ -1,44 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Button,
   Container,
   Modal,
   Background,
   Action,
-  Tabs,
+  // Tabs,
   TableRow,
   TableCell,
   Table,
   CloseButton,
-  TabsInfo,
+  // TabsInfo,
   Content,
   TableContainer,
   ProgressBar,
   ProgressStep,
-} from './styled';
+} from "./styled";
 
+interface Props {
+  name: string,
+  email: string,
+  patientCode: string,
+  title: string,
+  phone: string,
+  location: string,
+  medications: string,
+  allergies: string,
+  restrictions: string,
+  preferences: string,
+  foodList: string,
+  mealTimings: string,
+}
 
 const PatientList: React.FC = () => {
-  const [patients, setPatients] = useState<any[]>([]);
+  const [patients, setPatients] = useState<Props[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [detailsModalOpen, setDetailsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    patientCode: '',
-    title: '',
-    phone: '',
-    location: '',
-    medications: '',
-    allergies: '',
-    restrictions: '',
-    preferences: '',
-    foodList: '',
-    mealTimings: '',
+    name: "",
+    email: "",
+    patientCode: "",
+    title: "",
+    phone: "",
+    location: "",
+    medications: "",
+    allergies: "",
+    restrictions: "",
+    preferences: "",
+    foodList: "",
+    mealTimings: "",
   });
 
   const [activeStep, setActiveStep] = useState(0);
-  const steps = ['Informações Pessoais', 'Detalhes Adicionais'];
+  const steps = ["Informações Pessoais", "Detalhes Adicionais"];
 
   const handleNextStep = () => {
     setActiveStep((prevStep) => prevStep + 1);
@@ -59,46 +73,43 @@ const PatientList: React.FC = () => {
     } else {
       setEditIndex(null);
       setFormData({
-        name: '',
-        email: '',
-        patientCode: '',
-        title: '',
-        phone: '',
-        location: '',
-        medications: '',
-        allergies: '',
-        restrictions: '',
-        preferences: '',
-        foodList: '',
-        mealTimings: '',
+        name: "",
+        email: "",
+        patientCode: "",
+        title: "",
+        phone: "",
+        location: "",
+        medications: "",
+        allergies: "",
+        restrictions: "",
+        preferences: "",
+        foodList: "",
+        mealTimings: "",
       });
       setActiveStep(0); // Iniciar na aba de informações pessoais ao adicionar
     }
   };
 
-
-
   const [editIndex, setEditIndex] = useState<number | null>(null);
 
-  const [activeTab, setActiveTab] = useState('info');
+  // const [activeTab, setActiveTab] = useState("info");
 
- 
   const closeModal = () => {
     setIsModalOpen(false);
     setEditIndex(null);
     setFormData({
-      name: '',
-      email: '',
-      patientCode: '',
-      title: '',
-      phone: '',
-      location: '',
-      medications: '',
-      allergies: '',
-      restrictions: '',
-      preferences: '',
-      foodList: '',
-      mealTimings: '',
+      name: "",
+      email: "",
+      patientCode: "",
+      title: "",
+      phone: "",
+      location: "",
+      medications: "",
+      allergies: "",
+      restrictions: "",
+      preferences: "",
+      foodList: "",
+      mealTimings: "",
     });
   };
 
@@ -119,14 +130,13 @@ const PatientList: React.FC = () => {
   };
 
   const [detailsFormData, setDetailsFormData] = useState({
-    medications: '',
-    allergies: '',
-    restrictions: '',
-    preferences: '',
-    foodList: '',
-    mealTimings: '',
+    medications: "",
+    allergies: "",
+    restrictions: "",
+    preferences: "",
+    foodList: "",
+    mealTimings: "",
   });
-  
 
   const openDetailsModal = (index: number) => {
     setEditIndex(index);
@@ -138,8 +148,11 @@ const PatientList: React.FC = () => {
     setDetailsModalOpen(false);
   };
 
-  const [isDeleteConfirmationOpen, setIsDeleteConfirmationOpen] = useState(false);
-  const [deleteConfirmationIndex, setDeleteConfirmationIndex] = useState<number | null>(null);
+  const [isDeleteConfirmationOpen, setIsDeleteConfirmationOpen] =
+    useState(false);
+  const [deleteConfirmationIndex, setDeleteConfirmationIndex] = useState<
+    number | null
+  >(null);
 
   const openDeleteConfirmation = (index: number) => {
     setDeleteConfirmationIndex(index);
@@ -168,8 +181,10 @@ const PatientList: React.FC = () => {
         <Background>
           <Modal>
             <CloseButton onClick={closeModal}>X</CloseButton>
-            <h2>{editIndex !== null ? 'Editar Paciente' : 'Adicionar Paciente'}</h2>
-           <ProgressBar>
+            <h2>
+              {editIndex !== null ? "Editar Paciente" : "Adicionar Paciente"}
+            </h2>
+            <ProgressBar>
               {steps.map((step, index) => (
                 <ProgressStep key={index} completed={index < activeStep}>
                   {step}
@@ -182,42 +197,55 @@ const PatientList: React.FC = () => {
                   type="text"
                   placeholder="Nome"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                 />
                 <input
                   type="text"
                   placeholder="Email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                 />
                 <select
-              value={formData.title}
-              onChange={(e) => setFormData({ ...formData, title: e.target.value })}>
-              <option value="">Selecione um tipo</option>
-              <option value="Risco">Risco</option>
-              <option value="Cadeirante">Cadeirante</option>
-              <option value="Idoso Avançado">Idoso Avançado</option>
-              <option value="Saudável">Saudável</option>
-            </select>
-            <input
-              type="text"
-              placeholder="Telefone"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            />
-            <input
-              type="text"
-              placeholder="Código do Paciente"
-              value={formData.patientCode}
-              onChange={(e) => setFormData({ ...formData, patientCode: e.target.value })}
-            />
-            <input
-              type="text"
-              placeholder="Endereço"
-              value={formData.location}
-              onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-            />
-              <button onClick={handleNextStep}>Próximo</button>
+                  value={formData.title}
+                  onChange={(e) =>
+                    setFormData({ ...formData, title: e.target.value })
+                  }
+                >
+                  <option value="">Selecione um tipo</option>
+                  <option value="Risco">Risco</option>
+                  <option value="Cadeirante">Cadeirante</option>
+                  <option value="Idoso Avançado">Idoso Avançado</option>
+                  <option value="Saudável">Saudável</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="Telefone"
+                  value={formData.phone}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
+                  }
+                />
+                <input
+                  type="text"
+                  placeholder="Código do Paciente"
+                  value={formData.patientCode}
+                  onChange={(e) =>
+                    setFormData({ ...formData, patientCode: e.target.value })
+                  }
+                />
+                <input
+                  type="text"
+                  placeholder="Endereço"
+                  value={formData.location}
+                  onChange={(e) =>
+                    setFormData({ ...formData, location: e.target.value })
+                  }
+                />
+                <button onClick={handleNextStep}>Próximo</button>
               </div>
             )}
             {activeStep === 1 && (
@@ -225,90 +253,114 @@ const PatientList: React.FC = () => {
                 <textarea
                   placeholder="Remédios"
                   value={formData.medications}
-                  onChange={(e) => setFormData({ ...formData, medications: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, medications: e.target.value })
+                  }
                 />
                 <textarea
                   placeholder="Alimentos"
                   value={formData.foodList}
-                  onChange={(e) => setFormData({ ...formData, foodList: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, foodList: e.target.value })
+                  }
                 />
-                 <textarea
+                <textarea
                   placeholder="Restrições"
                   value={formData.restrictions}
-                  onChange={(e) => setFormData({ ...formData, restrictions: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, restrictions: e.target.value })
+                  }
                 />
                 <textarea
                   placeholder="Alergias"
                   value={formData.allergies}
-                  onChange={(e) => setFormData({ ...formData, allergies: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, allergies: e.target.value })
+                  }
                 />
                 <textarea
                   placeholder="Preferências"
                   value={formData.preferences}
-                  onChange={(e) => setFormData({ ...formData, preferences: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, preferences: e.target.value })
+                  }
                 />
                 <button onClick={handlePreviousStep}>Anterior</button>
                 <button onClick={handleSave}>Salvar</button>
               </div>
             )}
-            
+
             {editIndex !== null && (
-                  <button onClick={() => openDeleteConfirmation(editIndex)}>Excluir</button>
+              <button onClick={() => openDeleteConfirmation(editIndex)}>
+                Excluir
+              </button>
             )}
           </Modal>
         </Background>
       )}
       <TableContainer>
-      <Table>
-        <thead>
-          <tr>
-            <th>Ativo</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Tipo</th>
-            <th>Telefone</th>
-            <th>Código do Paciente</th>
-            <th>Endereço</th>
-            <th>Ações</th>
-            <th>Detalhes</th>
-          </tr>
-        </thead>
-        <tbody>
-          {patients.map((patient, index) => (
-            <TableRow key={index}>
-              <TableCell>Toggle button</TableCell>
-              <TableCell>{patient.name}</TableCell>
-              <TableCell>{patient.email}</TableCell>
-              <TableCell>{patient.title}</TableCell>
-              <TableCell>{patient.phone}</TableCell>
-              <TableCell>{patient.patientCode}</TableCell>
-              <TableCell>{patient.location}</TableCell>
-              <TableCell>
-                <Action>
-                  <button onClick={() => handleEdit(index)}>Editar</button>
-                </Action>
-              </TableCell>
-              <TableCell>
-                <Action>
-                  <button onClick={() => openDetailsModal(index)}>Detalhes</button>
-                </Action>
-              </TableCell>
-            </TableRow>
-          ))}
-        </tbody>
-      </Table>
+        <Table>
+          <thead>
+            <tr>
+              <th>Ativo</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Tipo</th>
+              <th>Telefone</th>
+              <th>Código do Paciente</th>
+              <th>Endereço</th>
+              <th>Ações</th>
+              <th>Detalhes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {patients.map((patient, index) => (
+              <TableRow key={index}>
+                <TableCell>Toggle button</TableCell>
+                <TableCell>{patient.name}</TableCell>
+                <TableCell>{patient.email}</TableCell>
+                <TableCell>{patient.title}</TableCell>
+                <TableCell>{patient.phone}</TableCell>
+                <TableCell>{patient.patientCode}</TableCell>
+                <TableCell>{patient.location}</TableCell>
+                <TableCell>
+                  <Action>
+                    <button onClick={() => handleEdit(index)}>Editar</button>
+                  </Action>
+                </TableCell>
+                <TableCell>
+                  <Action>
+                    <button onClick={() => openDetailsModal(index)}>
+                      Detalhes
+                    </button>
+                  </Action>
+                </TableCell>
+              </TableRow>
+            ))}
+          </tbody>
+        </Table>
       </TableContainer>
       {detailsModalOpen && (
         <Background>
           <Modal>
             <CloseButton onClick={closeDetailsModal}>X</CloseButton>
             <Content>
-            <h2>Detalhes do Paciente</h2>
-              <p><strong>Remédios:</strong> {detailsFormData.medications}</p>
-              <p><strong>Alimentos:</strong> {detailsFormData.foodList}</p>
-              <p><strong>Restrições:</strong> {detailsFormData.restrictions}</p>
-              <p><strong>Alergias:</strong> {detailsFormData.allergies}</p>
-              <p><strong>Preferências:</strong> {detailsFormData.preferences}</p>
+              <h2>Detalhes do Paciente</h2>
+              <p>
+                <strong>Remédios:</strong> {detailsFormData.medications}
+              </p>
+              <p>
+                <strong>Alimentos:</strong> {detailsFormData.foodList}
+              </p>
+              <p>
+                <strong>Restrições:</strong> {detailsFormData.restrictions}
+              </p>
+              <p>
+                <strong>Alergias:</strong> {detailsFormData.allergies}
+              </p>
+              <p>
+                <strong>Preferências:</strong> {detailsFormData.preferences}
+              </p>
             </Content>
           </Modal>
         </Background>
