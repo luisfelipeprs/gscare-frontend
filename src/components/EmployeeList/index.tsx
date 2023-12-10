@@ -27,7 +27,7 @@ interface IEmployees {
 }
 import Toggle from '../ToggleButton';
 
-const EmployeeList: React.FC = () => {
+export function EmployeeList() {
   const [employees, setEmployees] = useState<IEmployees[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -282,6 +282,4 @@ const EmployeeList: React.FC = () => {
       )}
     </Container>
   );
-};
-
-export default EmployeeList;
+}

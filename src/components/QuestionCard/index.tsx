@@ -9,7 +9,7 @@ function QuestionCard() {
         <ContainerAction>
           <div>
             <h1>Perguntas? Entre em contato conosco!</h1>
-            <Button textButton='Entre em contato' typeButton='withBg' />
+            <Button textButton='Entre em contato' typeButton='withBg' color='blue' />
           </div>
         </ContainerAction>
         <ContainerImage>

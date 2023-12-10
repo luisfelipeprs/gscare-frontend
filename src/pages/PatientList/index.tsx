@@ -32,7 +32,7 @@ interface Props {
   mealTimings: string,
 }
 
-const PatientList: React.FC = () => {
+function PatientList() {
   const [patients, setPatients] = useState<Props[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [detailsModalOpen, setDetailsModalOpen] = useState(false);
@@ -376,6 +376,7 @@ const PatientList: React.FC = () => {
       )}
     </Container>
   );
-};
+}
+
 
 export default PatientList;

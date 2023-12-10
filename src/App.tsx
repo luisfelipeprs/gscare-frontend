@@ -1,13 +1,17 @@
 import './App.css'
 import { BrowserRouter } from 'react-router-dom'
 import { Router } from './Router'
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Router />
+        <Theme>
+          <Router />
+        </Theme>
       </BrowserRouter>
     </>
   )

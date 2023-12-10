@@ -1,7 +1,11 @@
 import { useState } from 'react';
-import { Container, Img, Infos, SignOutInfo, StyledFloatingMenu } from './styled';
-import { List, SignOut, X } from 'phosphor-react';
-// import Sidebar from '../SideBar';
+import { Container, Infos, ContentIcon, StyledFloatingMenu, MenuIcon, ImageLogo, MenuButton, LeftContainer, RightContainer, IconAndInfos } from './styled';
+// import { SignOut } from 'phosphor-react';
+
+import logo from './../../assets/logo.svg'
+import { AvatarIconAndOption } from '../AvatarIconAndOption';
+import { BellIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
+
 
 interface IProps{
   handleIsOpen: () => void;
@@ -16,23 +20,47 @@ function FloatingMenu({handleIsOpen}:IProps){
 
   return (
     <StyledFloatingMenu>
-        <button onClick={handleIsOpen}>
-        {isMenuOpen ? (
-          <div onClick={toggleMenu}><X size={35} color="#ffffff"/></div>
-        ) : (
-          <List size={35} color="#ffffff" onClick={toggleMenu} />
-        )}
-          </button>
-      <Img src='https://i.pinimg.com/564x/85/71/72/8571727e081f426167ac04b819ce8dbf.jpg'></Img>
       <Container>
-        <Infos>
-          <p>Neymar JR</p>
-          <p>Microsoft Windows</p>
-        </Infos>
-        <SignOutInfo>
-          <SignOut size={32} />
-        </SignOutInfo>
+        <LeftContainer>
+          
+          <ContentIcon>
+            <MenuButton onClick={handleIsOpen}>
+              <MenuIcon onClick={toggleMenu} />
+            </MenuButton>
+          </ContentIcon>
+
+          <ImageLogo>
+            <img src={logo} alt="logo" width='200px' />
+          </ImageLogo>
+        </LeftContainer>
+
+        <RightContainer>
+          
+          {/* <ContentIcon>
+            <SignOut size={32} />
+          </ContentIcon> */}
+          
+          <ContentIcon>
+            <BellIcon />
+          </ContentIcon>
+          
+          <ContentIcon>
+            <EnvelopeClosedIcon />
+          </ContentIcon>
+          
+          <IconAndInfos>
+            <Infos>
+              <p>Neymar JR</p>
+              <p>Microsoft Windows</p>
+            </Infos>
+            
+            <ContentIcon>
+              <AvatarIconAndOption />
+            </ContentIcon>
+          </IconAndInfos>
+        </RightContainer>
       </Container>
+
     </StyledFloatingMenu>
   );
 }

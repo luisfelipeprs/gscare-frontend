@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styled'
 import { Form, InputField, ProfileEditContainer, ProfileImage, SaveButton, TextAreaField } from './styled';
 
-const ProfileEdit: React.FC = () => {
+function ProfileEdit() {
   const [name, setName] = useState('Neymar JR da Silva');
   const [phone, setPhone] = useState('40028922');
   const [email, setEmail] = useState('neymar@example.com');
@@ -74,6 +74,6 @@ const ProfileEdit: React.FC = () => {
       </Form>
     </ProfileEditContainer>
   );
-};
+}
 
 export default ProfileEdit;

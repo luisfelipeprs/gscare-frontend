@@ -4,6 +4,6 @@ function CalendarFeat(){
       
     </>
   );
-};
+}
 
 export default CalendarFeat;
