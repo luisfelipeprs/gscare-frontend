@@ -1,7 +1,8 @@
 import React from 'react';
 import '@radix-ui/themes/styles.css';
 import { Avatar, Box, Card, Flex, Strong, Text, Theme } from "@radix-ui/themes";
-import { Container, Content } from './styled';
+import { Container, Content, MessageResponse } from './styled';
+import ModalFeedback from '../../components/ModalFeedback';
 
 function Feedback() {
   return (
@@ -33,9 +34,16 @@ function Feedback() {
                 make written language legible, readable and appealing when displayed.
               </Text>
               <br />
+              
               <Text as="div" size="1" color="gray">
                     11/09/2001 as 22:00
                   </Text>
+              <MessageResponse>
+                <span>
+                  message
+                </span>
+                <ModalFeedback/>
+              </MessageResponse>
             </Card>
             <Card style={{ maxWidth: 240 }}>
               <Flex gap="3" align="center">

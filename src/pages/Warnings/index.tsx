@@ -1,8 +1,8 @@
+import ModalFeedback from "../../components/ModalFeedback";
+
 function Warnings(){
   return (
-    <>
-    Warnings Works!
-    </>
+  <ModalFeedback />
   );
 }
 
