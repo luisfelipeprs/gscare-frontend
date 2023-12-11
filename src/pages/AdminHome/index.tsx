@@ -1,9 +1,95 @@
+import React from 'react';
+import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeParagraph, WelcomeTitle } from './styled';
+import { DotsThreeVertical, House } from 'phosphor-react';
+import helloWork from '../../assets/helloWork.svg'
+import CardAmountAndTile from '../../components/CardAmountAndTile';
+import LineChart from '../../components/LineChart';
 
-function AdminHome() {
+
+
+const data = [
+  { title: 'Earnings (Monthly)', amount: '$40,000' },
+  { title: 'Earnings (Monthly)', amount: '$40,000' },
+  { title: 'Earnings (Monthly)', amount: '$40,000' },
+  { title: 'Earnings (Monthly)', amount: '$40,000' },
+];
+
+
+// Componente principal
+const AdminHome: React.FC = () => {
+  // Função para obter a data de hoje
+  const getTodayDate = (): string => {
+    const today = new Date();
+    const options: Intl.DateTimeFormatOptions = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    };
+    return today.toLocaleDateString('pt-BR', options);
+  };
+
+  const chartData = [30, 40, 35, 50, 49, 60, 70, 91, 125];
+  const chartCategories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
+
   return (
-      <>
-        <h1>teste</h1>
-      </>
-    )
-}
+    <Container>
+      <ContainerBlueBar>
+          <ContentBlueBar>
+            <StyledNameContainer>
+              <div>
+                <House size={30} />
+                <p>Dashboard</p>
+              </div>
+              <p className="info-text">veja as informações mais importantes</p>
+            </StyledNameContainer>
+            <StyledDateContainer>
+              <CalendarIcon />
+              <DateText>
+                <span>Data:</span> 
+                {getTodayDate()}
+              </DateText>
+            </StyledDateContainer>
+          </ContentBlueBar>
+      </ContainerBlueBar>
+      <ContainerSectionsInfos>
+        <SectionInfos>
+          <WelcomeContaint>
+            <WelcomeTitle>Bem vindos ao CarePlus!</WelcomeTitle>
+            <WelcomeParagraph>
+              Browse our fully designed UI toolkit! Browse our prebuilt app pages, components, and utilites, and be sure to look at our full documentation!
+            </WelcomeParagraph>
+            <img src={helloWork} alt="" />
+          </WelcomeContaint>
+        </SectionInfos>
+        
+        <SectionInfos>
+          <HeaderInfos>
+            <TitleInfos>Recent Activity</TitleInfos>
+            <ButtonInfos><DotsThreeVertical size={20} /></ButtonInfos>
+          </HeaderInfos>
+          <Information>
+          </Information>
+        </SectionInfos>
+        
+        <SectionInfos>
+          <HeaderInfos>
+            <TitleInfos>Recent Activity</TitleInfos>
+            <ButtonInfos><DotsThreeVertical size={20} /></ButtonInfos>
+          </HeaderInfos>
+          <Information>
+          </Information>
+        </SectionInfos>
+      </ContainerSectionsInfos>
+
+      <GridWrapper>
+        {data.map((item, index) => (
+          <CardAmountAndTile key={index} title={item.title} amount={item.amount} />
+        ))}
+      </GridWrapper>
+
+      <LineChart data={chartData} categories={chartCategories} />
+    </Container>
+  );
+};
+
 export default AdminHome;
