@@ -8,7 +8,7 @@ function ModalFeedback(){
     <>
     <Dialog.Root>
   <Dialog.Trigger>
-  <ChatText size={32} color="#d60000" weight="light" />
+  <ChatText size={32} color="#aaa" weight="light" />
   </Dialog.Trigger>
 
   <Dialog.Content style={{ maxWidth: 450 }}>
