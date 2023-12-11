@@ -10,7 +10,7 @@ export const SidebarContainer = styled.div<IisOpen>`
   max-width: ${(props) => (props.isOpen ? '240px' : '60px')}; /* Adicione essa linha */
   background-color: #fff;
   color: #000;
-  transition: width 0.3s ease-in-out, min-width 0.3s ease-in-out, max-width 0.3s ease-in-out; /* Adicione essas linhas */
+  transition: width 0.3s ease, min-width 0.3s ease, max-width 0.3s ease; /* Adicione essas linhas */
   overflow-x: hidden;
   z-index: 10;
 
