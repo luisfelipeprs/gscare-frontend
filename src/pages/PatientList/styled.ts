@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   text-align: center;
   max-width: 100%;
+  flex:1;
 `;
 
 export const Button = styled.button`
@@ -331,5 +332,15 @@ export const ProgressStep = styled.div<{ completed: boolean }>`
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+  }
+`;
+
+export const AddContent = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 35px;
+  svg{
+    cursor: pointer;
   }
 `;
