@@ -344,3 +344,11 @@ export const AddContent = styled.div`
     cursor: pointer;
   }
 `;
+
+export const ContentInput = styled.div`
+  display:flex;
+  gap:30px;
+  svg{
+    background-color:red;  
+}
+`;

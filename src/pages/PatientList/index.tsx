@@ -15,6 +15,7 @@ import {
   ProgressBar,
   ProgressStep,
   AddContent,
+  ContentInput,
 } from "./styled";
 
 interface Props {
@@ -32,11 +33,19 @@ interface Props {
   mealTimings: string,
 }
 
+interface AddedItems {
+  medications: string[];
+  allergies: string[];
+  restrictions: string[];
+  preferences: string[];
+  foodList: string[];
+}
+
 function PatientList() {
   const [patients, setPatients] = useState<Props[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [detailsModalOpen, setDetailsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<Props>({
     name: "",
     email: "",
     patientCode: "",
@@ -52,14 +61,15 @@ function PatientList() {
   });
 
   const [activeStep, setActiveStep] = useState(0);
-  const steps = ["Informações Pessoais", "Detalhes Adicionais"];
 
-  const handleNextStep = () => {
+    const handleNextStep = () => {
     setActiveStep((prevStep) => prevStep + 1);
+    setProgress((prevProgress:any ) => prevProgress + 50);
   };
 
   const handlePreviousStep = () => {
     setActiveStep((prevStep) => prevStep - 1);
+    setProgress((prevProgress:any )=> prevProgress - 50);
   };
 
   const openModal = (index?: number) => {
@@ -112,6 +122,7 @@ function PatientList() {
       mealTimings: "",
     });
   };
+
 
   const handleSave = () => {
     const updatedPatients = [...patients];
@@ -172,6 +183,15 @@ function PatientList() {
       closeDeleteConfirmation();
     }
   };
+   const [addedItems, setAddedItems] = useState<string[]>([]);
+
+   const handleAddItem = (field: keyof FormData) => {
+    if (formData[field] !== "") {
+      setAddedItems((prevItems) => [...prevItems, formData[field]]);
+      setFormData({ ...formData, [field]: "" });
+    }
+  };
+  
 
   return (
     <Container>
@@ -189,11 +209,8 @@ function PatientList() {
               {editIndex !== null ? "Editar Paciente" : "Adicionar Paciente"}
             </h2>
             <ProgressBar>
-              {steps.map((step, index) => (
-                <ProgressStep key={index} completed={index < activeStep}>
-                  {step}
-                </ProgressStep>
-              ))}
+              <ProgressStep completed={activeStep >= 0}>Informações Pessoais</ProgressStep>
+              <ProgressStep completed={activeStep >= 1}>Detalhes Adicionais</ProgressStep>
             </ProgressBar>
             {activeStep === 0 && (
               <div>
@@ -253,42 +270,30 @@ function PatientList() {
               </div>
             )}
             {activeStep === 1 && (
-              <div>
-                <textarea
-                  placeholder="Remédios"
-                  value={formData.medications}
-                  onChange={(e) =>
-                    setFormData({ ...formData, medications: e.target.value })
-                  }
-                />
-                <textarea
-                  placeholder="Alimentos"
-                  value={formData.foodList}
-                  onChange={(e) =>
-                    setFormData({ ...formData, foodList: e.target.value })
-                  }
-                />
-                <textarea
-                  placeholder="Restrições"
-                  value={formData.restrictions}
-                  onChange={(e) =>
-                    setFormData({ ...formData, restrictions: e.target.value })
-                  }
-                />
-                <textarea
-                  placeholder="Alergias"
-                  value={formData.allergies}
-                  onChange={(e) =>
-                    setFormData({ ...formData, allergies: e.target.value })
-                  }
-                />
-                <textarea
-                  placeholder="Preferências"
-                  value={formData.preferences}
-                  onChange={(e) =>
-                    setFormData({ ...formData, preferences: e.target.value })
-                  }
-                />
+        <div>
+          <ContentInput>
+          <input
+            type="text"
+            placeholder="Remédios"
+            value={formData.medications}
+            onChange={(e) =>
+              setFormData({ ...formData, medications: e.target.value })
+            }
+            />
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+          <g fill="#007bff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.683,0 -23,10.317 -23,23c0,12.683 10.317,23 23,23c12.683,0 23,-10.317 23,-23c0,-12.683 -10.317,-23 -23,-23zM37,26h-11v11h-2v-11h-11v-2h11v-11h2v11h11z" onClick={() => handleAddItem("medications")}></path></g></g>
+           </svg>
+            </ContentInput>
+              <div style={{ marginTop: "10px" }}>
+            {addedItems.map((item, index) => (
+              <span key={index} style={{ marginRight: "5px", fontSize: "16px" }}>
+                {item}
+              </span>
+            ))}
+          </div>
+          <button onClick={() => handleAddItem("medications")}>Adicionar</button>
+
+      
                 <button onClick={handlePreviousStep}>Anterior</button>
                 <button onClick={handleSave}>Salvar</button>
               </div>
