@@ -16,6 +16,7 @@ import {
   ProgressStep,
   AddContent,
   ContentInput,
+  ContainerForm,
 } from "./styled";
 
 interface Props {
@@ -96,7 +97,7 @@ function PatientList() {
         foodList: "",
         mealTimings: "",
       });
-      setActiveStep(0); // Iniciar na aba de informações pessoais ao adicionar
+      setActiveStep(0);
     }
   };
 
@@ -213,7 +214,7 @@ function PatientList() {
               <ProgressStep completed={activeStep >= 1}>Detalhes Adicionais</ProgressStep>
             </ProgressBar>
             {activeStep === 0 && (
-              <div>
+              <ContainerForm>
                 <input
                   type="text"
                   placeholder="Nome"
@@ -267,7 +268,7 @@ function PatientList() {
                   }
                 />
                 <button onClick={handleNextStep}>Próximo</button>
-              </div>
+              </ContainerForm>
             )}
             {activeStep === 1 && (
         <div>

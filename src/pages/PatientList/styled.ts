@@ -31,7 +31,6 @@ export const Modal = styled.div`
   input {
     width: 100%;
     padding: 10px;
-    margin-top: 16px;
     border-radius: 10px;
     transition: box-shadow 0.3s;
   }
@@ -55,7 +54,6 @@ export const Modal = styled.div`
     width: 100%;
     padding: 12px;
     padding-left: 5px;
-    margin-top: 16px;
     border: 1px solid black;
     border-radius: 10px;
     option {
@@ -79,6 +77,15 @@ export const Modal = styled.div`
     }
   }
 `;
+
+export const ContainerForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+
+
 
 export const EmployeeCard = styled.div`
   position: relative;
@@ -319,25 +326,12 @@ export const ProgressStep = styled.div<{ completed: boolean }>`
     top: 35px;
     left: 0;
   }
-
-  &:after {
-    content: "";
-    width: 15px;
-    height: 15px;
-    background-color: ${({ completed }) => (completed ? "#007bff" : "#fff")};
-    border: 2px solid #007bff;
-    border-radius: 50%;
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-`;
+`
 
 export const AddContent = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
   gap: 30px;
   margin: 35px;
   svg{
@@ -346,9 +340,10 @@ export const AddContent = styled.div`
 `;
 
 export const ContentInput = styled.div`
-  display:flex;
-  gap:30px;
-  svg{
-    background-color:red;  
-}
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  svg {
+    background-color: red;
+  }
 `;
