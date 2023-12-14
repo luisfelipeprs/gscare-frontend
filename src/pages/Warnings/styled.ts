@@ -5,11 +5,11 @@ export const Container = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  margin: 20px;
 `;
 
 export const Content = styled.div`
-  margin: 50px 0px 20px 0px;
+  width: 80%;
 `;
 
 export const SelectContainer = styled.div`
@@ -24,6 +24,9 @@ export const StyledSelect = styled.select`
 
 export const SelectContent = styled.div`
     display: flex;
+    select{
+      width: 100%;
+    }
 `;
 
 export const InputContent = styled.div`
@@ -36,6 +39,10 @@ export const AgroupInput = styled.div`
   flex-direction: row;
   gap: 20px;
   margin-bottom: 20px;
+  width: 100%;
+  div{
+    width: 100%;
+  }
 `;
 
 export const DateContainer = styled.div`

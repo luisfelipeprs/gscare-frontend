@@ -4,6 +4,7 @@ export const Container = styled.div`
   text-align: center;
   max-width: 100%;
   flex:1;
+  margin: 20px;
 `;
 
 export const Button = styled.button`
@@ -383,6 +384,5 @@ export const ContentInputDate = styled.div`
   input{
     display: flex;
     width: 100%;
-
   }
 `;
