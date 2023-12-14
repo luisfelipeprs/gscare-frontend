@@ -1,5 +1,5 @@
 import '@radix-ui/themes/styles.css';
-import { Container, Content } from './styled';
+import { Container, Content, ListCards } from './styled';
 import CardFeedback from '../../components/CardFeedback';
 
 function Feedback() {
@@ -7,9 +7,12 @@ function Feedback() {
     <>
       <Container>
         <Content>
-          <CardFeedback/>
-          <CardFeedback/>
-          <CardFeedback/>
+          <ListCards>
+            <CardFeedback/>
+            <CardFeedback/>
+            <CardFeedback/>
+            <CardFeedback/>
+          </ListCards>
         </Content>
       </Container>
     </>
