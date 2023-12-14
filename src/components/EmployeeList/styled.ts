@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  text-align: center;
-  max-width: 100%;
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+`;
+
+export const Content = styled.div`
+  width: 80%;
 `;
 
 export const Button = styled.button`

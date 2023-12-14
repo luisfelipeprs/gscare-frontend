@@ -61,3 +61,31 @@ export const ContentInputDate = styled.div`
   }
 `;
 
+
+export const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+`;
+
+export const TableContainer = styled.div`
+  overflow: hidden;
+  overflow-x: auto;
+  max-width: 100%;
+
+`;

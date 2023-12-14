@@ -196,6 +196,8 @@ function PatientList() {
 
   return (
     <Container>
+      <Content>
+
       <AddContent>
       <h1>Lista de Pacientes</h1>
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
@@ -222,7 +224,7 @@ function PatientList() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                />
+                  />
                 <input
                   type="text"
                   placeholder="Email"
@@ -230,13 +232,13 @@ function PatientList() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                />
+                  />
                 <select
                   value={formData.title}
                   onChange={(e) =>
                     setFormData({ ...formData, title: e.target.value })
                   }
-                >
+                  >
                   <option value="">Selecione um tipo</option>
                   <option value="Risco">Risco</option>
                   <option value="Cadeirante">Cadeirante</option>
@@ -250,7 +252,7 @@ function PatientList() {
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                />
+                  />
                 <input
                   type="text"
                   placeholder="Código do Paciente"
@@ -258,7 +260,7 @@ function PatientList() {
                   onChange={(e) =>
                     setFormData({ ...formData, patientCode: e.target.value })
                   }
-                />
+                  />
                 <input
                   type="text"
                   placeholder="Endereço"
@@ -266,7 +268,7 @@ function PatientList() {
                   onChange={(e) =>
                     setFormData({ ...formData, location: e.target.value })
                   }
-                />
+                  />
                 <button onClick={handleNextStep}>Próximo</button>
               </ContainerForm>
             )}
@@ -384,6 +386,7 @@ function PatientList() {
           </Modal>
         </Background>
       )}
+      </Content>
     </Container>
   );
 }

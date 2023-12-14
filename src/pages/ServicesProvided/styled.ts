@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  text-align: center;
-  max-width: 100%;
-  flex:1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
   margin: 20px;
+`;
+
+export const Content = styled.div`
+  width: 80%;
 `;
 
 export const Button = styled.button`
@@ -281,26 +286,10 @@ export const TabsInfo = styled.div`
   margin: 20px;
 `;
 
-export const Content = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 20px;
-  h2{
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-  }
-  p{
-    margin: 10px;
-  }
-`;
-
 export const TableContainer = styled.div`
   overflow: hidden;
   overflow-x: auto;
   max-width: 100%;
-  margin: 10px;
 `;
 
 export const ProgressBar = styled.div`

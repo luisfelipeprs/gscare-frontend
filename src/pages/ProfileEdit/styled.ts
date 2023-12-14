@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
-export const ProfileEditContainer = styled.div`
+export const Container = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
   margin: 20px;
+`;
+
+export const Content = styled.div`
+  width: 80%;
 `;
 
 export const ProfileInfoContainer = styled.div`

@@ -1,5 +1,5 @@
 import { Button, Flex, Text, TextArea, TextField } from "@radix-ui/themes";
-import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect } from "./styled";
+import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect, TableContainer, Table } from "./styled";
 import { useState } from "react";
 
 type Option = {
@@ -106,6 +106,28 @@ function Warnings(){
           </div>
         </Flex>
         <Button style={{ width: "100%", marginTop: "20px" }}> Salvar</Button>
+        <TableContainer>
+            <Table>
+              <thead>
+                <tr>
+                  <th>Título</th>
+                  <th>Tipo de Aviso</th>
+                  <th>Mensagem</th>
+                  <th>Data Início</th>
+                  <th>Data Fim</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </Table>
+          </TableContainer>
       </Content>
     </Container>
 

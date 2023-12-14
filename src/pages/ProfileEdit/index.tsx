@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styled'
-import { Form, InputField, ProfileEditContainer, ProfileImage, SaveButton, TextAreaField } from './styled';
+import { Container, Content, Form, InputField, ProfileEditContainer, ProfileImage, ProfileInfoContainer, SaveButton, TextAreaField } from './styled';
 
 function ProfileEdit() {
   const [name, setName] = useState('Neymar JR da Silva');
@@ -32,7 +32,9 @@ function ProfileEdit() {
   };
 
   return (
-    <ProfileEditContainer>
+    <Container>
+      <Content>
+        <ProfileInfoContainer>
     <ProfileImage src={editedProfile.image} alt="Seu Perfil" />
       <Form>
         <InputField
@@ -72,7 +74,9 @@ function ProfileEdit() {
           />
         <SaveButton onClick={handleSave}>Salvar</SaveButton>
       </Form>
-    </ProfileEditContainer>
+      </ProfileInfoContainer>
+      </Content>
+    </Container>
   );
 }
 
