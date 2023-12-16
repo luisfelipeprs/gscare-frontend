@@ -111,7 +111,7 @@ export const StyledDateContainer = styled.div`
 `;
 
 export const DateText = styled.p`
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #6a6a6a;
   font-family: monospace;
   font-weight: 500;
@@ -120,6 +120,14 @@ export const DateText = styled.p`
     font-weight: 500;
     color: #1141ff;
     margin-right: 5px;
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 0.7rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
   }
 `;
 
@@ -138,6 +146,7 @@ export const ContainerSectionsInfos = styled.div`
   
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin-top: -50px;
   }
 `;
 
