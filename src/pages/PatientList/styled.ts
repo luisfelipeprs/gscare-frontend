@@ -212,6 +212,12 @@ export const TableCell = styled.td`
   max-width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 `;
 
 const DropdownContent = styled.div`
@@ -330,8 +336,6 @@ export const ProgressStep = styled.div<{ completed: boolean }>`
 
 export const AddContent = styled.div`
   display: flex;
-  justify-content: center;
-  text-align: center;
   gap: 30px;
   margin: 35px;
   svg{
@@ -346,4 +350,10 @@ export const ContentInput = styled.div`
   svg {
     background-color: red;
   }
+`;
+
+
+export const Filter = styled.div`
+  display: flex;
+  gap:10px
 `;
