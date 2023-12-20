@@ -10,6 +10,7 @@ import {
   Table,
   CloseButton,
   AddContent,
+  Content,
 } from './styled';
 
 // import cartoonHomen from "../../assets/cartoonHomen.png";
@@ -148,6 +149,7 @@ export function EmployeeList() {
 
   return (
     <Container>
+      <Content>
       <AddContent>
         <h1>Lista de Funcionários</h1>
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
@@ -284,6 +286,7 @@ export function EmployeeList() {
           </Modal>
         </Background>
       )}
+      </Content>
     </Container>
   );
 }

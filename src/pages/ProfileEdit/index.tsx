@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import './styled'
-import { Form, InputField, ProfileEditContainer, ProfileImage, SaveButton, TextAreaField } from './styled';
+import { useState } from 'react';
+import './styled';
+import { AddPicture, AgroupInterest, Container, Content, InfoName, Interest, LeftContainer, MidContainer, ProfileImage, ProfileInfoContainer, ShowInterest } from './styled';
+import { Box, Section } from '@radix-ui/themes';
 
 function ProfileEdit() {
-  const [name, setName] = useState('Neymar JR da Silva');
-  const [phone, setPhone] = useState('40028922');
-  const [email, setEmail] = useState('neymar@example.com');
-  const [image, setImage] = useState('https://bootdey.com/img/Content/avatar/avatar7.png');
-  const [birthdate, setBirthdate] = useState('1992-02-05');
-  const [description, setDescription] = useState('Jogador de futebol profissional');
+  const [name] = useState('Neymar JR da Silva');
+  const [role] = useState('Developer');
+  const [phone] = useState('40028922');
+  const [email] = useState('neymar@example.com');
+  const [image] = useState('https://bootdey.com/img/Content/avatar/avatar7.png');
+  const [birthdate] = useState('1992-02-05');
+  const [description] = useState('Jogador de futebol profissional');
 
-  const [editedProfile, setEditedProfile] = useState({
+  const [editedProfile] = useState({
     name,
     phone,
     email,
@@ -19,60 +21,42 @@ function ProfileEdit() {
     description,
   });
 
-  const handleSave = () => {
-    const updatedProfile = {
-      name,
-      phone,
-      email,
-      image,
-      birthdate,
-      description,
-    };
-    setEditedProfile(updatedProfile);
-  };
 
   return (
-    <ProfileEditContainer>
-    <ProfileImage src={editedProfile.image} alt="Seu Perfil" />
-      <Form>
-        <InputField
-          type="text"
-          placeholder="Nome"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          />
-        <InputField
-          type="text"
-          placeholder="Telefone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          />
-        <InputField
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          />
-        <InputField
-          type="text"
-          placeholder="URL da Foto"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-          />
-        <InputField
-          type="date"
-          placeholder="Data de Nascimento"
-          value={birthdate}
-          onChange={(e) => setBirthdate(e.target.value)}
-          />
-        <TextAreaField
-          placeholder="Descrição"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          />
-        <SaveButton onClick={handleSave}>Salvar</SaveButton>
-      </Form>
-    </ProfileEditContainer>
+    <Container>
+      <Content>
+        <ProfileInfoContainer>
+          <LeftContainer>
+            <AddPicture>
+              <ProfileImage src={editedProfile.image} alt="Seu Perfil" />
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
+              <g fill="#007bff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.683,0 -23,10.317 -23,23c0,12.683 10.317,23 23,23c12.683,0 23,-10.317 23,-23c0,-12.683 -10.317,-23 -23,-23zM37,26h-11v11h-2v-11h-11v-2h11v-11h2v11h11z"></path></g></g>
+              </svg>
+            </AddPicture>
+            <InfoName>
+            <h1>{name}</h1>
+            <p>{role}</p>
+            </InfoName>
+            <a href="#"><h2>Profile</h2></a>
+            <a href="#"><h2>Task</h2></a>
+            <a href="#"><h2>Calendar</h2></a>
+            <a href="#"><h2>Files</h2></a>
+          </LeftContainer>
+          <MidContainer>
+          <Interest>
+            <Section size="1" style={{width:'100%'}}>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <ShowInterest>📱 Product Infrastructure</ShowInterest>
+            <ShowInterest>🔒 Network Security</ShowInterest>
+            <ShowInterest>🕹️ Security Testing</ShowInterest>
+            <ShowInterest>🌎 Security Audit Outsourcing</ShowInterest>
+            <ShowInterest>🐞 Bugs</ShowInterest>
+            </Section>
+            </Interest>
+          </MidContainer>
+      </ProfileInfoContainer>
+      </Content>
+    </Container>
   );
 }
 

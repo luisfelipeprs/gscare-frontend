@@ -1,5 +1,5 @@
 import { Button, Flex, Text, TextArea, TextField } from "@radix-ui/themes";
-import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect } from "./styled";
+import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect, TableContainer, Table } from "./styled";
 import { useState } from "react";
 
 type Option = {
@@ -42,11 +42,11 @@ const Select: React.FC<SelectProps> = ({ options, onChange }) => {
 };
 
 function Warnings(){
-    const options: Option[] = [
-      { value: 'option1', label: 'Urgente' },
-      { value: 'option2', label: 'Importante' },
-      { value: 'option3', label: 'Lembrete' },
-    ];
+  const options: Option[] = [
+    { value: 'option1', label: 'Urgente' },
+    { value: 'option2', label: 'Importante' },
+    { value: 'option3', label: 'Lembrete' },
+  ];
 
   const handleChange = (value: string) => {
     console.log('Opção selecionada:', value);
@@ -54,68 +54,82 @@ function Warnings(){
   return (
     <Container>
       <Content>
-      <AgroupInput>
-         <label>
-           <Text as="div" size="2" mb="1" weight="bold">
-             Título
-           </Text>
-          <TextField.Input
-            style={
-              {
-                width:"500px"
-              }
-            }
-            placeholder="Digite o título do aviso."
+        <AgroupInput>
+          <div>
+            <Text as="div" size="2" mb="1" weight="bold">
+              Título
+            </Text>
+            <TextField.Input
+              placeholder="Digite o título do aviso."
             />
-         </label>
+          </div>
 
-       <InputContent>
-       <Text as="div" size="2" mb="1" weight="bold">
-             Tipo de Aviso
-           </Text>
-       <SelectContent>
-      <Select options={options} onChange={handleChange} />
-       </SelectContent>
-       </InputContent>
-            </AgroupInput>
-          <DateContainer>
-            <ContentInputDate>
-          <Text as="div" size="2" mb="1" weight="bold">
-             Data de Início do Aviso
-           </Text>
-              <input type="date" />
-            </ContentInputDate>
-            <ContentInputDate>
-          <Text as="div" size="2" mb="1" weight="bold">
-             Data de Fim do Aviso
-           </Text>
-              <input type="date" />
-            </ContentInputDate>
-            
-          </DateContainer>
+          <InputContent>
+            <Text as="div" size="2" mb="1" weight="bold">
+              Tipo de Aviso
+            </Text>
+            <SelectContent>
+              <Select options={options} onChange={handleChange} />
+            </SelectContent>
+          </InputContent>
+        </AgroupInput>
+        <DateContainer>
+          <ContentInputDate>
+            <Text as="div" size="2" mb="1" weight="bold">
+              Data de Início do Aviso
+            </Text>
+            <input type="date" />
+          </ContentInputDate>
+          <ContentInputDate>
+            <Text as="div" size="2" mb="1" weight="bold">
+              Data de Fim do Aviso
+            </Text>
+            <input type="date" />
+          </ContentInputDate>
 
+        </DateContainer>
 
-
-
-       <Flex direction="column" gap="3">
-      <label>
-        <Text as="div" size="2" mb="1" weight="bold">
-          Mensagem
-        </Text>
-        <TextArea
-          style={
-            {
-              height:"140px"
-            }
-          }
-        // defaultValue="Fernando Franco"
-          placeholder="Digite sua mensagem aqui."
-        />
-      </label>
-    </Flex>
-    <Button style={{width:"100%", marginTop:"20px"}}> Salvar</Button>
-            </Content>
-          </Container>
+        <Flex direction="column" gap="3">
+          <div>
+            <Text as="div" size="2" mb="1" weight="bold">
+              Mensagem
+            </Text>
+            <TextArea
+              style={
+                {
+                  height: "140px"
+                }
+              }
+              // defaultValue="Fernando Franco"
+              placeholder="Digite sua mensagem aqui."
+            />
+          </div>
+        </Flex>
+        <Button style={{ width: "100%", marginTop: "20px" }}> Salvar</Button>
+        <TableContainer>
+            <Table>
+              <thead>
+                <tr>
+                  <th>Título</th>
+                  <th>Tipo de Aviso</th>
+                  <th>Mensagem</th>
+                  <th>Data Início</th>
+                  <th>Data Fim</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </Table>
+          </TableContainer>
+      </Content>
+    </Container>
 
   );
 }

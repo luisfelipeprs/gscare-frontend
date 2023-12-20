@@ -199,6 +199,8 @@ function PatientList() {
 
   return (
     <Container>
+      <Content>
+
       <AddContent>
         <TextField.Root style={{border:"none", boxShadow:"0px"}}>
           <TextField.Slot style={{border:"none" }}>
@@ -255,7 +257,7 @@ Filter:
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                />
+                  />
                 <input
                   type="text"
                   placeholder="Email"
@@ -263,13 +265,13 @@ Filter:
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                />
+                  />
                 <select
                   value={formData.title}
                   onChange={(e) =>
                     setFormData({ ...formData, title: e.target.value })
                   }
-                >
+                  >
                   <option value="">Selecione um tipo</option>
                   <option value="Risco">Risco</option>
                   <option value="Cadeirante">Cadeirante</option>
@@ -283,7 +285,7 @@ Filter:
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                />
+                  />
                 <input
                   type="text"
                   placeholder="Código do Paciente"
@@ -291,7 +293,7 @@ Filter:
                   onChange={(e) =>
                     setFormData({ ...formData, patientCode: e.target.value })
                   }
-                />
+                  />
                 <input
                   type="text"
                   placeholder="Endereço"
@@ -299,7 +301,7 @@ Filter:
                   onChange={(e) =>
                     setFormData({ ...formData, location: e.target.value })
                   }
-                />
+                  />
                 <button onClick={handleNextStep}>Próximo</button>
               </ContainerForm>
             )}
@@ -417,6 +419,7 @@ Filter:
           </Modal>
         </Background>
       )}
+      </Content>
     </Container>
   );
 }

@@ -22,3 +22,7 @@ export const MessageResponse = styled.div`
   border-top: 1px solid black;
 `;
 
+export const Feedback = styled.div`
+  
+`;
+

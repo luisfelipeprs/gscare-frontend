@@ -5,11 +5,11 @@ export const Container = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  margin: 20px;
 `;
 
 export const Content = styled.div`
-  margin: 50px 0px 20px 0px;
+  width: 80%;
 `;
 
 export const SelectContainer = styled.div`
@@ -24,6 +24,9 @@ export const StyledSelect = styled.select`
 
 export const SelectContent = styled.div`
     display: flex;
+    select{
+      width: 100%;
+    }
 `;
 
 export const InputContent = styled.div`
@@ -36,6 +39,10 @@ export const AgroupInput = styled.div`
   flex-direction: row;
   gap: 20px;
   margin-bottom: 20px;
+  width: 100%;
+  div{
+    width: 100%;
+  }
 `;
 
 export const DateContainer = styled.div`
@@ -54,3 +61,31 @@ export const ContentInputDate = styled.div`
   }
 `;
 
+
+export const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+`;
+
+export const TableContainer = styled.div`
+  overflow: hidden;
+  overflow-x: auto;
+  max-width: 100%;
+
+`;

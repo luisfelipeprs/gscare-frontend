@@ -37,7 +37,6 @@ export const Modal = styled.div`
   input {
     width: 100%;
     padding: 10px;
-    margin-top: 16px;
     border-radius: 10px;
     transition: box-shadow 0.3s;
   }
@@ -47,6 +46,13 @@ export const Modal = styled.div`
   select:focus {
     box-shadow: 0 0 5px #007bff;
   }
+  textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 16px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+  }
   select {
     background-color: #fff;
     color: #212529;
@@ -54,7 +60,6 @@ export const Modal = styled.div`
     width: 100%;
     padding: 12px;
     padding-left: 5px;
-    margin-top: 16px;
     border: 1px solid black;
     border-radius: 10px;
     option {
@@ -77,6 +82,13 @@ export const Modal = styled.div`
       margin-top: 10px;
     }
   }
+`;
+
+export const ContainerForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 `;
 
 export const EmployeeCard = styled.div`
@@ -144,18 +156,17 @@ export const EmployeeImageContainer = styled.div`
 `;
 
 export const Background = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-
 export const GenderRadius = styled.div`
   display: flex;
 `;
@@ -262,12 +273,105 @@ export const CloseButton = styled.div`
   margin: 10px 10px;
 `;
 
+export const Tabs = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  height: 35px;
+`;
+export const TabsInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+`;
+
+export const TableContainer = styled.div`
+  overflow: hidden;
+  overflow-x: auto;
+  max-width: 100%;
+`;
+
+export const ProgressBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+export const ProgressStep = styled.div<{ completed: boolean }>`
+  flex: 1;
+  text-align: center;
+  position: relative;
+  margin:20px;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: ${({ completed }) => (completed ? "#007bff" : "#ddd")};
+    position: absolute;
+    top: 35px;
+    left: 0;
+  }
+`
+
 export const AddContent = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
   gap: 30px;
   margin: 35px;
-  svg {
+  svg{
     cursor: pointer;
+  }
+`;
+
+export const ContentInput = styled.div`
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  svg {
+    background-color: red;
+  }
+`;
+
+export const SelectContent = styled.div`
+    display: flex;
+    select{
+      width: 100%;
+    }
+`;
+
+export const InputContent = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const AgroupInput = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  div{
+    width: 100%;
+  }
+`;
+
+export const DateContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+`;
+
+export const ContentInputDate = styled.div`
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  input{
+    display: flex;
+    width: 100%;
   }
 `;

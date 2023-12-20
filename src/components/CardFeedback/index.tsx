@@ -1,12 +1,13 @@
-import { Avatar, Box, Card, Flex, Strong, Text, Theme } from "@radix-ui/themes";
+import { Avatar, Box, Card, Flex, Strong, Text } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
-import { ContentHeader, MessageResponse } from './styled';
+import { ContentHeader, MessageResponse,Feedback } from './styled';
 import ModalFeedback from '../ModalFeedback';
+
 
 function CardFeedback(){
   return (
-   
-    <Theme>
+
+    <Feedback>
     <Flex gap="3" wrap="wrap">
       <Card style={{ maxWidth: 500 }}>
         <ContentHeader>
@@ -45,7 +46,7 @@ function CardFeedback(){
         </MessageResponse>
       </Card>
     </Flex>
-  </Theme>
+  </Feedback>
   );
 };
 
