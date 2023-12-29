@@ -1,9 +1,9 @@
 import React from 'react';
 import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeParagraph, WelcomeTitle } from './styled';
 import { DotsThreeVertical, House } from 'phosphor-react';
-import helloWork from '../../assets/helloWork.svg'
-import CardAmountAndTile from '../../components/CardAmountAndTile';
-import LineChart from '../../components/LineChart';
+import helloWork from '../../../assets/helloWork.svg'
+import CardAmountAndTile from '../../../components/CardAmountAndTile';
+import LineChart from '../../../components/LineChart';
 
 
 

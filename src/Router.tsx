@@ -1,25 +1,27 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { DefaultLayout } from "./layout/DefaultLayout";
 
-import Home from './pages/Home/index.tsx';
-import FormLeads from './pages/FormLeads/index.tsx';
-import AdminHome from './pages/AdminHome/index.tsx';
+import Home from './pages/@landing-page/Home/index.tsx';
+import FormLeads from './pages/@landing-page/FormLeads/index.tsx';
+import AdminHome from './pages/@app/AdminHome/index.tsx';
 import ErrorPage from './pages/ErrorPage/index.tsx';
-import FeedbackDetails from './pages/FeedbackDetails/index.tsx';
-import Feedback from './pages/Feedback/index.tsx';
-import Login from './pages/Login/index.tsx';
-import Register from './pages/Register/index.tsx';
-import Calendar from "./pages/Calendar/index.tsx";
-import Employee from "./pages/Employee/index.tsx";
+import {FeedbackDetails} from './pages/@app/FeedbackDetails/index.tsx';
+import Feedback from './pages/@app/Feedback/index.tsx';
+import Calendar from "./pages/@app/Calendar/index.tsx";
+import Employee from "./pages/@app/Employee/index.tsx";
 // import Patients from "./pages/Patients/index.tsx";
-import ProfileEdit from "./pages/ProfileEdit/index.tsx";
-import PatientList from "./pages/PatientList/index.tsx";
-import Warnings from "./pages/Warnings/index.tsx";
-import Reports from "./pages/Reports/index.tsx";
-import ServicesProvided from "./pages/ServicesProvided/index.tsx";
-import FinancialManagement from "./pages/FinancialManagement/index.tsx";
-import ZapScheduling from "./pages/ZapScheduling/index.tsx";
-import ZapCampaign from "./pages/ZapCampaign/index.tsx";
+import ProfileEdit from "./pages/@app/ProfileEdit/index.tsx";
+import Warnings from "./pages/@app/Warnings/index.tsx";
+import Reports from "./pages/@app/Reports/index.tsx";
+import ServicesProvided from "./pages/@app/ServicesProvided/index.tsx";
+import ZapScheduling from "./pages/@app/ZapScheduling/index.tsx";
+import ZapCampaign from "./pages/@app/ZapCampaign/index.tsx";
+import FinancialManagement from "./pages/@app/FinancialManagement/index.tsx";
+import PatientList from "./pages/@app/PatientList/index.tsx";
+import { Login } from "./pages/@auth/Login/index.tsx";
+import { LoginAdmin } from "./pages/@auth/LoginAdmin/index.tsx";
+import { Register } from "./pages/@auth/Register/index.tsx";
+import { ForgotPassword } from "./pages/@auth/ForgetPassword/index.tsx";
 
 
 export function Router() {
@@ -28,7 +30,9 @@ export function Router() {
             <Route path="/" element={<Home/>} errorElement={<ErrorPage/>} />
             <Route path="/form" element={<FormLeads/>} />
             <Route path="/login" element={<Login/>} />
+            <Route path="/login-admin" element={<LoginAdmin/>} />
             <Route path="/register" element={<Register/>} />
+            <Route path="/forgot-password" element={<ForgotPassword/>} />
 
             <Route path="/admin" element={<DefaultLayout />}>
                 <Route path="/admin/" element={<AdminHome/>} />

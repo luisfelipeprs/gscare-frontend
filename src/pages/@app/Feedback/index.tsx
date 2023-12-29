@@ -1,6 +1,6 @@
 import '@radix-ui/themes/styles.css';
 import { Container, Content, ListCards } from './styled';
-import CardFeedback from '../../components/CardFeedback';
+import CardFeedback from '../../../components/CardFeedback';
 
 function Feedback() {
   return (

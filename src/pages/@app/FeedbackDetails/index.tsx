@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 
-function FeedbackDetails() {
+export function FeedbackDetails() {
   const {id} = useParams()
 
   const navigate = useNavigate()
@@ -18,4 +18,3 @@ function FeedbackDetails() {
       </>
     )
 }
-export default FeedbackDetails;
