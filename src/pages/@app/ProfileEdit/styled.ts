@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 3% 5%;
+  align-items: center;
+  margin: 20px;
 `;
 
 export const Content = styled.div`
-
+  width: 80%;
 `;
 
 export const ProfileInfoContainer = styled.div`
@@ -113,7 +115,7 @@ export const Interest = styled.div`
 export const ShowInterest = styled.div`
   display: flex;
   justify-content: center;
-  width: 40%;
+  width: 100%;
   flex-direction: column;
   border: 1px solid #ddd;
   border-radius: 10px;
