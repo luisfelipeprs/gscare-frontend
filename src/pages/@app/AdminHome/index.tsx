@@ -3,7 +3,8 @@ import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerSectio
 import { DotsThreeVertical, House } from 'phosphor-react';
 import helloWork from '../../../assets/helloWork.svg'
 import CardAmountAndTile from '../../../components/CardAmountAndTile';
-import LineChart from '../../../components/LineChart';
+import LineChart from '../../../components/ChatsHomeAdmin/LineChart';
+import ColumnChart from '../../../components/ChatsHomeAdmin/ColumnChart';
 
 
 
@@ -30,6 +31,12 @@ const AdminHome: React.FC = () => {
 
   const chartData = [30, 40, 35, 50, 49, 60, 70, 91, 125];
   const chartCategories = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'];
+
+  const chartColumnData = {
+    data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2],
+    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    title: 'Monthly Inflation in Argentina, 2002',
+  };
 
   return (
     <Container>
@@ -88,6 +95,7 @@ const AdminHome: React.FC = () => {
       </GridWrapper>
 
       <LineChart data={chartData} categories={chartCategories} />
+      <ColumnChart data={chartColumnData.data} categories={chartColumnData.categories} title={chartColumnData.title} />
     </Container>
   );
 };
