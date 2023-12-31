@@ -1,13 +1,15 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Container,
   Modal,
   Background,
   Action,
+  // Tabs,
   TableRow,
   TableCell,
   Table,
   CloseButton,
+  // TabsInfo,
   Content,
   TableContainer,
   ProgressBar,
@@ -15,7 +17,10 @@ import {
   AddContent,
   ContentInput,
   ContainerForm,
+  Filter,
 } from "./styled";
+import { Select, TextField } from "@radix-ui/themes";
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 
 interface Props {
   name: string,
@@ -32,13 +37,13 @@ interface Props {
   mealTimings: string,
 }
 
-// interface AddedItems {
-//   medications: string[];
-//   allergies: string[];
-//   restrictions: string[];
-//   preferences: string[];
-//   foodList: string[];
-// }
+interface AddedItems {
+  medications: string[];
+  allergies: string[];
+  restrictions: string[];
+  preferences: string[];
+  foodList: string[];
+}
 
 function PatientList() {
   const [patients, setPatients] = useState<Props[]>([]);
@@ -197,10 +202,40 @@ function PatientList() {
       <Content>
 
         <AddContent>
-          <h1>Lista de Pacientes</h1>
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
+          <TextField.Root style={{ border: "none", boxShadow: "0px" }}>
+            <TextField.Slot style={{ border: "none" }}>
+              <MagnifyingGlassIcon height="16" width="16" />
+            </TextField.Slot>
+            <TextField.Input
+              placeholder="Pesquisar Paciente"
+              style={{ width: '1000px', border: 'none' }}
+
+            />
+          </TextField.Root>
+          <Filter>
+
+            Filter:
+            <Select.Root defaultValue="all">
+              <Select.Trigger />
+              <Select.Content>
+                <Select.Group>
+                  <Select.Label>Filter</Select.Label>
+                  <Select.Item value="all">All</Select.Item>
+                  <Select.Item value="az">A-Z</Select.Item>
+                  <Select.Item value="state" disabled>Ativo</Select.Item>
+                </Select.Group>
+                <Select.Separator />
+                <Select.Group>
+                  <Select.Label>Patient Code</Select.Label>
+                  <Select.Item value="tel">Telefone</Select.Item>
+                  <Select.Item value="type">Tipo</Select.Item>
+                </Select.Group>
+              </Select.Content>
+            </Select.Root>
+          </Filter>
+          {/* <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
             <g fill="#007bff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.683,0 -23,10.317 -23,23c0,12.683 10.317,23 23,23c12.683,0 23,-10.317 23,-23c0,-12.683 -10.317,-23 -23,-23zM37,26h-11v11h-2v-11h-11v-2h11v-11h2v11h11z" onClick={() => openModal()}></path></g></g>
-          </svg>
+          </svg> */}
         </AddContent>
         {isModalOpen && (
           <Background>
@@ -292,7 +327,7 @@ function PatientList() {
                       </span>
                     ))}
                   </div>
-                  <button onClick={() => handleAddItem('medications')}>Adicionar</button>
+                  <button onClick={() => handleAddItem("medications")}>Adicionar</button>
 
 
                   <button onClick={handlePreviousStep}>Anterior</button>
