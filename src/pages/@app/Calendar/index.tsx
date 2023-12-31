@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { StyledButton, StyledCalendar, StyledClose, StyledContainer, StyledDay, StyledForm, StyledHeader, StyledInput, StyledLabel, StyledModal, StyledModalContent } from './styled';
+import { CalendarContainer, Container, Content, StyledButton, StyledCalendar, StyledClose, StyledContainer, StyledDay, StyledForm, StyledHeader, StyledInput, StyledLabel, StyledModal, StyledModalContent } from './styled';
 
-function Calendar(){
+function Calendar() {
   const [showModal, setShowModal] = useState(false);
 
   const getDaysInMonth = (year: number, month: number) => {
@@ -55,37 +55,43 @@ function Calendar(){
   const calendarDays = generateCalendar();
 
   return (
-    <StyledContainer>
-      <StyledHeader>
-        <h1>Calendário de Consulta</h1>
-      </StyledHeader>
-      <StyledCalendar>
-        {calendarDays.map((day, index) => (
-          <StyledDay
-            key={index}
-            onClick={() => handleDayClick(`dateId-${day.day}`)}
-            className={day.inactive ? 'day inactive' : 'day'}
-          >
-            {day.day}
-          </StyledDay>
-        ))}
-      </StyledCalendar>
-      <StyledModal show={showModal}>
-        <StyledModalContent>
-          <StyledClose onClick={handleCloseModal}>&times;</StyledClose>
-          <h2>Agendar Consulta</h2>
-          <StyledForm onSubmit={handleFormSubmit}>
-            <StyledLabel htmlFor="attendant">Nome do Atendente:</StyledLabel>
-            <StyledInput type="text" id="attendant" name="attendant" placeholder="Defina um Atendente" required />
+    <Container>
+      <Content>
+        <CalendarContainer>
+          <StyledContainer>
+            <StyledHeader>
+              <h1>Calendário de Consulta</h1>
+            </StyledHeader>
+            <StyledCalendar>
+              {calendarDays.map((day, index) => (
+                <StyledDay
+                  key={index}
+                  onClick={() => handleDayClick(`dateId-${day.day}`)}
+                  className={day.inactive ? 'day inactive' : 'day'}
+                >
+                  {day.day}
+                </StyledDay>
+              ))}
+            </StyledCalendar>
+            <StyledModal show={showModal}>
+              <StyledModalContent>
+                <StyledClose onClick={handleCloseModal}>&times;</StyledClose>
+                <h2>Agendar Consulta</h2>
+                <StyledForm onSubmit={handleFormSubmit}>
+                  <StyledLabel htmlFor="attendant">Nome do Atendente:</StyledLabel>
+                  <StyledInput type="text" id="attendant" name="attendant" placeholder="Defina um Atendente" required />
 
-            <StyledLabel htmlFor="patient">Nome do Paciente:</StyledLabel>
-            <StyledInput type="text" id="patient" name="patient" placeholder="Defina um Paciente" required />
+                  <StyledLabel htmlFor="patient">Nome do Paciente:</StyledLabel>
+                  <StyledInput type="text" id="patient" name="patient" placeholder="Defina um Paciente" required />
 
-            <StyledButton type="submit">Adicionar</StyledButton>
-          </StyledForm>
-        </StyledModalContent>
-      </StyledModal>
-    </StyledContainer>
+                  <StyledButton type="submit">Adicionar</StyledButton>
+                </StyledForm>
+              </StyledModalContent>
+            </StyledModal>
+          </StyledContainer>
+        </CalendarContainer>
+      </Content>
+    </Container>
   );
 }
 

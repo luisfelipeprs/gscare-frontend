@@ -200,7 +200,7 @@ function PatientList() {
             </TextField.Slot>
             <TextField.Input
               placeholder="Pesquisar Paciente"
-              style={{ width: '1000px', border: 'none' }}
+              style={{ width: '1000px', border: 'none', margin: 'auto' }}
 
             />
           </TextField.Root>

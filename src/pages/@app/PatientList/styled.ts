@@ -327,8 +327,13 @@ export const ProgressStep = styled.div<{ completed: boolean }>`
 
 export const AddContent = styled.div`
   display: flex;
-  gap: 30px;
-  margin: 35px;
+  justify-content: space-between;
+  margin: 10px;
+  /* gap: 30px; */
+  /* margin: 35px; */
+  .rt-TextFieldRoot{
+    width: 60%;
+  }
   svg{
     cursor: pointer;
   }
