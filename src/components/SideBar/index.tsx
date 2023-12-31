@@ -29,22 +29,22 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
 
   return (
     <>
-      <SidebarContainer isOpen={isOpenSideBar}>
+      <SidebarContainer isopen={isOpenSideBar}>
         <Menu>
           <div>
-            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Administrativo
             </Logo>
 
             <NavLinkStyled
               to="/admin/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/'}
               onClick={() => handleNavLinkClick('/admin/')}
             >
               <Icons>{HomeIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Início
               </LinkText>
             </NavLinkStyled>
@@ -52,12 +52,12 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
             <NavLinkStyled
               to="/admin/calendar/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/calendar/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/calendar/'}
               onClick={() => handleNavLinkClick('/admin/calendar/')}
             >
               <Icons>{CalendarIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Calendário
               </LinkText>
             </NavLinkStyled>
@@ -65,12 +65,12 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
             <NavLinkStyled
               to="/admin/employee/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/employee/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/employee/'}
               onClick={() => handleNavLinkClick('/admin/employee/')}
             >
               <Icons>{EmployeeIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Funcionários
               </LinkText>
             </NavLinkStyled>
@@ -78,12 +78,12 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
             <NavLinkStyled
               to="/admin/patients/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/patients/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/patients/'}
               onClick={() => handleNavLinkClick('/admin/patients/')}
             >
               <Icons>{PatientsIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Pacientes
               </LinkText>
             </NavLinkStyled>
@@ -91,31 +91,31 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
             <NavLinkStyled
               to="/admin/servicesprovided/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/servicesprovided/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/servicesprovided/'}
               onClick={() => handleNavLinkClick('/admin/servicesprovided/')}
             >
               <Icons>{CalendarCheckIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 atendimentos
               </LinkText>
             </NavLinkStyled>
           </div>
           
           <div>
-            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Relatórios
             </Logo>
 
             <NavLinkStyled
               to="/admin/reports/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/reports/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/reports/'}
               onClick={() => handleNavLinkClick('/admin/reports/')}
             >
               <Icons>{ChartPieSliceIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 relatorios
               </LinkText>
             </NavLinkStyled>
@@ -123,12 +123,12 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
             <NavLinkStyled
               to="/admin/financialmanagement/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/financialmanagement/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/financialmanagement/'}
               onClick={() => handleNavLinkClick('/admin/financialmanagement/')}
             >
               <Icons>{FinanceIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 financeiro
               </LinkText>
             </NavLinkStyled>
@@ -136,12 +136,12 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
             <NavLinkStyled
               to="/admin/zapscheduling/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/zapscheduling/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/zapscheduling/'}
               onClick={() => handleNavLinkClick('/admin/zapscheduling/')}
             >
               <Icons>{CalendarIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Agendamento Zap
               </LinkText>
             </NavLinkStyled>
@@ -149,31 +149,31 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
             <NavLinkStyled
               to="/admin/zapcampaign/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/zapcampaign/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/zapcampaign/'}
               onClick={() => handleNavLinkClick('/admin/zapcampaign/')}
             >
               <Icons>{WhatsappLogoIcon}</Icons>
-              <LinkText  style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText  style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Campanha Zap
               </LinkText>
             </NavLinkStyled>
           </div>
           
           <div>
-            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Interação
             </Logo>
 
             <NavLinkStyled
               to="/admin/feedback/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/feedback/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/feedback/'}
               onClick={() => handleNavLinkClick('/admin/feedback/')}
             >
               <Icons>{FeedbackIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Feedbacks
               </LinkText>
             </NavLinkStyled>
@@ -181,38 +181,38 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
             <NavLinkStyled
               to="/admin/Warnings/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/Warnings/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/Warnings/'}
               onClick={() => handleNavLinkClick('/admin/Warnings/')}
             >
               <Icons>{BellRingingIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 avisos
               </LinkText>
             </NavLinkStyled>
           </div>
           
           <div>
-            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Configuração
             </Logo>
 
             <NavLinkStyled
               to="/admin/profile/"
               className="link"
-              isOpen={isOpenSideBar}
-              isActive={lastClickedLink === '/admin/profile/'}
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/profile/'}
               onClick={() => handleNavLinkClick('/admin/profile/')}
             >
               <Icons>{UserGearIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isOpen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 profiles
               </LinkText>
             </NavLinkStyled>
           </div>
         </Menu>
       </SidebarContainer>
-      {isOpenSideBar && <Overlay onClick={toggleSidebar} isOpen={isOpenSideBar} />}
+      {isOpenSideBar && <Overlay onClick={toggleSidebar} isopen={isOpenSideBar} />}
     </>
   );
 };

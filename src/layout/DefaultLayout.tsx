@@ -8,8 +8,8 @@ export function DefaultLayout() {
   const [isOpenSideBar, setIsOpenSideBar] = useState(false);
 
   function handleOpenSideBar() {
-    const isOpen = isOpenSideBar;
-    setIsOpenSideBar(!isOpen);
+    const isopen = isOpenSideBar;
+    setIsOpenSideBar(!isopen);
     console.log("ta aberto:", isOpenSideBar);
   }
   return (

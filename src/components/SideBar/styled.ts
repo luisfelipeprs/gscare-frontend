@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-interface IisOpen {
-  isOpen: boolean;
+interface IsOpen {
+  isopen: boolean;
 }
 
-export const SidebarContainer = styled.div<IisOpen>`
-  width: ${(props) => (props.isOpen ? '240px' : '60px')};
-  min-width: ${(props) => (props.isOpen ? '240px' : '60px')}; /* Adicione essa linha */
-  max-width: ${(props) => (props.isOpen ? '240px' : '60px')}; /* Adicione essa linha */
+export const SidebarContainer = styled.div<IsOpen>`
+  width: ${(props) => (props.isopen ? '240px' : '60px')};
+  min-width: ${(props) => (props.isopen ? '240px' : '60px')}; /* Adicione essa linha */
+  max-width: ${(props) => (props.isopen ? '240px' : '60px')}; /* Adicione essa linha */
   background-color: #fff;
   color: #000;
   transition: width 0.3s ease, min-width 0.3s ease, max-width 0.3s ease; /* Adicione essas linhas */
@@ -15,7 +15,7 @@ export const SidebarContainer = styled.div<IisOpen>`
   z-index: 10;
 
   @media screen and (max-width: 1000px) {
-    display: ${(props) => (props.isOpen ? 'block' : 'none')}; /* Altere de 'none' para 'block' */
+    display: ${(props) => (props.isopen ? 'block' : 'none')}; /* Altere de 'none' para 'block' */
     width: 100%;
     /* min-width: 100%; 
     max-width: 100%;  */
@@ -41,8 +41,8 @@ export const TopSection = styled.div`
   }
 `;
 
-export const Logo = styled.h1<IisOpen>`
-  display: ${(props) => (props.isOpen ? 'flex' : 'none')};
+export const Logo = styled.h1<IsOpen>`
+  display: ${(props) => (props.isopen ? 'flex' : 'none')};
   color: #aaaaaa;
   font-family: monospace;
   font-size: 1.1rem;
@@ -56,7 +56,7 @@ export const Logo = styled.h1<IisOpen>`
   }
 `;
 
-export const LinkIcon = styled.div<IisOpen>`
+export const LinkIcon = styled.div<IsOpen>`
   font-size: 1rem;
   margin-right: 10px;
 
@@ -65,8 +65,8 @@ export const LinkIcon = styled.div<IisOpen>`
   }
 `;
 
-export const LinkText = styled.div<IisOpen>`
-  display: ${(props) => (props.isOpen ? 'block' : 'none')};
+export const LinkText = styled.div<IsOpen>`
+  display: ${(props) => (props.isopen ? 'block' : 'none')};
   font-size: 1rem;
   margin-left: 5px;
 
@@ -79,26 +79,22 @@ export const LinkText = styled.div<IisOpen>`
   }
 `;
 
-interface IisOpen {
-  isOpen: boolean;
-}
-
-interface INavLinkStyledProps extends IisOpen {
-  isActive?: boolean;
+interface INavLinkStyledProps extends IsOpen {
+  isactive?: boolean;
 }
 
 export const NavLinkStyled = styled(NavLink)<INavLinkStyledProps>`
   text-decoration: none;
-  /* color: ${(props) => (props.isActive ? '#5e9bf7' : '#000')};
-  div{svg{color:${(props) => (props.isActive ? '#5e9bf7' : '#A7AEB8')};}} */
-  color: ${(props) => (props.isActive ? '#FFA500' : '#000')};
-  div{svg{color:${(props) => (props.isActive ? '#FFA500' : '#A7AEB8')};}}
+  /* color: ${(props) => (props.isactive ? '#5e9bf7' : '#000')};
+  div{svg{color:${(props) => (props.isactive ? '#5e9bf7' : '#A7AEB8')};}} */
+  color: ${(props) => (props.isactive ? '#FFA500' : '#000')};
+  div{svg{color:${(props) => (props.isactive ? '#FFA500' : '#A7AEB8')};}}
   display: flex;
   align-items: center;
   padding: 10px 0;
   transition: background-color 0.2s ease-in-out, padding 0.2s ease-in-out, color 0.2s ease-in-out;
   margin: 3px 0;
-  margin-left: ${(props) => (props.isOpen ? '20px' : '0px')};
+  margin-left: ${(props) => (props.isopen ? '20px' : '0px')};
 
   @media screen and (max-width: 600px) {
     padding: 15px; /* Ajuste o valor conforme necessário */
@@ -150,10 +146,10 @@ export const Icons = styled.div`
   margin-right: 10px;
 `;
 
-export const Overlay = styled.div<IisOpen>`
+export const Overlay = styled.div<IsOpen>`
   display: none;
   @media screen and (max-width: 1000px) {
-    display: ${(props) => (props.isOpen ? 'block' : 'none')};
+    display: ${(props) => (props.isopen ? 'block' : 'none')};
     position: fixed;
     z-index: 9;
     top: 0;

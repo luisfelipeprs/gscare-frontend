@@ -12,10 +12,8 @@ interface IProps{
 }
 
 function FloatingMenu({handleIsOpen}:IProps){
-  // const [isOpen, setIsOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // const toggle = () => setIsOpen(!isOpen);
+  
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
