@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './styled';
-import { AddPicture, AgroupInterest, Container, Content, InfoName, Interest, LeftContainer, MidContainer, ProfileImage, ProfileInfoContainer, ShowInterest } from './styled';
-import { Box, Section } from '@radix-ui/themes';
+import { AddPicture, Container, Content, InfoName, Interest, LeftContainer, MidContainer, ProfileImage, ProfileInfoContainer, ShowInterest } from './styled';
+import { Section } from '@radix-ui/themes';
 
 function ProfileEdit() {
   const [name] = useState('Neymar JR da Silva');

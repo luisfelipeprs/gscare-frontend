@@ -9,7 +9,6 @@ import {FeedbackDetails} from './pages/@app/FeedbackDetails/index.tsx';
 import Feedback from './pages/@app/Feedback/index.tsx';
 import Calendar from "./pages/@app/Calendar/index.tsx";
 import Employee from "./pages/@app/Employee/index.tsx";
-// import Patients from "./pages/Patients/index.tsx";
 import ProfileEdit from "./pages/@app/ProfileEdit/index.tsx";
 import Warnings from "./pages/@app/Warnings/index.tsx";
 import Reports from "./pages/@app/Reports/index.tsx";

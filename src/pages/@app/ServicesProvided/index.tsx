@@ -1,5 +1,5 @@
-import { Button, Flex, Text, TextArea, TextField } from "@radix-ui/themes";
-import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContent, ContainerForm, TableContainer, Table } from "./styled";
+import { Button, Text, TextField } from "@radix-ui/themes";
+import { AgroupInput, Container, Content, DateContainer, ContentInputDate, SelectContent, ContainerForm, TableContainer, Table } from "./styled";
 import { SelectContainer, StyledSelect } from "../Warnings/styled";
 import { useState } from "react";
 
