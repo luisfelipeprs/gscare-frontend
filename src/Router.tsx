@@ -15,7 +15,6 @@ import Reports from "./pages/@app/Reports/index.tsx";
 import ServicesProvided from "./pages/@app/ServicesProvided/index.tsx";
 import ZapScheduling from "./pages/@app/ZapScheduling/index.tsx";
 import ZapCampaign from "./pages/@app/ZapCampaign/index.tsx";
-import FinancialManagement from "./pages/@app/FinancialManagement/index.tsx";
 import PatientList from "./pages/@app/PatientList/index.tsx";
 import { Login } from "./pages/@auth/Login/index.tsx";
 import { LoginAdmin } from "./pages/@auth/LoginAdmin/index.tsx";
@@ -44,7 +43,6 @@ export function Router() {
                 <Route path="/admin/warnings" element={<Warnings/>} />
                 <Route path="/admin/reports" element={<Reports/>} />
                 <Route path="/admin/servicesprovided" element={<ServicesProvided/>} />
-                <Route path="/admin/financialmanagement" element={<FinancialManagement/>} />
                 <Route path="/admin/zapscheduling" element={<ZapScheduling/>} />
                 <Route path="/admin/zapcampaign" element={<ZapCampaign/>} />
                 <Route path='/admin/oldadmin' element={<Navigate to="/admin"/>} />

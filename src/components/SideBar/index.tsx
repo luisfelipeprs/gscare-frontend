@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, Money, WhatsappLogo, UsersThree } from 'phosphor-react';
+import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, WhatsappLogo, UsersThree } from 'phosphor-react';
 import { Icons, LinkText, Logo, Menu, NavLinkStyled, Overlay, SidebarContainer } from './styled';
 
 const HomeIcon = <House size={24} />;
@@ -11,7 +11,6 @@ const BellRingingIcon = <BellRinging size={24} />
 const UserGearIcon = <UserGear size={24} />
 const CalendarCheckIcon = <CalendarCheck size={24} />
 const ChartPieSliceIcon = <ChartPieSlice size={24} />
-const FinanceIcon = <Money size={24} />
 const WhatsappLogoIcon = <WhatsappLogo size={24} />
 
 interface IProps {
@@ -117,19 +116,6 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
               <Icons>{ChartPieSliceIcon}</Icons>
               <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 relatorios
-              </LinkText>
-            </NavLinkStyled>
-
-            <NavLinkStyled
-              to="/admin/financialmanagement/"
-              className="link"
-              isopen={isOpenSideBar}
-              isactive={lastClickedLink === '/admin/financialmanagement/'}
-              onClick={() => handleNavLinkClick('/admin/financialmanagement/')}
-            >
-              <Icons>{FinanceIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                financeiro
               </LinkText>
             </NavLinkStyled>
 

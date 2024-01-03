@@ -20,21 +20,6 @@ interface UserData {
   username: string
 }
 
-// {
-//   id: string;
-//   name: string;
-//   botEnable: boolean;
-//   phone: string;
-//   username: string;
-//   email: string;
-//   isAdmin: boolean;
-//   access_token: string;
-//   session: string;
-//   accessAllCategorys: boolean;
-//   categorys_id: string;
-//   categorys_name: string;
-// }
-
 
 interface AuthenticatorOptions {
   email: string;
