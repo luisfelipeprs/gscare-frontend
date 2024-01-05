@@ -88,12 +88,14 @@ const AdminHome: React.FC = () => {
         </SectionInfos>
       </ContainerSectionsInfos>
 
+      {/* divs com dados de faturamento e outros numeros importantes */}
       <GridWrapper>
         {data.map((item, index) => (
           <CardAmountAndTile key={index} title={item.title} amount={item.amount} />
         ))}
       </GridWrapper>
 
+      {/* graficos com dados da conta */}
       <LineChart data={chartData} categories={chartCategories} />
       <ColumnChart data={chartColumnData.data} categories={chartColumnData.categories} title={chartColumnData.title} />
     </Container>

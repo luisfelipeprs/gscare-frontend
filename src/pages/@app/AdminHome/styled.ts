@@ -153,7 +153,7 @@ export const ContainerSectionsInfos = styled.div`
 export const SectionInfos = styled.div`
   width: calc(33.33% - 20px); /* Cada seção ocupa 33.33% do espaço, com margem à direita */
   margin-bottom: 20px; /* Distância entre as seções */
-  /* background-color: #fff; */
+  background-color: #fff;
   /* padding: 20px; */
   box-sizing: border-box;
   height: 480px;
