@@ -134,14 +134,22 @@ export const ButtonSaibaMais = styled.button`
   height: 50px;
   color: #fff;
   margin: auto;
-  color: #FFA500;
-  background-color: #ffffff;
-  border: solid 2px #FFA500;
+  background-color: transparent;
+  border: solid 2px #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 5px 15px;
+  
+  svg {  
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+    transform: translateY(15%);
+  }
+
   &:hover {
     cursor: pointer;
+    text-decoration: underline;
   }
 `
 

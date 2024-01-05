@@ -2,6 +2,7 @@
 import {ButtonSaibaMais, ButtonTesteGratis, Container, ContainerButtons, Content, Functionalities, Leftdiv, Rightdiv } from './styled'
 import saasPhoto from './../../assets/saasPhotoWithoutBack.png'
 import { Check } from 'phosphor-react'
+import { EyeOpenIcon } from '@radix-ui/react-icons'
 
 export default function Homepage() {
   return (
@@ -38,7 +39,10 @@ export default function Homepage() {
           </Functionalities>
           <ContainerButtons>
             <ButtonTesteGratis>Faca o teste gratis</ButtonTesteGratis>
-            <ButtonSaibaMais>Saiba mais</ButtonSaibaMais>
+            <ButtonSaibaMais>
+              <EyeOpenIcon/>
+              <span>Saiba mais</span>
+            </ButtonSaibaMais>
           </ContainerButtons>
         </Leftdiv>
         <Rightdiv>
