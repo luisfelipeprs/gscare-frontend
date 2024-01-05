@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   background-color: #FFA500;
-  color: white;
+  color: #fff;
   
 `
 

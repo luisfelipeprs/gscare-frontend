@@ -4,7 +4,7 @@ import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
 export const StyledFloatingMenu = styled.div`
   z-index: 11;
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #0000008c;
   height: 60px;
   width: 100%;

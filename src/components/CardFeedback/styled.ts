@@ -16,7 +16,7 @@ div{
 
 export const MessageResponse = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   //background-color: #0000000f;
   border-top: 1px solid black;

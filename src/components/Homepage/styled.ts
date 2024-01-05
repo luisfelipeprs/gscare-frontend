@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div`  
+  background-color: #1e22a3;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   padding: 50px 0px;
   width: 100%;
   text-align: center;
-  background-color: #ffff;
+  /* background-color: #ffff; */
   height: 100%;
   padding-bottom: 50px;
   
@@ -17,9 +20,11 @@ export const Content = styled.div`
   justify-content: space-between;
   max-width: 1280px;
   margin: auto;
+  position: relative;
   &:hover{
     /* cursor: pointer; */
   }
+  padding: 20px;
 
   @media screen and (max-width: 1000px) {
     flex-direction: column;
@@ -45,7 +50,7 @@ export const Functionalities = styled.div`
   align-items: start;
   gap: none;
   span {
-    color: #00000090;
+    color: #f0f0f0;
     svg {
       
     transform: translateY(20%);
@@ -65,14 +70,14 @@ export const Leftdiv = styled.div`
   /* padding-left: 15px; */
 
   h1{
-    text-align: start;
-    color: #FFA500;
+    text-align: start;  
+    color: #f0f0f0;
     font-size: 2.7rem;
   }
   p{
     text-align: start;
     font-size: 1.3rem;
-    color: #2d2d2d;
+    color: #ddd;
   }  
   
   @media screen and (max-width: 1280px) {
@@ -111,10 +116,10 @@ export const ButtonTesteGratis = styled.button`
   border: none;
   border-radius: 5px;
   height: 50px;
-  color: white;
+  color: #fff;
   margin: auto;
-  background-color: #0176D3;
-  border: solid 2px #0176D3;
+  background-color: #FFA500;
+  border: solid 2px #FFA500;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 5px 15px;
@@ -127,11 +132,11 @@ export const ButtonSaibaMais = styled.button`
   border: none;
   border-radius: 5px;
   height: 50px;
-  color: white;
+  color: #fff;
   margin: auto;
-  color: #0176D3;
+  color: #FFA500;
   background-color: #ffffff;
-  border: solid 2px #0176D3;
+  border: solid 2px #FFA500;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 5px 15px;
@@ -155,5 +160,36 @@ export const Rightdiv = styled.div`
     /* height: 350px; */
     /* max-width: 100%; */
     /* padding: 0 20px; */
+  }
+`
+
+
+export const Curve = styled.div`
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #fff;
+    transform: translate(100%, 60%);
+  }
+
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #fff;
+    transform: translate(-4%, 40%);
+    z-index: -1;
   }
 `

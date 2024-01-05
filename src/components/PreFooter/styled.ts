@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  background-color: white;
+  /* background-color: #fff; */
   color: black;
   
   @media screen and (max-width: 1280px) {

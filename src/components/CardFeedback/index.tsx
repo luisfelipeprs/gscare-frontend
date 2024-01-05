@@ -48,6 +48,6 @@ function CardFeedback(){
     </Flex>
   </Feedback>
   );
-};
+}
 
 export default CardFeedback;

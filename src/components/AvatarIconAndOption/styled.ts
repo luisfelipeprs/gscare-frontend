@@ -24,7 +24,7 @@ export const slideUpAndFade = keyframes`
 export const DropdownMenuContent = styled(DropdownMenu.Content)`
   margin: 10px;
   min-width: 220px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 6px;
   padding: 5px;
   box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
@@ -73,7 +73,7 @@ export const IconButton = styled.button`
   align-items: center;
   justify-content: center;
   color: var(--violet-11);
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 2px 10px var(--black-a7);
   &:hover {
     background-color: var(--violet-3);

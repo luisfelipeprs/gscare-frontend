@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   text-align: center;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 10px 0;
   /* background-color: #4047d0; */
 `
@@ -57,7 +57,7 @@ export const Action = styled.div`
     border: none;
     border-radius: 10px;
     height: 50px;
-    color: white;
+    color: #fff;
     background-color: #137d00;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -145,7 +145,7 @@ export const Infos = styled.div`
 `
 
 export const Notification = styled.div`
-  background-color: #00a1ff;
+  background-color: #3652cd;
   text-align: center;
   font-size: 0.8rem;
   h2 {

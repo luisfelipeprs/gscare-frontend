@@ -1,6 +1,6 @@
 // import Button from '../Button'
 import {ButtonSaibaMais, ButtonTesteGratis, Container, ContainerButtons, Content, Functionalities, Leftdiv, Rightdiv } from './styled'
-import saasPhoto from './../../assets/saasPhoto.png'
+import saasPhoto from './../../assets/saasPhotoWithoutBack.png'
 import { Check } from 'phosphor-react'
 
 export default function Homepage() {
@@ -48,6 +48,7 @@ export default function Homepage() {
             Seu navegador não suporta o elemento de vídeo.
           </video> */}
         </Rightdiv>
+        {/* <Curve/> */}
       </Content>
     </Container>
     
