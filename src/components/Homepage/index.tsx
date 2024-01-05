@@ -1,6 +1,6 @@
 // import Button from '../Button'
 import {ButtonSaibaMais, ButtonTesteGratis, Container, ContainerButtons, Content, Functionalities, Leftdiv, Rightdiv } from './styled'
-import videoInfos from './../../assets/trailer.mp4'
+import saasPhoto from './../../assets/saasPhoto.png'
 import { Check } from 'phosphor-react'
 
 export default function Homepage() {
@@ -42,12 +42,11 @@ export default function Homepage() {
           </ContainerButtons>
         </Leftdiv>
         <Rightdiv>
-          {/* <img src="https://wp.salesforce.com/pt-br/wp-content/uploads/sites/15/2022/11/homepage-success-now-fg.png" alt="home-page-image" /> */}
-          <video width="100%" controls>
+          <img src={saasPhoto} alt="home-page-image" />
+          {/* <video width="100%" controls>
             <source src={videoInfos} type="video/mp4" />
-            {/* <source src="caminho-para-o-seu-video.webm" type="video/webm" /> */}
             Seu navegador não suporta o elemento de vídeo.
-          </video>
+          </video> */}
         </Rightdiv>
       </Content>
     </Container>
