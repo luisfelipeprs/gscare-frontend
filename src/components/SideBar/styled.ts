@@ -8,7 +8,7 @@ export const SidebarContainer = styled.div<IsOpen>`
   width: ${(props) => (props.isopen ? '240px' : '60px')};
   min-width: ${(props) => (props.isopen ? '240px' : '60px')}; /* Adicione essa linha */
   max-width: ${(props) => (props.isopen ? '240px' : '60px')}; /* Adicione essa linha */
-  /* background-color: #fff; */
+  background-color: #fff;
   color: #000;
   transition: width 0.3s ease, min-width 0.3s ease, max-width 0.3s ease; /* Adicione essas linhas */
   overflow-x: hidden;
