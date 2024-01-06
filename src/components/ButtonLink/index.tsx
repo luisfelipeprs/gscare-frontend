@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 
 interface IProps{
   textButton: string;
-  typeButton: "withBorder"|"withBg"
+  typebutton: "withBorder"|"withBg"
   link: string
 }
-function ButtonLink({textButton,typeButton, link}: IProps) {
+function ButtonLink({textButton,typebutton, link}: IProps) {
   return (
-    <ContainerButton typeButton={typeButton}>
+    <ContainerButton typebutton={typebutton}>
       <Link to={link}>
         {textButton}
       </Link>

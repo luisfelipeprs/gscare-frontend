@@ -16,7 +16,7 @@ function BoxCardsTools() {
           title={'Há beneficios para seus cuidadores tambem! Ferramente que trazem agilidade e eficiencia para seus funcionarios.'} 
           description='lofsadfasdfasdfasdfasd'
           textButton='Faça o teste gratis'
-          typeButton='withBg'
+          typebutton='withBg'
           color='orange'
         />
         <CardsContainer>

@@ -8,15 +8,15 @@ interface IProps{
   textButton?: string;
   color?: 'blue' | 'orange'
   // color: '#FFA500' | '#FFA500'
-  typeButton?: "withBorder"|"withBg"
+  typebutton?: "withBorder"|"withBg"
 }
-function Title({title,description,textButton,typeButton='withBg', color='blue'}: IProps) {
+function Title({title,description,textButton,typebutton='withBg', color='blue'}: IProps) {
   return (
     <Container>
       <Content>
         <h1>{title}</h1>
         {description && <p>{description}</p>}
-        {textButton && <Button textButton={textButton} color={color} typeButton={typeButton}/>}
+        {textButton && <Button textButton={textButton} color={color} typebutton={typebutton}/>}
       </Content>
     </Container>
   )

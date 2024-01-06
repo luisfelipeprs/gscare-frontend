@@ -4,12 +4,12 @@ import { ContainerButton } from './styled'
 
 interface IProps{
   textButton: string;
-  typeButton: "withBorder"|"withBg"
+  typebutton: "withBorder"|"withBg"
   color: 'blue' | 'orange'
 }
-function Button({textButton,typeButton,color}: IProps) {
+function Button({textButton,typebutton,color}: IProps) {
   return (
-    <ContainerButton typeButton={typeButton} color={color}>
+    <ContainerButton typebutton={typebutton} color={color}>
       {textButton}
     </ContainerButton>
 
