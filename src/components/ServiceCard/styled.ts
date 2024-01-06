@@ -31,6 +31,11 @@ export const ContainerText = styled.div`
 
     p{
         margin-top: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 `;
 

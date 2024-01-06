@@ -16,6 +16,7 @@ export const Content = styled.div`
 `
 export const CardsContainer = styled.div`
   justify-content: space-evenly;
+  gap: 32px;
   width: 100%;
   display: flex;
   margin: auto;
