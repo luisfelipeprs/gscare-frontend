@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  align-items: center;
-  margin: 20px;
+  padding: 3% 5%;
 `;
 
 export const Content = styled.div`
-  width: 80%;
+
 `;
 
 export const ProfileInfoContainer = styled.div`
@@ -96,6 +94,7 @@ export const InfoName = styled.div`
 
 export const MidContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: 70%;
   @media (max-width: 768px) {
    width: 100%;
@@ -115,7 +114,7 @@ export const Interest = styled.div`
 export const ShowInterest = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 40%;
   flex-direction: column;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -129,3 +128,33 @@ export const AgroupInterest = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   height: 100%; /* Set the height to 100% */
 `;
+
+
+export const AvatarContainer = styled.div`
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  gap: 10px;
+  border: 1px solid black;
+  height: 20%;
+  border-radius: 20px;
+  padding: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+  svg {
+    width: 30px;
+  }
+  @media screen and (max-width: 1000px) {
+    margin-top: 50px;
+  }
+`;
+
+
+export const Person = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+  font-weight: bold ;
+`;
+

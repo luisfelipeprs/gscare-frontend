@@ -28,14 +28,18 @@ export const InfoName = styled.div`
 `;
 
 export const LeftContainer = styled.div`
-  padding: 60px 20px;
   width: 50%;
-  border: 1px solid black;
-  border-radius: 20px;
-  margin-right: 0px;
   @media (max-width: 1280px) {
     width: 100%;
   }
+`;
+
+export const LeftContent = styled.div`
+  padding: 60px 20px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-right: 0px;
 `;
 
 export const MidContainer = styled.div`

@@ -15,11 +15,13 @@ import {
   InfoContainer,
   InfoName,
   LeftContainer,
+  LeftContent,
   MidContainer,
   ProfileInfoContainer,
   Received,
   Support,
 } from "./styled";
+import Modal from "./Modal/modal.tsx";
 
 function ZapCampaign() {
   return (
@@ -27,30 +29,35 @@ function ZapCampaign() {
       <Content>
         <ProfileInfoContainer>
           <LeftContainer>
-            <InfoName>
-              <Text as="div" size="4" mb="1" weight="bold">
-                Título
-              </Text>
-              <TextField.Input
-                size={"3"}
-                placeholder="Digite o título do aviso."
-              />
-            </InfoName>
-            <InfoName>
-              <Text as="div" size="4" mb="1" weight="bold">
-                SubTítulo
-              </Text>
-              <TextField.Input
-                size={"3"}
-                placeholder="Digite o título do aviso."
-              />
-            </InfoName>
-            <InfoName>
-              <Text as="div" size="4" mb="1" weight="bold">
-                Texto da Campanha
-              </Text>
-              <TextArea size={"3"} placeholder="Digite o texto da campanha." />
-            </InfoName>
+            <Text as="div" size="3" mb="1" weight="bold">
+              Formulário de cadastro de campanha
+            </Text>
+            <LeftContent>
+              <InfoName>
+                <Text as="div" size="4" mb="1" weight="bold">
+                  Título
+                </Text>
+                <TextField.Input
+                  size={"3"}
+                  placeholder="Digite o título do aviso."
+                />
+              </InfoName>
+              <InfoName>
+                <Text as="div" size="4" mb="1" weight="bold">
+                  SubTítulo
+                </Text>
+                <TextField.Input
+                  size={"3"}
+                  placeholder="Digite o título do aviso."
+                />
+              </InfoName>
+              <InfoName>
+                <Text as="div" size="4" mb="1" weight="bold">
+                  Texto da Campanha
+                </Text>
+                <TextArea size={"3"} placeholder="Digite o texto da campanha." />
+              </InfoName>
+            </LeftContent>
           </LeftContainer>
           <MidContainer>
             <Text as="div" size="3" mb="1" weight="bold">
@@ -60,74 +67,40 @@ function ZapCampaign() {
               <Avatar
                 size="4"
                 radius="full"
-                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
                 fallback="A"
               />
               <Avatar
                 size="4"
                 radius="full"
-                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-                fallback="A"
+                fallback="B"
               />
               <Avatar
                 size="4"
                 radius="full"
-                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-                fallback="A"
+                fallback="C"
               />
               <Avatar
                 size="4"
                 radius="full"
-                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-                fallback="A"
+                fallback="D"
               />
               <Avatar
                 size="4"
                 radius="full"
-                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-                fallback="A"
+                fallback="E"
               />
               <Avatar
                 size="4"
                 radius="full"
-                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-                fallback="A"
+                fallback="F"
               />
               <Avatar
                 size="4"
                 radius="full"
-                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-                fallback="A"
+                fallback="G"
               />
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0,0,256,256"
-              >
-                <g
-                  fill="#007bff"
-                  fillRule="nonzero"
-                  stroke="none"
-                  strokeWidth="1"
-                  strokeLinecap="butt"
-                  strokeLinejoin="miter"
-                  strokeMiterlimit="10"
-                  strokeDasharray=""
-                  strokeDashoffset="0"
-                  fontFamily="none"
-                  fontWeight="none"
-                  fontSize="none"
-                  textAnchor="none"
-                >
-                  <g transform="scale(5.12,5.12)">
-                    <path d="M25,2c-12.683,0 -23,10.317 -23,23c0,12.683 10.317,23 23,23c12.683,0 23,-10.317 23,-23c0,-12.683 -10.317,-23 -23,-23zM37,26h-11v11h-2v-11h-11v-2h11v-11h2v11h11z"></path>
-                  </g>
-                </g>
-              </svg>
+              <Modal />
             </AvatarContainer>
             <Text
               as="div"
@@ -217,7 +190,6 @@ function ZapCampaign() {
                 <Avatar
                   size="3"
                   radius="full"
-                  src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
                   fallback="A"
                 />
 
@@ -254,8 +226,7 @@ function ZapCampaign() {
                 <Avatar
                   size="3"
                   radius="full"
-                  src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-                  fallback="A"
+                  fallback="B"
                 />
 
                 <Box>
@@ -288,8 +259,7 @@ function ZapCampaign() {
                 <Avatar
                   size="3"
                   radius="full"
-                  src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-                  fallback="A"
+                  fallback="C"
                 />
 
                 <Box>
@@ -325,8 +295,7 @@ function ZapCampaign() {
                 <Avatar
                   size="3"
                   radius="full"
-                  src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-                  fallback="A"
+                  fallback="D"
                 />
 
                 <Box>

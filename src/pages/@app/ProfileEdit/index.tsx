@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './styled';
-import { AddPicture, Container, Content, InfoName, Interest, LeftContainer, MidContainer, ProfileImage, ProfileInfoContainer, ShowInterest } from './styled';
-import { Section } from '@radix-ui/themes';
+import { AddPicture, Container, Content, InfoName, Interest, LeftContainer, MidContainer, ProfileImage, ProfileInfoContainer, ShowInterest, AvatarContainer, Person } from './styled';
+import { Avatar, Section, Text } from '@radix-ui/themes';
 
 function ProfileEdit() {
   const [name] = useState('Neymar JR da Silva');
@@ -30,7 +30,7 @@ function ProfileEdit() {
             <AddPicture>
               <ProfileImage src={editedProfile.image} alt="Seu Perfil" />
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
-              <g fill="#007bff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.683,0 -23,10.317 -23,23c0,12.683 10.317,23 23,23c12.683,0 23,-10.317 23,-23c0,-12.683 -10.317,-23 -23,-23zM37,26h-11v11h-2v-11h-11v-2h11v-11h2v11h11z"></path></g></g>
+              <g fill="#007bff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.683,0 -23,10.317 -23,23c0,12.683 10.317,23 23,23c12.683,0 23,-10.317 23,-23c0,-12.683 -10.317,-23 -23,-23zM37,26h-11v11h-2v-11h-11v-2h11v-11h2v11h11z"></path></g></g>
               </svg>
             </AddPicture>
             <InfoName>
@@ -53,6 +53,82 @@ function ProfileEdit() {
             <ShowInterest>🐞 Bugs</ShowInterest>
             </Section>
             </Interest>
+            <Text as="div" size="3" mb="1" weight="bold">
+              Funcionários
+            </Text>
+          <AvatarContainer>        
+            <Person>
+              <Avatar
+                size="4"
+                radius="full"
+                fallback="A"
+                />
+                Joe A.
+                </Person>
+             <Person>
+              <Avatar
+                size="4"
+                radius="full"
+                fallback="B"
+              />
+               Dylan C.
+                </Person>
+             <Person>
+              <Avatar
+                size="4"
+                radius="full"
+                fallback="C"
+              />
+               Ethan C.
+                </Person>
+             <Person>
+              <Avatar
+                size="4"
+                radius="full"
+                fallback="D"
+              />
+               Louis W.
+                </Person>
+              </AvatarContainer>
+              <Text as="div" size="3" mb="1" weight="bold">
+              Pacientes
+            </Text>
+            <AvatarContainer>
+            <Person>
+              <Avatar
+                size="4"
+                radius="full"
+                fallback="A"
+                />
+                Joe A.
+                </Person>
+             <Person>
+              <Avatar
+                size="4"
+                radius="full"
+                fallback="B"
+              />
+               Dylan C.
+                </Person>
+             <Person>
+              <Avatar
+                size="4"
+                radius="full"
+                fallback="C"
+              />
+               Ethan C.
+                </Person>
+             <Person>
+              <Avatar
+                size="4"
+                radius="full"
+                fallback="D"
+              />
+               Louis W.
+                </Person>
+          
+       
+              </AvatarContainer>
           </MidContainer>
       </ProfileInfoContainer>
       </Content>
