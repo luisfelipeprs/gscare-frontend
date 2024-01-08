@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeParagraph, WelcomeTitle } from './styled';
+import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerCharts, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeParagraph, WelcomeTitle } from './styled';
 import { DotsThreeVertical, House } from 'phosphor-react';
 import helloWork from '../../../assets/helloWork.svg'
 import CardAmountAndTile from '../../../components/CardAmountAndTile';
@@ -96,8 +96,10 @@ const AdminHome: React.FC = () => {
       </GridWrapper>
 
       {/* graficos com dados da conta */}
-      <LineChart data={chartData} categories={chartCategories} />
-      <ColumnChart data={chartColumnData.data} categories={chartColumnData.categories} title={chartColumnData.title} />
+      <ContainerCharts>
+        <LineChart data={chartData} categories={chartCategories} />
+        <ColumnChart data={chartColumnData.data} categories={chartColumnData.categories} title={chartColumnData.title} />
+      </ContainerCharts>
     </Container>
   );
 };

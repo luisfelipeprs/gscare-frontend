@@ -273,3 +273,30 @@ export const GridWrapper = styled.div`
     background-color: #E81500;
   }
 `;
+
+export const ContainerCharts = styled.div`
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 150px;
+
+  > div {
+    width: calc(50% - 20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+
+    > div {
+      width: 100%;
+    }
+  }
+`
