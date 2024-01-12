@@ -1,11 +1,11 @@
-import { Container } from "./styled";
+import ModalStep from "./modal/modal-components";
+import { Container, Content } from "./styled";
 
 function FormLeads() {
   return (
     <Container>
-      <div className="container">
-        <div className="containerContent">
-
+      <ModalStep />
+        <Content>
           <h1 className="titulo">
             Experimente nossa solução completa de CRM e vendas, grátis por 30
             dias.
@@ -37,7 +37,6 @@ function FormLeads() {
             <b>Dúvidas?</b> Entre em contato e fale com um de nossos
             especialistas: <b>0800 891 1887</b>
           </p>
-        </div>
 
         <div className="formulario">
           <p>
@@ -120,7 +119,7 @@ function FormLeads() {
 
           <button className="button">INICIAR TESTE GRATUITO</button>
         </div>
-      </div>
+        </Content>
     </Container>
     )
 }

@@ -166,3 +166,7 @@ export const Container = styled.main`
     margin-left: 5px;
   }
 `;
+
+export const Content = styled.div`
+  background-color: red;
+`
