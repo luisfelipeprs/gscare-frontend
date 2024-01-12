@@ -15,7 +15,7 @@ export const Content = styled.div`
   gap: 50px;
 `
 export const CardsContainer = styled.div`
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 32px;
   width: 100%;
   display: flex;

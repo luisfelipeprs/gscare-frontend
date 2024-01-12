@@ -1,33 +1,27 @@
 import {
   Container,
   Action,
+  TableRow,
+  TableCell,
   Table,
   Content,
-  ContainerSearch_Filter_Pagination,
-  InputSearch,
+  TableContainer,
   Filter,
-  ContainerFilterAndPagination,
   PaginationContainer,
   NavigationButton,
   PageIndicator,
-  TableContainer,
-  TableRow,
-  TableCell,
-} from './styled';
+  ContainerFilterAndPagination,
+  ContainerSearch_Filter_Pagination,
+  InputSearch
+} from "./styled";
 import { Select, TextField } from "@radix-ui/themes";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { RouterIndicator } from "../../../components/RouterIndicator";
 import { CaretLeft, CaretRight, Funnel } from "phosphor-react";
-import Toggle from '../../../components/ToggleButton';
 
 import Modal from "./Modal/modal.tsx";
 
-export function Employee() {
-
-  function handleEdit(string: string) {
-    console.log(string)
-  }
-
+function Patient() {
   // function radixFunc() {
   //   console.log('clicou pra abrir um modal radix')
   // }
@@ -43,7 +37,6 @@ export function Employee() {
   const currentPage = 1
   const totalPages = 10
 
-
   return (
     <Container>
       <RouterIndicator
@@ -52,6 +45,7 @@ export function Employee() {
         routerText="Funcionarios"
         onButtonClick={Modal}
       >
+
         <Content>
           <ContainerSearch_Filter_Pagination>
             <InputSearch>
@@ -107,171 +101,222 @@ export function Employee() {
                   <th>Ativo</th>
                   <th>Nome</th>
                   <th>Email</th>
-                  <th>Cargo</th>
+                  <th>Tipo</th>
                   <th>Telefone</th>
-                  <th>Código do Funcionário</th>
+                  <th>Código do Paciente</th>
                   <th>Endereço</th>
                   <th>Ações</th>
+                  <th>Detalhes</th>
                 </tr>
               </thead>
               <tbody>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
+                <TableRow key='id'>
+                  <TableCell>Toggle button</TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
+                  <TableCell>title</TableCell>
                   <TableCell>phone</TableCell>
                   <TableCell>Code</TableCell>
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button>Editar</button>
+                    </Action>
+                  </TableCell>
+                  <TableCell>
+                    <Action>
+                      <button>
+                        Detalhes
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -279,7 +324,12 @@ export function Employee() {
             </Table>
           </TableContainer>
         </Content>
+
       </RouterIndicator>
+
     </Container>
   );
 }
+
+
+export default Patient;

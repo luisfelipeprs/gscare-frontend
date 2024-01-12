@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import { TextField } from "@radix-ui/themes";
 
 export const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  width: 100%;
 `;
 
 export const Content = styled.div`
-  width: 80%;
+  width: 100%;
 `;
 
 export const Button = styled.button`
@@ -20,63 +21,6 @@ export const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 20px;
-`;
-
-export const Modal = styled.div`
-  min-width: 350px;
-  max-width: 600px;
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 16px;
-    border-radius: 10px;
-    transition: box-shadow 0.3s;
-  }
-  input:focus {
-    box-shadow: 0 0 5px #007bff;
-  }
-  select:focus {
-    box-shadow: 0 0 5px #007bff;
-  }
-  select {
-    background-color: #fff;
-    color: #212529;
-    font-size: 16px;
-    width: 100%;
-    padding: 12px;
-    padding-left: 5px;
-    margin-top: 16px;
-    border: 1px solid black;
-    border-radius: 10px;
-    option {
-      color: #212529;
-    }
-  }
-
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 10px;
-
-    @media (max-width: 768px) {
-      width: 100%;
-      margin: auto;
-      margin-top: 10px;
-    }
-  }
 `;
 
 export const EmployeeCard = styled.div`
@@ -143,19 +87,6 @@ export const EmployeeImageContainer = styled.div`
   }
 `;
 
-export const Background = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const GenderRadius = styled.div`
   display: flex;
 `;
@@ -174,27 +105,6 @@ export const Action = styled.div`
   }
 `;
 
-export const Table = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-
-  th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-  }
-
-  th {
-    background-color: #007bff;
-    color: #fff;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f5f5f5;
-  }
-`;
-
 export const TableRow = styled.tr`
   &:hover {
     background-color: #ddd;
@@ -205,6 +115,12 @@ export const TableCell = styled.td`
   max-width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 `;
 
 const DropdownContent = styled.div`
@@ -248,26 +164,162 @@ export const DropdownItem = styled.button`
   }
 `;
 
-export const CloseButton = styled.div`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px 10px;
+
+export const ContainerSearch_Filter_Pagination = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  gap: 10px;
+  svg{
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1360px) {
+    flex-direction: column;
+  }
 `;
 
-export const AddContent = styled.div`
+export const InputSearch = styled(TextField.Root)`
+  width: 55%;
+  padding: 5px;
+  box-sizing: border-box;
+  /* border-radius: 18px; */
+
+  @media screen and (max-width: 1360px) {
+    width: 100%;
+  }
+`
+
+export const ContainerFilterAndPagination = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 35px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45%;
+
+  @media screen and (max-width: 1360px) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+`;
+
+export const Filter = styled.div`
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  display: flex;
+  margin: auto 0;
+  cursor: pointer;
+  padding: 5px;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  gap:10px;
+
+  button {
+    box-shadow: none;
+  }
+`;
+
+export const PaginationContainer = styled.div`
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  /* background-color: #f0f0f0; */
+`;
+
+export const NavigationButton = styled.button`
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  display: flex;
+  margin: auto 0;
+  cursor: pointer;  
+  padding: 5px;
+
   svg {
-    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+
+  span {
+    padding: 0 5px;
+    transform: translateY(10%);
+  }
+  @media screen and (max-width: 780px) {
+    span {
+      display: none;
+    }
+  }
+
+
+  &:hover {
+    span {
+      /* text-decoration: underline; */
+      color: #000000ca;
+    }
+    svg {
+      color: #000000ca;
+    }
+  }
+`;
+
+export const PageIndicator = styled.div`
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+`;
+
+
+export const TableContainer = styled.div`
+  overflow: hidden;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 10px;
+`;
+
+export const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin: 5px 0 100px 0;
+  /* margin-top: 20px; */
+
+  th, td {
+    /* border: 1px solid #ddd; */
+    padding: 18px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+  }
+
+  th:first-child {
+    border-top-left-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+  }
+
+  th:last-child {
+    border-top-right-radius: 10px;
+    /* border-bottom-right-radius: 10px; */
   }
 `;

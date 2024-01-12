@@ -21,6 +21,7 @@ import {
   Received,
   Support,
 } from "./styled";
+
 import Modal from "./Modal/modal.tsx";
 
 function ZapCampaign() {

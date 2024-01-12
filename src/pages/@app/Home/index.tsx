@@ -17,7 +17,7 @@ const data = [
 
 
 // Componente principal
-const AdminHome: React.FC = () => {
+const Home: React.FC = () => {
   // Função para obter a data de hoje
   const getTodayDate = (): string => {
     const today = new Date();
@@ -104,4 +104,4 @@ const AdminHome: React.FC = () => {
   );
 };
 
-export default AdminHome;
+export default Home;
