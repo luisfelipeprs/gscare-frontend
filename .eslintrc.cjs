@@ -3,16 +3,21 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
+    'prettier',
+    'prettier/react',
+    'prettier/@typescript-eslint',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    // Adicione regras específicas se necessário
   },
-}
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+};

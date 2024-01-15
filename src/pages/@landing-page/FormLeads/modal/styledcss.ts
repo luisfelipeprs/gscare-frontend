@@ -17,6 +17,7 @@ export const ResetStyles = styled.div`
   input {
     all: unset;
   }
+
 `;
 
 // Keyframes globais
@@ -65,6 +66,11 @@ export const DialogOverlay = styled(Dialog.Overlay)`
 `;
 
 export const DialogContent = styled(Dialog.Content)`
+
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   background-color: white;
   border-radius: 6px;
   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
@@ -74,7 +80,8 @@ export const DialogContent = styled(Dialog.Content)`
   transform: translate(-50%, -50%);
   width: 90vw;
   max-width: 450px;
-  max-height: 85vh;
+  max-height: 90vh;
+  min-height: 90vh;
   padding: 25px;
   animation: ${ContentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1);
 `;
@@ -159,7 +166,19 @@ export const Fieldset = styled.fieldset`
   display: flex;
   gap: 20px;
   align-items: center;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
+  border: none;
+`;
+
+
+export const StepThreeContainer = styled.fieldset`
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 300px;
+  border: none;
+  flex-direction: column;
 `;
 
 export const Label = styled.label`
@@ -167,6 +186,15 @@ export const Label = styled.label`
   color: #333;
   width: 90px;
   text-align: right;
+`;
+
+
+export const LabelThree = styled.label`
+  font-size: 15px;
+  color: #333;
+  width: 90px;
+  text-align: center;
+  width: 100%;
 `;
 
 export const Input = styled.input`
@@ -240,4 +268,67 @@ export const ConversationLimit = styled.input`
 
 export const UserLimit = styled.input`
   
+`;
+
+
+export const StepTwoFieldset = styled.fieldset`
+  /* border: 1px solid #ddd;
+  border-radius: 8px; */
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const StepTwoLabel = styled.label`
+  font-size: 18px;
+  margin-bottom: 10px;
+`;
+
+export const StepTwoCategoryList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+`;
+
+export const StepTwoCategoryItem = styled.li`
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none;
+  }
+`;
+
+export const UserList = styled.ul`
+  width: 100%;
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+`;
+
+export const UserItem = styled.li`
+  display: flex;
+  flex-direction: column; /* Exibir informações uma abaixo da outra */
+  padding: 10px; /* Adicionar um espaçamento interno */
+  border: 1px solid #ccc; /* Adicionar uma borda para separar os itens */
+  border-radius: 5px; /* Opcional: Adicionar bordas arredondadas para uma aparência mais suave */
+  margin-bottom: 10px;
+
+  div {
+    strong {
+      color: #000;
+      font-size: 1.05rem;
+    }
+    p {
+      color: #000;
+      display: block;
+    }
+  }
 `;
