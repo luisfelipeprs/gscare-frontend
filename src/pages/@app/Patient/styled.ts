@@ -95,13 +95,14 @@ export const Action = styled.div`
   display: flex;
   justify-content: center;
   button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: transparent;
+    color: #007bff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px 10px;
+    cursor: pointer;
   }
 `;
 

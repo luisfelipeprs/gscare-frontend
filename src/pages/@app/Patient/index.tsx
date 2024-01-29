@@ -17,14 +17,18 @@ import {
 import { Select, TextField } from "@radix-ui/themes";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import { CaretLeft, CaretRight, Funnel } from "phosphor-react";
+import { CaretLeft, CaretRight, DotsThreeVertical, Funnel } from "phosphor-react";
 
 import Modal from "./Modal/modal.tsx";
+import Toggle from "../../../components/ToggleButton/index.tsx";
 
 function Patient() {
   // function radixFunc() {
   //   console.log('clicou pra abrir um modal radix')
   // }
+  function handleEdit(string: string) {
+    console.log(string)
+  }
 
   function onPrevClick() {
     console.log('voltar paginacao')
@@ -41,8 +45,8 @@ function Patient() {
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="listagem de funcionarios"
-        routerText="Funcionarios"
+        descText="listagem de pacientes"
+        routerText="Paciente"
         onButtonClick={Modal}
       >
 
@@ -98,7 +102,7 @@ function Patient() {
             <Table>
               <thead>
                 <tr>
-                  <th>Ativo</th>
+                  <th>Ativo2</th>
                   <th>Nome</th>
                   <th>Email</th>
                   <th>Tipo</th>
@@ -106,12 +110,13 @@ function Patient() {
                   <th>Código do Paciente</th>
                   <th>Endereço</th>
                   <th>Ações</th>
-                  <th>Detalhes</th>
                 </tr>
               </thead>
               <tbody>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -120,19 +125,16 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>
                 </TableRow>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -141,19 +143,16 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>
                 </TableRow>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -162,19 +161,16 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>
                 </TableRow>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -183,19 +179,16 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>
                 </TableRow>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -204,19 +197,16 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>
                 </TableRow>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -225,19 +215,16 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>
                 </TableRow>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -246,19 +233,16 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>
                 </TableRow>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -267,19 +251,16 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>
                 </TableRow>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -288,19 +269,16 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>
                 </TableRow>
                 <TableRow key='id'>
-                  <TableCell>Toggle button</TableCell>
+                  <TableCell>
+                    <Toggle />
+                  </TableCell>
                   <TableCell>name</TableCell>
                   <TableCell>email</TableCell>
                   <TableCell>title</TableCell>
@@ -309,13 +287,8 @@ function Patient() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button>Editar</button>
-                    </Action>
-                  </TableCell>
-                  <TableCell>
-                    <Action>
-                      <button>
-                        Detalhes
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
                       </button>
                     </Action>
                   </TableCell>

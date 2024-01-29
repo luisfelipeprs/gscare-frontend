@@ -17,7 +17,7 @@ import {
 import { Select, TextField } from "@radix-ui/themes";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import { CaretLeft, CaretRight, Funnel } from "phosphor-react";
+import { CaretLeft, CaretRight, DotsThreeVertical, Funnel } from "phosphor-react";
 import Toggle from '../../../components/ToggleButton';
 
 import Modal from "./Modal/modal.tsx";
@@ -104,7 +104,7 @@ export function Employee() {
             <Table>
               <thead>
                 <tr>
-                  <th>Ativo</th>
+                  <th>Ativo1</th>
                   <th>Nome</th>
                   <th>Email</th>
                   <th>Cargo</th>
@@ -127,7 +127,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -143,7 +145,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -159,7 +163,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -175,7 +181,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -191,7 +199,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -207,7 +217,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -223,7 +235,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -239,7 +253,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -255,7 +271,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
@@ -271,7 +289,9 @@ export function Employee() {
                   <TableCell>location</TableCell>
                   <TableCell>
                     <Action>
-                      <button onClick={() => handleEdit('index')}>Editar</button>
+                      <button onClick={() => handleEdit('index')}>
+                        <DotsThreeVertical size={32} weight="bold" />
+                      </button>
                     </Action>
                   </TableCell>
                 </TableRow>
