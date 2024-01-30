@@ -24,9 +24,10 @@ export const ProfileInfoContainer = styled.div`
   justify-content: space-around;
   flex-direction: row;
   /* margin: 10px; */
+  gap: 30px;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 `;
 
@@ -98,7 +99,6 @@ display: flex;
   flex: 1;
   flex-direction: column;
   height: 100%;
-  margin-left: 20px;
 `;
 
 export const RightContainer = styled.div`
@@ -224,6 +224,11 @@ export const ContainerOptionsChatBot = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
+
+  width: 100%; /* Ou uma largura específica */
+  white-space: nowrap; /* Evita que o conteúdo quebre para a próxima linha */
+  overflow-x: auto; /* Adiciona uma barra de rolagem horizontal quando necessário */
+  padding: 10px;
 
   div {
     background-color: #dddddd50;
