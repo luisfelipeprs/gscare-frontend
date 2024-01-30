@@ -12,7 +12,7 @@ import ProfileEdit from "./pages/@app/ProfileEdit/index.tsx";
 import Warnings from "./pages/@app/Warnings/index.tsx";
 import Reports from "./pages/@app/Reports/index.tsx";
 import ServicesProvided from "./pages/@app/ServicesProvided/index.tsx";
-import ZapScheduling from "./pages/@app/ZapScheduling/index.tsx";
+import { ZapScheduling } from "./pages/@app/ZapScheduling/index.tsx";
 import ZapCampaign from "./pages/@app/ZapCampaign/index.tsx";
 import Patient from "./pages/@app/Patient/index.tsx";
 import { Login } from "./pages/@auth/Login/index.tsx";

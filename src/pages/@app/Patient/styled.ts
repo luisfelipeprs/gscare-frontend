@@ -106,23 +106,6 @@ export const Action = styled.div`
   }
 `;
 
-export const TableRow = styled.tr`
-  &:hover {
-    background-color: #ddd;
-  }
-`;
-
-export const TableCell = styled.td`
-  max-width: 150px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-`;
 
 const DropdownContent = styled.div`
   display: none;
@@ -322,5 +305,23 @@ export const Table = styled.table`
   th:last-child {
     border-top-right-radius: 10px;
     /* border-bottom-right-radius: 10px; */
+  }
+`;
+
+export const TableRow = styled.tr`
+  &:hover {
+    background-color: #ddd;
+  }
+`;
+
+export const TableCell = styled.td`
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
   }
 `;
