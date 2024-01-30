@@ -1,3 +1,4 @@
+import { TextField, Text, Button } from '@radix-ui/themes';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -5,17 +6,18 @@ export const Container = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  width: 100%;
 `;
 
 export const Content = styled.div`
-  width: 80%;
+  width: 100%;
 `;
 
-export const Button = styled.button`
-  background-color: #007bff;
+export const ButtonStyled = styled(Button)`
+  background-color: #FFA500;
   color: #fff;
-  padding: 10px 20px;
+  padding: 20px 20px;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -85,10 +87,15 @@ export const Modal = styled.div`
 `;
 
 export const ContainerForm = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  width: 100%; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  margin: 10px;
+  gap: 10px;
 `;
 
 export const EmployeeCard = styled.div`
@@ -185,15 +192,23 @@ export const Action = styled.div`
   }
 `;
 
+export const TableContainer = styled.div`
+  overflow: hidden;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 10px;
+`;
+
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 5px 0 100px 0;
+  /* margin-top: 20px; */
 
   th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
+    /* border: 1px solid #ddd; */
+    padding: 18px;
+    text-align: center;
   }
 
   th {
@@ -201,8 +216,24 @@ export const Table = styled.table`
     color: #fff;
   }
 
-  tr:nth-child(even) {
-    background-color: #f5f5f5;
+  tbody {
+    tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+  }
+
+  th:first-child {
+    border-top-left-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+  }
+
+  th:last-child {
+    border-top-right-radius: 10px;
+    /* border-bottom-right-radius: 10px; */
   }
 `;
 
@@ -216,6 +247,12 @@ export const TableCell = styled.td`
   max-width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 `;
 
 const DropdownContent = styled.div`
@@ -286,12 +323,6 @@ export const TabsInfo = styled.div`
   margin: 20px;
 `;
 
-export const TableContainer = styled.div`
-  overflow: hidden;
-  overflow-x: auto;
-  max-width: 100%;
-`;
-
 export const ProgressBar = styled.div`
   display: flex;
   justify-content: space-between;
@@ -352,11 +383,24 @@ export const AgroupInput = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   width: 100%;
   div{
     width: 100%;
   }
+`;
+
+export const TextLabelStyle = styled(Text)`
+  color: #ddd;
+`;
+
+export const InputStyle = styled(TextField.Input)`
+  padding: 20px 10px;
+  /* padding: 10px 10px; */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
 `;
 
 export const DateContainer = styled.div`
@@ -367,11 +411,16 @@ export const DateContainer = styled.div`
 `;
 
 export const ContentInputDate = styled.div`
+color: #fff;
   display: flex;
   flex-direction:column;
   width: 100%;
   input{
     display: flex;
     width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
   }
 `;

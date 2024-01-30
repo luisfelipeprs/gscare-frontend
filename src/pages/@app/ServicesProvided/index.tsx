@@ -1,7 +1,7 @@
-import { Button, Text, TextField } from "@radix-ui/themes";
-import { AgroupInput, Container, Content, DateContainer, ContentInputDate, SelectContent, ContainerForm, TableContainer, Table } from "./styled";
+import { AgroupInput, Container, Content, DateContainer, ContentInputDate, SelectContent, ContainerForm, TableContainer, Table, InputStyle, TextLabelStyle, ButtonStyled } from "./styled";
 import { SelectContainer, StyledSelect } from "../Warnings/styled";
 import { useState } from "react";
+import { RouterIndicator } from "../../../components/RouterIndicator";
 
 type Option = {
   value: string;
@@ -52,75 +52,83 @@ function ServicesProvided() {
     console.log('Opção selecionada:', value);
   };
   return (
-    <>
-      <Container>
+    <Container>
+      <RouterIndicator
+        // buttonText="Criar"
+        descText="listagem de atendimentos"
+        routerText="Atendimentos"
+      >
         <Content>
           <ContainerForm>
             <AgroupInput>
               <div>
-                <Text as="div" size="2" mb="1" weight="bold">
+                <TextLabelStyle as="div" size="2" mb="1" weight="bold">
                   Nome do Funcionário
-                </Text>
-                <TextField.Input
+                </TextLabelStyle>
+                <InputStyle
                   placeholder="Digite o nome do funcionário"
                 />
               </div>
               <div>
-                <Text as="div" size="2" mb="1" weight="bold">
+                <TextLabelStyle as="div" size="2" mb="1" weight="bold">
                   Nome do Paciente
-                </Text>
-                <TextField.Input
+                </TextLabelStyle>
+                <InputStyle
                   placeholder="Digite o nome do paciente"
                 />
               </div>
             </AgroupInput>
 
-            <DateContainer>
-              <ContentInputDate>
-                <Text as="div" size="2" mb="1" weight="bold">
-                  Data de Início do Atendimento
-                </Text>
-                <input type="date" />
-              </ContentInputDate>
-              <ContentInputDate>
-                <Text as="div" size="2" mb="1" weight="bold">
-                  Data de Fim do Atendimento
-                </Text>
-                <input type="date" />
-              </ContentInputDate>
-            </DateContainer>
-
             <AgroupInput>
-            <div>
-                <Text as="div" size="2" mb="1" weight="bold">
+              {/* * o endereço ou sera da empresa por padrao, ou da sede que cadastrar o endereço */}
+              {/* <div>
+                <TextLabelStyle as="div" size="2" mb="1" weight="bold">
                   Endereço
-                </Text>
-                <TextField.Input
+                </TextLabelStyle>
+                <InputStyle
                   placeholder="Digite o Endereço do paciente"
                 />
-              </div>
-              <div>
-                <Text as="div" size="2" mb="1" weight="bold">
+              </div> */}
+              {/* o estado do atendimento vai ser sempre em aberto, ninguem marca um atendimento cancelado.
+              se passou do prazo o sistema marca como nao atendido ou algo do tipo, se o paciente remarcar vai remarcar outro dia e entao sera outro atendimento */}
+              {/* <div>
+                <TextLabelStyle as="div" size="2" mb="1" weight="bold">
                   Estado do Atendimento
-                </Text>
+                </TextLabelStyle>
                 <SelectContent>
                   <Select options={options} onChange={handleChange} />
                 </SelectContent>
+              </div> */}
+              <div>
+                <DateContainer>
+                  <ContentInputDate>
+                    <TextLabelStyle as="div" size="2" mb="1" weight="bold">
+                      Data de Início
+                    </TextLabelStyle>
+                    <input type="date" />
+                  </ContentInputDate>
+                  <ContentInputDate>
+                    <TextLabelStyle as="div" size="2" mb="1" weight="bold">
+                      Data de Fim
+                    </TextLabelStyle>
+                    <input type="date" />
+                  </ContentInputDate>
+                </DateContainer>
               </div>
               <div>
                 <label>
-                  <Text as="div" size="2" mb="1" weight="bold">
+                  <TextLabelStyle as="div" size="2" mb="1" weight="bold">
                     Valor do Atendimento
-                  </Text>
-                  <TextField.Input
+                  </TextLabelStyle>
+                  <InputStyle
                     placeholder="Digite o valor do atendimento"
                   />
                 </label>
               </div>
 
             </AgroupInput>
-            
-            <Button style={{ width: "100%", marginTop: "20px" }}> Salvar</Button>
+
+            <ButtonStyled style={{ width: "100%", marginTop: "20px" }}> Salvar</ButtonStyled>
 
 
           </ContainerForm>
@@ -153,8 +161,8 @@ function ServicesProvided() {
             </Table>
           </TableContainer>
         </Content>
-      </Container>
-    </>
+      </RouterIndicator>
+    </Container>
   );
 }
 

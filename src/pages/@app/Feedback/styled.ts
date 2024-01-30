@@ -5,11 +5,11 @@ export const Container = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  width: 100%;
 `;
 
 export const Content = styled.div`
-  width: 80%;
+  width: 100%;
 `;
 
 export const ListCards = styled.div`

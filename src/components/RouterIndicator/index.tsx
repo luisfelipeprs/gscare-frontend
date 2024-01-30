@@ -1,7 +1,6 @@
-import { ReactNode, ComponentType } from "react";
+import { ReactNode, ComponentType, ReactElement } from "react";
 import { House } from "phosphor-react";
 import {
-  // ButtonPlus,
   ContainerBlueBar,
   ContainerSectionsInfos,
   ContentBlueBar,
@@ -10,8 +9,7 @@ import {
 } from "./styled";
 
 interface RouterIndicatorProps {
-  onButtonClick: ComponentType<unknown>; // Change here to accept a React component
-  // buttonText: string;
+  onButtonClick?: ComponentType<unknown>; // Agora é opcional
   children: ReactNode;
   descText: string;
   routerText: string;
@@ -19,11 +17,10 @@ interface RouterIndicatorProps {
 
 export function RouterIndicator({
   onButtonClick: ButtonComponent,
-  // buttonText,
   children,
   descText,
   routerText,
-}: RouterIndicatorProps) {
+}: RouterIndicatorProps): ReactElement {
   return (
     <>
       <ContainerBlueBar>
@@ -36,10 +33,7 @@ export function RouterIndicator({
             <p className="info-text">{descText}</p>
           </StyledNameContainer>
           <StyledDateContainer>
-            {/* <ButtonPlus> */}
-            <ButtonComponent /> {/* Render the passed component here */}
-            {/* <Plus size={19} weight="bold" /> */}
-            {/* </ButtonPlus> */}
+            {ButtonComponent && <ButtonComponent />} {/* Renderiza apenas se ButtonComponent existir */}
           </StyledDateContainer>
         </ContentBlueBar>
       </ContainerBlueBar>
