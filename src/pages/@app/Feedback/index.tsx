@@ -1,21 +1,26 @@
 import '@radix-ui/themes/styles.css';
 import { Container, Content, ListCards } from './styled';
 import CardFeedback from '../../../components/CardFeedback';
+import { RouterIndicator } from '../../../components/RouterIndicator';
 
 function Feedback() {
   return (
-    <>
-      <Container>
+    <Container>
+      <RouterIndicator
+        // buttonText="Criar"
+        descText="listagem de atendimentos"
+        routerText="Atendimentos"
+      >
         <Content>
           <ListCards>
-            <CardFeedback/>
-            <CardFeedback/>
-            <CardFeedback/>
-            <CardFeedback/>
+            <CardFeedback />
+            <CardFeedback />
+            <CardFeedback />
+            <CardFeedback />
           </ListCards>
         </Content>
-      </Container>
-    </>
+      </RouterIndicator>
+    </Container>
   );
 }
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './styled';
 import { AddPicture, Container, Content, InfoName, Interest, LeftContainer, MidContainer, ProfileImage, ProfileInfoContainer, ShowInterest, AvatarContainer, Person } from './styled';
 import { Avatar, Section, Text } from '@radix-ui/themes';
+import { RouterIndicator } from '../../../components/RouterIndicator';
 
 function ProfileEdit() {
   const [name] = useState('Neymar JR da Silva');
@@ -24,114 +25,120 @@ function ProfileEdit() {
 
   return (
     <Container>
-      <Content>
-        <ProfileInfoContainer>
-          <LeftContainer>
-            <AddPicture>
-              <ProfileImage src={editedProfile.image} alt="Seu Perfil" />
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
-              <g fill="#007bff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.683,0 -23,10.317 -23,23c0,12.683 10.317,23 23,23c12.683,0 23,-10.317 23,-23c0,-12.683 -10.317,-23 -23,-23zM37,26h-11v11h-2v-11h-11v-2h11v-11h2v11h11z"></path></g></g>
-              </svg>
-            </AddPicture>
-            <InfoName>
-            <h1>{name}</h1>
-            <p>{role}</p>
-            </InfoName>
-            <a href="#"><h2>Profile</h2></a>
-            <a href="#"><h2>Task</h2></a>
-            <a href="#"><h2>Calendar</h2></a>
-            <a href="#"><h2>Files</h2></a>
-          </LeftContainer>
-          <MidContainer>
-          <Interest>
-            <Section size="1" style={{width:'100%'}}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <ShowInterest>📱 Product Infrastructure</ShowInterest>
-            <ShowInterest>🔒 Network Security</ShowInterest>
-            <ShowInterest>🕹️ Security Testing</ShowInterest>
-            <ShowInterest>🌎 Security Audit Outsourcing</ShowInterest>
-            <ShowInterest>🐞 Bugs</ShowInterest>
-            </Section>
-            </Interest>
-            <Text as="div" size="3" mb="1" weight="bold">
-              Funcionários
-            </Text>
-          <AvatarContainer>        
-            <Person>
-              <Avatar
-                size="4"
-                radius="full"
-                fallback="A"
-                />
-                Joe A.
+      <RouterIndicator
+        // buttonText="Criar"
+        descText="listagem de atendimentos"
+        routerText="Atendimentos"
+      >
+        <Content>
+          <ProfileInfoContainer>
+            <LeftContainer>
+              <AddPicture>
+                <ProfileImage src={editedProfile.image} alt="Seu Perfil" />
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
+                  <g fill="#007bff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.683,0 -23,10.317 -23,23c0,12.683 10.317,23 23,23c12.683,0 23,-10.317 23,-23c0,-12.683 -10.317,-23 -23,-23zM37,26h-11v11h-2v-11h-11v-2h11v-11h2v11h11z"></path></g></g>
+                </svg>
+              </AddPicture>
+              <InfoName>
+                <h1>{name}</h1>
+                <p>{role}</p>
+              </InfoName>
+              <a href="#"><h2>Profile</h2></a>
+              <a href="#"><h2>Task</h2></a>
+              <a href="#"><h2>Calendar</h2></a>
+              <a href="#"><h2>Files</h2></a>
+            </LeftContainer>
+            <MidContainer>
+              <Interest>
+                <Section size="1" style={{ width: '100%' }}>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <ShowInterest>📱 Product Infrastructure</ShowInterest>
+                  <ShowInterest>🔒 Network Security</ShowInterest>
+                  <ShowInterest>🕹️ Security Testing</ShowInterest>
+                  <ShowInterest>🌎 Security Audit Outsourcing</ShowInterest>
+                  <ShowInterest>🐞 Bugs</ShowInterest>
+                </Section>
+              </Interest>
+              <Text as="div" size="3" mb="1" weight="bold">
+                Funcionários
+              </Text>
+              <AvatarContainer>
+                <Person>
+                  <Avatar
+                    size="4"
+                    radius="full"
+                    fallback="A"
+                  />
+                  Joe A.
                 </Person>
-             <Person>
-              <Avatar
-                size="4"
-                radius="full"
-                fallback="B"
-              />
-               Dylan C.
+                <Person>
+                  <Avatar
+                    size="4"
+                    radius="full"
+                    fallback="B"
+                  />
+                  Dylan C.
                 </Person>
-             <Person>
-              <Avatar
-                size="4"
-                radius="full"
-                fallback="C"
-              />
-               Ethan C.
+                <Person>
+                  <Avatar
+                    size="4"
+                    radius="full"
+                    fallback="C"
+                  />
+                  Ethan C.
                 </Person>
-             <Person>
-              <Avatar
-                size="4"
-                radius="full"
-                fallback="D"
-              />
-               Louis W.
+                <Person>
+                  <Avatar
+                    size="4"
+                    radius="full"
+                    fallback="D"
+                  />
+                  Louis W.
                 </Person>
               </AvatarContainer>
               <Text as="div" size="3" mb="1" weight="bold">
-              Pacientes
-            </Text>
-            <AvatarContainer>
-            <Person>
-              <Avatar
-                size="4"
-                radius="full"
-                fallback="A"
-                />
-                Joe A.
+                Pacientes
+              </Text>
+              <AvatarContainer>
+                <Person>
+                  <Avatar
+                    size="4"
+                    radius="full"
+                    fallback="A"
+                  />
+                  Joe A.
                 </Person>
-             <Person>
-              <Avatar
-                size="4"
-                radius="full"
-                fallback="B"
-              />
-               Dylan C.
+                <Person>
+                  <Avatar
+                    size="4"
+                    radius="full"
+                    fallback="B"
+                  />
+                  Dylan C.
                 </Person>
-             <Person>
-              <Avatar
-                size="4"
-                radius="full"
-                fallback="C"
-              />
-               Ethan C.
+                <Person>
+                  <Avatar
+                    size="4"
+                    radius="full"
+                    fallback="C"
+                  />
+                  Ethan C.
                 </Person>
-             <Person>
-              <Avatar
-                size="4"
-                radius="full"
-                fallback="D"
-              />
-               Louis W.
+                <Person>
+                  <Avatar
+                    size="4"
+                    radius="full"
+                    fallback="D"
+                  />
+                  Louis W.
                 </Person>
-          
-       
+
+
               </AvatarContainer>
-          </MidContainer>
-      </ProfileInfoContainer>
-      </Content>
+            </MidContainer>
+          </ProfileInfoContainer>
+        </Content>
+      </RouterIndicator>
     </Container>
   );
 }
