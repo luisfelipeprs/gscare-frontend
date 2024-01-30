@@ -84,15 +84,13 @@ export const CheckboxCallAttendant = styled.div`
 export const LeftContainer = styled.div`
   height: 400px;
   background-color: #ffffff50;
-  /* padding: 60px 20px; */
   padding: 20px;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 20px;
-  /* margin-right: 0px; */
-  /* @media (max-width: 1280px) {
-    width: 100%;
-  } */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 `;
 
 export const RightDiv = styled.div`
@@ -198,6 +196,7 @@ export const ConfigChatBotAnswerContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  gap: 20px;
   /* border: 1px solid black; */
   height: 20%;
   border-radius: 8px;
@@ -213,6 +212,25 @@ export const DetailsConfigChatBotAnswer = styled.div`
   position: absolute;
   top: 10px;
   right: 10px;
+`;
+
+export const TitleOptionsChatBot = styled.h3`
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3d4265;
+`;
+
+export const ContainerOptionsChatBot = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  div {
+    background-color: #dddddd50;
+    border-radius: 12px;
+    padding: 5px 10px;
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const InfoContainer = styled.div`

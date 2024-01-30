@@ -13,7 +13,9 @@ import {
     ScroolAnswerChatBot,
     DetailsConfigChatBotAnswer,
     ProfileContainerAndButtonSubmit,
-    ButtonSubmitOptionBot
+    ButtonSubmitOptionBot,
+    ContainerOptionsChatBot,
+    TitleOptionsChatBot
 } from "./styled";
 import { RouterIndicator } from "../../../components/RouterIndicator";
 import { DotsThreeVertical, Eye } from "phosphor-react";
@@ -79,78 +81,155 @@ export function ZapScheduling() {
                                             <DetailsConfigChatBotAnswer>
                                                 <DotsThreeVertical size={32} color="#1146ff" weight="bold" />
                                             </DetailsConfigChatBotAnswer>
-                                            <Text>
+                                            <TitleOptionsChatBot>
                                                 (Titulo nome da solução escolhida)
-                                            </Text>
-                                            <Text as="div" size="4" weight="medium">
-                                                (1o opcao); (2o opcao); (3o lorem); (4o lorem)
-                                            </Text>
+                                            </TitleOptionsChatBot>
+                                            <ContainerOptionsChatBot>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                            </ContainerOptionsChatBot>
                                         </ConfigChatBotAnswerContainer>
                                         <ConfigChatBotAnswerContainer>
                                             <DetailsConfigChatBotAnswer>
                                                 <DotsThreeVertical size={32} color="#1146ff" weight="bold" />
                                             </DetailsConfigChatBotAnswer>
-                                            <Text>
+                                            <TitleOptionsChatBot>
                                                 (Titulo nome da solução escolhida)
-                                            </Text>
-                                            <Text as="div" size="4" weight="medium">
-                                                (1o opcao); (2o opcao); (3o lorem); (4o lorem)
-                                            </Text>
+                                            </TitleOptionsChatBot>
+                                            <ContainerOptionsChatBot>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                            </ContainerOptionsChatBot>
                                         </ConfigChatBotAnswerContainer>
                                         <ConfigChatBotAnswerContainer>
                                             <DetailsConfigChatBotAnswer>
                                                 <DotsThreeVertical size={32} color="#1146ff" weight="bold" />
                                             </DetailsConfigChatBotAnswer>
-                                            <Text>
+                                            <TitleOptionsChatBot>
                                                 (Titulo nome da solução escolhida)
-                                            </Text>
-                                            <Text as="div" size="4" weight="medium">
-                                                (1o opcao); (2o opcao); (3o lorem); (4o lorem)
-                                            </Text>
+                                            </TitleOptionsChatBot>
+                                            <ContainerOptionsChatBot>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                            </ContainerOptionsChatBot>
                                         </ConfigChatBotAnswerContainer>
                                         <ConfigChatBotAnswerContainer>
                                             <DetailsConfigChatBotAnswer>
                                                 <DotsThreeVertical size={32} color="#1146ff" weight="bold" />
                                             </DetailsConfigChatBotAnswer>
-                                            <Text>
+                                            <TitleOptionsChatBot>
                                                 (Titulo nome da solução escolhida)
-                                            </Text>
-                                            <Text as="div" size="4" weight="medium">
-                                                (1o opcao); (2o opcao); (3o lorem); (4o lorem)
-                                            </Text>
+                                            </TitleOptionsChatBot>
+                                            <ContainerOptionsChatBot>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                            </ContainerOptionsChatBot>
                                         </ConfigChatBotAnswerContainer>
                                         <ConfigChatBotAnswerContainer>
                                             <DetailsConfigChatBotAnswer>
                                                 <DotsThreeVertical size={32} color="#1146ff" weight="bold" />
                                             </DetailsConfigChatBotAnswer>
-                                            <Text>
+                                            <TitleOptionsChatBot>
                                                 (Titulo nome da solução escolhida)
-                                            </Text>
-                                            <Text as="div" size="4" weight="medium">
-                                                (1o opcao); (2o opcao); (3o lorem); (4o lorem)
-                                            </Text>
+                                            </TitleOptionsChatBot>
+                                            <ContainerOptionsChatBot>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                            </ContainerOptionsChatBot>
                                         </ConfigChatBotAnswerContainer>
                                         <ConfigChatBotAnswerContainer>
                                             <DetailsConfigChatBotAnswer>
                                                 <DotsThreeVertical size={32} color="#1146ff" weight="bold" />
                                             </DetailsConfigChatBotAnswer>
-                                            <Text>
+                                            <TitleOptionsChatBot>
                                                 (Titulo nome da solução escolhida)
-                                            </Text>
-                                            <Text as="div" size="4" weight="medium">
-                                                (1o opcao); (2o opcao); (3o lorem); (4o lorem)
-                                            </Text>
+                                            </TitleOptionsChatBot>
+                                            <ContainerOptionsChatBot>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                            </ContainerOptionsChatBot>
                                         </ConfigChatBotAnswerContainer>
                                         <ConfigChatBotAnswerContainer>
                                             <DetailsConfigChatBotAnswer>
                                                 <DotsThreeVertical size={32} color="#1146ff" weight="bold" />
                                             </DetailsConfigChatBotAnswer>
-                                            <Text>
+                                            <TitleOptionsChatBot>
                                                 (Titulo nome da solução escolhida)
-                                            </Text>
-                                            <Text as="div" size="4" weight="medium">
-                                                (1o opcao); (2o opcao); (3o lorem); (4o lorem)
-                                            </Text>
+                                            </TitleOptionsChatBot>
+                                            <ContainerOptionsChatBot>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                                <Text as="div" size="4" weight="medium">
+                                                    1o opcao
+                                                </Text>
+                                            </ContainerOptionsChatBot>
                                         </ConfigChatBotAnswerContainer>
                                     </ScroolAnswerChatBot>
                                 </RightContainer>
