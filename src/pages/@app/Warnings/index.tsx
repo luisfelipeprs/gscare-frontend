@@ -1,5 +1,5 @@
 import { Button, Flex, Text, TextArea, TextField } from "@radix-ui/themes";
-import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect, TableContainer, Table } from "./styled";
+import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect, TableContainer, Table, TableRow, TableCell } from "./styled";
 import { useState } from "react";
 import { RouterIndicator } from "../../../components/RouterIndicator";
 
@@ -95,24 +95,25 @@ function Warnings() {
             </ContentInputDate>
 
           </DateContainer>
-
-          <Flex direction="column" gap="3">
-            <div>
-              <Text as="div" size="2" mb="1" weight="bold">
-                Mensagem
-              </Text>
-              <TextArea
-                style={
-                  {
-                    height: "140px"
+          <div>
+            <Flex direction="column" gap="3">
+              <div>
+                <Text as="div" size="2" mb="1" weight="bold">
+                  Mensagem
+                </Text>
+                <TextArea
+                  style={
+                    {
+                      height: "140px"
+                    }
                   }
-                }
-                // defaultValue="Fernando Franco"
-                placeholder="Digite sua mensagem aqui."
-              />
-            </div>
-          </Flex>
-          <Button style={{ width: "100%", marginTop: "20px" }}> Salvar</Button>
+                  // defaultValue="Fernando Franco"
+                  placeholder="Digite sua mensagem aqui."
+                />
+              </div>
+            </Flex>
+            <Button style={{ width: "100%", marginTop: "20px" }}> Salvar</Button>
+          </div>
           <TableContainer>
             <Table>
               <thead>
@@ -125,13 +126,34 @@ function Warnings() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                </tr>
+                <TableRow key='id'>
+                  <TableCell>1</TableCell>
+                  <TableCell>2</TableCell>
+                  <TableCell>3</TableCell>
+                  <TableCell>4</TableCell>
+                  <TableCell>5</TableCell>
+                </TableRow>
+                <TableRow key='id'>
+                  <TableCell>1</TableCell>
+                  <TableCell>2</TableCell>
+                  <TableCell>3</TableCell>
+                  <TableCell>4</TableCell>
+                  <TableCell>5</TableCell>
+                </TableRow>
+                <TableRow key='id'>
+                  <TableCell>1</TableCell>
+                  <TableCell>2</TableCell>
+                  <TableCell>3</TableCell>
+                  <TableCell>4</TableCell>
+                  <TableCell>5</TableCell>
+                </TableRow>
+                <TableRow key='id'>
+                  <TableCell>1</TableCell>
+                  <TableCell>2</TableCell>
+                  <TableCell>3</TableCell>
+                  <TableCell>4</TableCell>
+                  <TableCell>5</TableCell>
+                </TableRow>
               </tbody>
             </Table>
           </TableContainer>

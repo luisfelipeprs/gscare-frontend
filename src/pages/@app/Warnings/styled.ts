@@ -59,18 +59,34 @@ export const ContentInputDate = styled.div`
   input{
     width: 100%;
   }
+  div {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    max-height: 1.5em;
+  }
 `;
 
+
+export const TableContainer = styled.div`
+  overflow: hidden;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 10px;
+`;
 
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 5px 0 100px 0;
+  /* margin-top: 20px; */
 
   th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
+    /* border: 1px solid #ddd; */
+    padding: 18px;
+    text-align: center;
   }
 
   th {
@@ -78,14 +94,41 @@ export const Table = styled.table`
     color: #fff;
   }
 
-  tr:nth-child(even) {
-    background-color: #f5f5f5;
+  tbody {
+    tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+  }
+
+  th:first-child {
+    border-top-left-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+  }
+
+  th:last-child {
+    border-top-right-radius: 10px;
+    /* border-bottom-right-radius: 10px; */
   }
 `;
 
-export const TableContainer = styled.div`
-  overflow: hidden;
-  overflow-x: auto;
-  max-width: 100%;
+export const TableRow = styled.tr`
+  &:hover {
+    background-color: #ddd;
+  }
+`;
 
+export const TableCell = styled.td`
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 `;
