@@ -122,6 +122,7 @@ export const StyledDateContainer = styled.div`
 
 
 export const ContainerSectionsInfos = styled.div`
+  flex: 1;
   margin-top: -150px;
   width: 80%;
   display: flex;
