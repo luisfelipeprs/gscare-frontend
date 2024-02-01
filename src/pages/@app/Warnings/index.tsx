@@ -1,5 +1,5 @@
 import { Button, Flex, Text, TextArea, TextField } from "@radix-ui/themes";
-import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect, TableContainer, Table, TableRow, TableCell } from "./styled";
+import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect, TableContainer, Table, TableRow, TableCell, ButtonStyled } from "./styled";
 import { useState } from "react";
 import { RouterIndicator } from "../../../components/RouterIndicator";
 
@@ -62,14 +62,14 @@ function Warnings() {
         <Content>
 
           <AgroupInput>
-            <div>
+            <InputContent>
               <Text as="div" size="2" mb="1" weight="bold">
                 Título
               </Text>
               <TextField.Input
                 placeholder="Digite o título do aviso."
               />
-            </div>
+            </InputContent>
 
             <InputContent>
               <Text as="div" size="2" mb="1" weight="bold">
@@ -97,7 +97,7 @@ function Warnings() {
           </DateContainer>
           <div>
             <Flex direction="column" gap="3">
-              <div>
+              <InputContent>
                 <Text as="div" size="2" mb="1" weight="bold">
                   Mensagem
                 </Text>
@@ -110,9 +110,9 @@ function Warnings() {
                   // defaultValue="Fernando Franco"
                   placeholder="Digite sua mensagem aqui."
                 />
-              </div>
+              </InputContent>
             </Flex>
-            <Button style={{ width: "100%", marginTop: "20px" }}> Salvar</Button>
+            <ButtonStyled style={{ width: "100%", marginTop: "20px" }}> Salvar</ButtonStyled>
           </div>
           <TableContainer>
             <Table>

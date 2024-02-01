@@ -1,3 +1,4 @@
+import { Button } from "@radix-ui/themes";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -32,6 +33,24 @@ export const SelectContent = styled.div`
 export const InputContent = styled.div`
   display: flex;
   flex-direction: column;
+
+  div {
+    color: #ddd;
+  }
+  input {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  select {
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+  }
 `;
 
 export const AgroupInput = styled.div`
@@ -56,8 +75,16 @@ export const ContentInputDate = styled.div`
   display: flex;
   flex-direction:column;
   width: 100%;
+  div {
+    color: #ddd;
+  }
   input{
+    display: flex;
     width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
   }
   div {
     display: -webkit-box;
@@ -68,7 +95,16 @@ export const ContentInputDate = styled.div`
     max-height: 1.5em;
   }
 `;
-
+export const ButtonStyled = styled(Button)`
+  background-color: #FFA500;
+  color: #fff;
+  padding: 20px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+`;
 
 export const TableContainer = styled.div`
   overflow: hidden;
