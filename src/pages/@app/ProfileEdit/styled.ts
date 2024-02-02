@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -50,8 +50,9 @@ export const ProfileImageContainer = styled.div`
 `;
 
 export const ProfileImage = styled.img`
-  width: 150px;
-  height: 150px;
+  /* width: 150px;
+  height: 150px; */
+  margin: 0 auto;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 2px 19px 54px -46px rgba(0, 0, 0, 0.75);
@@ -82,17 +83,129 @@ export const AddPicture = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  svg{
-    margin-top: 100px;
+  position: relative;
+
+  button {  
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    background: #1146ff;
+    cursor: pointer;
+
+    &:hover {
+      background: #0e3cde;
+    }
+
+    svg {
+      color: #fff;
+    }
   }
 `;
 
-export const InfoName = styled.div`
-  margin-top: 50px;
-  margin-bottom: 50px;
-  p{
-    font-size: 1.5rem;
+export const InfoProfile = styled.div`
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+`;
 
+export const InfoProfileText = styled.div`
+  color: #ddd;
+`;
+
+export const InfoProfileDatas = styled.div`
+  text-align: end;
+`;
+
+export const RegistrationData = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
+
+
+const piscar = keyframes`
+  0% {
+    background-color: rgb(142, 255, 99);
+  }
+  100% {
+    background-color: rgb(70, 255, 0);
+  }
+`;
+
+export const ContainerCustomerTrackingEnabled = styled.div`
+  position: relative;
+  font-size: 1.2rem;
+  color: #333;
+  width: 100%;
+
+  &::after {
+  content: '';
+  width: 10px; /* Ajuste a largura da bolinha conforme necessário */
+  height: 10px; /* Ajuste a altura da bolinha conforme necessário */
+  background-color: #ff0000; /* Cor da bolinha */
+  border-radius: 50%; /* Para criar uma bolinha com bordas arredondadas */
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  animation: ${piscar} 1s infinite alternate; /* Animação de piscar */
+}
+`;
+
+
+export const ContainerButtonEditAccount = styled.div`
+  display: flex;
+  justify-content: center;
+
+  button {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    background-color: rgb(255, 167, 0);
+  }
+`;
+
+export const ContainerNameAndNumberTel = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 20px;
+
+  div {
+    flex: 1;
+    border-bottom: 2px solid #ddd;
+    
+    input {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+  }
+`;
+
+export const ContainerEmail = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 20px;
+
+  div {
+    flex: 1;
+    border-bottom: 2px solid #ddd;
+    
+    input {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
   }
 `;
 
@@ -107,13 +220,17 @@ export const RightContainer = styled.div`
 `;
 
 export const CardInfoAccountDatas = styled.div`
+justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   margin-bottom: 20px;
   background-color: #fff;
   box-sizing: border-box;
   flex: 1;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 40px;
 `;
 
 export const CardInfoAboutAccountDatas = styled.div`

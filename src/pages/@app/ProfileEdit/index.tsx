@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { AddPicture, Container, Content, InfoName, Interest, LeftContainer, RightContainer, ProfileImage, ProfileInfoContainer, ShowInterest, AvatarContainer, Person, CardInfoAboutAccount, HeaderCardInfoAboutAccount, CardInfoAccountDatas, ContentCardInfoAboutAccount, CardInfoAccount, CardInfo, CardData, CardInfoAboutAccountDatas } from './styled';
+import { AddPicture, Container, Content, InfoProfile, Interest, LeftContainer, RightContainer, ProfileImage, ProfileInfoContainer, ShowInterest, AvatarContainer, Person, CardInfoAboutAccount, HeaderCardInfoAboutAccount, CardInfoAccountDatas, ContentCardInfoAboutAccount, CardInfoAccount, CardInfo, CardData, CardInfoAboutAccountDatas, RegistrationData, ContainerNameAndNumberTel, ContainerEmail, InfoProfileText, InfoProfileDatas, ContainerCustomerTrackingEnabled, ContainerButtonEditAccount } from './styled';
 import { Avatar, Section, Text } from '@radix-ui/themes';
 import { RouterIndicator } from '../../../components/RouterIndicator';
-import { DotsThreeVertical } from 'phosphor-react';
+import { DotsThreeVertical, Plus } from 'phosphor-react';
 
 function ProfileEdit() {
   const [name] = useState('Neymar JR da Silva');
@@ -36,18 +36,51 @@ function ProfileEdit() {
               <CardInfoAccountDatas>
                 <AddPicture>
                   <ProfileImage src={editedProfile.image} alt="Seu Perfil" />
-                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
-                    <g fill="#007bff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.683,0 -23,10.317 -23,23c0,12.683 10.317,23 23,23c12.683,0 23,-10.317 23,-23c0,-12.683 -10.317,-23 -23,-23zM37,26h-11v11h-2v-11h-11v-2h11v-11h2v11h11z"></path></g></g>
-                  </svg>
+                  <button>
+                    <Plus size={20} weight='bold' />
+                  </button>
                 </AddPicture>
-                <InfoName>
-                  <h1>{name}</h1>
-                  <p>{role}</p>
-                </InfoName>
-                <a href="#"><h2>Profile</h2></a>
+                <InfoProfile>
+                  <InfoProfileText>
+                    <h3>Seu Perfil</h3>
+                  </InfoProfileText>
+                  <InfoProfileDatas>
+                    <p>
+                      primeiro acesso: 10-10-2010
+                    </p>
+                    <p>
+                      pais / cidade / bairro
+                    </p>
+
+                  </InfoProfileDatas>
+                </InfoProfile>
+                <RegistrationData>
+                  <ContainerNameAndNumberTel>
+                    <div>
+                      <input type="text" disabled value="Fernando Franco" placeholder="digite seu nome" />
+                    </div>
+                    <div>
+                      <input type="tel" disabled value="(00) 12345-6789" placeholder="(xx) xxxxx-xxxx" />
+                    </div>
+                  </ContainerNameAndNumberTel>
+                  <ContainerEmail>
+                    <div>
+                      <input type="email" disabled value="seuemail@email.com" placeholder="digite seu email" />
+                    </div>
+                  </ContainerEmail>
+
+                </RegistrationData>
+                {/* <a href="#"><h2>Profile</h2></a>
                 <a href="#"><h2>Task</h2></a>
                 <a href="#"><h2>Calendar</h2></a>
-                <a href="#"><h2>Files</h2></a>
+                <a href="#"><h2>Files</h2></a> */}
+                <ContainerCustomerTrackingEnabled>
+                  Rastreamento de cliente ativado
+                </ContainerCustomerTrackingEnabled>
+
+                <ContainerButtonEditAccount>
+                  <button>Editar</button>
+                </ContainerButtonEditAccount>
               </CardInfoAccountDatas>
             </LeftContainer>
             <RightContainer>
