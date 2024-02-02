@@ -129,6 +129,74 @@ function ProfileEdit() {
                   <h2>Dados da sua empresa:</h2>
                   <button><DotsThreeVertical size={20} /></button>
                 </HeaderCardInfoAboutAccount>
+                <ContentCardInfoAboutAccount>
+                  <CardInfoAccount>
+                    <CardInfo>
+                      <h3>Numero de funcionarios ativos:</h3>
+                      <p>gerencie, monitore e organize processos</p>
+                    </CardInfo>
+                    <CardData>
+                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
+                        30
+                      </span>
+                    </CardData>
+                  </CardInfoAccount>
+                  <CardInfoAccount>
+                    <CardInfo>
+                      <h3>Numero de pacientes ativos:</h3>
+                      <p>gerencie, monitore e preste um melhor atendimento</p>
+                    </CardInfo>
+                    <CardData>
+                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
+                        120
+                      </span>
+                    </CardData>
+                  </CardInfoAccount>
+                  <CardInfoAccount>
+                    <CardInfo>
+                      <h3>Numero agendamentos marcados:</h3>
+                      <p>gerencie, monitore e preste um melhor atendimento</p>
+                    </CardInfo>
+                    <CardData>
+                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
+                        312
+                      </span>
+                    </CardData>
+                  </CardInfoAccount>
+                  <CardInfoAccount>
+                    <CardInfo>
+                      <h3>Numero agendamentos marcados:</h3>
+                      <p>gerencie, monitore e preste um melhor atendimento</p>
+                    </CardInfo>
+                    <CardData>
+                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
+                        312
+                      </span>
+                    </CardData>
+                  </CardInfoAccount>
+                  <CardInfoAccount>
+                    <CardInfo>
+                      <h3>Numero agendamentos marcados:</h3>
+                      <p>gerencie, monitore e preste um melhor atendimento</p>
+                    </CardInfo>
+                    <CardData>
+                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
+                        312
+                      </span>
+                    </CardData>
+                  </CardInfoAccount>
+                  <CardInfoAccount>
+                    <CardInfo>
+                      <h3>Numero agendamentos marcados:</h3>
+                      <p>gerencie, monitore e preste um melhor atendimento</p>
+                    </CardInfo>
+                    <CardData>
+                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
+                        312
+                      </span>
+                    </CardData>
+                  </CardInfoAccount>
+                </ContentCardInfoAboutAccount>
               </CardInfoAboutAccount>
               {/* <CardInfoAboutAccount>
                 <Text as="div" size="3" mb="1" weight="bold">

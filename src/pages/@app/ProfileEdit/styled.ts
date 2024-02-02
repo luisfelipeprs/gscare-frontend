@@ -19,7 +19,7 @@ export const ProfileInfoContainer = styled.div`
   gap: 20px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    flex-wrap: wrap;    
+    /* flex-wrap: wrap;     */
   }
 `;
 
@@ -52,6 +52,8 @@ export const ProfileImageContainer = styled.div`
 export const ProfileImage = styled.img`
   /* width: 150px;
   height: 150px; */
+  max-width: 300px;
+  width: 100%;
   margin: 0 auto;
   border-radius: 50%;
   object-fit: cover;
@@ -288,6 +290,8 @@ export const ContentCardInfoAboutAccount = styled.div`
   gap: 30px;
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  height: 300px;
 `;
 
 export const CardInfoAccount = styled.div`
@@ -295,6 +299,12 @@ export const CardInfoAccount = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+
+  @media (max-width: 768px) {
+   flex-direction: column;
+   gap: 30px;
+  }
 `;
 
 export const CardInfo = styled.div`
