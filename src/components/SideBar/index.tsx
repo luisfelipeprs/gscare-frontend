@@ -18,7 +18,7 @@ interface IProps {
   toggleSidebar: () => void;
 }
 
-const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
+const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
   const [lastClickedLink, setLastClickedLink] = useState('/admin/');
 
   const handleNavLinkClick = (to: string) => {
@@ -100,7 +100,7 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
               </LinkText>
             </NavLinkStyled>
           </div>
-          
+
           <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Relatórios
@@ -140,12 +140,12 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
               onClick={() => handleNavLinkClick('/admin/zapcampaign/')}
             >
               <Icons>{WhatsappLogoIcon}</Icons>
-              <LinkText  style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Campanha Zap
               </LinkText>
             </NavLinkStyled>
           </div>
-          
+
           <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Interação
@@ -177,7 +177,26 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
               </LinkText>
             </NavLinkStyled>
           </div>
-          
+
+          <div>
+            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+              Prontuário
+            </Logo>
+
+            <NavLinkStyled
+              to="/admin/medicalrecord/"
+              className="link"
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/medicalrecord/'}
+              onClick={() => handleNavLinkClick('/admin/medicalrecord/')}
+            >
+              <Icons>{UserGearIcon}</Icons>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+                Prontuário Eletrônico
+              </LinkText>
+            </NavLinkStyled>
+          </div>
+
           <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Configuração

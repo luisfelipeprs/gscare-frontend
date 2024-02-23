@@ -20,6 +20,7 @@ import { LoginAdmin } from "./pages/@auth/LoginAdmin/index.tsx";
 import { Register } from "./pages/@auth/Register/index.tsx";
 import { ForgotPassword } from "./pages/@auth/ForgetPassword/index.tsx";
 import { Employee } from "./pages/@app/Employee/index.tsx";
+import MedicalRecord from "./pages/@app/MedicalRecord/index.tsx";
 
 
 export function Router() {
@@ -46,6 +47,7 @@ export function Router() {
                 <Route path="/admin/zapscheduling" element={<ZapScheduling />} />
                 <Route path="/admin/zapcampaign" element={<ZapCampaign />} />
                 <Route path='/admin/oldadmin' element={<Navigate to="/admin" />} />
+                <Route path="/admin/medicalrecord" element={<MedicalRecord />} />
             </Route>
         </Routes>
     )
