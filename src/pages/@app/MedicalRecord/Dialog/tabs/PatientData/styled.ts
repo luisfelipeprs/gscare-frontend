@@ -37,8 +37,8 @@ export const DivLegal1 = styled.div`
 
 export const DivLegal2 = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
   margin-top: 1rem;
   gap: 1.5rem;
 `;

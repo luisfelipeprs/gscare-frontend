@@ -25,30 +25,3 @@ function UserProfile() {
 }
 
 export default UserProfile;
-
-/*
-<UserInfo >
-                    <InputLabel>
-                        <h2>Carlos</h2>
-                    </InputLabel>
-                    <InputLabel>
-                        Idade: <b>23 anos</b>
-                    </InputLabel>
-                    <br />
-                    <InputLabel>
-                        Primeira consulta em: <b>05/10/2017</b>
-                    </InputLabel>
-                    <br />
-                    <InputLabel>
-                        Atendimentos: <b>0</b>
-                    </InputLabel>
-                    <br />
-                    <InputLabel>
-                        Faltas: <b>0</b>
-                    </InputLabel>
-                    <br />
-                    <Button variant="outline" highContrast>
-                        Edit profile
-                    </Button>
-                </UserInfo>
-*/

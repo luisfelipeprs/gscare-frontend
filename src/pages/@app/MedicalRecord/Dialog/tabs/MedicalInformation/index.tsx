@@ -42,13 +42,6 @@ function MedicalInformation() {
                 </InputField>
                 <InputField>
                     <InputLabel>
-                        <b>Resultados de exames:</b>
-                    </InputLabel>
-                    <TextArea
-                        size={"3"} />
-                </InputField>
-                <InputField>
-                    <InputLabel>
                         <b>Diagnóstico atual:</b>
                     </InputLabel>
                     <TextArea
