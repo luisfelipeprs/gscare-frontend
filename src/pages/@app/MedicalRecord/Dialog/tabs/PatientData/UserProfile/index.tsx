@@ -1,5 +1,5 @@
 import { Avatar, Button } from "@radix-ui/themes";
-import { InputLabel, UserInfo, Container } from "./styled";
+import { UserInfo, Container } from "./styled";
 
 function UserProfile() {
 

@@ -1,5 +1,5 @@
-import { TextArea, TextField } from "@radix-ui/themes";
-import { InputGroupLabel, InputField, InputLabel, Container } from "./styled";
+import { TextArea } from "@radix-ui/themes";
+import { InputField, InputLabel, Container } from "./styled";
 
 function MedicalInformation() {
     return (
@@ -17,7 +17,7 @@ function MedicalInformation() {
                         <b>Alergias:</b>
                     </InputLabel>
                     <TextArea
-                        size={"3"}/>
+                        size={"3"} />
                 </InputField>
                 <InputField>
                     <InputLabel>

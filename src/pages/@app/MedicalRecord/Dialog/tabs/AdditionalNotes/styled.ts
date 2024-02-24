@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const PatientData = styled.div`
-  width: 100%;
-  background: white;
-  margin: 0.5rem;
-  border-radius: 10px;
-  padding: 0.5rem;
-`;
-
 export const Container = styled.div`
   width: 100%;
   padding: 1rem;
@@ -25,9 +17,4 @@ export const InputLabel = styled.label`
 export const InputField = styled.div`
   width: 100%;
   margin: 0.5rem 0.5rem 1rem 0.5rem;
-`;
-
-export const InputGroupLabel = styled.div`
-  width: 100%;
-  font-size: 1.2rem;
 `;

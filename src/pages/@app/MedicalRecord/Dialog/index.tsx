@@ -4,6 +4,7 @@ import SchedulesAndConsultations from "./tabs/SchedulesAndConsultations";
 import HealthInsurance from "./tabs/HealthInsurance";
 import AdditionalNotes from "./tabs/AdditionalNotes";
 import PatientData from "./tabs/PatientData";
+import { ButtonSubmitContainer } from "./tabs/PatientData/styled";
 
 export default function UserDialog() {
     return (
@@ -13,7 +14,7 @@ export default function UserDialog() {
                     <Button size={"4"}>VISUALIZAR CADASTRO</Button>
                 </Dialog.Trigger>
 
-                <Dialog.Content style={{ maxWidth: 1200,  minHeight: 1085} }>
+                <Dialog.Content style={{ maxWidth: 1200, minHeight: 1085 }}>
                     <Dialog.Title>Dados do Cadastro</Dialog.Title>
 
                     <Tabs.Root defaultValue="patientData" style={{ width: '100%', height: '1000px' }}>
@@ -23,7 +24,7 @@ export default function UserDialog() {
                             <Tabs.Trigger value="schedulesAndConsultations" style={{ fontSize: '1.1rem' }}>Agendamentos e Consultas</Tabs.Trigger>
                             <Tabs.Trigger value="healthInsurance" style={{ fontSize: '1.1rem' }}>Convênio</Tabs.Trigger>
                             <Tabs.Trigger value="additionalNotes" style={{ fontSize: '1.1rem' }}>Anotações Adicionais</Tabs.Trigger>
-                         </Tabs.List>
+                        </Tabs.List>
 
                         <Box px="2" pt="2" pb="2">
                             <Tabs.Content value="patientData">
@@ -47,20 +48,19 @@ export default function UserDialog() {
                             </Tabs.Content>
                         </Box>
                     </Tabs.Root>
-                    <div style={{ display: "flex", justifyContent: 'flex-end' }}>
-                    <Dialog.Close>
-                        <Button size={'3'} variant="soft" color="gray">
-                            Cancel
-                        </Button>
-                    </Dialog.Close>
-                    <Dialog.Close>
-                        <Button size={'3'} >Save</Button>
-                    </Dialog.Close>
-                    </div>
-                    
+                    <ButtonSubmitContainer>
+                        <Dialog.Close>
+                            <Button size={'3'} variant="soft" color="gray">
+                                Cancel
+                            </Button>
+                        </Dialog.Close>
+                        <Dialog.Close>
+                            <Button size={'3'} >Save</Button>
+                        </Dialog.Close>
+                    </ButtonSubmitContainer>
                 </Dialog.Content>
             </Dialog.Root>
-           
+
         </>
     );
 }

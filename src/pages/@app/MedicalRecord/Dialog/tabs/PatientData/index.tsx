@@ -1,5 +1,5 @@
 import { Checkbox, RadioGroup, TextArea, TextField, flexPropDefs } from "@radix-ui/themes";
-import { InputField, InputLabel, DivLegal1, DivLegal2, Contact, Adress } from "./styled";
+import { InputField, InputLabel, Container, AdditionalInfoContainer, Contact, Adress } from "./styled";
 import UserProfile from "./UserProfile";
 
 
@@ -7,8 +7,7 @@ function PatientData() {
 
     return (
         <>
-            <DivLegal1>
-
+            <Container>
                 <div>
                     <h3>
                         Geral
@@ -73,8 +72,8 @@ function PatientData() {
                     </InputField>
                 </div>
                 <UserProfile />
-            </DivLegal1>
-            <DivLegal2>
+            </Container>
+            <AdditionalInfoContainer>
                 <Contact>
                     <h3>
                         <b>Informações para Contato:</b>
@@ -184,7 +183,7 @@ function PatientData() {
                     </InputField>
                 </Adress>
 
-            </DivLegal2>
+            </AdditionalInfoContainer>
         </>
     );
 }
