@@ -8,7 +8,7 @@ import {
     UserInfoContainer
 } from './styled';
 import { RouterIndicator } from '../../../components/RouterIndicator';
-import UserDialog from './Dialog';
+import UserDialog from './Model';
 import { Avatar } from '@radix-ui/themes';
 
 function MedicalRecord() {

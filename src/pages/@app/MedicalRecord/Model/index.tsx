@@ -1,10 +1,10 @@
 import { Box, Button, Dialog, Tabs } from "@radix-ui/themes";
-import MedicalInformation from "./tabs/MedicalInformation";
-import SchedulesAndConsultations from "./tabs/SchedulesAndConsultations";
-import HealthInsurance from "./tabs/HealthInsurance";
-import AdditionalNotes from "./tabs/AdditionalNotes";
-import PatientData from "./tabs/PatientData";
-import { ButtonSubmitContainer } from "./tabs/PatientData/styled";
+import MedicalInformation from "./steps/MedicalInformation";
+import SchedulesAndConsultations from "./steps/SchedulesAndConsultations";
+import HealthInsurance from "./steps/HealthInsurance";
+import AdditionalNotes from "./steps/AdditionalNotes";
+import PatientData from "./steps/PatientData";
+import { ButtonSubmitContainer } from "./steps/PatientData/styled";
 
 export default function UserDialog() {
     return (
