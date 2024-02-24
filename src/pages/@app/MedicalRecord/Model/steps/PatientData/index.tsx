@@ -1,9 +1,14 @@
-import { Checkbox, RadioGroup, TextArea, TextField, flexPropDefs } from "@radix-ui/themes";
+import { Checkbox, RadioGroup, TextArea, TextField } from "@radix-ui/themes";
 import { InputField, InputLabel, Container, AdditionalInfoContainer, Contact, Adress } from "./styled";
 import UserProfile from "./UserProfile";
 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
 
 function PatientData() {
+
+    const [startDate, setStartDate] = useState(new Date());
 
     return (
         <>
@@ -24,8 +29,7 @@ function PatientData() {
                             <InputLabel>
                                 <b>Data de nascimento:</b>
                             </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
+                            <DatePicker selected={startDate} onChange={(date: Date) => setStartDate(date)} />
                         </InputField>
                         <InputField>
                             <InputLabel>
