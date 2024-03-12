@@ -187,15 +187,15 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
             </Logo>
 
             <NavLinkStyled
-              to="/admin/profile/"
+              to="/admin/financial/"
               className="link"
               isopen={isOpenSideBar}
-              isactive={lastClickedLink === '/admin/profile/'}
-              onClick={() => handleNavLinkClick('/admin/profile/')}
+              isactive={lastClickedLink === '/admin/financial/'}
+              onClick={() => handleNavLinkClick('/admin/financial/')}
             >
               <Icons>{UserGearIcon}</Icons>
               <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                profiles
+                financials
               </LinkText>
             </NavLinkStyled>
           </div>
@@ -215,6 +215,24 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
             </NavLinkStyled>
           </div>
 
+          <div>
+            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+              Nova funcionalidade
+            </Logo>
+
+            <NavLinkStyled
+              to="/admin/financial/"
+              className="link"
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/financial/'}
+              onClick={() => handleNavLinkClick('/admin/financial/')}
+            >
+              <Icons>{UserGearIcon}</Icons>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+                Financial
+              </LinkText>
+            </NavLinkStyled>
+          </div>
 
         </Menu>
       </SidebarContainer>
