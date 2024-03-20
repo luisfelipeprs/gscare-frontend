@@ -33,7 +33,7 @@ export const ProfileInfoContainer = styled.div`
   justify-content: space-between;
   gap: 30px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1300px) {
     flex-direction: column;
   }
 `;
@@ -62,7 +62,7 @@ export const RightContainer = styled.div`
 
 export const LeftContent = styled.div`
   height: 600px;
-  background-color: #ffffff50;
+  background-color: #ffffff;
   padding: 20px;
   width: 100%;
   border: 1px solid #ddd;
@@ -125,6 +125,7 @@ export const CampaignTextField = styled(TextField.Input)`
 
 export const CampaignTextArea = styled(TextArea)`
   width: 100%;
+  height: 200px;
 `;
 
 export const CampaignSubtitle = styled(CampaignTitle)`
@@ -251,7 +252,7 @@ export const MidContainer = styled.div`
 `;
 
 export const AvatarContainer = styled.div`
-display: flex;
+  display: flex;
   flex-direction: row;
   gap: 10px;
 
@@ -262,21 +263,21 @@ display: flex;
 
   display: flex;
   gap: 10px;
-  background-color: #ffffff50;
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 20px;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 `;
 
 export const Support = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff50;
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 `;
 
 export const ScrollHorizontal = styled.div`
@@ -310,17 +311,23 @@ export const ScrollInfoContainer = styled.div`
 export const InfoContainer = styled.div`
   display: flex;
   gap: 10px;
-  background-color: #ffffff50;
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 20px;
   align-items: center;
-  margin-top: 20px;
+  justify-content: space-between;
   svg {
     width: 30px;
   }
   @media screen and (max-width: 1000px) {
     flex-direction: column;
   }
+`;
+
+export const LogoAndInformations = styled.div`
+  display: flex;
+  gap: 15px;
+  flex: 1;
 `;
 
 export const TextStatus = styled(Text)`

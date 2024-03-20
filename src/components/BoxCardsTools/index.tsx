@@ -8,12 +8,12 @@ import func2Atend from './../../assets/func2Atend.png'
 import func3Atend from './../../assets/func3Atend.png'
 import func4Atend from './../../assets/func4Atend.png'
 
-function BoxCardsTools() {
+function BoxCardsTools () {
   return (
     <Container>
       <Content>
         <Title
-          title={'Há beneficios para seus cuidadores tambem! Ferramente que trazem agilidade e eficiencia para seus funcionarios.'} 
+          title={'Há beneficios para seus cuidadores tambem! Ferramente que trazem agilidade e eficiencia para seus funcionarios.'}
           description='lofsadfasdfasdfasdfasd'
           textButton='Faça o teste gratis'
           typebutton='withBg'
@@ -51,6 +51,6 @@ function BoxCardsTools() {
         </CardsContainer>
       </Content>
     </Container>
-    )
+  )
 }
 export default BoxCardsTools;

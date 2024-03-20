@@ -61,8 +61,6 @@ export const TitleDivDescription = styled(Text)`
 `;
 
 export const InfoName = styled.div`
-  /* margin-top: 50px; */
-  margin-bottom: 50px;
   p {
     font-size: 1.5rem;
   }
@@ -83,12 +81,12 @@ export const CheckboxCallAttendant = styled.div`
 `;
 
 export const LeftContainer = styled.div`
-  height: 400px;
-  background-color: #ffffff50;
+  height: 450px;
+  background-color: #ffffff;
   padding: 20px;
   width: 100%;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -102,7 +100,7 @@ display: flex;
 `;
 
 export const RightContainer = styled.div`
-  height: 400px;
+  height: 450px;
   /* padding: 30px 20px;
   border: 1px solid black;
   border-radius: 20px;
@@ -110,12 +108,12 @@ export const RightContainer = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   } */
-  background-color: #ffffff50;
+  background-color: #ffffff;
   /* padding: 60px 20px; */
   padding: 20px;
   width: 100%;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 16px;
 `;
 
 export const HeaderContainerRight = styled.div`
@@ -175,7 +173,7 @@ export const AgroupInterest = styled.div`
 
 export const ScroolAnswerChatBot = styled.div`
   overflow: auto;
-  max-height: 300px;
+  max-height: 350px;
 
   /* &::-webkit-scrollbar {
     width: 12px;

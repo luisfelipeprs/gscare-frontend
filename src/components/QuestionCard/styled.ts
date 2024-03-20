@@ -16,6 +16,8 @@ export const Content = styled.div`
   border-radius: 12px;
   height: 452px;
 
+  
+
   @media (max-width: 768px) {
     flex-direction: column;
     height: auto;
@@ -30,13 +32,35 @@ export const ContainerAction = styled.div`
   padding: 20px;
   margin: auto;
   box-sizing: border-box;
+  justify-content: start;
 
   div {
     padding: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: start;
+    
     h1 {
       width: 100%;
       color: #032D60;
       font-size: 2.5rem;
+    }
+
+    button {
+      border: none;
+      padding: 15px;
+      background-color: #564BC6;
+      font-weight: 800;
+      color: #fff;
+      width: 60%;
+      text-align: center;
+      border-radius: 8px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #564BC6dd;
+      }
     }
   }
 `;

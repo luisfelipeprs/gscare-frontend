@@ -10,12 +10,14 @@ import {
 } from "@radix-ui/themes";
 import {
   AvatarContainer,
+  CampaignTextArea,
   Container,
   Content,
   InfoContainer,
   InfoName,
   LeftContainer,
   LeftContent,
+  LogoAndInformations,
   MidContainer,
   ProfileInfoContainer,
   Received,
@@ -28,7 +30,7 @@ import {
 import Modal from "./Modal/modal.tsx";
 import { RouterIndicator } from "../../../components/RouterIndicator/index.tsx";
 
-function ZapCampaign() {
+function ZapCampaign () {
   return (
     <Container>
       <RouterIndicator
@@ -57,16 +59,13 @@ function ZapCampaign() {
                   <Text as="div" size="4" mb="1" weight="bold">
                     SubTítulo
                   </Text>
-                  <TextField.Input
-                    size={"3"}
-                    placeholder="Digite o título do aviso."
-                  />
+                  <CampaignTextArea size={"3"} placeholder="Digite o texto da campanha." />
                 </InfoName>
                 <InfoName>
                   <Text as="div" size="4" mb="1" weight="bold">
                     Texto da Campanha
                   </Text>
-                  <TextArea size={"3"} placeholder="Digite o texto da campanha." />
+                  <CampaignTextArea size={"3"} placeholder="Digite o texto da campanha." />
                 </InfoName>
               </LeftContent>
             </LeftContainer>
@@ -204,125 +203,22 @@ function ZapCampaign() {
 
                   <ScrollInfoContainer>
                     <InfoContainer>
-                      <Avatar
-                        size="3"
-                        radius="full"
-                        fallback="A"
-                      />
+                      <LogoAndInformations>
+                        <Avatar
+                          size="3"
+                          radius="full"
+                          fallback="A"
+                        />
 
-                      <Box>
-                        <Text as="div" size="2" weight="bold">
-                          Teodros Girmay
-                        </Text>
-                        <Text as="div" size="2" color="gray">
-                          Engineering
-                        </Text>
-                      </Box>
-                      <Received>
-                        <svg
-                          version="1.1"
-                          id="Layer_1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          x="0px"
-                          y="0px"
-                          width="10"
-                          height="10"
-                          viewBox="0 0 122.88 122.88"
-                        >
-                          <g fill="#36ff04">
-                            <path d="M61.44,0c33.93,0,61.44,27.51,61.44,61.44c0,33.93-27.51,61.44-61.44,61.44C27.51,122.88,0,95.37,0,61.44 C0,27.51,27.51,0,61.44,0L61.44,0z" />
-                          </g>
-                        </svg>
-
-                        <Text size={"4"} color="green">
-                          Recebido
-                        </Text>
-                      </Received>
-                    </InfoContainer>
-                    <InfoContainer>
-                      <Avatar
-                        size="3"
-                        radius="full"
-                        fallback="B"
-                      />
-
-                      <Box>
-                        <Text as="div" size="2" weight="bold">
-                          Teodros Girmay
-                        </Text>
-                        <Text as="div" size="2" color="gray">
-                          Engineering
-                        </Text>
-                      </Box>
-                      <Received>
-                        <svg
-                          version="1.1"
-                          id="Layer_1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          x="0px"
-                          y="0px"
-                          width="10"
-                          height="10"
-                          viewBox="0 0 122.88 122.88"
-                        >
-                          <g fill="#000000">
-                            <path d="M61.44,0c33.93,0,61.44,27.51,61.44,61.44c0,33.93-27.51,61.44-61.44,61.44C27.51,122.88,0,95.37,0,61.44 C0,27.51,27.51,0,61.44,0L61.44,0z" />
-                          </g>
-                        </svg>
-                        <Text size={"4"}>Não Recebido</Text>
-                      </Received>
-                    </InfoContainer>
-                    <InfoContainer>
-                      <Avatar
-                        size="3"
-                        radius="full"
-                        fallback="C"
-                      />
-
-                      <Box>
-                        <Text as="div" size="2" weight="bold">
-                          Teodros Girmay
-                        </Text>
-                        <Text as="div" size="2" color="gray">
-                          Engineering
-                        </Text>
-                      </Box>
-                      <Received>
-                        <svg
-                          version="1.1"
-                          id="Layer_1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          x="0px"
-                          y="0px"
-                          width="10"
-                          height="10"
-                          viewBox="0 0 122.88 122.88"
-                        >
-                          <g fill="#36ff04">
-                            <path d="M61.44,0c33.93,0,61.44,27.51,61.44,61.44c0,33.93-27.51,61.44-61.44,61.44C27.51,122.88,0,95.37,0,61.44 C0,27.51,27.51,0,61.44,0L61.44,0z" />
-                          </g>
-                        </svg>
-
-                        <Text size={"4"} color="green">
-                          Recebido
-                        </Text>
-                      </Received>
-                    </InfoContainer>
-                    <InfoContainer>
-                      <Avatar
-                        size="3"
-                        radius="full"
-                        fallback="D"
-                      />
-
-                      <Box>
-                        <Text as="div" size="2" weight="bold">
-                          Teodros Girmay
-                        </Text>
-                        <Text as="div" size="2" color="gray">
-                          Engineering
-                        </Text>
-                      </Box>
+                        <Box>
+                          <Text as="div" size="2" weight="bold">
+                            Teodros Girmay
+                          </Text>
+                          <Text as="div" size="2" color="gray">
+                            Engineering
+                          </Text>
+                        </Box>
+                      </LogoAndInformations>
                       <Received>
                         <svg
                           version="1.1"

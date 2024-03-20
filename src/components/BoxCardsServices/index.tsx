@@ -3,7 +3,7 @@ import Title from "../Title";
 import { CardsContainer, Container, Content } from "./styled";
 import screenTelaAdm from './../../assets/screenAdm.png'
 
-function BoxCardsServices() {
+function BoxCardsServices () {
   return (
     <Container>
       <Content>
@@ -18,7 +18,7 @@ function BoxCardsServices() {
             title="Contas a Pagar/Receber:"
             description="astreie despesas e receitas para manter controle financeiro."
           />
-          
+
           <ServiceCard
             img={screenTelaAdm}
             link="/"

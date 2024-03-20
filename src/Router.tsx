@@ -20,17 +20,27 @@ import { LoginAdmin } from "./pages/@auth/LoginAdmin/index.tsx";
 import { Register } from "./pages/@auth/Register/index.tsx";
 import { ForgotPassword } from "./pages/@auth/ForgetPassword/index.tsx";
 import { Employee } from "./pages/@app/Employee/index.tsx";
+import Sobre from "./pages/@landing-page/Sobre/index.tsx";
+import Recursos from "./pages/@landing-page/Recursos/index.tsx";
+import Planos from "./pages/@landing-page/Planos/index.tsx";
+import Contact from "./pages/@landing-page/Contact/index.tsx";
 
 
-export function Router() {
+export function Router () {
     return (
         <Routes>
             <Route path="/" element={<HomeLandingPage />} errorElement={<ErrorPage />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/recursos" element={<Recursos />} />
+            <Route path="/planos" element={<Planos />} />
+            <Route path="/contact" element={<Contact />} />
+
             <Route path="/form" element={<FormLeads />} />
             <Route path="/login" element={<Login />} />
             <Route path="/login-admin" element={<LoginAdmin />} />
             <Route path="/register" element={<Register />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+
 
             <Route path="/admin" element={<DefaultLayout />}>
                 <Route path="/admin/" element={<Home />} />

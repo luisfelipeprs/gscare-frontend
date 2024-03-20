@@ -1,10 +1,14 @@
 // import Button from '../Button'
-import {ButtonSaibaMais, ButtonTesteGratis, Container, ContainerButtons, Content, Functionalities, Leftdiv, Rightdiv } from './styled'
+import { ButtonSaibaMais, ButtonTesteGratis, Container, ContainerButtons, Content, Functionalities, Leftdiv, Rightdiv } from './styled'
 import saasPhoto from './../../assets/saasPhotoWithoutBack.png'
 import { Check } from 'phosphor-react'
 import { EyeOpenIcon } from '@radix-ui/react-icons'
 
-export default function Homepage() {
+interface IProps {
+  handleOpenModal: () => void
+}
+
+export default function Homepage ({ handleOpenModal }: IProps) {
   return (
     <Container>
       <Content>
@@ -38,10 +42,10 @@ export default function Homepage() {
             </span>
           </Functionalities>
           <ContainerButtons>
-            <ButtonTesteGratis>Faca o teste gratis</ButtonTesteGratis>
+            <ButtonTesteGratis onClick={handleOpenModal}>Faca o teste gratis</ButtonTesteGratis>
             <ButtonSaibaMais>
-              <EyeOpenIcon/>
-              <span>Saiba mais</span>
+              <EyeOpenIcon />
+              <span>Vídeo demonstrativo</span>
             </ButtonSaibaMais>
           </ContainerButtons>
         </Leftdiv>
@@ -55,6 +59,6 @@ export default function Homepage() {
         {/* <Curve/> */}
       </Content>
     </Container>
-    
+
   )
 }

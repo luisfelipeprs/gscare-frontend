@@ -11,8 +11,8 @@ export const Container = styled.div`
   height: 100%;
   padding-bottom: 50px;
   
-  @media screen and (max-width: 320px) {
-    padding: 100px 0px;
+  @media screen and (max-width: 400px) {
+    padding: 150px 0px;
   }
 `
 export const Content = styled.div`
@@ -42,21 +42,31 @@ export const Content = styled.div`
   @media screen and (max-width: 425px) {
     gap: 100px;
   }
+  @media screen and (max-width: 320px) {
+    gap: 150px;
+  }
 `
 
 export const Functionalities = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: none;
+  gap: 0;
   span {
     color: #f0f0f0;
-    svg {
-      
-    transform: translateY(20%);
-    margin-right: 2px;
+    text-align: start;
+
+    svg {  
+      transform: translateY(20%);
+      margin-right: 2px;
     }
   }
+  @media screen and (max-width: 320px) {
+    & {
+      gap: 10px;
+    }
+  }
+  
 `
 
 export const Leftdiv = styled.div`
@@ -68,7 +78,6 @@ export const Leftdiv = styled.div`
   gap: 20px;
   margin: 40px 0;
   /* padding-left: 15px; */
-
   h1{
     text-align: start;  
     color: #f0f0f0;
@@ -88,10 +97,13 @@ export const Leftdiv = styled.div`
     /* padding: 0 20px; */
   }
   
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 400px) {
     /* background-color: red; */
     margin: auto;
     height: 350px;
+    h1 {
+      font-size: 1.5rem;
+    }
     /* max-width: 100%; */
     /* padding: 0 20px; */
   }
