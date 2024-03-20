@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, WhatsappLogo, UsersThree } from 'phosphor-react';
+import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, WhatsappLogo, UsersThree, Gauge } from 'phosphor-react';
 import { Icons, LinkText, Logo, Menu, NavLinkStyled, Overlay, SidebarContainer } from './styled';
 
 const HomeIcon = <House size={24} />;
@@ -12,13 +12,16 @@ const UserGearIcon = <UserGear size={24} />
 const CalendarCheckIcon = <CalendarCheck size={24} />
 const ChartPieSliceIcon = <ChartPieSlice size={24} />
 const WhatsappLogoIcon = <WhatsappLogo size={24} />
+const GaugeIcon = <Gauge size={24} />
+
+
 
 interface IProps {
   isOpenSideBar: boolean;
   toggleSidebar: () => void;
 }
 
-const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
+const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
   const [lastClickedLink, setLastClickedLink] = useState('/admin/');
 
   const handleNavLinkClick = (to: string) => {
@@ -100,7 +103,7 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
               </LinkText>
             </NavLinkStyled>
           </div>
-          
+
           <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Relatórios
@@ -140,12 +143,12 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
               onClick={() => handleNavLinkClick('/admin/zapcampaign/')}
             >
               <Icons>{WhatsappLogoIcon}</Icons>
-              <LinkText  style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Campanha Zap
               </LinkText>
             </NavLinkStyled>
           </div>
-          
+
           <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Interação
@@ -177,7 +180,7 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
               </LinkText>
             </NavLinkStyled>
           </div>
-          
+
           <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Configuração
@@ -196,6 +199,23 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar  }: IProps) => {
               </LinkText>
             </NavLinkStyled>
           </div>
+
+          <div>
+            <NavLinkStyled
+              to="/admin/dashboard/"
+              className="link"
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/dashboard/'}
+              onClick={() => handleNavLinkClick('/admin/dashboard/')}
+            >
+              <Icons>{GaugeIcon}</Icons>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+                painel paciente
+              </LinkText>
+            </NavLinkStyled>
+          </div>
+
+
         </Menu>
       </SidebarContainer>
       {isOpenSideBar && <Overlay onClick={toggleSidebar} isopen={isOpenSideBar} />}

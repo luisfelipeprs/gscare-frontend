@@ -24,6 +24,7 @@ import Sobre from "./pages/@landing-page/Sobre/index.tsx";
 import Recursos from "./pages/@landing-page/Recursos/index.tsx";
 import Planos from "./pages/@landing-page/Planos/index.tsx";
 import Contact from "./pages/@landing-page/Contact/index.tsx";
+import Dashboard from "./pages/@app/Dashboard/index.tsx";
 
 
 export function Router () {
@@ -55,6 +56,7 @@ export function Router () {
                 <Route path="/admin/servicesprovided" element={<ServicesProvided />} />
                 <Route path="/admin/zapscheduling" element={<ZapScheduling />} />
                 <Route path="/admin/zapcampaign" element={<ZapCampaign />} />
+                <Route path="/admin/dashboard" element={<Dashboard />} />
                 <Route path='/admin/oldadmin' element={<Navigate to="/admin" />} />
             </Route>
         </Routes>
