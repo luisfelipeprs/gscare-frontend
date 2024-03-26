@@ -18,10 +18,10 @@ import {
     TitleOptionsChatBot
 } from "./styled";
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import { DotsThreeVertical, Eye } from "phosphor-react";
+import { DotsThreeVertical } from "phosphor-react";
 
 
-export function ZapScheduling() {
+export function ZapScheduling () {
     return (
         <Container>
             <RouterIndicator
@@ -52,6 +52,14 @@ export function ZapScheduling() {
                                         <TextArea
                                             size={"3"}
                                             placeholder="Digite o texto descritivo inicial." />
+                                    </InfoName>
+                                    <InfoName>
+                                        <TextLabel>
+                                            Texto descritivo final
+                                        </TextLabel>
+                                        <TextArea
+                                            size={"3"}
+                                            placeholder="Digite o texto descritivo final." />
                                     </InfoName>
                                     <CheckboxCallAttendant>
                                         <input type="checkbox" />

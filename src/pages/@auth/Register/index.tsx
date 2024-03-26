@@ -25,7 +25,7 @@ const registerAccountFormSchema = z.object({
 
 type RegisterAccountFormData = z.infer<typeof registerAccountFormSchema>
 
-export function Register() {
+export function Register () {
   const { register, handleSubmit, formState: { errors } } = useForm<RegisterAccountFormData>({
     resolver: zodResolver(registerAccountFormSchema)
   });
@@ -36,7 +36,7 @@ export function Register() {
     navigate(-1);
   };
 
-  function handleSubmitData({ email, email2, password, password2, name, phone }: RegisterAccountFormData) {
+  function handleSubmitData ({ email, email2, password, password2, name, phone }: RegisterAccountFormData) {
     signup({ email, email2, password, password2, name, phone })
   }
 
@@ -49,7 +49,7 @@ export function Register() {
 
         <div className="container">
           <header className="header">
-            <img src={logoImg} width='200px' alt="Workflow" className="logoImg" />
+            {/* <img src={logoImg} width='200px' alt="Workflow" className="logoImg" /> */}
             <p>Criar Conta</p>
           </header>
 
@@ -72,7 +72,7 @@ export function Register() {
                 type="text"
                 {...register('name')}
                 id="name"
-                placeholder="OLI Consultoria"
+                placeholder="GSCare"
               // onChange={(e) => setEmail(e.target.value)}
               />
               {errors.name && <span>{errors.name.message}</span>}

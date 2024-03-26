@@ -1,6 +1,6 @@
 import { Container, Content, Copyright, FooterLinks } from './styled';
 
-function Footer() {
+function Footer () {
   return (
     <Container>
       <Content>
@@ -17,6 +17,7 @@ function Footer() {
             <li><a href="https://cdn.discordapp.com/attachments/920700154204553226/1154199226255949894/timbo.png">Contato</a></li>
             <li><a href="https://cdn.discordapp.com/attachments/920700154204553226/1154199226255949894/timbo.png">Preferências de cookies</a></li>
           </ul>
+          projeto pessoal: equipe GSCare
         </FooterLinks>
       </Content>
     </Container>

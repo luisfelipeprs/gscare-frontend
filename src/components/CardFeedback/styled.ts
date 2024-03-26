@@ -23,6 +23,5 @@ export const MessageResponse = styled.div`
 `;
 
 export const Feedback = styled.div`
-  
+  background-color: #fff;
 `;
-

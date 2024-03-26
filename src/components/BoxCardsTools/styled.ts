@@ -14,6 +14,12 @@ export const Content = styled.div`
   max-width: 1280px;
   margin: auto;
   gap: 50px;
+  
+
+  @media screen and (max-width: 1280px) {
+    width: 80%;
+    margin: auto;
+  }
 `;
 
 export const CardsContainer = styled.div`

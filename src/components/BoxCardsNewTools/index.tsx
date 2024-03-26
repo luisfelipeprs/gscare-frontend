@@ -3,12 +3,12 @@ import Title from '../Title';
 import { CardsContainer, Container, Content } from './styled';
 import screenTelaAdm from './../../assets/screenAdm.png'
 
-function BoxCardsNewTools() {
+function BoxCardsNewTools () {
   return (
     <Container>
       <Content>
         <Title
-          title={'As melhores ferramentas para sua empresa ter mais agilidade nos processos internos.'} 
+          title={'As melhores ferramentas para sua empresa ter mais agilidade nos processos internos.'}
           description={'Apresentamos o RevolutionCare, uma plataforma completa que transforma a gestão de cuidados domiciliares.'}
         />
         <CardsContainer>
@@ -33,6 +33,6 @@ function BoxCardsNewTools() {
         </CardsContainer>
       </Content>
     </Container>
-    )
+  )
 }
 export default BoxCardsNewTools;

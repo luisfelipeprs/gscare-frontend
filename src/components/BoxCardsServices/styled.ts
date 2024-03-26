@@ -38,7 +38,7 @@ export const CardsContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 900px) {
     & > section {
       max-width: 100%;
       min-width: 100%;

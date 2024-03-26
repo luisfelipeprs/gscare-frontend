@@ -10,9 +10,10 @@ export const Content = styled.div`
   max-width: 1280px;
   margin: auto;
   h1{
-    font-size: 2.2rem;
+    font-family: inherit;
+    font-size: 2.8rem;
     color: #FFA500;
-    max-width: 840px;
+    max-width: 1000px;
   }
   p{
     font-size: 1.2rem;
