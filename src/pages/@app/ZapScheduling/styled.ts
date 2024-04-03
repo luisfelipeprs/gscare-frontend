@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TextField, Text, Flex, Separator, Button, TextArea } from "@radix-ui/themes";
+import { Text, Button } from "@radix-ui/themes";
 
 export const Container = styled.div`
   display: flex;

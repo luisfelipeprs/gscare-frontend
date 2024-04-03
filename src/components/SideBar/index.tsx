@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, WhatsappLogo, UsersThree, Gauge } from 'phosphor-react';
 import { Icons, LinkText, Logo, Menu, NavLinkStyled, Overlay, SidebarContainer } from './styled';
 

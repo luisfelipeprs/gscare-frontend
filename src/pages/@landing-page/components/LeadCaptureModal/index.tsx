@@ -43,15 +43,6 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const CloseButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-`;
-
 interface LeadCaptureModalProps {
   isOpen: boolean;
   onClose: () => void;

@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import { AddPicture, Container, Content, InfoProfile, Interest, LeftContainer, RightContainer, ProfileImage, ProfileInfoContainer, ShowInterest, AvatarContainer, Person, CardInfoAboutAccount, HeaderCardInfoAboutAccount, CardInfoAccountDatas, ContentCardInfoAboutAccount, CardInfoAccount, CardInfo, CardData, CardInfoAboutAccountDatas, RegistrationData, ContainerNameAndNumberTel, ContainerEmail, InfoProfileText, InfoProfileDatas, ContainerCustomerTrackingEnabled, ContainerButtonEditAccount } from './styled';
-import { Avatar, Section, Text } from '@radix-ui/themes';
+import { AddPicture, Container, Content, InfoProfile, LeftContainer, RightContainer, ProfileImage, ProfileInfoContainer, CardInfoAboutAccount, HeaderCardInfoAboutAccount, CardInfoAccountDatas, ContentCardInfoAboutAccount, CardInfoAccount, CardInfo, CardData, CardInfoAboutAccountDatas, RegistrationData, ContainerNameAndNumberTel, ContainerEmail, InfoProfileText, InfoProfileDatas, ContainerCustomerTrackingEnabled, ContainerButtonEditAccount } from './styled';
 import { RouterIndicator } from '../../../components/RouterIndicator';
 import { DotsThreeVertical, Plus } from 'phosphor-react';
 
-function ProfileEdit() {
+function ProfileEdit () {
   const [name] = useState('Neymar JR da Silva');
-  const [role] = useState('Developer');
   const [phone] = useState('40028922');
   const [email] = useState('neymar@example.com');
   const [image] = useState('https://bootdey.com/img/Content/avatar/avatar7.png');

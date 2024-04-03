@@ -145,16 +145,40 @@ export const TextFaleConosco = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-content: center;
+  padding-bottom: 50px;
 
   h1{
-    
+    font-family: inherit;
+    font-size: 2.8rem;
+    color: #FFA500;
+    max-width: 80%;
+    margin: auto;
   }
 
   p {
-    
+    font-size: 1.2rem;
+    color: #181818;
+    max-width: 728px;
+    margin: auto;
+    padding: 20px 30px;
   }
 
-  input {
-    padding: 0 15px;
+  button {
+    margin: auto;
+    border: none;
+    padding: 15px;
+    background-color: #564BC6;
+    font-weight: 800;
+    color: #fff;
+    width: 60%;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  @media screen and (max-width: 900px) {
+    h1 {
+      font-size: 1.6rem;
+    }
   }
 `;

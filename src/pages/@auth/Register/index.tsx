@@ -1,5 +1,4 @@
 import { Container, Content } from "./styled";
-import logoImg from "../../../assets/logoPng.png";
 import { Link, useNavigate } from "react-router-dom";
 import { CaretLeft } from "phosphor-react";
 import { useForm } from "react-hook-form";

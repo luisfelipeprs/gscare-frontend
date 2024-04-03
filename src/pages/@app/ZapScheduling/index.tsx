@@ -1,4 +1,4 @@
-import { TextField, Text, Separator, Button, TextArea } from "@radix-ui/themes";
+import { TextField, Text, Separator, TextArea } from "@radix-ui/themes";
 import {
     ConfigChatBotAnswerContainer, Container, InfoName, LeftContainer, RightDiv, ProfileInfoContainer, RightContainer,
     Table,

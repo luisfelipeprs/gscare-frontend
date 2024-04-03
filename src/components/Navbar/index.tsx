@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
-import { Action, CloseButton, Contact, Container, ContainerLinks, ContentWrapper, ImageIconLogo, ImageLogo, Infos, Navigationbar, Notification, RouteOptionsContent, RouteSelectorContainer } from './styled';
+import { Action, Contact, Container, ContainerLinks, ContentWrapper, ImageIconLogo, ImageLogo, Infos, Navigationbar, Notification, RouteOptionsContent, RouteSelectorContainer } from './styled';
 import { User } from 'phosphor-react';
 import logo from './../../assets/logo.svg';
 import iconLogo from './../../assets/iconLogo.png';
 
 interface IProps {
-  handleOpenModal: () => void
+  handleOpenModal?: () => void
 }
 
 const Navbar = ({ handleOpenModal }: IProps) => {
@@ -100,10 +100,11 @@ interface RouteSelectorProps {
 
 // Componente para a tela de seleção de rota
 function RouteSelector ({ onClose, onSelect }: RouteSelectorProps): JSX.Element {
-  const handleRouteSelection = (route: string) => {
-    onSelect(route);
-    onClose();
-  };
+  console.log(onClose, onSelect)
+  // const handleRouteSelection = (route: string) => {
+  //   onSelect(route);
+  //   onClose();
+  // };
 
   return (
     <RouteSelectorContainer>

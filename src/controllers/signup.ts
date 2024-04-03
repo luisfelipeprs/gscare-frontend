@@ -10,7 +10,7 @@ interface SignupData {
   password2: string;
 }
 
-export function signup({name, email, email2, phone, password, password2}: SignupData): void {
+export function signup ({ email, email2, phone, password, password2 }: SignupData): void {
 
   if (!/\S+@\S+\.\S+/.test(email)) {
     Swal.fire({ title: 'E-mail inválido', icon: 'warning' });
@@ -49,7 +49,7 @@ export function signup({name, email, email2, phone, password, password2}: Signup
     //     Swal.fire({ title: 'Sua conta foi criada com sucesso!', icon: 'success' });
     //     document.body.classList.remove('swal2-height-auto');
     //     document.body.classList.remove('swal2-shown');
-        
+
     //     setTimeout(async () => {
     //         window.location.href = "/login-admin"
     //     }, 2000);

@@ -1,4 +1,3 @@
-import Button from '../Button';
 import { Container, ContainerAction, ContainerImage, Content } from './styled';
 import imageCta from './../../assets/ctaImageLandingPage.png'
 

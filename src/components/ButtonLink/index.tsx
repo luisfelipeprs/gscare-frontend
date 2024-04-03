@@ -1,14 +1,13 @@
-import React from 'react'
 import { ContainerButton } from './styled'
 import { Link } from 'react-router-dom';
 
 
-interface IProps{
+interface IProps {
   textButton: string;
-  typebutton: "withBorder"|"withBg"
+  typebutton: "withBorder" | "withBg"
   link: string
 }
-function ButtonLink({textButton,typebutton, link}: IProps) {
+function ButtonLink ({ textButton, typebutton, link }: IProps) {
   return (
     <ContainerButton typebutton={typebutton}>
       <Link to={link}>
@@ -16,8 +15,6 @@ function ButtonLink({textButton,typebutton, link}: IProps) {
       </Link>
     </ContainerButton>
 
-    )
+  )
 }
 export default ButtonLink;
-
-

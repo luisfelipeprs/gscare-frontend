@@ -1,56 +1,56 @@
-import { AgroupInput, Container, Content, DateContainer, ContentInputDate, SelectContent, ContainerForm, TableContainer, Table, InputStyle, TextLabelStyle, ButtonStyled } from "./styled";
-import { SelectContainer, StyledSelect } from "../Warnings/styled";
-import { useState } from "react";
+import { AgroupInput, Container, Content, DateContainer, ContentInputDate, ContainerForm, TableContainer, Table, InputStyle, TextLabelStyle, ButtonStyled } from "./styled";
+// import { SelectContainer, StyledSelect } from "../Warnings/styled";
+// import { useState } from "react";
 import { RouterIndicator } from "../../../components/RouterIndicator";
 
-type Option = {
-  value: string;
-  label: string;
-};
+// type Option = {
+//   value: string;
+//   label: string;
+// };
 
-interface SelectProps {
-  options: Option[];
-  onChange: (value: string) => void;
-}
-
-
-const Select: React.FC<SelectProps> = ({ options, onChange }) => {
-  const [selectedValue, setSelectedValue] = useState<string>('');
-
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedOption = event.target.value;
-    setSelectedValue(selectedOption);
-    onChange(selectedOption);
-  };
-
-  return (
-    <SelectContainer>
-      <StyledSelect value={selectedValue} onChange={handleSelectChange}>
-        <option value="" disabled hidden>
-          Selecione o estado do atendimento
-        </option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </StyledSelect>
-    </SelectContainer>
-  );
-};
+// interface SelectProps {
+//   options: Option[];
+//   onChange: (value: string) => void;
+// }
 
 
-function ServicesProvided() {
-  const options: Option[] = [
-    { value: 'option1', label: 'Atendido' },
-    { value: 'option2', label: 'Não atendido' },
-    { value: 'option3', label: 'Em Aberto' },
-    { value: 'option4', label: 'Remarcado' },
-  ];
+// const Select: React.FC<SelectProps> = ({ options, onChange }) => {
+//   const [selectedValue, setSelectedValue] = useState<string>('');
 
-  const handleChange = (value: string) => {
-    console.log('Opção selecionada:', value);
-  };
+//   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+//     const selectedOption = event.target.value;
+//     setSelectedValue(selectedOption);
+//     onChange(selectedOption);
+//   };
+
+//   return (
+//     <SelectContainer>
+//       <StyledSelect value={selectedValue} onChange={handleSelectChange}>
+//         <option value="" disabled hidden>
+//           Selecione o estado do atendimento
+//         </option>
+//         {options.map((option) => (
+//           <option key={option.value} value={option.value}>
+//             {option.label}
+//           </option>
+//         ))}
+//       </StyledSelect>
+//     </SelectContainer>
+//   );
+// };
+
+
+function ServicesProvided () {
+  // const options: Option[] = [
+  //   { value: 'option1', label: 'Atendido' },
+  //   { value: 'option2', label: 'Não atendido' },
+  //   { value: 'option3', label: 'Em Aberto' },
+  //   { value: 'option4', label: 'Remarcado' },
+  // ];
+
+  // const handleChange = (value: string) => {
+  //   console.log('Opção selecionada:', value);
+  // };
   return (
     <Container>
       <RouterIndicator

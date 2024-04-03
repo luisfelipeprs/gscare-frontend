@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { EyeOpenIcon } from '@radix-ui/react-icons';
-import { Button,
-  ConversationLimit,
+import {
+  Button,
   DialogContent,
   DialogOverlay,
   DialogTitle,
@@ -20,9 +20,8 @@ import { Button,
   StepTwoFieldset,
   StepTwoLabel,
   SwitchRoot,
-  SwitchThumb, 
-  UserItem, 
-  UserLimit, 
+  SwitchThumb,
+  UserItem,
   UserList
 } from './styledcss';
 
@@ -32,7 +31,7 @@ interface StepProps {
   onClick: () => void;
 }
 
-const Step: React.FC<StepProps> = ({ number, active, onClick }) => (
+const Step: React.FC<StepProps> = ({ active, onClick }) => (
   <div
     style={{
       flex: 1,
@@ -46,99 +45,99 @@ const Step: React.FC<StepProps> = ({ number, active, onClick }) => (
 
 interface StepOneProps {
   onNext: () => void;
-}   
+}
 
 const StepOne: React.FC<StepOneProps> = ({ onNext }) => (
   <>
-    
+
     <Fieldset>
-          <Label htmlFor="name">
-            Nome
-          </Label>
-          <Input id="name" defaultValue="Pedro Duarte" />
-        </Fieldset>
+      <Label htmlFor="name">
+        Nome
+      </Label>
+      <Input id="name" defaultValue="Pedro Duarte" />
+    </Fieldset>
 
-        <Fieldset>
-          <Label htmlFor="email">
-            Email
-          </Label>
-          <Input id="email" defaultValue="example@example.com" readOnly />
-        </Fieldset>
+    <Fieldset>
+      <Label htmlFor="email">
+        Email
+      </Label>
+      <Input id="email" defaultValue="example@example.com" readOnly />
+    </Fieldset>
 
-        <Fieldset>
-          <Label htmlFor="contactNumber">
-            Númmero de contato
-          </Label>
-          <Input id="contactNumber" defaultValue="+1234567890" />
-        </Fieldset>
-        
-        <SideBySide>
-            <Fieldset>
-                <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
-                    Bloqueio/ Desbloqueio
-                </Label>
-                <SwitchRoot id="airplane-mode" checked={false} onCheckedChange={() => console.log('switch click')}>
-                    <SwitchThumb/>
-                </SwitchRoot>
-            </Fieldset>
-            
-            <Fieldset>
-                <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
-                    olisa
-                </Label>
-                <SwitchRoot id="airplane-mode" checked={true} onCheckedChange={() => console.log('switch click')}>
-                    <SwitchThumb/>
-                </SwitchRoot>
-            </Fieldset>
-        </SideBySide>
-        
-        
-        <SideBySide>
-            <Fieldset>
-                <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
-                    chat interno
-                </Label>
-                <SwitchRoot id="airplane-mode" checked={true} onCheckedChange={() => console.log('switch click')}>
-                    <SwitchThumb />
-                </SwitchRoot>
-            </Fieldset>
-            
-            <Fieldset>
-                <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
-                    categorias
-                </Label>
-                <SwitchRoot id="airplane-mode" checked={true} onCheckedChange={() => console.log('switch click')}>
-                    <SwitchThumb />
-                </SwitchRoot>
-            </Fieldset>
-        </SideBySide>
-        
-        <SideBySide>
-            <Fieldset>
-                <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
-                    bot
-                </Label>
-                <SwitchRoot id="airplane-mode" checked={true} onCheckedChange={() => console.log('switch click')}>
-                    <SwitchThumb />
-                </SwitchRoot>
-            </Fieldset>
-            <Fieldset>
-            </Fieldset>
-        </SideBySide> 
+    <Fieldset>
+      <Label htmlFor="contactNumber">
+        Númmero de contato
+      </Label>
+      <Input id="contactNumber" defaultValue="+1234567890" />
+    </Fieldset>
 
-            <Fieldset>
-            <Label htmlFor="conversationLimit">
-                limite de conversas
-            </Label>
-            <Input id="conversationLimit" type="number" defaultValue="10" />
-            </Fieldset>
-        
-        <Fieldset>
-          <Label htmlFor="userLimit">
-            limite de usuarios
-          </Label>
-          <Input id="userLimit" type="number" defaultValue="100" />
-        </Fieldset>
+    <SideBySide>
+      <Fieldset>
+        <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
+          Bloqueio/ Desbloqueio
+        </Label>
+        <SwitchRoot id="airplane-mode" checked={false} onCheckedChange={() => console.log('switch click')}>
+          <SwitchThumb />
+        </SwitchRoot>
+      </Fieldset>
+
+      <Fieldset>
+        <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
+          olisa
+        </Label>
+        <SwitchRoot id="airplane-mode" checked={true} onCheckedChange={() => console.log('switch click')}>
+          <SwitchThumb />
+        </SwitchRoot>
+      </Fieldset>
+    </SideBySide>
+
+
+    <SideBySide>
+      <Fieldset>
+        <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
+          chat interno
+        </Label>
+        <SwitchRoot id="airplane-mode" checked={true} onCheckedChange={() => console.log('switch click')}>
+          <SwitchThumb />
+        </SwitchRoot>
+      </Fieldset>
+
+      <Fieldset>
+        <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
+          categorias
+        </Label>
+        <SwitchRoot id="airplane-mode" checked={true} onCheckedChange={() => console.log('switch click')}>
+          <SwitchThumb />
+        </SwitchRoot>
+      </Fieldset>
+    </SideBySide>
+
+    <SideBySide>
+      <Fieldset>
+        <Label htmlFor="airplane-mode" style={{ paddingRight: 15 }}>
+          bot
+        </Label>
+        <SwitchRoot id="airplane-mode" checked={true} onCheckedChange={() => console.log('switch click')}>
+          <SwitchThumb />
+        </SwitchRoot>
+      </Fieldset>
+      <Fieldset>
+      </Fieldset>
+    </SideBySide>
+
+    <Fieldset>
+      <Label htmlFor="conversationLimit">
+        limite de conversas
+      </Label>
+      <Input id="conversationLimit" type="number" defaultValue="10" />
+    </Fieldset>
+
+    <Fieldset>
+      <Label htmlFor="userLimit">
+        limite de usuarios
+      </Label>
+      <Input id="userLimit" type="number" defaultValue="100" />
+    </Fieldset>
 
     {/* Botão para avançar para o próximo passo */}
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
@@ -199,29 +198,29 @@ interface StepThreeProps {
 
 const StepThree: React.FC<StepThreeProps> = ({ onPrev, users }) => (
   <>
-  {/* Conteúdo do terceiro passo */}
-  <StepThreeContainer>
-    <LabelThree htmlFor="list">Listagem de Usuários:</LabelThree>
-    <UserList>
-      {users.map((user) => (
-        <UserItem key={user._id}>
-          <div>
-            <strong>{user.name}</strong>
-            <p>Email: {user.email}</p>
-            <p>Admin: {user.isAdmin ? 'Sim' : 'Não'}</p>
-            <p>Modo Escuro Ativo: {user.DarkModeThemeIsActive ? 'Sim' : 'Não'}</p>
-            <p>Categoria Favorita: {user.categoryFavoriteMessages ? user.categoryFavoriteMessages[0]?.name : 'Nenhuma'}</p>
-          </div>
-        </UserItem>
-      ))}
-    </UserList>
-  </StepThreeContainer>
+    {/* Conteúdo do terceiro passo */}
+    <StepThreeContainer>
+      <LabelThree htmlFor="list">Listagem de Usuários:</LabelThree>
+      <UserList>
+        {users.map((user) => (
+          <UserItem key={user._id}>
+            <div>
+              <strong>{user.name}</strong>
+              <p>Email: {user.email}</p>
+              <p>Admin: {user.isAdmin ? 'Sim' : 'Não'}</p>
+              <p>Modo Escuro Ativo: {user.DarkModeThemeIsActive ? 'Sim' : 'Não'}</p>
+              <p>Categoria Favorita: {user.categoryFavoriteMessages ? user.categoryFavoriteMessages[0]?.name : 'Nenhuma'}</p>
+            </div>
+          </UserItem>
+        ))}
+      </UserList>
+    </StepThreeContainer>
 
-  {/* Botão para navegar de volta */}
-  <div style={{ display: 'flex', flexDirection: 'column', marginTop: '20px', alignItems: 'flex-end' }}>
-    <button onClick={onPrev} style={{ marginBottom: '10px' }}>Anterior</button>
-  </div>
-</>
+    {/* Botão para navegar de volta */}
+    <div style={{ display: 'flex', flexDirection: 'column', marginTop: '20px', alignItems: 'flex-end' }}>
+      <button onClick={onPrev} style={{ marginBottom: '10px' }}>Anterior</button>
+    </div>
+  </>
 );
 
 // ...
@@ -300,7 +299,7 @@ const ModalStep: React.FC = () => {
     },
   ];
 
-  const [users, setUsers] = useState<User[]>([
+  const [users,] = useState<User[]>([
     { name: 'Usuário 1', email: 'usuario1@email.com', isAdmin: true, DarkModeThemeIsActive: false, _id: '1' },
     { name: 'Usuário 2', email: 'usuario2@email.com', isAdmin: false, DarkModeThemeIsActive: true, _id: '2' },
     { name: 'Usuário 2', email: 'usuario2@email.com', isAdmin: false, DarkModeThemeIsActive: true, _id: '3' },
@@ -309,7 +308,7 @@ const ModalStep: React.FC = () => {
     { name: 'Usuário 2', email: 'usuario2@email.com', isAdmin: false, DarkModeThemeIsActive: true, _id: '6' },
     { name: 'Usuário 2', email: 'usuario2@email.com', isAdmin: false, DarkModeThemeIsActive: true, _id: '7' },
   ]);
-  
+
 
   return (
     <Dialog.Root>
@@ -338,7 +337,7 @@ const ModalStep: React.FC = () => {
           {/* Renderiza o conteúdo com base no passo atual */}
           {currentStep === 1 && <StepOne onNext={handleNextStep} />}
           {currentStep === 2 && <StepTwo onPrev={handlePrevStep} onNext={handleNextStep} categories={suaListaDeCategorias} />}
-          {currentStep === 3 && <StepThree onPrev={handlePrevStep} users={users}/>}
+          {currentStep === 3 && <StepThree onPrev={handlePrevStep} users={users} />}
 
           {/* Botão para fechar o modal */}
           <Dialog.Close asChild>

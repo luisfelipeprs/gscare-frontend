@@ -1,4 +1,4 @@
-import { Button, Flex, Text, TextArea, TextField } from "@radix-ui/themes";
+import { Flex, Text, TextArea, TextField } from "@radix-ui/themes";
 import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect, TableContainer, Table, TableRow, TableCell, ButtonStyled } from "./styled";
 import { useState } from "react";
 import { RouterIndicator } from "../../../components/RouterIndicator";
@@ -42,7 +42,7 @@ const Select: React.FC<SelectProps> = ({ options, onChange }) => {
   );
 };
 
-function Warnings() {
+function Warnings () {
   const options: Option[] = [
     { value: 'option1', label: 'Urgente' },
     { value: 'option2', label: 'Importante' },

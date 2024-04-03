@@ -60,10 +60,6 @@ const Day: React.FC<DayProps> = ({ day, atendimentos, onClick }) => (
   </div>
 );
 
-interface CalendarGerenciadorConsultaProps {
-  // Defina as propriedades do componente aqui, se necessário
-}
-
 const Calendar: React.FC = () => {
   const [currentMonth, setCurrentMonth] = useState<number>(
     new Date().getMonth()
@@ -138,7 +134,7 @@ const Calendar: React.FC = () => {
   const calendarDaysGerenciadorConsulta = generateCalendarGerenciadorConsulta();
 
   useEffect(() => {
-    function generateCalendar(): Day[] {
+    function generateCalendar (): Day[] {
       const currentDate = new Date();
       const firstDayOfMonth = new Date(
         currentDate.getFullYear(),
@@ -198,12 +194,12 @@ const Calendar: React.FC = () => {
     setCalendarDays(generateCalendar());
   }, [currentMonth, currentYear]);
 
-  function handleDayClick(dateId: string) {
+  function handleDayClick (dateId: string) {
     // Implement your logic for handling day click
     alert(`Clicked on ${dateId}`);
   }
 
-  function changeMonth(offset: number) {
+  function changeMonth (offset: number) {
     setCurrentMonth((prevMonth) => {
       let newMonth = prevMonth + offset;
       if (newMonth < 0) {
@@ -222,18 +218,18 @@ const Calendar: React.FC = () => {
     setLeftSectionVisible(!leftSectionVisible);
   }
 
-  function marcarAtendimento() {
+  function marcarAtendimento () {
     // Implement your logic for scheduling appointments here
     alert("Atendimento marcado! Implemente a lógica desejada.");
   }
 
-  function handlehtmlFormSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function handlehtmlFormSubmit (event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     // Implement your logic for handling form submission
     // ...
   }
 
-  function handleCloseModal() {
+  function handleCloseModal () {
     // Implement your logic for closing the modal
     // ...
   }
@@ -352,9 +348,8 @@ const Calendar: React.FC = () => {
                     </StyledDayOfWeekDefineConsulta>
                     {calendarDays.map((day, index) => (
                       <div
-                        className={`styled-day ${
-                          day.inactive ? "inactive" : ""
-                        }`}
+                        className={`styled-day ${day.inactive ? "inactive" : ""
+                          }`}
                         key={index}
                         onClick={() => handleDayClick(`dateId-${day.day}`)}
                       >

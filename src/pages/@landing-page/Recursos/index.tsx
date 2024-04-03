@@ -197,7 +197,9 @@ function Recursos () {
           <h1>Criamos um sistema simples,completo e incrível</h1>
           <p>O nosso negócio é ajudar a potencializar o seu!<br />
             Agende uma reunião conosco para discutir seus objetivos e necessidades.</p>
-          <input type="button" value="Fale conosco" className="button-fale-conosco" />
+          <button className="button-fale-conosco">
+            Fale conosco
+          </button>
         </TextFaleConosco>
       </ContainerRecursos>
     </>
