@@ -183,6 +183,25 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
 
           <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+              Prontuário
+            </Logo>
+
+            <NavLinkStyled
+              to="/admin/medicalrecord/"
+              className="link"
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/medicalrecord/'}
+              onClick={() => handleNavLinkClick('/admin/medicalrecord/')}
+            >
+              <Icons>{UserGearIcon}</Icons>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+                Prontuário Eletrônico
+              </LinkText>
+            </NavLinkStyled>
+          </div>
+
+          <div>
+            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Configuração
             </Logo>
 
