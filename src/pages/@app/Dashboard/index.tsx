@@ -1,6 +1,6 @@
 import { ApexOptions } from "apexcharts";
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import { Card, CardInner, Container, Content, Icons, MainCards } from "./styled";
+import { Card, CardInner, Container, Content, Icons, MainCards, ContentGrafico } from "./styled";
 import ApexCharts from 'react-apexcharts';
 
 import { CalendarX, CalendarCheck, CalendarBlank, ArrowURightUp, Money } from 'phosphor-react';
@@ -23,14 +23,28 @@ interface ReportScreenState {
         series: number[];
         options: ApexOptions;
     };
-    //Codigo do grafico de colunas 
-    distributedColumnsData: {
+
+    distributedColumnsData: { //Codigo do grafico de colunas 
         series: {
-            name: string;
             data: number[];
         }[];
         options: ApexOptions;
     };// fim 
+
+    convenioColumnsData: { //Codigo do grafico Convenios 
+        series: {
+            data: number[];
+        }[];
+        options: ApexOptions;
+    }; //fim
+
+    procedimentosColumnsData: { //Codigo do grafico Top Procedimentos 
+        series: {
+            data: number[];
+        }[];
+        options: ApexOptions;
+    }; //fim
+
 }
 
 function Dashboard() {
@@ -59,10 +73,9 @@ function Dashboard() {
         }
     };
 
-    //Cofig do graficos de colunas 
+    //Cofig do grafico de coluna
     const distributedColumnsData: ReportScreenState["distributedColumnsData"] = {
         series: [{
-            name: "serie 1",
             data: [300, 12, 33, 42, 42, 60]
         }],
         options: {
@@ -84,8 +97,8 @@ function Dashboard() {
                 show: false
             },
             xaxis: {
-                categories: ['Pacientes agendados', 'Pacientes confirmados', 'Pacientes desmarcados', 
-                'Pacientes com retorno', 'Agendamento não faturados','Agendamento faturados'],
+                categories: ['Pacientes agendados', 'Pacientes confirmados', 'Pacientes desmarcados',
+                    'Pacientes com retorno', 'Agendamento não faturados', 'Agendamento faturados'],
                 labels: {
                     style: {
                         fontSize: '12px'
@@ -103,6 +116,87 @@ function Dashboard() {
         }
     };
 
+    // Config do grafico Convenios
+    const convenioColumnsData: ReportScreenState["convenioColumnsData"] = {
+        series: [{
+            data: [4.7, 3.0],
+        }],
+        options: {
+            chart: {
+                type: "bar",
+            },
+            colors: ['#FF6666', '#FFFF99'],
+            plotOptions: {
+                bar: {
+                    columnWidth: '45%',
+                    distributed: true,
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            legend: {
+                show: false
+            },
+            xaxis: {
+                categories: [1, 2],
+                labels: {
+                    style: {
+                        fontSize: '12px'
+                    }
+                }
+            },
+            yaxis: {
+                labels: {
+                    show: true
+                }
+            },
+            tooltip: {
+                enabled: true
+            }
+        }
+    };
+
+    // Config do Grafico Top Procedimentos  
+    const procedimentosColumnsData: ReportScreenState["procedimentosColumnsData"] = {
+        series: [{
+            data: [1.0, 0.8, 0.9],
+        }],
+        options: {
+            chart: {
+                type: "bar",
+            },
+            colors: ['#CCCCCC', '#3399FF', '#66CC66'],
+            plotOptions: {
+                bar: {
+                    columnWidth: '45%',
+                    distributed: true,
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            legend: {
+                show: false
+            },
+            xaxis: {
+                categories: [1, 2, 3],
+                labels: {
+                    style: {
+                        fontSize: '12px'
+                    }
+                }
+            },
+            yaxis: {
+                labels: {
+                    show: true
+                }
+            },
+            tooltip: {
+                enabled: true
+            }
+        }
+    };
 
     return (
         <Container>
@@ -112,9 +206,7 @@ function Dashboard() {
             >
                 <Content>
                     <div>
-
                         <h1>DASHBOARD</h1>
-
                         <h4>Indicadores de hoje</h4>
 
                         <MainCards>
@@ -168,24 +260,29 @@ function Dashboard() {
                         </MainCards>
                     </div>
 
-                </Content>
+                    <ContentGrafico>
+                        <div>{/** Aqui jás um grafico de colunas */}
+                            <h2>Top Convênios</h2>
+                            <ApexCharts options={convenioColumnsData.options} series={convenioColumnsData.series} type="bar" height={350} />
+                        </div>
+                        <div>{/** Aqui jás um grafico de colunas */}
+                            <h2>Top Procedimentos</h2>
+                            <ApexCharts options={procedimentosColumnsData.options} series={procedimentosColumnsData.series} type="bar" height={350} />
+                        </div>
+                        <div>{/** Grafico de linas */}
+                            <h2>Pacientes Agendados</h2>
+                            <ApexCharts options={patientsScheduledData.options} series={patientsScheduledData.series} type="line" height={350} />
+                        </div>
+                        <div>{/**Grafico de Pizza */}
+                            <h2>Dashboards</h2>
+                            <ApexCharts options={otherDashboardData.options} series={otherDashboardData.series} type="donut" height={350} />
+                        </div>
+                        <div>{/** Aqui jás um grafico de colunas */}
+                            <h2>Visão geral</h2>
+                            <ApexCharts options={distributedColumnsData.options} series={distributedColumnsData.series} type="bar" height={350} />
+                        </div>
 
-                <Content>
-                    <div>{/** Aqui jás um grafico de colunas */}
-                        <h2>Visão geral</h2>
-                        <ApexCharts options={distributedColumnsData.options} series={distributedColumnsData.series} type="bar" height={350} />
-                    </div>
-
-                    <div>
-                        <h2>Pacientes Agendados</h2>
-                        <ApexCharts options={patientsScheduledData.options} series={patientsScheduledData.series} type="line" height={350} />
-                    </div>
-
-                    <div>
-
-                        <h2>Dashboards</h2>
-                        <ApexCharts options={otherDashboardData.options} series={otherDashboardData.series} type="donut" height={350} />
-                    </div>
+                    </ContentGrafico>
 
                 </Content>
             </RouterIndicator>

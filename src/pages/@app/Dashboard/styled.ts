@@ -15,6 +15,29 @@ export const Content = styled.div`
   margin-right: 10px;
 `;
 
+export const ContentGrafico = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+
+  > div {
+    background-color:  #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  & > div:nth-child(5) {
+    grid-column: span 2;
+  }
+`;
+
 export const Icons = styled.div`
   margin-left: 5px;
   margin-top: 5px;
