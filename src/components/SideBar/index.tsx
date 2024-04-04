@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, WhatsappLogo, UsersThree, Gauge } from 'phosphor-react';
+import React, { useState } from 'react';
+import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, WhatsappLogo, UsersThree, ClipboardText, Gauge } from 'phosphor-react';
 import { Icons, LinkText, Logo, Menu, NavLinkStyled, Overlay, SidebarContainer } from './styled';
 
 const HomeIcon = <House size={24} />;
@@ -15,6 +15,7 @@ const WhatsappLogoIcon = <WhatsappLogo size={24} />
 const GaugeIcon = <Gauge size={24} />
 
 
+const CripboardTextIcon = <ClipboardText size={24} />
 
 interface IProps {
   isOpenSideBar: boolean;
@@ -221,36 +222,18 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
 
           <div>
             <NavLinkStyled
-              to="/admin/dashboard/"
+              to="/admin/prescription/"
               className="link"
               isopen={isOpenSideBar}
-              isactive={lastClickedLink === '/admin/dashboard/'}
-              onClick={() => handleNavLinkClick('/admin/dashboard/')}
+              isactive={lastClickedLink === '/admin/prescription/'}
+              onClick={() => handleNavLinkClick('/admin/prescription/')}
             >
-              <Icons>{GaugeIcon}</Icons>
+              <Icons>{CripboardTextIcon}</Icons>
               <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                painel paciente
+                ordem e prescrição
               </LinkText>
             </NavLinkStyled>
-          </div>
 
-          <div>
-            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-              Nova funcionalidade
-            </Logo>
-
-            <NavLinkStyled
-              to="/admin/financial/"
-              className="link"
-              isopen={isOpenSideBar}
-              isactive={lastClickedLink === '/admin/financial/'}
-              onClick={() => handleNavLinkClick('/admin/financial/')}
-            >
-              <Icons>{UserGearIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                Financial
-              </LinkText>
-            </NavLinkStyled>
           </div>
 
         </Menu>

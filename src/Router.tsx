@@ -27,6 +27,7 @@ import Contact from "./pages/@landing-page/Contact/index.tsx";
 import Dashboard from "./pages/@app/Dashboard/index.tsx";
 import Financial from "./pages/@app/Financial/index.tsx";
 import MedicalRecord from "./pages/@app/MedicalRecord/index.tsx";
+import OrderAndPrescription from "./pages/@app/OrderAndPrescription/index.tsx";
 
 
 export function Router () {
@@ -59,6 +60,7 @@ export function Router () {
                 <Route path="/admin/zapscheduling" element={<ZapScheduling />} />
                 <Route path="/admin/zapcampaign" element={<ZapCampaign />} />
                 <Route path="/admin/dashboard" element={<Dashboard />} />
+                <Route path="/admin/prescription" element={<OrderAndPrescription />} />
                 <Route path='/admin/oldadmin' element={<Navigate to="/admin" />} />
                 <Route path="/admin/financial" element={<Financial />} />
                 <Route path="/admin/medicalrecord" element={<MedicalRecord />} />
