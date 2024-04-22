@@ -6,7 +6,7 @@ import AdditionalNotes from "./steps/AdditionalNotes";
 import PatientData from "./steps/PatientData";
 import { ButtonSubmitContainer } from "./steps/PatientData/styled";
 
-export default function UserDialog() {
+export default function UserDialog () {
     return (
         <>
             <Dialog.Root>
@@ -64,4 +64,3 @@ export default function UserDialog() {
         </>
     );
 }
-

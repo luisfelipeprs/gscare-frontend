@@ -1,162 +1,157 @@
-import { Flex, Text, TextArea, TextField } from "@radix-ui/themes";
-import { AgroupInput, Container, Content, DateContainer, InputContent, ContentInputDate, SelectContainer, SelectContent, StyledSelect, TableContainer, Table, TableRow, TableCell, ButtonStyled } from "./styled";
-import { useState } from "react";
+import { Container, Content, FilterButton, FilterSelect, Header, LeftHeader, NavigationButton, PageIndicator, PaginationContainer, RightHeader, SearchInput } from "./styled";
 import { RouterIndicator } from "../../../components/RouterIndicator";
+import ModalWarnings from "./Modal/ModalWarnings";
+import { CaretLeft, CaretRight, MagnifyingGlass } from "phosphor-react";
+import { useState } from "react";
+import PatientTable from "./TableUI";
 
-type Option = {
-  value: string;
-  label: string;
-};
-
-interface SelectProps {
-  options: Option[];
-  onChange: (value: string) => void;
-}
-
-// Styled components
-
-
-// Componente funcional Select
-const Select: React.FC<SelectProps> = ({ options, onChange }) => {
-  const [selectedValue, setSelectedValue] = useState<string>('');
-
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedOption = event.target.value;
-    setSelectedValue(selectedOption);
-    onChange(selectedOption);
-  };
-
-  return (
-    <SelectContainer>
-      <StyledSelect value={selectedValue} onChange={handleSelectChange}>
-        <option value="" disabled hidden>
-          Selecione o tipo de aviso
-        </option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </StyledSelect>
-    </SelectContainer>
-  );
-};
+// titulo
+// tipo de aviso
+// data de inicio 
+// data de fim 
+// mensagem 
 
 function Warnings () {
-  const options: Option[] = [
-    { value: 'option1', label: 'Urgente' },
-    { value: 'option2', label: 'Importante' },
-    { value: 'option3', label: 'Lembrete' },
+
+  const patients = [
+    {
+      id: 1,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    },
+    {
+      id: 2,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    },
+    {
+      id: 3,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    },
+    {
+      id: 4,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    },
+    {
+      id: 5,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    },
+    {
+      id: 6,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    },
+    {
+      id: 7,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    },
+    {
+      id: 8,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    },
+    {
+      id: 9,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    },
+    {
+      id: 10,
+      titulo: 'nova regra',
+      tipo: 'importante',
+      inicio: '01/05/2022',
+      fim: '20/05/2022',
+      mensagem: 'Tenha cuidado com a nova regra que deve ser seguida',
+    }
+    // Adicione mais pacientes conforme necessário
   ];
 
-  const handleChange = (value: string) => {
-    console.log('Opção selecionada:', value);
-  };
+
+  const totalPages = 10
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+
+
+  function onPrevClick () {
+    console.log('voltar paginacao')
+    setCurrentPage(currentPage - 1);
+  }
+
+  function onNextClick () {
+    console.log('avancar paginacao')
+    setCurrentPage(currentPage + 1);
+  }
+
   return (
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="listagem de atendimentos"
-        routerText="Atendimentos"
+        descText="Listagem de avisos agendados e do ultimo mes"
+        routerText="Avisos"
+        onButtonClick={ModalWarnings}
       >
+
         <Content>
+          <Header>
+            <LeftHeader>
+              <SearchInput type="text" id="searchInput" placeholder="Pesquisar por nome" />
+              <FilterSelect id="filterSelect">
+                <option value="nome">Nome</option>
+                <option value="diagnostico">Diagnóstico</option>
+                <option value="medicamento">Medicamento Prescrito</option>
+              </FilterSelect>
+              <FilterButton id="filterButton">
+                <MagnifyingGlass size={20} weight="bold" />
+              </FilterButton>
+            </LeftHeader>
+            <RightHeader>
+              <PaginationContainer>
+                <NavigationButton onClick={onPrevClick}>
+                  <CaretLeft />
+                  {/* <span>voltar</span> */}
+                </NavigationButton>
+                <PageIndicator>{`${currentPage} - ${currentPage * 20} de ${totalPages * 20}`}</PageIndicator>
+                <NavigationButton onClick={onNextClick}>
+                  {/* <span>avancar</span> */}
+                  <CaretRight />
+                </NavigationButton>
+              </PaginationContainer>
+            </RightHeader>
+          </Header>
 
-          <AgroupInput>
-            <InputContent>
-              <Text as="div" size="2" mb="1" weight="bold">
-                Título
-              </Text>
-              <TextField.Input
-                placeholder="Digite o título do aviso."
-              />
-            </InputContent>
-
-            <InputContent>
-              <Text as="div" size="2" mb="1" weight="bold">
-                Tipo de Aviso
-              </Text>
-              <SelectContent>
-                <Select options={options} onChange={handleChange} />
-              </SelectContent>
-            </InputContent>
-          </AgroupInput>
-          <DateContainer>
-            <ContentInputDate>
-              <Text as="div" size="2" mb="1" weight="bold">
-                Data de Início do Aviso
-              </Text>
-              <input type="date" />
-            </ContentInputDate>
-            <ContentInputDate>
-              <Text as="div" size="2" mb="1" weight="bold">
-                Data de Fim do Aviso
-              </Text>
-              <input type="date" />
-            </ContentInputDate>
-
-          </DateContainer>
-          <div>
-            <Flex direction="column" gap="3">
-              <InputContent>
-                <Text as="div" size="2" mb="1" weight="bold">
-                  Mensagem
-                </Text>
-                <TextArea
-                  style={
-                    {
-                      height: "140px"
-                    }
-                  }
-                  // defaultValue="Fernando Franco"
-                  placeholder="Digite sua mensagem aqui."
-                />
-              </InputContent>
-            </Flex>
-            <ButtonStyled style={{ width: "100%", marginTop: "20px" }}> Salvar</ButtonStyled>
-          </div>
-          <TableContainer>
-            <Table>
-              <thead>
-                <tr>
-                  <th>Título</th>
-                  <th>Tipo de Aviso</th>
-                  <th>Mensagem</th>
-                  <th>Data Início</th>
-                  <th>Data Fim</th>
-                </tr>
-              </thead>
-              <tbody>
-                <TableRow key='id'>
-                  <TableCell>1</TableCell>
-                  <TableCell>2</TableCell>
-                  <TableCell>3</TableCell>
-                  <TableCell>4</TableCell>
-                  <TableCell>5</TableCell>
-                </TableRow>
-                <TableRow key='id'>
-                  <TableCell>1</TableCell>
-                  <TableCell>2</TableCell>
-                  <TableCell>3</TableCell>
-                  <TableCell>4</TableCell>
-                  <TableCell>5</TableCell>
-                </TableRow>
-                <TableRow key='id'>
-                  <TableCell>1</TableCell>
-                  <TableCell>2</TableCell>
-                  <TableCell>3</TableCell>
-                  <TableCell>4</TableCell>
-                  <TableCell>5</TableCell>
-                </TableRow>
-                <TableRow key='id'>
-                  <TableCell>1</TableCell>
-                  <TableCell>2</TableCell>
-                  <TableCell>3</TableCell>
-                  <TableCell>4</TableCell>
-                  <TableCell>5</TableCell>
-                </TableRow>
-              </tbody>
-            </Table>
-          </TableContainer>
+          <PatientTable patients={patients} />
         </Content>
       </RouterIndicator>
     </Container>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, WhatsappLogo, UsersThree, ClipboardText, Gauge } from 'phosphor-react';
+import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, WhatsappLogo, UsersThree, ClipboardText, Gauge, User } from 'phosphor-react';
 import { Icons, LinkText, Logo, Menu, NavLinkStyled, Overlay, SidebarContainer } from './styled';
 
 const HomeIcon = <House size={24} />;
@@ -16,6 +16,9 @@ const GaugeIcon = <Gauge size={24} />
 
 
 const CripboardTextIcon = <ClipboardText size={24} />
+const UserIcon = <User size={24} />
+
+
 
 interface IProps {
   isOpenSideBar: boolean;
@@ -105,57 +108,13 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
             </NavLinkStyled>
           </div>
 
-          <div>
-            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-              Relatórios
-            </Logo>
-
-            <NavLinkStyled
-              to="/admin/reports/"
-              className="link"
-              isopen={isOpenSideBar}
-              isactive={lastClickedLink === '/admin/reports/'}
-              onClick={() => handleNavLinkClick('/admin/reports/')}
-            >
-              <Icons>{ChartPieSliceIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                relatorios
-              </LinkText>
-            </NavLinkStyled>
-
-            <NavLinkStyled
-              to="/admin/zapscheduling/"
-              className="link"
-              isopen={isOpenSideBar}
-              isactive={lastClickedLink === '/admin/zapscheduling/'}
-              onClick={() => handleNavLinkClick('/admin/zapscheduling/')}
-            >
-              <Icons>{CalendarIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                Agendamento Zap
-              </LinkText>
-            </NavLinkStyled>
-
-            <NavLinkStyled
-              to="/admin/zapcampaign/"
-              className="link"
-              isopen={isOpenSideBar}
-              isactive={lastClickedLink === '/admin/zapcampaign/'}
-              onClick={() => handleNavLinkClick('/admin/zapcampaign/')}
-            >
-              <Icons>{WhatsappLogoIcon}</Icons>
-              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                Campanha Zap
-              </LinkText>
-            </NavLinkStyled>
-          </div>
 
           <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Interação
             </Logo>
 
-            <NavLinkStyled
+            {/* <NavLinkStyled
               to="/admin/feedback/"
               className="link"
               isopen={isOpenSideBar}
@@ -166,7 +125,7 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
               <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
                 Feedbacks
               </LinkText>
-            </NavLinkStyled>
+            </NavLinkStyled> */}
 
             <NavLinkStyled
               to="/admin/Warnings/"
@@ -184,6 +143,51 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
 
           <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+              Relatórios
+            </Logo>
+
+            <NavLinkStyled
+              to="/admin/dashboard/"
+              className="link"
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/dashboard/'}
+              onClick={() => handleNavLinkClick('/admin/dashboard/')}
+            >
+              <Icons>{ChartPieSliceIcon}</Icons>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+                relatorios
+              </LinkText>
+            </NavLinkStyled>
+
+            {/* <NavLinkStyled
+              to="/admin/zapscheduling/"
+              className="link"
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/zapscheduling/'}
+              onClick={() => handleNavLinkClick('/admin/zapscheduling/')}
+            >
+              <Icons>{CalendarIcon}</Icons>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+                Agendamento Zap
+              </LinkText>
+            </NavLinkStyled> */}
+
+            {/* <NavLinkStyled
+              to="/admin/zapcampaign/"
+              className="link"
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/zapcampaign/'}
+              onClick={() => handleNavLinkClick('/admin/zapcampaign/')}
+            >
+              <Icons>{WhatsappLogoIcon}</Icons>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+                Campanha Zap
+              </LinkText>
+            </NavLinkStyled> */}
+          </div>
+
+          {/* <div>
+            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Prontuário
             </Logo>
 
@@ -199,9 +203,9 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
                 Prontuário Eletrônico
               </LinkText>
             </NavLinkStyled>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
               Configuração
             </Logo>
@@ -218,9 +222,9 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
                 financials
               </LinkText>
             </NavLinkStyled>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <NavLinkStyled
               to="/admin/prescription/"
               className="link"
@@ -233,7 +237,25 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
                 ordem e prescrição
               </LinkText>
             </NavLinkStyled>
+          </div> */}
 
+          <div>
+            <Logo style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+              Configuração
+            </Logo>
+
+            <NavLinkStyled
+              to="/admin/profile/"
+              className="link"
+              isopen={isOpenSideBar}
+              isactive={lastClickedLink === '/admin/profile/'}
+              onClick={() => handleNavLinkClick('/admin/profile/')}
+            >
+              <Icons>{UserIcon}</Icons>
+              <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
+                profile
+              </LinkText>
+            </NavLinkStyled>
           </div>
 
         </Menu>

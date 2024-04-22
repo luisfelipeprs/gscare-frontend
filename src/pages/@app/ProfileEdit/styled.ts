@@ -13,11 +13,11 @@ export const Content = styled.div`
 `;
 
 export const ProfileInfoContainer = styled.div`
-  height: 90%;
+  /* height: 90%; */
   display: flex;
   flex-direction: row;
   gap: 20px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
     /* flex-wrap: wrap;     */
   }
@@ -51,7 +51,6 @@ export const ProfileImageContainer = styled.div`
 
 export const ProfileImage = styled.img`
   /* width: 150px;
-  height: 150px; */
   max-width: 300px;
   width: 100%;
   margin: 0 auto;
@@ -60,8 +59,62 @@ export const ProfileImage = styled.img`
   box-shadow: 2px 19px 54px -46px rgba(0, 0, 0, 0.75);
   /* @media (max-width: 768px) {
     width: 100px;
-    height: 100px;
   } */
+`;
+
+export const ContainerRight = styled.div`
+  flex: 1;
+`;
+
+export const ContainerDataFloat = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* width: 30%; */
+  a{
+    color: #a0a0a0;
+    text-decoration:none
+  }
+  a:hover{
+    color: black;
+  }
+  @media (max-width: 768px) {
+    width:100%
+  }
+`;
+
+export const ContainerRightFirst = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* width: 30%; */
+  a{
+    color: #a0a0a0;
+    text-decoration:none
+  }
+  a:hover{
+    color: black;
+  }
+  @media (max-width: 768px) {
+    width:100%
+  }
+`;
+
+export const ContainerRightSecond = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* width: 30%; */
+  a{
+    color: #a0a0a0;
+    text-decoration:none
+  }
+  a:hover{
+    color: black;
+  }
+  @media (max-width: 768px) {
+    width:100%
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -81,11 +134,43 @@ export const LeftContainer = styled.div`
   }
 `;
 
+
+export const TwoContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  a{
+    color: #a0a0a0;
+    text-decoration:none
+  }
+  a:hover{
+    color: black;
+  }
+  @media (max-width: 768px) {
+    width:100%
+  }
+`
+
+export const RightContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  @media (max-width: 768px) {
+   width: 100%;
+  }
+`;
+
 export const AddPicture = styled.div`
+  padding: 15px;
   width: 100%;
   display: flex;
   flex-direction: row;
   position: relative;
+  box-shadow: 0px 10px 38px -10px #00000030;
+  border-radius: 8px;
+  justify-content: space-between;
 
   button {  
     text-align: center;
@@ -110,18 +195,45 @@ export const AddPicture = styled.div`
   }
 `;
 
+
+
+export const ContainerIconName = styled.div`
+  /* margin: 15px; */
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  gap: 20px;
+  /* width: 100%; */
+`
+
+export const ContentImgAndName = styled.div`
+  display: flex;
+`;
+
+export const ContentName = styled.div`
+
+`;
+
 export const InfoProfile = styled.div`
   justify-content: space-between;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 `;
 
 export const InfoProfileText = styled.div`
   color: #ddd;
+
+  h3 {
+    color: #1345FF;
+    font-size: 1.3rem;
+  }
 `;
 
 export const InfoProfileDatas = styled.div`
-  text-align: end;
+  text-align: start;
+  font-size: 0.9rem;
+  font-family: monospace;
+  font-weight: bold;
 `;
 
 export const RegistrationData = styled.div`
@@ -133,7 +245,7 @@ export const RegistrationData = styled.div`
 
 const piscar = keyframes`
   0% {
-    background-color: rgb(142, 255, 99);
+    background-color: transparent;
   }
   100% {
     background-color: rgb(70, 255, 0);
@@ -142,37 +254,54 @@ const piscar = keyframes`
 
 export const ContainerCustomerTrackingEnabled = styled.div`
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-family: sans-serif;
   color: #333;
   width: 100%;
 
   &::after {
-  content: '';
-  width: 10px; /* Ajuste a largura da bolinha conforme necessário */
-  height: 10px; /* Ajuste a altura da bolinha conforme necessário */
-  background-color: #ff0000; /* Cor da bolinha */
-  border-radius: 50%; /* Para criar uma bolinha com bordas arredondadas */
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-50%, -50%);
-  animation: ${piscar} 1s infinite alternate; /* Animação de piscar */
-}
+    content: '';
+    width: 10px; /* Ajuste a largura da bolinha conforme necessário */
+    height: 10px; /* Ajuste a altura da bolinha conforme necessário */
+    background-color: #ff0000; /* Cor da bolinha */
+    border-radius: 50%; /* Para criar uma bolinha com bordas arredondadas */
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    animation: ${piscar} 1s infinite alternate; /* Animação de piscar */
+  }
+`;
+
+export const CardData = styled.div`
+  margin: auto 0;
+  span {
+    /* background: linear-gradient(166deg, #FFCE3A, #FFA700); */
+    /* background: linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156)); */
+    background: #1346FF;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #fff;
+  }
 `;
 
 
 export const ContainerButtonEditAccount = styled.div`
-  display: flex;
+  text-align: center;
   justify-content: center;
+  /* margin: auto; */
+  display: flex;
 
-  button {
-    padding: 10px 20px;
-    color: #fff;
-    border: none;
-    border-radius: 16px;
-    font-size: 1.1rem;
-    background-color: rgb(255, 167, 0);
-  }
+  margin: auto 0;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(255, 167, 0);
+  cursor: pointer;
 `;
 
 export const ContainerNameAndNumberTel = styled.div`
@@ -211,15 +340,6 @@ export const ContainerEmail = styled.div`
   }
 `;
 
-export const RightContainer = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  @media (max-width: 768px) {
-   width: 100%;
-  }
-`;
 
 export const CardInfoAccountDatas = styled.div`
 justify-content: space-between;
@@ -240,19 +360,15 @@ export const CardInfoAboutAccountDatas = styled.div`
   margin-bottom: 20px;
   background-color: #fff;
   box-sizing: border-box;
-  height: 480px;
-  max-height: 500px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
 export const CardInfoAboutAccount = styled.div`
-  flex: 2;
+  flex: 1;
   margin-bottom: 20px;
   background-color: #fff;
   box-sizing: border-box;
-  height: 480px;
-  max-height: 500px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 `;
@@ -291,7 +407,22 @@ export const ContentCardInfoAboutAccount = styled.div`
   display: flex;
   flex-direction: column;
   overflow: auto;
-  height: 300px;
+  max-height: 300px;
+
+  
+
+  /* Estilo da barra de rolagem */
+  &::-webkit-scrollbar {
+      width: 5px; /* largura da barra de rolagem */
+  }
+
+  /* Estilo do polegar da barra de rolagem */
+  &::-webkit-scrollbar-thumb {
+      background-color: #111dff; /* cor do polegar */
+      border-radius: 5px; /* borda arredondada do polegar */
+  }
+
+  /* teste */
 `;
 
 export const CardInfoAccount = styled.div`
@@ -317,15 +448,6 @@ export const CardInfo = styled.div`
   }
 `;
 
-export const CardData = styled.div`
-  margin: auto 0;
-  span {
-    /* background: linear-gradient(166deg, #FFCE3A, #FFA700); */
-    padding: 10px;
-    border-radius: 8px;
-    color: #fff;
-  }
-`;
 
 export const Interest = styled.div`
   display: flex;
@@ -352,7 +474,7 @@ export const AgroupInterest = styled.div`
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  height: 100%; /* Set the height to 100% */
+  /* height: 100%; Set the height to 100% */
 `;
 
 
@@ -362,7 +484,7 @@ export const AvatarContainer = styled.div`
   justify-content: space-around;
   gap: 10px;
   border: 1px solid black;
-  height: 20%;
+  /* height: 20%; */
   border-radius: 20px;
   padding: 20px;
   align-items: center;
@@ -383,4 +505,3 @@ export const Person = styled.div`
   color: black;
   font-weight: bold ;
 `;
-

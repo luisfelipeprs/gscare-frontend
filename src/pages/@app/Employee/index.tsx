@@ -13,18 +13,30 @@ import {
   TableContainer,
   TableRow,
   TableCell,
+  Header,
+  LeftHeader,
+  SearchInput,
+  FilterSelect,
+  FilterButton,
+  RightHeader,
+  Pagination,
+  PaginationButton,
+  CurrentPageDiv,
 } from './styled';
 import { Select, TextField } from "@radix-ui/themes";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import { CaretLeft, CaretRight, DotsThreeVertical, Funnel } from "phosphor-react";
+import { CaretLeft, CaretRight, DotsThreeVertical, Funnel, MagnifyingGlass } from "phosphor-react";
 import Toggle from '../../../components/ToggleButton';
 
 import Modal from "./Modal/modal.tsx";
+import ModalStep from './ModalSteps/ModalStep.tsx';
+import React, { FC } from 'react';
+import PatientTable from '../../../components/TableUI/index.tsx';
 
-export function Employee() {
+export function Employee () {
 
-  function handleEdit(string: string) {
+  function handleEdit (string: string) {
     console.log(string)
   }
 
@@ -32,272 +44,264 @@ export function Employee() {
   //   console.log('clicou pra abrir um modal radix')
   // }
 
-  function onPrevClick() {
-    console.log('voltar paginacao')
-  }
 
-  function onNextClick() {
-    console.log('avancar paginacao')
-  }
 
-  const currentPage = 1
+
+  const patients = [
+    {
+      id: 1,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'homem'
+    },
+    {
+      id: 2,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'mulher'
+    },
+    {
+      id: 3,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'mulher'
+    },
+    {
+      id: 4,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'mulher'
+    },
+    {
+      id: 5,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'mulher'
+    },
+    {
+      id: 6,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'mulher'
+    },
+    {
+      id: 7,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'mulher'
+    },
+    {
+      id: 8,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'mulher'
+    },
+    {
+      id: 9,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'mulher'
+    },
+    {
+      id: 10,
+      nome: 'João Silva',
+      idade: 45,
+      patologia: 'Hipertensão',
+      endereco: 'Rua ABC, 123',
+      dataPagamento: '01/04/2024',
+      // responsavel: 'Maria Silva',
+      // formaPagamento: 'Cartão de Crédito',
+      // parentesco: 'Esposa',
+      // identidade: '1234567',
+      // cpf: '123.456.789-00',
+      // email: 'joao@example.com',
+      celular: '(11) 99999-9999',
+      tipoEscala: 'Período Integral',
+      valorMensal: '1500.00',
+      valorPlantao: '200.00',
+      sexo: 'mulher'
+    },
+    // Adicione mais pacientes conforme necessário
+  ];
+
   const totalPages = 10
+
+  const [currentPage, setCurrentPage] = React.useState(1);
+
+  function onPrevClick () {
+    console.log('voltar paginacao')
+    setCurrentPage(currentPage - 1);
+  }
+
+  function onNextClick () {
+    console.log('avancar paginacao')
+    setCurrentPage(currentPage + 1);
+  }
+
+  // const handleNextPage = () => {
+  //   setCurrentPage(currentPage + 1);
+  // };
+
+  // const handlePrevPage = () => {
+  //   setCurrentPage(currentPage - 1);
+  // };
 
 
   return (
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="listagem de funcionarios"
+        descText="Listagem de funcionários"
         routerText="Funcionarios"
-        onButtonClick={Modal}
+        onButtonClick={ModalStep}
       >
         <Content>
-          <ContainerSearch_Filter_Pagination>
-            <InputSearch>
-              <TextField.Slot style={{ border: "none" }}>
-                <MagnifyingGlassIcon height="16" width="16" />
-              </TextField.Slot>
-              <TextField.Input
-                placeholder="Pesquisar Paciente"
-                style={{ border: 'none', margin: 'auto' }}
-              />
-            </InputSearch>
 
-            <ContainerFilterAndPagination>
-              <Filter>
-                <Funnel size={30} weight="light" color="#000" />
-                <Select.Root defaultValue="all">
-                  <Select.Trigger />
-                  <Select.Content>
-                    <Select.Group>
-                      <Select.Label>Filter</Select.Label>
-                      <Select.Item value="all">All</Select.Item>
-                      <Select.Item value="az">A-Z</Select.Item>
-                      <Select.Item value="state" disabled>Ativo</Select.Item>
-                    </Select.Group>
-                    <Select.Separator />
-                    <Select.Group>
-                      <Select.Label>Patient Code</Select.Label>
-                      <Select.Item value="tel">Telefone</Select.Item>
-                      <Select.Item value="type">Tipo</Select.Item>
-                    </Select.Group>
-                  </Select.Content>
-                </Select.Root>
-              </Filter>
-
+          <Header>
+            <LeftHeader>
+              <SearchInput type="text" id="searchInput" placeholder="Pesquisar por nome" />
+              <FilterSelect id="filterSelect">
+                <option value="nome">Nome</option>
+                <option value="diagnostico">Diagnóstico</option>
+                <option value="medicamento">Medicamento Prescrito</option>
+              </FilterSelect>
+              <FilterButton id="filterButton">
+                <MagnifyingGlass size={20} weight="bold" />
+              </FilterButton>
+            </LeftHeader>
+            <RightHeader>
               <PaginationContainer>
                 <NavigationButton onClick={onPrevClick}>
                   <CaretLeft />
-                  <span>voltar</span>
+                  {/* <span>voltar</span> */}
                 </NavigationButton>
                 <PageIndicator>{`${currentPage} - ${currentPage * 20} de ${totalPages * 20}`}</PageIndicator>
                 <NavigationButton onClick={onNextClick}>
-                  <span>avancar</span>
+                  {/* <span>avancar</span> */}
                   <CaretRight />
                 </NavigationButton>
               </PaginationContainer>
-            </ContainerFilterAndPagination>
+            </RightHeader>
+          </Header>
 
-          </ContainerSearch_Filter_Pagination>
-          <TableContainer>
-            <Table>
-              <thead>
-                <tr>
-                  <th>Ativo1</th>
-                  <th>Nome</th>
-                  <th>Email</th>
-                  <th>Cargo</th>
-                  <th>Telefone</th>
-                  <th>Código do Funcionário</th>
-                  <th>Endereço</th>
-                  <th>Ações</th>
-                </tr>
-              </thead>
-              <tbody>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-                <TableRow key={'index'}>
-                  <TableCell>
-                    <Toggle />
-                  </TableCell>
-                  <TableCell>name</TableCell>
-                  <TableCell>email</TableCell>
-                  <TableCell>jobTitle</TableCell>
-                  <TableCell>phone</TableCell>
-                  <TableCell>Code</TableCell>
-                  <TableCell>location</TableCell>
-                  <TableCell>
-                    <Action>
-                      <button onClick={() => handleEdit('index')}>
-                        <DotsThreeVertical size={32} weight="bold" />
-                      </button>
-                    </Action>
-                  </TableCell>
-                </TableRow>
-              </tbody>
-            </Table>
-          </TableContainer>
+          <PatientTable patients={patients} />
         </Content>
       </RouterIndicator>
     </Container>

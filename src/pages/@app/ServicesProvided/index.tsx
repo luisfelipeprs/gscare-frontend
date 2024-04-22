@@ -1,7 +1,11 @@
-import { AgroupInput, Container, Content, DateContainer, ContentInputDate, ContainerForm, TableContainer, Table, InputStyle, TextLabelStyle, ButtonStyled } from "./styled";
+import { Container, Content, FilterButton, FilterSelect, Header, LeftHeader, NavigationButton, PageIndicator, PaginationContainer, RightHeader, SearchInput, Title } from "./styled";
 // import { SelectContainer, StyledSelect } from "../Warnings/styled";
 // import { useState } from "react";
 import { RouterIndicator } from "../../../components/RouterIndicator";
+import ModalCalendar from "./ModalCalendar/ModalServices";
+import { CaretLeft, CaretRight, MagnifyingGlass } from "phosphor-react";
+import { useState } from "react";
+import PatientTable from "./TableUI";
 
 // type Option = {
 //   value: string;
@@ -51,115 +55,146 @@ function ServicesProvided () {
   // const handleChange = (value: string) => {
   //   console.log('Opção selecionada:', value);
   // };
+
+  const patients = [
+    {
+      id: 1,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    {
+      id: 2,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    {
+      id: 3,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    {
+      id: 4,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    {
+      id: 5,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    {
+      id: 6,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    {
+      id: 7,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    {
+      id: 8,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    {
+      id: 9,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    {
+      id: 10,
+      nameEmployee: 'Funcionário',
+      namePatient: 'Paciente',
+      inicio: '10/08/2022',
+      fim: '13/08/2022',
+      valor: '120.20',
+    },
+    // Adicione mais pacientes conforme necessário
+  ];
+
+
+  const totalPages = 10
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+
+
+  function onPrevClick () {
+    console.log('voltar paginacao')
+    setCurrentPage(currentPage - 1);
+  }
+
+  function onNextClick () {
+    console.log('avancar paginacao')
+    setCurrentPage(currentPage + 1);
+  }
+
   return (
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="listagem de atendimentos"
-        routerText="Atendimentos"
+        routerText="Serviços agendados"
+        descText="Listagem de todas as consultas"
+        onButtonClick={ModalCalendar}
       >
         <Content>
-          <ContainerForm>
-            <AgroupInput>
-              <div>
-                <TextLabelStyle as="div" size="2" mb="1" weight="bold">
-                  Nome do Funcionário
-                </TextLabelStyle>
-                <InputStyle
-                  placeholder="Digite o nome do funcionário"
-                />
-              </div>
-              <div>
-                <TextLabelStyle as="div" size="2" mb="1" weight="bold">
-                  Nome do Paciente
-                </TextLabelStyle>
-                <InputStyle
-                  placeholder="Digite o nome do paciente"
-                />
-              </div>
-            </AgroupInput>
 
-            <AgroupInput>
-              {/* * o endereço ou sera da empresa por padrao, ou da sede que cadastrar o endereço */}
-              {/* <div>
-                <TextLabelStyle as="div" size="2" mb="1" weight="bold">
-                  Endereço
-                </TextLabelStyle>
-                <InputStyle
-                  placeholder="Digite o Endereço do paciente"
-                />
-              </div> */}
-              {/* o estado do atendimento vai ser sempre em aberto, ninguem marca um atendimento cancelado.
-              se passou do prazo o sistema marca como nao atendido ou algo do tipo, se o paciente remarcar vai remarcar outro dia e entao sera outro atendimento */}
-              {/* <div>
-                <TextLabelStyle as="div" size="2" mb="1" weight="bold">
-                  Estado do Atendimento
-                </TextLabelStyle>
-                <SelectContent>
-                  <Select options={options} onChange={handleChange} />
-                </SelectContent>
-              </div> */}
-              <div>
-                <DateContainer>
-                  <ContentInputDate>
-                    <TextLabelStyle as="div" size="2" mb="1" weight="bold">
-                      Data de Início
-                    </TextLabelStyle>
-                    <input type="date" />
-                  </ContentInputDate>
-                  <ContentInputDate>
-                    <TextLabelStyle as="div" size="2" mb="1" weight="bold">
-                      Data de Fim
-                    </TextLabelStyle>
-                    <input type="date" />
-                  </ContentInputDate>
-                </DateContainer>
-              </div>
-              <div>
-                <label>
-                  <TextLabelStyle as="div" size="2" mb="1" weight="bold">
-                    Valor do Atendimento
-                  </TextLabelStyle>
-                  <InputStyle
-                    placeholder="Digite o valor do atendimento"
-                  />
-                </label>
-              </div>
+          <Header>
+            <LeftHeader>
+              <SearchInput type="text" id="searchInput" placeholder="Pesquisar por nome" />
+              <FilterSelect id="filterSelect">
+                <option value="nome">Nome</option>
+                <option value="diagnostico">Diagnóstico</option>
+                <option value="medicamento">Medicamento Prescrito</option>
+              </FilterSelect>
+              <FilterButton id="filterButton">
+                <MagnifyingGlass size={20} weight="bold" />
+              </FilterButton>
+            </LeftHeader>
+            <RightHeader>
+              <PaginationContainer>
+                <NavigationButton onClick={onPrevClick}>
+                  <CaretLeft />
+                  {/* <span>voltar</span> */}
+                </NavigationButton>
+                <PageIndicator>{`${currentPage} - ${currentPage * 20} de ${totalPages * 20}`}</PageIndicator>
+                <NavigationButton onClick={onNextClick}>
+                  {/* <span>avancar</span> */}
+                  <CaretRight />
+                </NavigationButton>
+              </PaginationContainer>
+            </RightHeader>
+          </Header>
 
-            </AgroupInput>
-
-            <ButtonStyled style={{ width: "100%", marginTop: "20px" }}> Salvar</ButtonStyled>
-
-
-          </ContainerForm>
-
-
-          <TableContainer>
-            <Table>
-              <thead>
-                <tr>
-                  <th>Funcionário</th>
-                  <th>Paciente</th>
-                  <th>Local</th>
-                  <th>Data Início</th>
-                  <th>Data Fim</th>
-                  <th>Valor</th>
-                  <th>Estado do atendimento</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>6</td>
-                  <td>7</td>
-                </tr>
-              </tbody>
-            </Table>
-          </TableContainer>
+          <PatientTable patients={patients} />
         </Content>
       </RouterIndicator>
     </Container>

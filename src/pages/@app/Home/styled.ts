@@ -20,7 +20,7 @@ export const ContainerBlueBar = styled.div`
 export const ContentBlueBar = styled.div`
   display: flex;
   margin: 20px auto;
-  width: 80%;
+  width: 90%;
   justify-content: space-between;
 
   @media screen and (max-width: 768px) {
@@ -29,8 +29,8 @@ export const ContentBlueBar = styled.div`
 `
 
 export const ContainerSection = styled.div`
-  margin-top: -100px;
-  width: 80%;
+  margin-top: -120px;
+  width: 90%;
 `;
 
 export const MainDiv = styled.div`
@@ -137,8 +137,8 @@ export const CalendarIcon = styled(Calendar)`
 `;
 
 export const ContainerSectionsInfos = styled.div`
-  margin-top: -100px;
-  width: 80%;
+  margin-top: -120px;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   gap: 20px; /* Distância igual entre as três seções */
@@ -202,10 +202,54 @@ export const ButtonInfos = styled.button`
 `;
 
 export const Information = styled.div`
-  max-height: 100%;
+  height: 400px;
   overflow-y: auto;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* Estilo da barra de rolagem */
+  &::-webkit-scrollbar {
+      width: 5px; /* largura da barra de rolagem */
+  }
+
+  /* Estilo do polegar da barra de rolagem */
+  &::-webkit-scrollbar-thumb {
+      background-color: #111dff; /* cor do polegar */
+      border-radius: 5px; /* borda arredondada do polegar */
+  }
 `;
 
+export const InformationCard = styled.div`
+  
+    background-color: #ffffff;
+    color: #1c0066;
+    box-shadow: 0px 2px 4px rgb(0 76 255 / 12%);
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+
+  div {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+  }
+
+  .namePaciente {
+    font-size: 0.95rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+
+    h3 {
+      font-weight: 400;
+    }
+  }
+`;
 
 export const WelcomeContaint = styled.div`
   height: 100%;
@@ -236,7 +280,7 @@ export const WelcomeTitle = styled.h3`
 `;
 
 export const WelcomeParagraph = styled.div`
-  width: 80%;
+  width: 90%;
   font-size: 1.05rem;
   margin: auto;
   color: #4A515B;
@@ -251,7 +295,7 @@ export const WelcomeParagraph = styled.div`
 `;
 
 export const GridWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -275,7 +319,7 @@ export const GridWrapper = styled.div`
 `;
 
 export const ContainerCharts = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;

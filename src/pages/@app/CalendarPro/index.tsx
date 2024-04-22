@@ -1,23 +1,23 @@
 import { RouterIndicator } from "../../../components/RouterIndicator";
+import ModalStep from "../Employee/ModalSteps/ModalStep";
 import { Container, Content } from "./styled";
 
-function Reports() {
+const CalendarPro: React.FC = () => {
   return (
+
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="listagem de atendimentos"
-        routerText="Atendimentos"
+        descText="listagem de funcionarios"
+        routerText="Funcionarios"
+        onButtonClick={ModalStep}
       >
         <Content>
-          <div>
-            Reports Works!
-          </div>
 
         </Content>
       </RouterIndicator>
     </Container>
   );
-}
+};
 
-export default Reports;
+export default CalendarPro;

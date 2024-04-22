@@ -181,7 +181,7 @@ export const StyledModalContent = styled.div`
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 90%;
 `;
 
 /* Styled Close */

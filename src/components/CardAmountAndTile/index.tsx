@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const CardAmountAndTileWrapper = styled.div`
   width: calc(25% - 30px); 
   min-height: 150px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 8px;
   color: #fff;
   /* background-color: #0061F2; */

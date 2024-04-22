@@ -16,26 +16,10 @@ export const Content = styled.div`
 `;
 
 export const ContentGrafico = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   margin: 20px 0;
-
-  > div {
-    background-color:  #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  h2 {
-    margin-bottom: 15px;
-    color: #333;
-  }
-
-  & > div:nth-child(5) {
-    grid-column: span 2;
-  }
 `;
 
 export const Icons = styled.div`
@@ -83,4 +67,61 @@ export const CardInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+
+export const GridWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  
+  & > :nth-child(1) {
+    background-color: #0061F2;
+  }
+
+  & > :nth-child(2) {
+    background-color: #F4A100;
+  }
+
+  & > :nth-child(3) {
+    background-color: #00AC69;
+  }
+
+  & > :nth-child(4) {
+    background-color: #E81500;
+  }
+`;
+
+export const GraficsFirstLine = styled.div`
+  /* background-color: red; */
+  display: flex;
+  gap: 20px;
+  
+  & > div {
+    flex: 1;
+
+    background-color:  #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  }
+`;
+
+export const GraficsSecondLine = styled.div`
+  /* background-color: blue; */
+  display: flex;
+  gap: 20px;
+  
+  & > div {
+    flex: 1;
+
+    background-color:  #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  }
 `;

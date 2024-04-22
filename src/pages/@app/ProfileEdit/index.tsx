@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import { AddPicture, Container, Content, InfoProfile, LeftContainer, RightContainer, ProfileImage, ProfileInfoContainer, CardInfoAboutAccount, HeaderCardInfoAboutAccount, CardInfoAccountDatas, ContentCardInfoAboutAccount, CardInfoAccount, CardInfo, CardData, CardInfoAboutAccountDatas, RegistrationData, ContainerNameAndNumberTel, ContainerEmail, InfoProfileText, InfoProfileDatas, ContainerCustomerTrackingEnabled, ContainerButtonEditAccount } from './styled';
+import { AddPicture, Container, Content, InfoProfile, LeftContainer, RightContainer, ProfileImage, ProfileInfoContainer, CardInfoAboutAccount, HeaderCardInfoAboutAccount, CardInfoAccountDatas, ContentCardInfoAboutAccount, CardInfoAccount, CardInfo, CardData, CardInfoAboutAccountDatas, RegistrationData, ContainerNameAndNumberTel, ContainerEmail, InfoProfileText, InfoProfileDatas, ContainerCustomerTrackingEnabled, ContainerButtonEditAccount, TwoContainer, ContainerIconName, ContentName, ContainerDataFloat, ContentImgAndName, ContainerRight, ContainerRightFirst, ContainerRightSecond } from './styled';
 import { RouterIndicator } from '../../../components/RouterIndicator';
-import { DotsThreeVertical, Plus } from 'phosphor-react';
+import { DotsThreeVertical, PencilSimple, Plus } from 'phosphor-react';
+import { AvatarIconAndOption } from '../../../components/AvatarIconAndOption';
+import { Avatar, Flex } from '@radix-ui/themes';
+import { Care, Gs } from '../../../components/TextGscare/styled';
 
 function ProfileEdit () {
   const [name] = useState('Neymar JR da Silva');
@@ -25,19 +28,35 @@ function ProfileEdit () {
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="listagem de atendimentos"
-        routerText="Atendimentos"
+        descText="detalhes do seu perfil"
+        routerText="Perfil"
       >
         <Content>
           <ProfileInfoContainer>
-            <LeftContainer>
+            <ContainerDataFloat>
               <CardInfoAccountDatas>
                 <AddPicture>
-                  <ProfileImage src={editedProfile.image} alt="Seu Perfil" />
-                  <button>
-                    <Plus size={20} weight='bold' />
-                  </button>
+                  {/* <ProfileImage src={editedProfile.image} alt="Seu Perfil" /> */}
+
+                  <ContainerIconName>
+
+                    {/* <ContentImgAndName> */}
+                    <Flex gap="2">
+                      <Avatar fallback="F" radius="full" size="4" /> {/* <Avatar src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop" fallback="A" /> */}
+                    </Flex>
+                    <ContentName>
+                      <h4>Fernando Franco</h4>
+                      <p>bem vido a <Gs>GS</Gs><Care>Care</Care></p>
+                    </ContentName>
+                    {/* </ContentImgAndName> */}
+
+                  </ContainerIconName>
+
+                  <ContainerButtonEditAccount>
+                    <PencilSimple size={20} color='#fff' weight="bold" />
+                  </ContainerButtonEditAccount>
                 </AddPicture>
+
                 <InfoProfile>
                   <InfoProfileText>
                     <h3>Seu Perfil</h3>
@@ -46,16 +65,26 @@ function ProfileEdit () {
                     <p>
                       primeiro acesso: 10-10-2010
                     </p>
-                    <p>
-                      pais / cidade / bairro
-                    </p>
-
                   </InfoProfileDatas>
                 </InfoProfile>
                 <RegistrationData>
+
+                  <ContainerEmail>
+                    <div>
+                      <input type="text" disabled value="Fernando Alexandre xavier coelho" placeholder="digite seu nome" />
+                    </div>
+                  </ContainerEmail>
                   <ContainerNameAndNumberTel>
                     <div>
-                      <input type="text" disabled value="Fernando Franco" placeholder="digite seu nome" />
+                      <input type="text" disabled value="123.456.789-90" placeholder="digite seu CPF" />
+                    </div>
+                    <div>
+                      <input type="tel" disabled value="20040-001" placeholder="digite seu CEP" />
+                    </div>
+                  </ContainerNameAndNumberTel>
+                  <ContainerNameAndNumberTel>
+                    <div>
+                      <input type="text" disabled value="12.345.678/0001-00" placeholder="digite seu CNPJ" />
                     </div>
                     <div>
                       <input type="tel" disabled value="(00) 12345-6789" placeholder="(xx) xxxxx-xxxx" />
@@ -67,6 +96,28 @@ function ProfileEdit () {
                     </div>
                   </ContainerEmail>
 
+                  <ContainerNameAndNumberTel>
+                    <div>
+                      <input type="password" value="Fernando Franco" placeholder="digite seu nome" />
+                    </div>
+                    <div>
+                      <input type="password" placeholder="digite nova senha" />
+                    </div>
+                  </ContainerNameAndNumberTel>
+                  {/* 
+                    NOME COMPLETO [x]
+                    CPF E IDENTIDADE [x]
+                    ENDEREÇO COM CEP [x]
+                    DISPONIBILIDADE DE HORARIO [ ]
+
+                    FOTOS:
+                    IDENTIDADE, CPF, COMPROVANTE DE RESIDÊNCIA 
+                    CERTIFICADO DO CURSO
+                    MEI
+                    NADA CONSTA 
+                  */}
+
+
                 </RegistrationData>
                 {/* <a href="#"><h2>Profile</h2></a>
                 <a href="#"><h2>Task</h2></a>
@@ -76,41 +127,40 @@ function ProfileEdit () {
                   Rastreamento de cliente ativado
                 </ContainerCustomerTrackingEnabled>
 
-                <ContainerButtonEditAccount>
-                  <button>Editar</button>
-                </ContainerButtonEditAccount>
               </CardInfoAccountDatas>
-            </LeftContainer>
-            <RightContainer>
-              <CardInfoAboutAccountDatas>
-                <HeaderCardInfoAboutAccount>
-                  <h2>Detalhes sua conta</h2>
-                  <button><DotsThreeVertical size={20} /></button>
-                </HeaderCardInfoAboutAccount>
-                <ContentCardInfoAboutAccount>
-                  <CardInfoAccount>
-                    <CardInfo>
-                      <h3>Credencial unico da sua conta:</h3>
-                      <p>f123f12-3f123f-21f3sav-cvqd1</p>
-                    </CardInfo>
-                    <CardData>
-                      <span style={{ background: 'linear-gradient(166deg, rgb(142, 255, 99), rgb(19, 156, 0))' }}>
-                        Conta ativa
-                      </span>
-                    </CardData>
-                  </CardInfoAccount>
-                  <CardInfoAccount>
-                    <CardInfo>
-                      <h3>Assinatura:</h3>
-                      <p>01/10/2023 - 01/10/2024</p>
-                    </CardInfo>
-                    <CardData>
-                      <span style={{ background: 'linear-gradient(166deg, #FFCE3A, #FFA700)' }}>
-                        Assinatura Premiun
-                      </span>
-                    </CardData>
-                  </CardInfoAccount>
-                  {/* <Interest>
+            </ContainerDataFloat>
+
+            <ContainerRight>
+              <ContainerRightFirst>
+                <CardInfoAboutAccountDatas>
+                  <HeaderCardInfoAboutAccount>
+                    <h2>Detalhes da conta</h2>
+                    <button><DotsThreeVertical size={20} /></button>
+                  </HeaderCardInfoAboutAccount>
+                  <ContentCardInfoAboutAccount>
+                    <CardInfoAccount>
+                      <CardInfo>
+                        <h3>Credencial unico da sua conta:</h3>
+                        <p>f123f12-3f123f-21f3sav-cvqd1</p>
+                      </CardInfo>
+                      <CardData>
+                        <span style={{ background: 'linear-gradient(166deg, rgb(142, 255, 99), rgb(19, 156, 0))' }}>
+                          Conta ativa
+                        </span>
+                      </CardData>
+                    </CardInfoAccount>
+                    <CardInfoAccount>
+                      <CardInfo>
+                        <h3>Assinatura:</h3>
+                        <p>01/10/2023 - 01/10/2024</p>
+                      </CardInfo>
+                      <CardData>
+                        <span style={{ background: 'linear-gradient(166deg, #FFCE3A, #FFA700)' }}>
+                          Assinatura Premiun
+                        </span>
+                      </CardData>
+                    </CardInfoAccount>
+                    {/* <Interest>
                     <Section size="1" style={{ width: '100%' }}>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                       <ShowInterest>📱 Product Infrastructure</ShowInterest>
@@ -120,83 +170,86 @@ function ProfileEdit () {
                       <ShowInterest>🐞 Bugs</ShowInterest>
                     </Section>
                   </Interest> */}
-                </ContentCardInfoAboutAccount>
-              </CardInfoAboutAccountDatas>
-              <CardInfoAboutAccount>
-                <HeaderCardInfoAboutAccount>
-                  <h2>Dados da sua empresa:</h2>
-                  <button><DotsThreeVertical size={20} /></button>
-                </HeaderCardInfoAboutAccount>
-                <ContentCardInfoAboutAccount>
-                  <CardInfoAccount>
-                    <CardInfo>
-                      <h3>Numero de funcionarios ativos:</h3>
-                      <p>gerencie, monitore e organize processos</p>
-                    </CardInfo>
-                    <CardData>
-                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
-                        30
-                      </span>
-                    </CardData>
-                  </CardInfoAccount>
-                  <CardInfoAccount>
-                    <CardInfo>
-                      <h3>Numero de pacientes ativos:</h3>
-                      <p>gerencie, monitore e preste um melhor atendimento</p>
-                    </CardInfo>
-                    <CardData>
-                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
-                        120
-                      </span>
-                    </CardData>
-                  </CardInfoAccount>
-                  <CardInfoAccount>
-                    <CardInfo>
-                      <h3>Numero agendamentos marcados:</h3>
-                      <p>gerencie, monitore e preste um melhor atendimento</p>
-                    </CardInfo>
-                    <CardData>
-                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
-                        312
-                      </span>
-                    </CardData>
-                  </CardInfoAccount>
-                  <CardInfoAccount>
-                    <CardInfo>
-                      <h3>Numero agendamentos marcados:</h3>
-                      <p>gerencie, monitore e preste um melhor atendimento</p>
-                    </CardInfo>
-                    <CardData>
-                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
-                        312
-                      </span>
-                    </CardData>
-                  </CardInfoAccount>
-                  <CardInfoAccount>
-                    <CardInfo>
-                      <h3>Numero agendamentos marcados:</h3>
-                      <p>gerencie, monitore e preste um melhor atendimento</p>
-                    </CardInfo>
-                    <CardData>
-                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
-                        312
-                      </span>
-                    </CardData>
-                  </CardInfoAccount>
-                  <CardInfoAccount>
-                    <CardInfo>
-                      <h3>Numero agendamentos marcados:</h3>
-                      <p>gerencie, monitore e preste um melhor atendimento</p>
-                    </CardInfo>
-                    <CardData>
-                      <span style={{ background: 'linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156))' }}>
-                        312
-                      </span>
-                    </CardData>
-                  </CardInfoAccount>
-                </ContentCardInfoAboutAccount>
-              </CardInfoAboutAccount>
-              {/* <CardInfoAboutAccount>
+                  </ContentCardInfoAboutAccount>
+                </CardInfoAboutAccountDatas>
+              </ContainerRightFirst>
+
+              <ContainerRightSecond>
+                <CardInfoAboutAccount>
+                  <HeaderCardInfoAboutAccount>
+                    <h2>Dados da sua empresa:</h2>
+                    <button><DotsThreeVertical size={20} /></button>
+                  </HeaderCardInfoAboutAccount>
+                  <ContentCardInfoAboutAccount>
+                    <CardInfoAccount>
+                      <CardInfo>
+                        <h3>Numero agendamentos marcados:</h3>
+                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                      </CardInfo>
+                      <CardData>
+                        <span>
+                          312
+                        </span>
+                      </CardData>
+                    </CardInfoAccount>
+                    <CardInfoAccount>
+                      <CardInfo>
+                        <h3>Numero agendamentos marcados:</h3>
+                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                      </CardInfo>
+                      <CardData>
+                        <span>
+                          312
+                        </span>
+                      </CardData>
+                    </CardInfoAccount>
+                    <CardInfoAccount>
+                      <CardInfo>
+                        <h3>Numero agendamentos marcados:</h3>
+                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                      </CardInfo>
+                      <CardData>
+                        <span>
+                          312
+                        </span>
+                      </CardData>
+                    </CardInfoAccount>
+                    <CardInfoAccount>
+                      <CardInfo>
+                        <h3>Numero agendamentos marcados:</h3>
+                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                      </CardInfo>
+                      <CardData>
+                        <span>
+                          312
+                        </span>
+                      </CardData>
+                    </CardInfoAccount>
+                    <CardInfoAccount>
+                      <CardInfo>
+                        <h3>Numero agendamentos marcados:</h3>
+                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                      </CardInfo>
+                      <CardData>
+                        <span>
+                          312
+                        </span>
+                      </CardData>
+                    </CardInfoAccount>
+                    <CardInfoAccount>
+                      <CardInfo>
+                        <h3>Numero agendamentos marcados:</h3>
+                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                      </CardInfo>
+                      <CardData>
+                        <span>
+                          312
+                        </span>
+                      </CardData>
+                    </CardInfoAccount>
+                  </ContentCardInfoAboutAccount>
+                </CardInfoAboutAccount>
+                {/* <CardInfoAboutAccount>
                 <Text as="div" size="3" mb="1" weight="bold">
                   Funcionários
                 </Text>
@@ -276,7 +329,8 @@ function ProfileEdit () {
 
                 </AvatarContainer>
               </CardInfoAboutAccount> */}
-            </RightContainer>
+              </ContainerRightSecond>
+            </ContainerRight>
           </ProfileInfoContainer>
         </Content>
       </RouterIndicator>

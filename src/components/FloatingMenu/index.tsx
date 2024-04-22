@@ -7,20 +7,20 @@ import { AvatarIconAndOption } from '../AvatarIconAndOption';
 import { BellIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
 
 
-interface IProps{
+interface IProps {
   handleIsOpen: () => void;
 }
 
-function FloatingMenu({handleIsOpen}:IProps){
+function FloatingMenu ({ handleIsOpen }: IProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <StyledFloatingMenu>
       <Container>
         <LeftContainer>
-          
+
           <ContentIcon>
             <MenuButton onClick={handleIsOpen}>
               <MenuIcon onClick={toggleMenu} />
@@ -33,25 +33,25 @@ function FloatingMenu({handleIsOpen}:IProps){
         </LeftContainer>
 
         <RightContainer>
-          
+
           {/* <ContentIcon>
             <SignOut size={32} />
           </ContentIcon> */}
-          
+
           <ContentIcon>
             <BellIcon />
           </ContentIcon>
-          
-          <ContentIcon>
+
+          {/* <ContentIcon>
             <EnvelopeClosedIcon />
-          </ContentIcon>
-          
+          </ContentIcon> */}
+
           <IconAndInfos>
             <Infos>
               <p>Neymar JR</p>
               <p>Microsoft Windows</p>
             </Infos>
-            
+
             <ContentIcon>
               <AvatarIconAndOption />
             </ContentIcon>

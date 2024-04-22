@@ -1,42 +1,44 @@
 import ModalStep from "./modal/modal-components";
 import { Container, Content } from "./styled";
 
-function FormLeads() {
+function FormLeads () {
   return (
     <Container>
-      <ModalStep />
-        <Content>
-          <h1 className="titulo">
-            Experimente nossa solução completa de CRM e vendas, grátis por 30
-            dias.
-          </h1>
-          <h2 className="subTitulo">
-            Com o Sales Cloud Professional Edition, você tem acesso a:
-          </h2>
-          <ul className="listContent">
-            <li>
-              Dados pré-carregados e recursos para integrar os dados da sua
-              empresa;
-            </li>
-            <li>Processos, relatórios e dashboards pré-configurados;</li>
-            <li>
-              Experiências guiadas para representantes, líderes e gestores de
-              vendas;
-            </li>
-            <li>Guias e outros materiais sobre boas práticas de vendas;</li>
-            <li>Onboarding integrado, treinamentos e webinars online;</li>
-            <li>Configuração de pontuação e roteamento de leads;</li>
-            <li>Ferramentas para automação de tarefas recorrentes;</li>
-            <li>
-              Uma visão completa da performance de seus representantes e equipes
-              de vendas.
-            </li>
-          </ul>
+      <div>
+        <ModalStep />
+      </div>
+      <Content>
+        <h1 className="titulo">
+          Experimente nossa solução completa de CRM e vendas, grátis por 30
+          dias.
+        </h1>
+        <h2 className="subTitulo">
+          Com o Sales Cloud Professional Edition, você tem acesso a:
+        </h2>
+        <ul className="listContent">
+          <li>
+            Dados pré-carregados e recursos para integrar os dados da sua
+            empresa;
+          </li>
+          <li>Processos, relatórios e dashboards pré-configurados;</li>
+          <li>
+            Experiências guiadas para representantes, líderes e gestores de
+            vendas;
+          </li>
+          <li>Guias e outros materiais sobre boas práticas de vendas;</li>
+          <li>Onboarding integrado, treinamentos e webinars online;</li>
+          <li>Configuração de pontuação e roteamento de leads;</li>
+          <li>Ferramentas para automação de tarefas recorrentes;</li>
+          <li>
+            Uma visão completa da performance de seus representantes e equipes
+            de vendas.
+          </li>
+        </ul>
 
-          <p>
-            <b>Dúvidas?</b> Entre em contato e fale com um de nossos
-            especialistas: <b>0800 891 1887</b>
-          </p>
+        <p>
+          <b>Dúvidas?</b> Entre em contato e fale com um de nossos
+          especialistas: <b>0800 891 1887</b>
+        </p>
 
         <div className="formulario">
           <p>
@@ -94,7 +96,7 @@ function FormLeads() {
               <div className="check">
                 <label className="inlineFlex">
                   <input type="checkbox" id="checkBox" />
-                  Estou de acordo com o{" "} 
+                  Estou de acordo com o{" "}
                   <a href="#" target="_blank">
                     Main Services Agreement.
                   </a>
@@ -110,7 +112,7 @@ function FormLeads() {
             </p>
             <p>
               Ao inscrever-se, você confirma que concorda com o processamento de
-              seus dados pessoais pela Salesforce, conforme descrito na  
+              seus dados pessoais pela Salesforce, conforme descrito na
               <a href="#" target="_blank">
                 Declaração de privacidade.
               </a>
@@ -119,8 +121,8 @@ function FormLeads() {
 
           <button className="button">INICIAR TESTE GRATUITO</button>
         </div>
-        </Content>
+      </Content>
     </Container>
-    )
+  )
 }
 export default FormLeads;

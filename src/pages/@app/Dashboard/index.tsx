@@ -1,9 +1,10 @@
 import { ApexOptions } from "apexcharts";
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import { Card, CardInner, Container, Content, Icons, MainCards, ContentGrafico } from "./styled";
+import { Card, CardInner, Container, Content, Icons, MainCards, ContentGrafico, GridWrapper, GraficsFirstLine, GraficsSecondLine } from "./styled";
 import ApexCharts from 'react-apexcharts';
 
 import { CalendarX, CalendarCheck, CalendarBlank, ArrowURightUp, Money } from 'phosphor-react';
+import CardAmountAndTile from "../../../components/CardAmountAndTile";
 
 const calendarxIcons = <CalendarX size={24} />;
 const calendarCheckIcons = <CalendarCheck size={24} />;
@@ -47,7 +48,7 @@ interface ReportScreenState {
 
 }
 
-function Dashboard() {
+function Dashboard () {
     const patientsScheduledData: ReportScreenState["patientsScheduledData"] = {
         series: [{
             name: 'Atendimentos',
@@ -198,89 +199,107 @@ function Dashboard() {
         }
     };
 
+
+    const data = [
+        { title: 'Earnings (Monthly)', amount: '$40,000' },
+        { title: 'Earnings (Monthly)', amount: '$40,000' },
+        { title: 'Earnings (Monthly)', amount: '$40,000' },
+        { title: 'Earnings (Monthly)', amount: '$40,000' },
+    ];
+
     return (
         <Container>
             <RouterIndicator
-                descText="Painel do paciente"
-                routerText="Controle"
+                descText="dados para análise da sua empresa"
+                routerText="Relatórios"
             >
                 <Content>
-                    <div>
-                        <h1>DASHBOARD</h1>
-                        <h4>Indicadores de hoje</h4>
 
-                        <MainCards>
-                            <Card>
-                                <CardInner>
-                                    <h3>Pacientes agendados</h3>
-                                    <Icons>{calendarBlankIcons}</Icons>
-                                </CardInner>
-                                <h1>300</h1>
-                            </Card>
 
-                            <Card>
-                                <CardInner>
-                                    <h3>Pacientes confirmados</h3>
-                                    <Icons>{calendarCheckIcons}</Icons>
-                                </CardInner>
-                                <h1>12</h1>
-                            </Card>
 
-                            <Card>
-                                <CardInner>
-                                    <h3>Pacientes desmarcados</h3>
-                                    <Icons>{calendarxIcons}</Icons>
-                                </CardInner>
-                                <h1>33</h1>
-                            </Card>
+                    {/* divs com dados de faturamento e outros numeros importantes */}
+                    <GridWrapper>
+                        {data.map((item, index) => (
+                            <CardAmountAndTile key={index} title={item.title} amount={item.amount} />
+                        ))}
+                    </GridWrapper>
 
-                            <Card>
-                                <CardInner>
-                                    <h3>Pacientes com retorno</h3>
-                                    <Icons>{arrowURightUpIcons}</Icons>
-                                </CardInner>
-                                <h1>42</h1>
-                            </Card>
+                    {/* <MainCards>
+                        <Card>
+                            <CardInner>
+                                <h3>Pacientes agendados</h3>
+                                <Icons>{calendarBlankIcons}</Icons>
+                            </CardInner>
+                            <h1>300</h1>
+                        </Card>
 
-                            <Card>
-                                <CardInner>
-                                    <h3>Agendamento não faturados</h3>
-                                    <Icons color="#FF9999">{moneyIcons}</Icons>
-                                </CardInner>
-                                <h1>42</h1>
-                            </Card>
+                        <Card>
+                            <CardInner>
+                                <h3>Pacientes confirmados</h3>
+                                <Icons>{calendarCheckIcons}</Icons>
+                            </CardInner>
+                            <h1>12</h1>
+                        </Card>
 
-                            <Card>
-                                <CardInner>
-                                    <h3>Agendamento faturados</h3>
-                                    <Icons color="#99CCFF">{moneyIcons}</Icons>
-                                </CardInner>
-                                <h1>60</h1>
-                            </Card>
-                        </MainCards>
-                    </div>
+                        <Card>
+                            <CardInner>
+                                <h3>Pacientes desmarcados</h3>
+                                <Icons>{calendarxIcons}</Icons>
+                            </CardInner>
+                            <h1>33</h1>
+                        </Card>
+
+                        <Card>
+                            <CardInner>
+                                <h3>Pacientes com retorno</h3>
+                                <Icons>{arrowURightUpIcons}</Icons>
+                            </CardInner>
+                            <h1>42</h1>
+                        </Card>
+
+                        <Card>
+                            <CardInner>
+                                <h3>Agendamento não faturados</h3>
+                                <Icons color="#FF9999">{moneyIcons}</Icons>
+                            </CardInner>
+                            <h1>42</h1>
+                        </Card>
+
+                        <Card>
+                            <CardInner>
+                                <h3>Agendamento faturados</h3>
+                                <Icons color="#99CCFF">{moneyIcons}</Icons>
+                            </CardInner>
+                            <h1>60</h1>
+                        </Card>
+                    </MainCards> */}
 
                     <ContentGrafico>
-                        <div>{/** Aqui jás um grafico de colunas */}
-                            <h2>Top Convênios</h2>
-                            <ApexCharts options={convenioColumnsData.options} series={convenioColumnsData.series} type="bar" height={350} />
-                        </div>
-                        <div>{/** Aqui jás um grafico de colunas */}
-                            <h2>Top Procedimentos</h2>
-                            <ApexCharts options={procedimentosColumnsData.options} series={procedimentosColumnsData.series} type="bar" height={350} />
-                        </div>
-                        <div>{/** Grafico de linas */}
-                            <h2>Pacientes Agendados</h2>
-                            <ApexCharts options={patientsScheduledData.options} series={patientsScheduledData.series} type="line" height={350} />
-                        </div>
-                        <div>{/**Grafico de Pizza */}
-                            <h2>Dashboards</h2>
-                            <ApexCharts options={otherDashboardData.options} series={otherDashboardData.series} type="donut" height={350} />
-                        </div>
-                        <div>{/** Aqui jás um grafico de colunas */}
-                            <h2>Visão geral</h2>
-                            <ApexCharts options={distributedColumnsData.options} series={distributedColumnsData.series} type="bar" height={350} />
-                        </div>
+                        <GraficsFirstLine>
+                            <div>{/** Aqui jás um grafico de colunas */}
+                                <h2>Top Convênios</h2>
+                                <ApexCharts options={convenioColumnsData.options} series={convenioColumnsData.series} type="bar" height={350} />
+                            </div>
+                            <div>{/** Aqui jás um grafico de colunas */}
+                                <h2>Top Procedimentos</h2>
+                                <ApexCharts options={procedimentosColumnsData.options} series={procedimentosColumnsData.series} type="bar" height={350} />
+                            </div>
+                            <div>{/** Grafico de linas */}
+                                <h2>Pacientes Agendados</h2>
+                                <ApexCharts options={patientsScheduledData.options} series={patientsScheduledData.series} type="line" height={350} />
+                            </div>
+                        </GraficsFirstLine>
+                        <GraficsSecondLine>
+                            <div>{/** Aqui jás um grafico de colunas */}
+                                <h2>Visão geral</h2>
+                                <ApexCharts options={distributedColumnsData.options} series={distributedColumnsData.series} type="bar" height={350} />
+                            </div>
+
+                            <div>{/**Grafico de Pizza */}
+                                <h2>Dashboards</h2>
+                                <ApexCharts options={otherDashboardData.options} series={otherDashboardData.series} type="donut" height={350} />
+                            </div>
+                        </GraficsSecondLine>
 
                     </ContentGrafico>
 

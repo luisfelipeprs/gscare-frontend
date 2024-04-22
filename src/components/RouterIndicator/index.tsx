@@ -9,13 +9,13 @@ import {
 } from "./styled";
 
 interface RouterIndicatorProps {
-  onButtonClick?: ComponentType<unknown>; // Agora é opcional
+  onButtonClick?: ComponentType<{}> | undefined;  // Agora é opcional
   children: ReactNode;
-  descText: string;
+  descText?: string;
   routerText: string;
 }
 
-export function RouterIndicator({
+export function RouterIndicator ({
   onButtonClick: ButtonComponent,
   children,
   descText,
@@ -30,7 +30,7 @@ export function RouterIndicator({
               <House size={30} />
               <p>Dashboard / {routerText}</p>
             </div>
-            <p className="info-text">{descText}</p>
+            {descText && <p className="info-text">{descText}</p>}
           </StyledNameContainer>
           <StyledDateContainer>
             {ButtonComponent && <ButtonComponent />} {/* Renderiza apenas se ButtonComponent existir */}

@@ -1,10 +1,12 @@
 import React from 'react';
-import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerCharts, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeParagraph, WelcomeTitle } from './styled';
-import { DotsThreeVertical, House } from 'phosphor-react';
+import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerCharts, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, InformationCard, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeParagraph, WelcomeTitle } from './styled';
+import { CaretRight, DotsThreeVertical, House } from 'phosphor-react';
 import helloWork from '../../../assets/helloWork.svg'
 import CardAmountAndTile from '../../../components/CardAmountAndTile';
 import LineChart from '../../../components/ChatsHomeAdmin/LineChart';
 import ColumnChart from '../../../components/ChatsHomeAdmin/ColumnChart';
+import { ProgressBar } from '../../../components/ProgressBar';
+import TextGscare from '../../../components/TextGscare';
 
 
 
@@ -41,49 +43,165 @@ const Home: React.FC = () => {
   return (
     <Container>
       <ContainerBlueBar>
-          <ContentBlueBar>
-            <StyledNameContainer>
-              <div>
-                <House size={30} />
-                <p>Dashboard</p>
-              </div>
-              <p className="info-text">veja as informações mais importantes</p>
-            </StyledNameContainer>
-            <StyledDateContainer>
-              <CalendarIcon />
-              <DateText>
-                <span>Data:</span> 
-                {getTodayDate()}
-              </DateText>
-            </StyledDateContainer>
-          </ContentBlueBar>
+        <ContentBlueBar>
+          <StyledNameContainer>
+            <div>
+              <House size={30} />
+              <p>Dashboard</p>
+            </div>
+            <p className="info-text">veja as informações mais importantes</p>
+          </StyledNameContainer>
+          <StyledDateContainer>
+            <CalendarIcon />
+            <DateText>
+              <span>Data:</span>
+              {getTodayDate()}
+            </DateText>
+          </StyledDateContainer>
+        </ContentBlueBar>
       </ContainerBlueBar>
       <ContainerSectionsInfos>
         <SectionInfos>
           <WelcomeContaint>
-            <WelcomeTitle>Bem vindos ao CarePlus!</WelcomeTitle>
+            <WelcomeTitle>Bem vindos ao <TextGscare />!</WelcomeTitle>
             <WelcomeParagraph>
-              Browse our fully designed UI toolkit! Browse our prebuilt app pages, components, and utilites, and be sure to look at our full documentation!
+              Bem-vindos ao líder em gestão de saúde! Oferecemos cuidados superiores e satisfação total, para sua empresa e seus clientes
             </WelcomeParagraph>
             <img src={helloWork} alt="" />
           </WelcomeContaint>
         </SectionInfos>
-        
+
         <SectionInfos>
           <HeaderInfos>
-            <TitleInfos>Recent Activity</TitleInfos>
+            <TitleInfos>Lista de Pacientes</TitleInfos>
             <ButtonInfos><DotsThreeVertical size={20} /></ButtonInfos>
           </HeaderInfos>
           <Information>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
+            <InformationCard>
+              <div>
+                <span>11/10/2002</span>
+              </div>
+              <div className='namePaciente'>
+                <h3>Fernando Franco 21231231231</h3>
+              </div>
+              <div>
+                <CaretRight size={20} />
+              </div>
+            </InformationCard>
           </Information>
         </SectionInfos>
-        
+
         <SectionInfos>
           <HeaderInfos>
-            <TitleInfos>Recent Activity</TitleInfos>
+            <TitleInfos>Lista de Funcionários</TitleInfos>
             <ButtonInfos><DotsThreeVertical size={20} /></ButtonInfos>
           </HeaderInfos>
           <Information>
+            <ProgressBar percentage={28} name="Atendimentos do Mês" showText={true} barColor="#E81500" />
+            <ProgressBar percentage={71} name="Atendimentos do Mês" showText={true} barColor="#F4A100" />
+            <ProgressBar percentage={13} name="Atendimentos do Mês" showText={true} barColor="#0061F2" />
+            <ProgressBar percentage={94} name="Atendimentos do Mês" showText={true} barColor="#00CED4" />
+            <ProgressBar percentage={72} name="Atendimentos do Mês" showText={true} barColor="#00AC69" />
+
           </Information>
         </SectionInfos>
       </ContainerSectionsInfos>

@@ -12,7 +12,7 @@ export const ContainerBlueBar = styled.div`
 export const ContentBlueBar = styled.div`
   display: flex;
   margin: 20px auto;
-  width: 80%;
+  width: 90%;
   justify-content: space-between;
 
   @media screen and (max-width: 768px) {
@@ -123,8 +123,8 @@ export const StyledDateContainer = styled.div`
 
 export const ContainerSectionsInfos = styled.div`
   flex: 1;
-  margin-top: -150px;
-  width: 80%;
+  margin-top: -170px;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   gap: 20px; /* Distância igual entre as três seções */
@@ -135,4 +135,3 @@ export const ContainerSectionsInfos = styled.div`
     margin-top: -170px;
   }
 `;
-
