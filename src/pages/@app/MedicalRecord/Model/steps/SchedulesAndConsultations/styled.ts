@@ -9,8 +9,8 @@ export const Date = styled.div`
   padding: 1rem;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 1rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* padding: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   margin-top: 1rem;
 `;
 
@@ -19,8 +19,8 @@ export const Profissional = styled.div`
   padding: 1rem;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 1rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* padding: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   margin-top: 1rem;
 `;
 

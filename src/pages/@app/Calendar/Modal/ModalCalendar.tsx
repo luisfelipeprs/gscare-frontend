@@ -56,8 +56,9 @@ const Month = styled.div`
 `;
 
 const CalendarContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  flex: 1;
+  /* display: grid;
+  grid-template-columns: repeat(7, 1fr); */
 `;
 
 const DayStyled = styled.div`
@@ -158,6 +159,25 @@ const Availability = styled.div`
   color: green;
 `;
 
+const ContainerFormAndCalendar = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+const ButtonSubmitForm = styled.button`
+  width: 100%;
+  margin-top: 20px;
+  background-color: #FFA500;
+  color: #fff;
+  padding: 15px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+`;
+
 const H2 = styled.h2`
   color: #007bff;
   /* margin-bottom: 20px; */
@@ -253,7 +273,7 @@ const StyledCalendar = styled.div`
     padding: 10px;
     /* border: 1px solid #ddd; */
     background-color: #fff;
-    border-radius: 50%;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
@@ -314,7 +334,9 @@ const SubmitButton = styled(Button)`
 `;
 
 
-const Form = styled.form``
+const Form = styled.form`
+  flex: 1;
+`
 
 interface Day {
   day: number;
@@ -462,177 +484,179 @@ const ModalCalendar: React.FC = () => {
 
 
           <div>
-            <H2>Formulário de Agendamento</H2>
-            <Form id="appointmentForm">
-              <FormGroupContainer>
-                <FormGroup>
-                  <FormGroupLabel htmlFor="selectFuncionario">
-                    Funcionário:
-                  </FormGroupLabel>
-                  <FormGroupSelect id="selectFuncionario" name="funcionario">
-                    <option value="funcionario1">Funcionário 1</option>
-                    <option value="funcionario2">Funcionário 2</option>
-                  </FormGroupSelect>
-                </FormGroup>
-                <FormGroup>
-                  <FormGroupLabel htmlFor="selectPaciente">
-                    Paciente:
-                  </FormGroupLabel>
-                  <FormGroupSelect id="selectPaciente" name="paciente">
-                    <option value="paciente1">Paciente 1</option>
-                    <option value="paciente2">Paciente 2</option>
-                  </FormGroupSelect>
-                </FormGroup>
-              </FormGroupContainer>
+            {/* <H2>Formulário de Agendamento2</H2> */}
+            <ContainerFormAndCalendar>
+              <Form id="appointmentForm">
+                <FormGroupContainer>
+                  <FormGroup>
+                    <FormGroupLabel htmlFor="selectFuncionario">
+                      Funcionário:
+                    </FormGroupLabel>
+                    <FormGroupSelect id="selectFuncionario" name="funcionario">
+                      <option value="funcionario1">Funcionário 1</option>
+                      <option value="funcionario2">Funcionário 2</option>
+                    </FormGroupSelect>
+                  </FormGroup>
+                  <FormGroup>
+                    <FormGroupLabel htmlFor="selectPaciente">
+                      Paciente:
+                    </FormGroupLabel>
+                    <FormGroupSelect id="selectPaciente" name="paciente">
+                      <option value="paciente1">Paciente 1</option>
+                      <option value="paciente2">Paciente 2</option>
+                    </FormGroupSelect>
+                  </FormGroup>
+                </FormGroupContainer>
 
-              <FormGroupContainer>
-                <FormGroup>
-                  <FormGroupLabel htmlFor="phone">Telefone:</FormGroupLabel>
-                  <FormGroupInput
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
-                    placeholder="(11) 11111-1111"
-                    required={true}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <FormGroupLabel htmlFor="email">E-mail:</FormGroupLabel>
-                  <FormGroupInput
-                    type="email"
-                    id="email"
-                    name="email"
-                    required={true}
-                  />
-                </FormGroup>
-              </FormGroupContainer>
+                <FormGroupContainer>
+                  <FormGroup>
+                    <FormGroupLabel htmlFor="phone">Telefone:</FormGroupLabel>
+                    <FormGroupInput
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                      placeholder="(11) 11111-1111"
+                      required={true}
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <FormGroupLabel htmlFor="email">E-mail:</FormGroupLabel>
+                    <FormGroupInput
+                      type="email"
+                      id="email"
+                      name="email"
+                      required={true}
+                    />
+                  </FormGroup>
+                </FormGroupContainer>
 
-              <FormGroupContainer>
-                <FormGroup>
-                  <FormGroupLabel htmlFor="selectClinica">
-                    Endereço da Clínica:
-                  </FormGroupLabel>
-                  <FormGroupSelect id="selectClinica" name="clinica">
-                    <option value="clinica1">Clínica 1</option>
-                    <option value="clinica2">Clínica 2</option>
-                  </FormGroupSelect>
-                </FormGroup>
-                <FormGroup>
-                  <FormGroupLabel htmlFor="horario">Horário:</FormGroupLabel>
-                  <FormGroupInput
-                    type="time"
-                    id="horario"
-                    name="horario"
-                    required={true}
-                  />
-                </FormGroup>
-              </FormGroupContainer>
-            </Form>
-            <CalendarContainer>
-              <StyledContainer>
-                <StyledHeader>
-                  <CalendarNavigation>
-                    <div className="month-year-container">
-                      <CurrentMonthYear>Janeiro 2024</CurrentMonthYear>
-                    </div>
-                    <div className="nav-buttons-container">
-                      <CalendarNavButton onClick={() => changeMonth(-1)}>
-                        &lt;
-                      </CalendarNavButton>
-                      <CalendarNavButton onClick={() => changeMonth(1)}>
-                        &gt;
-                      </CalendarNavButton>
-                    </div>
-                  </CalendarNavigation>
-                </StyledHeader>
-                <StyledCalendar id="calendarContainer">
-                  <StyledDayOfWeekDefineConsulta>
-                    Dom
-                  </StyledDayOfWeekDefineConsulta>
-                  <StyledDayOfWeekDefineConsulta>
-                    Seg
-                  </StyledDayOfWeekDefineConsulta>
-                  <StyledDayOfWeekDefineConsulta>
-                    Ter
-                  </StyledDayOfWeekDefineConsulta>
-                  <StyledDayOfWeekDefineConsulta>
-                    Qua
-                  </StyledDayOfWeekDefineConsulta>
-                  <StyledDayOfWeekDefineConsulta>
-                    Qui
-                  </StyledDayOfWeekDefineConsulta>
-                  <StyledDayOfWeekDefineConsulta>
-                    Sex
-                  </StyledDayOfWeekDefineConsulta>
-                  <StyledDayOfWeekDefineConsulta>
-                    Sáb
-                  </StyledDayOfWeekDefineConsulta>
-                  {calendarDays.map((day, index) => (
-                    <div
-                      className={`styled-day ${day.inactive ? "inactive" : ""
-                        }`}
-                      key={index}
-                      onClick={() => handleDayClick(`dateId-${day.day}`)}
-                    >
-                      {day.day}
-                    </div>
-                  ))}
-                </StyledCalendar>
-                <StyledModal className="styled-modal" id="modalId">
-                  <div className="styled-modal-content">
-                    <span
-                      className="styled-close"
-                      onClick={() => handleCloseModal()}
-                    >
-                      ×
-                    </span>
-                    <h2>Agendar Consulta</h2>
-                    <Form
-                      className="styled-htmlForm"
-                      onSubmit={handlehtmlFormSubmit}
-                    >
-                      <FormGroupLabel
-                        className="styled-label"
-                        htmlFor="attendant"
+                <FormGroupContainer>
+                  <FormGroup>
+                    <FormGroupLabel htmlFor="selectClinica">
+                      Endereço da Clínica:
+                    </FormGroupLabel>
+                    <FormGroupSelect id="selectClinica" name="clinica">
+                      <option value="clinica1">Clínica 1</option>
+                      <option value="clinica2">Clínica 2</option>
+                    </FormGroupSelect>
+                  </FormGroup>
+                  <FormGroup>
+                    <FormGroupLabel htmlFor="horario">Horário:</FormGroupLabel>
+                    <FormGroupInput
+                      type="time"
+                      id="horario"
+                      name="horario"
+                      required={true}
+                    />
+                  </FormGroup>
+                </FormGroupContainer>
+              </Form>
+              <CalendarContainer>
+                <StyledContainer>
+                  <StyledHeader>
+                    <CalendarNavigation>
+                      <div className="month-year-container">
+                        <CurrentMonthYear>Janeiro 2024</CurrentMonthYear>
+                      </div>
+                      <div className="nav-buttons-container">
+                        <CalendarNavButton onClick={() => changeMonth(-1)}>
+                          &lt;
+                        </CalendarNavButton>
+                        <CalendarNavButton onClick={() => changeMonth(1)}>
+                          &gt;
+                        </CalendarNavButton>
+                      </div>
+                    </CalendarNavigation>
+                  </StyledHeader>
+                  <StyledCalendar id="calendarContainer">
+                    <StyledDayOfWeekDefineConsulta>
+                      Dom
+                    </StyledDayOfWeekDefineConsulta>
+                    <StyledDayOfWeekDefineConsulta>
+                      Seg
+                    </StyledDayOfWeekDefineConsulta>
+                    <StyledDayOfWeekDefineConsulta>
+                      Ter
+                    </StyledDayOfWeekDefineConsulta>
+                    <StyledDayOfWeekDefineConsulta>
+                      Qua
+                    </StyledDayOfWeekDefineConsulta>
+                    <StyledDayOfWeekDefineConsulta>
+                      Qui
+                    </StyledDayOfWeekDefineConsulta>
+                    <StyledDayOfWeekDefineConsulta>
+                      Sex
+                    </StyledDayOfWeekDefineConsulta>
+                    <StyledDayOfWeekDefineConsulta>
+                      Sáb
+                    </StyledDayOfWeekDefineConsulta>
+                    {calendarDays.map((day, index) => (
+                      <div
+                        className={`styled-day ${day.inactive ? "inactive" : ""
+                          }`}
+                        key={index}
+                        onClick={() => handleDayClick(`dateId-${day.day}`)}
                       >
-                        Nome do Atendente:
-                      </FormGroupLabel>
-                      <FormGroupInput
-                        className="styled-input"
-                        type="text"
-                        id="attendant"
-                        name="attendant"
-                        placeholder="Defina um Atendente"
-                        required={true}
-                      />
-
-                      <FormGroupLabel
-                        className="styled-label"
-                        htmlFor="patient"
+                        {day.day}
+                      </div>
+                    ))}
+                  </StyledCalendar>
+                  <StyledModal className="styled-modal" id="modalId">
+                    <div className="styled-modal-content">
+                      <span
+                        className="styled-close"
+                        onClick={() => handleCloseModal()}
                       >
-                        Nome do Paciente:
-                      </FormGroupLabel>
-                      <FormGroupInput
-                        className="styled-input"
-                        type="text"
-                        id="patient"
-                        name="patient"
-                        placeholder="Defina um Paciente"
-                        required={true}
-                      />
+                        ×
+                      </span>
+                      <h2>Agendar Consulta</h2>
+                      <Form
+                        className="styled-htmlForm"
+                        onSubmit={handlehtmlFormSubmit}
+                      >
+                        <FormGroupLabel
+                          className="styled-label"
+                          htmlFor="attendant"
+                        >
+                          Nome do Atendente:
+                        </FormGroupLabel>
+                        <FormGroupInput
+                          className="styled-input"
+                          type="text"
+                          id="attendant"
+                          name="attendant"
+                          placeholder="Defina um Atendente"
+                          required={true}
+                        />
 
-                      <button className="styled-button" type="submit">
-                        Adicionar&
-                      </button>
-                    </Form>
-                  </div>
-                </StyledModal>
-              </StyledContainer>
-            </CalendarContainer>
-            <button onClick={() => marcarAtendimento()}>
+                        <FormGroupLabel
+                          className="styled-label"
+                          htmlFor="patient"
+                        >
+                          Nome do Paciente:
+                        </FormGroupLabel>
+                        <FormGroupInput
+                          className="styled-input"
+                          type="text"
+                          id="patient"
+                          name="patient"
+                          placeholder="Defina um Paciente"
+                          required={true}
+                        />
+
+                        <button className="styled-button" type="submit">
+                          Adicionar&
+                        </button>
+                      </Form>
+                    </div>
+                  </StyledModal>
+                </StyledContainer>
+              </CalendarContainer>
+            </ContainerFormAndCalendar>
+            <ButtonSubmitForm onClick={() => marcarAtendimento()}>
               Marcar Atendimento
-            </button>
+            </ButtonSubmitForm>
           </div>
 
           <Dialog.Close asChild>

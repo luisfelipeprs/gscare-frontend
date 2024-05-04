@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
 
-function PatientData() {
+function PatientData () {
 
     const [startDate, setStartDate] = useState(new Date());
 
@@ -24,6 +24,43 @@ function PatientData() {
                         <TextField.Input
                             size={"3"} />
                     </InputField>
+
+                    <div style={{ display: "flex" }}>
+                        <InputField>
+                            <InputLabel>
+                                <b>Celular:</b>
+                            </InputLabel>
+                            <TextField.Input
+                                size={"3"} />
+                        </InputField>
+
+                        <InputField>
+                            <InputLabel>
+                                <b>Email:</b>
+                            </InputLabel>
+                            <TextField.Input
+                                size={"3"} />
+                        </InputField>
+                    </div>
+
+                    <div style={{ display: "flex" }}>
+                        <InputField>
+                            <InputLabel>
+                                <b>CPF:</b>
+                            </InputLabel>
+                            <TextField.Input
+                                size={"3"} />
+                        </InputField>
+                        <InputField>
+                            <InputLabel>
+                                <b>RG:</b>
+                            </InputLabel>
+                            <TextField.Input
+                                size={"3"} />
+                        </InputField>
+                    </div>
+
+
                     <div style={{ display: "flex" }}>
                         <InputField>
                             <InputLabel>
@@ -51,143 +88,16 @@ function PatientData() {
                         </InputField>
                     </div>
 
-                    <div style={{ display: "flex" }}>
-                        <InputField>
-                            <InputLabel>
-                                <b>CPF:</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-                        <InputField>
-                            <InputLabel>
-                                <b>RG:</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-                    </div>
                     <InputField>
                         <InputLabel>
                             <b>Observações:</b>
                         </InputLabel>
                         <TextArea size="3" />
-                        <p> * Esta informação será visível somente para você.</p>
+                        <p> <span style={{ color: "red" }}>*</span> Esta informação será visível somente para você.</p>
                     </InputField>
                 </div>
                 <UserProfile />
             </Container>
-            <AdditionalInfoContainer>
-                <Contact>
-                    <h3>
-                        <b>Informações para Contato:</b>
-                    </h3>
-
-                    <div style={{ display: "flex" }}>
-                        <InputField>
-                            <InputLabel>
-                                <b>Celular</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-
-                        <InputField>
-                            <InputLabel>
-                                <b>SMS:</b>
-                            </InputLabel>
-                            <br />
-                            <Checkbox defaultChecked /> Aceita receber SMS?
-                        </InputField>
-                    </div>
-                    <div style={{ display: "flex" }}>
-                        <InputField>
-                            <InputLabel>
-                                <b>Casa:</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-
-                        <InputField>
-                            <InputLabel>
-                                <b>Trabalho:</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-                    </div>
-
-                    <InputField>
-                        <InputLabel>
-                            <b>E-mail:</b>
-                        </InputLabel>
-                        <TextField.Input
-                            size={"3"} />
-                    </InputField>
-                </Contact>
-
-                <Adress>
-                    <h3>Endereço</h3>
-                    <div style={{ display: "flex" }}>
-                        <InputField>
-                            <InputLabel>
-                                <b>CEP:</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-
-                        <InputField>
-                            <InputLabel>
-                                <b>Estado:</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-                        <InputField>
-                            <InputLabel>
-                                <b>Cidade:</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-
-                    </div>
-                    <div style={{ display: "flex" }}>
-                        <InputField>
-                            <InputLabel>
-                                <b>Pais:</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-                        <InputField>
-                            <InputLabel>
-                                <b>Número:</b>
-                            </InputLabel>
-                            <TextField.Input
-                                size={"3"} />
-                        </InputField>
-                    </div>
-
-                    <InputField>
-                        <InputLabel>
-                            <b>Endereço Completo:</b>
-                        </InputLabel>
-                        <TextField.Input
-                            size={"3"} />
-                    </InputField>
-                    <InputField>
-                        <InputLabel>
-                            <b>Complemento:</b>
-                        </InputLabel>
-                        <TextField.Input
-                            size={"3"} />
-                    </InputField>
-                </Adress>
-
-            </AdditionalInfoContainer>
         </>
     );
 }

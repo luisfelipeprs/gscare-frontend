@@ -172,7 +172,7 @@ const StepTwo: React.FC<StepTwoProps> = ({ onPrev, onNext, categories }) => {
       {/* Conteúdo do segundo passo */}
 
       <ContainerStepTwo>
-        <h1>CRUD de Medicamentos Alérgicos</h1>
+        <h1>Medicamentos Alérgicos Registrados</h1>
         <AddFormStepTwo>
           <input type="text" id="medication-name" placeholder="Nome do Medicamento" />
           <select name="tipo_alergia" id="tipo_alergia">
@@ -181,9 +181,8 @@ const StepTwo: React.FC<StepTwoProps> = ({ onPrev, onNext, categories }) => {
             <option value="ambiental">Ambiental</option>
             <option value="picadas">Picadas de Insetos</option>
           </select>
-          <button id="add-medication">Adicionar Medicamento</button>
+          <button id="add-medication">Adicionar</button>
         </AddFormStepTwo>
-        <h2>Medicamentos Alérgicos Registrados</h2>
         <table>
           <thead>
             <tr>
@@ -315,18 +314,17 @@ const StepThree: React.FC<StepThreeProps> = ({ onPrev, onSave, users }) => (
   <>
     {/* Conteúdo do terceiro passo */}
     <ContainerStepThree>
-      <h1>CRUD de Medicamentos</h1>
+      <h1>Medicamentos Registrados</h1>
       <AddFormStepThree>
         <input type="text" id="medication-name" placeholder="Nome do Medicamento" />
-        <input type="time" id="medication-time" />
         <input type="number" id="medication-dose" placeholder="Dose" />
         <select id="dose-type">
           <option value="ml">ml</option>
           <option value="gota">Gota</option>
         </select>
-        <button id="AddMedicationStepThree">Adicionar Medicamento</button>
+        <input type="time" id="medication-time" />
+        <button id="AddMedicationStepThree">Adicionar</button>
       </AddFormStepThree>
-      <h2>Medicamentos Registrados</h2>
       <table>
         <thead>
           <tr>

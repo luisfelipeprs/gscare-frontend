@@ -32,7 +32,7 @@ export const ResumeContainer = styled.div`
 export const DivLegal1 = styled.div`
   width: 100%;
   margin: 10px;
-`; 
+`;
 
 export const Container2 = styled.div`
   width: 100%;  
@@ -49,8 +49,8 @@ export const UserContainer = styled.div`
   gap: 2%;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 1rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* padding: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   margin: 0 auto;
   align-items: center;
 `;
@@ -63,7 +63,7 @@ export const PatientInfo = styled.div`
   border-radius: 10px;
   background-color: white;
   font-size: 1.2rem;
-`; 
+`;
 
 export const Container3 = styled.div`
   width: 100%;  
@@ -77,7 +77,7 @@ export const UserInfoContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-`; 
+`;
 
 export const Info = styled.div`
   width: 100%;

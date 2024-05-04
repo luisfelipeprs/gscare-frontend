@@ -240,7 +240,7 @@ const Calendar: React.FC = () => {
         <FormContainer>
           <LeftSection className={leftSectionVisible ? 'visible' : 'hidden'}>
             <div>
-              <H2>Formulário de Agendamento</H2>
+              <H2>Formulário de Agendamento1</H2>
               <Form id="appointmentForm">
                 <FormGroupContainer>
                   <FormGroup>

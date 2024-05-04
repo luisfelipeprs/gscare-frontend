@@ -154,9 +154,9 @@ export const DialogOverlay = styled(Dialog.Overlay)`
 
 
 export const DialogTitle = styled.h2`
+  color: #373737;
   margin: 0;
   font-weight: 500;
-  color: var(--mauve-12);
   font-size: 17px;
   margin-bottom: 20px;
 `;
@@ -169,7 +169,8 @@ export const IconButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--violet-11);
+  background-color: transparent;
+  border: none;
   position: absolute;
   top: 10px;
   right: 10px;

@@ -172,7 +172,8 @@ export const IconButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--violet-11);
+  background-color: transparent;
+  border: none;
   position: absolute;
   top: 10px;
   right: 10px;

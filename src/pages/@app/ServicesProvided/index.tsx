@@ -6,6 +6,7 @@ import ModalCalendar from "./ModalCalendar/ModalServices";
 import { CaretLeft, CaretRight, MagnifyingGlass } from "phosphor-react";
 import { useState } from "react";
 import PatientTable from "./TableUI";
+import ModalServices from "./ModalCalendar/ModalServices";
 
 // type Option = {
 //   value: string;
@@ -163,7 +164,7 @@ function ServicesProvided () {
         // buttonText="Criar"
         routerText="Serviços agendados"
         descText="Listagem de todas as consultas"
-        onButtonClick={ModalCalendar}
+        onButtonClick={ModalServices}
       >
         <Content>
 

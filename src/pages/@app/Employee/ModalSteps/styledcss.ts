@@ -412,19 +412,21 @@ export const InputGroupStepOne = styled.div`
 export const ContainerStepTwo = styled.div`
   /* max-width: 800px; */
   /* margin: 20px auto; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 20px;
   background-color: #fff;
   border-radius: 5px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   
   h1, h2 {
-    text-align: center;
+    text-align: start;
     color: #007bff;
   }
   table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
   }
   th, td {
       padding: 10px;
@@ -438,7 +440,7 @@ export const ContainerStepTwo = styled.div`
 `;
 
 export const AddFormStepTwo = styled.div`
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   display: flex;
 
   input[type="text"], input[type="date"] {
@@ -515,22 +517,22 @@ export const ActionButtonsStepTwo = styled.td`
 `;
 
 export const ContainerStepThree = styled.div`
-  /* max-width: 800px;
-  margin: 20px auto; */
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
 
   h1, h2 {
-    text-align: center;
+    text-align: start;
     color: #007bff;
   }
 
   table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
   }
 
   th, td {
@@ -546,14 +548,22 @@ export const ContainerStepThree = styled.div`
 `;
 
 export const AddFormStepThree = styled.div`
-  margin-bottom: 20px;
+  display: flex;
 
   input[type="text"], input[type="time"], input[type="number"], select {
     padding: 8px;
-    width: calc(50% - 16px);
+    /* width: calc(50% - 16px); */
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+  }
+
+  input[type="text"] {
+    flex: 3;
+  }
+
+  input[type="time"], input[type="number"], select {
+    flex: 1;
   }
 
   button {
