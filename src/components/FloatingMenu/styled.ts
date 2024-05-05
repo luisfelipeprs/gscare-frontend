@@ -32,6 +32,7 @@ export const StyledFloatingMenu = styled.div`
 
 
 export const ImageLogo = styled.div`
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   display: flex;

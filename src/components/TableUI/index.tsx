@@ -106,7 +106,7 @@ const ButtonViewTd = styled.button`
   margin: auto;
   padding: 10px;
   border: none;
-  background-color: #0037ff99;
+  background-color: #7a97ff5c;
   border-radius: 8px;
 
   &:hover {
@@ -173,7 +173,7 @@ const PatientTable: React.FC<Props> = ({ patients }) => {
                 <tr key={patient.id}>
                   <Td>
                     <ButtonViewTd>
-                      <Eye size={20} color="#f2f2f2" weight="bold" />
+                      <Eye size={20} color="#272727" weight="light" />
                     </ButtonViewTd>
                   </Td>
                   <Td>

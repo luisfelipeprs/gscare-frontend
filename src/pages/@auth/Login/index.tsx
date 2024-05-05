@@ -1,11 +1,12 @@
 import { Container, Content } from "./styled";
 import logoImg from "../../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
-import { CaretLeft } from "phosphor-react";
+import { CaretLeft, House } from "phosphor-react";
 import { useForm } from "react-hook-form";
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod';
 import { authenticateUser } from "../../../controllers/login";
+
 
 const loginAttendantFormSchema = z.object({
   token:
@@ -23,7 +24,7 @@ const loginAttendantFormSchema = z.object({
 
 type LoginAttendatFormData = z.infer<typeof loginAttendantFormSchema>
 
-export function Login() {
+export function Login () {
 
   const navigate = useNavigate();
 
@@ -35,18 +36,25 @@ export function Login() {
     navigate(-1);
   };
 
-  function handleSubmitData({ token, email, password }: LoginAttendatFormData) {
-    authenticateUser({ token, email, password })
+  const goBackToHome = () => {
+    navigate('/')
+  };
+
+  // function handleSubmitData ({ token, email, password }: LoginAttendatFormData) {
+  function handleSubmitData () {
+    // authenticateUser({ token, email, password })
     // 64bfed1ee252092818948502
     // feh@gmail.com
     // Feh12345
+    navigate('/admin')
   }
+
 
   return (
     <Container>
       <Content>
         <button className="btn-top-left">
-          <CaretLeft size={32} color="#777777" weight="light" onClick={goBackToPreviousScreen} />
+          <House size={26} color="#000000" weight="thin" onClick={goBackToHome} />
         </button>
 
         <div className="container">
@@ -90,7 +98,7 @@ export function Login() {
             </div>
 
             <button className="button"
-            // onClick={handleSubmitData}
+              onClick={handleSubmitData}
             >
               Entrar
             </button>

@@ -34,6 +34,7 @@ export const DropdownMenuContent = styled(DropdownMenu.Content)`
 `;
 
 export const DropdownMenuItem = styled(DropdownMenu.Item)`
+  cursor: pointer;
   color: #5e9bf7;
   div{ svg{ color: #5e9bf7; } }
   font-size: 0.9rem;

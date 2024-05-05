@@ -29,6 +29,7 @@ export const Content = styled.main`
     left: 3px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
 
   .header {

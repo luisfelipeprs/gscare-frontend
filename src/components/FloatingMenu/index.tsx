@@ -5,6 +5,7 @@ import { Container, Infos, ContentIcon, StyledFloatingMenu, MenuIcon, ImageLogo,
 import logo from './../../assets/logo.svg'
 import { AvatarIconAndOption } from '../AvatarIconAndOption';
 import { BellIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
+import { useNavigate } from 'react-router-dom';
 
 
 interface IProps {
@@ -12,6 +13,14 @@ interface IProps {
 }
 
 function FloatingMenu ({ handleIsOpen }: IProps) {
+
+  const navigate = useNavigate();
+
+  function goToHome () {
+    navigate('/')
+  }
+
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -27,7 +36,7 @@ function FloatingMenu ({ handleIsOpen }: IProps) {
             </MenuButton>
           </ContentIcon>
 
-          <ImageLogo>
+          <ImageLogo onClick={goToHome}>
             <img src={logo} alt="logo" width='200px' />
           </ImageLogo>
         </LeftContainer>
