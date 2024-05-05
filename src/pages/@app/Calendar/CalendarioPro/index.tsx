@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { DotsThreeVertical } from 'phosphor-react';
 import {
   Appointment,
   Availability,
@@ -20,10 +21,12 @@ import {
   Modal,
   ModalContent,
   ModalContentDays,
+  ModalTable,
+  ModalTd,
+  ModalTh,
   Month,
   MonthsContainer,
 } from './styled';
-import { DotsThreeVertical } from 'phosphor-react';
 
 const CalendarioPro: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -45,6 +48,11 @@ const CalendarioPro: React.FC = () => {
     setModalIsOpen(false);
   };
 
+  const handleModalContentClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    // Prevent closing modal when clicking inside modal content
+    e.stopPropagation();
+  };
+
   const renderHourSlot = (hour: number, minute: number) => {
     const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
     const info = appointments[time];
@@ -55,7 +63,7 @@ const CalendarioPro: React.FC = () => {
           <Availability>Disponível</Availability>
         ) : (
           <Appointment>
-            <p>nome do paciente</p>
+            <p>nome do paciente1</p>
             <p>profissional</p>
             <p>local da consulta</p>
             <p>inicio</p>
@@ -86,6 +94,20 @@ const CalendarioPro: React.FC = () => {
 
   const firstDayOfMonth = (month: number, year: number) => new Date(year, month, 1).getDay();
 
+  const employees = ["Funcionário 1", "Funcionário 2", "Funcionário 3"]; // Lista de funcionários
+
+  const timeSlots: any = []; // Lista de horários
+  const startTime = 8; // Horário de início (8:00)
+  const endTime = 18; // Horário de término (18:00)
+
+  for (let hour = startTime; hour < endTime; hour++) {
+    for (let minute = 0; minute < 60; minute += 30) {
+      const formattedHour = `${hour < 10 ? '0' : ''}${hour}`;
+      const formattedMinute = `${minute === 0 ? '00' : '30'}`;
+      timeSlots.push(`${formattedHour}:${formattedMinute}`);
+    }
+  }
+
   const renderCalendar = (year: number, month: number) => {
     const days = daysInMonth(month, year);
     const firstDay = firstDayOfMonth(month, year);
@@ -114,23 +136,36 @@ const CalendarioPro: React.FC = () => {
 
   return (
     <>
-      <Modal isOpen={modalIsOpen}>
-        <ModalContent>
-          <CloseButton onClick={closeModal}>&times;</CloseButton>
-          <ModalContentDays>
-            {selectedDay !== null && (
-              <>
-                <h3>{selectedDay} de {months[currentMonth!]}</h3>
-                <HourSlotContainer>
-                  {renderHourSlots()}
-                </HourSlotContainer>
-              </>
-            )}
-          </ModalContentDays>
-        </ModalContent>
-      </Modal>
+      {modalIsOpen && (
+        <Modal isOpen={modalIsOpen} onClick={closeModal}>
+          <ModalContent onClick={handleModalContentClick}>
+            <ModalTable>
+              <thead>
+                <tr>
+                  <ModalTh></ModalTh>
+                  {/* Mapeia e renderiza os horários */}
+                  {timeSlots.map((time: string, index: string) => (
+                    <ModalTh key={index}>{time}</ModalTh>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {/* Mapeia e renderiza os funcionários */}
+                {employees.map((employee, index) => (
+                  <tr key={index}>
+                    <ModalTd>{employee}</ModalTd>
+                    {/* Mapeia e renderiza as células vazias para os horários */}
+                    {timeSlots.map((time: string, index: string) => (
+                      <ModalTd key={index}></ModalTd>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </ModalTable>
+          </ModalContent>
+        </Modal>
+      )}
       <Container>
-
         <HeaderInfos>
           <DivInfos>
             <h2 id="current-year">{currentYear}</h2>

@@ -198,10 +198,31 @@ export const DayWeekStyled = styled.div`
   }
 `;
 
+// export const Modal = styled.div<ModalProps>`
+//   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+//   position: fixed;
+//   z-index: 10;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   overflow: auto;
+//   background-color: rgba(0, 0, 0, 0.4);
+// `;
+
+// export const ModalContent = styled.div`
+//   background-color: #fefefe;
+//   margin: 15% auto;
+//   padding: 20px;
+//   border-radius: 8px;
+//   width: 90%;
+//   max-width: 600px;
+//   position: relative;
+// `;
 export const Modal = styled.div<ModalProps>`
   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -212,13 +233,64 @@ export const Modal = styled.div<ModalProps>`
 
 export const ModalContent = styled.div`
   background-color: #fefefe;
-  margin: 15% auto;
   padding: 20px;
   border-radius: 8px;
   width: 90%;
   max-width: 600px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-x: auto; /* Adiciona scroll horizontal se necessário */
 `;
+
+// const Modal = styled.div`
+//   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+//   position: fixed;
+//   z-index: 10;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   overflow: auto;
+//   background-color: rgba(0, 0, 0, 0.4);
+// `;
+
+// const ModalContent = styled.div`
+//   background-color: #fefefe;
+//   padding: 20px;
+//   border-radius: 8px;
+//   width: 90%;
+//   max-width: 600px;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// `;
+
+// Define os estilos da tabela
+export const ModalTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+`;
+
+// Define os estilos dos cabeçalhos da tabela
+export const ModalTh = styled.th`
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+`;
+
+// Define os estilos das células da tabela
+export const ModalTd = styled.td`
+  border: 1px solid #ddd;
+  padding: 8px;
+`;
+
 
 export const CloseButton = styled.span`
   color: #aaa;
