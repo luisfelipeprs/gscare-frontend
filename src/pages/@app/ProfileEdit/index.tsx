@@ -7,12 +7,12 @@ import { Avatar, Flex } from '@radix-ui/themes';
 import { Care, Gs } from '../../../components/TextGscare/styled';
 
 function ProfileEdit () {
-  const [name] = useState('Neymar JR da Silva');
+  const [name] = useState('Fernando');
   const [phone] = useState('40028922');
-  const [email] = useState('neymar@example.com');
+  const [email] = useState('fernando@example.com');
   const [image] = useState('https://bootdey.com/img/Content/avatar/avatar7.png');
   const [birthdate] = useState('1992-02-05');
-  const [description] = useState('Jogador de futebol profissional');
+  const [description] = useState('Dev');
 
   const [editedProfile] = useState({
     name,

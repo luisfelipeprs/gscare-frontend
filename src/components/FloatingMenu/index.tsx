@@ -57,8 +57,8 @@ function FloatingMenu ({ handleIsOpen }: IProps) {
 
           <IconAndInfos>
             <Infos>
-              <p>Neymar JR</p>
-              <p>Microsoft Windows</p>
+              <p>Fernando Franco</p>
+              <p>GsCare company</p>
             </Infos>
 
             <ContentIcon>
