@@ -1,57 +1,47 @@
 import ClientCard from '../ClientCard';
 import Title from '../Title';
 import { CardsContainer, Container, Content } from './styled';
+import func3Atend from './../../assets/func3Atend.png';
+import { ForkKnife, Heartbeat, Pill } from 'phosphor-react';
 
-
-import func1Atend from './../../assets/func1Atend.png'
-import func2Atend from './../../assets/func2Atend.png'
-import func3Atend from './../../assets/func3Atend.png'
-import func4Atend from './../../assets/func4Atend.png'
-import { AddressBook, ForkKnife, Heartbeat, Pill } from 'phosphor-react';
-
-function BoxCardsTools() {
+export function BoxCardsTools() {
     return (
         <Container>
             <Content>
                 <Title
                     title={'O sistema que faltava para sua empresa.'}
-                    description='lofsadfasdfasdfasdfasd3'
-                    textButton='Faça o teste gratis'
-                    typebutton='withBg'
-                    color='orange'
+                    description='Pegamos os serviços fundamentais que sua empresa precisa atender e colocamos de uma forma gerenciavel'
+                // textButton='Faça o teste gratis'
+                // typebutton='withBg'
+                // color='orange'
                 />
                 <CardsContainer>
                     <ClientCard
                         description='relatorio diário e avisos de imprevistos do dia.'
-                        img={<AddressBook size={32} />}
+                        img={<ForkKnife size={50} />}
                         link='/'
                         title='Relatórios'
-                        type='ocorridos'
-                    />
+                        type='ocorridos' />
                     <ClientCard
                         description='patologia, alergias, medicacoes e subrimentos.'
-                        img={<Pill size={32} />}
+                        img={<Pill size={50} />}
                         link='/'
                         title='Informações do Paciente'
-                        type='paciente'
-                    />
+                        type='paciente' />
                     <ClientCard
                         description='lembretes de consultas e medicacoes .'
-                        img={<Heartbeat size={32} />} // Passando um ícone SVG
+                        img={<Heartbeat size={50} />} // Passando um ícone SVG
                         link='/'
                         title='Lembretes'
-                        type='avisos'
-                    />
+                        type='avisos' />
                     <ClientCard
                         description='Numeros emergencias.'
-                        img={<ForkKnife size={32} />}
+                        img={<ForkKnife size={50} />}
                         link='/'
                         title='Contatos'
-                        type='auxilios'
-                    />
+                        type='auxilios' />
                 </CardsContainer>
             </Content>
         </Container>
-    )
+    );
 }
-export default BoxCardsTools;

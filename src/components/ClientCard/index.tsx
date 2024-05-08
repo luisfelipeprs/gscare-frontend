@@ -1,7 +1,9 @@
 import { A, Container } from "./styled";
+import * as React from "react";
+import { Heartbeat } from "phosphor-react";
 
 type Props = {
-  img: string;
+  img: React.ReactNode; // Alterando o tipo da prop img para React.ReactNode
   title: string;
   description: string;
   type: string;
@@ -12,7 +14,7 @@ export default function ClientCard(props: Props) {
   return (
     <Container>
       <div>
-        <img src={props.img} alt={"imagem sobre " + props.title} />
+        {props.img} {/* Renderizando a prop img */}
         <div>
           <a href={props.link}>
             <h3>{props.title}</h3>

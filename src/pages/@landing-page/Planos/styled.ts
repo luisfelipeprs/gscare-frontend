@@ -48,7 +48,7 @@ export const BannerPrice = styled.div`
 `;
 
 export const PricingContainer = styled.div`
-  margin: 50px auto;
+  margin: 50px 0;
   max-width: 1280px;
   justify-content: center;
   display: flex;
@@ -66,7 +66,7 @@ box-shadow: 2px 1px 8px 2px rgba(0, 0, 0, 0.1);
 padding: 20px;
 margin: auto;
 text-align: center;
-width: 300px;
+width: 30%;
 height: 500px;
 display: flex;
 flex-direction: column;
@@ -75,7 +75,7 @@ transition: all 0.50s;
 
 &:hover {
   box-shadow: 2px 1px 8px 6px rgba(0, 0, 0, 0.1);
-  width: 310px;
+  width: calc(30% + 5px);
   height: 510px;
 }
 
