@@ -13,7 +13,7 @@ function BoxCardsTools () {
     <Container>
       <Content>
         <Title
-          title={'Há beneficios para seus cuidadores tambem! Ferramente que trazem agilidade e eficiencia para seus funcionarios.'}
+          title={'O sistema que faltava para sua empresa.'}
           description='lofsadfasdfasdfasdfasd'
           textButton='Faça o teste gratis'
           typebutton='withBg'

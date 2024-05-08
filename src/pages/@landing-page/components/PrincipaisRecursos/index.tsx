@@ -1,3 +1,4 @@
+import HelpComponent from "./HelpComponent.tsx"
 import { Container, ContainerColumn, ContainerRow, ContainersRecursos, Content, PrincipaisRecursosContainer } from "./styled.ts"
 
 export const PrincipaisRecursos = () => {
@@ -5,7 +6,7 @@ export const PrincipaisRecursos = () => {
 
     <Container>
       <Content>
-        <PrincipaisRecursosContainer>
+        {/* <PrincipaisRecursosContainer>
           <div>
             <h2>Principais recursos</h2>
             <h6>Hoje a Stenci conta com inúmeros recursos para auxiliar sua clínica nas tarefas do dia a dia.
@@ -75,7 +76,8 @@ export const PrincipaisRecursos = () => {
             </ContainerRow>
 
           </ContainerColumn>
-        </PrincipaisRecursosContainer>
+        </PrincipaisRecursosContainer> */}
+        <HelpComponent />
       </Content>
     </Container>
   )

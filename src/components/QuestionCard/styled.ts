@@ -14,7 +14,7 @@ export const Content = styled.div`
   margin: auto;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
   border-radius: 12px;
-  height: 452px;
+  /* height: 452px; */
 
   
 
@@ -35,7 +35,7 @@ export const ContainerAction = styled.div`
   justify-content: start;
 
   div {
-    padding: 10%;
+    /* padding: 10%; */
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -46,14 +46,44 @@ export const ContainerAction = styled.div`
       color: #032D60;
       font-size: 2.5rem;
     }
+  }
+`;
 
-    button {
+
+export const DivSujestoesText = styled.div`
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h2 {
+      width: 100%;
+      color: #032D60;
+      font-size: 2rem;
+    }  
+
+    h6 {
+      
+      width: 100%;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+  @media screen and (max-width: 1280px) {
+    padding: 50px 0;
+  }
+`;
+
+
+export const ButtonContato = styled.div`
+  
       border: none;
       padding: 15px;
       background-color: #564BC6;
       font-weight: 800;
       color: #fff;
-      width: 60%;
+      /* width: 60%; */
       text-align: center;
       border-radius: 8px;
 
@@ -61,7 +91,12 @@ export const ContainerAction = styled.div`
         cursor: pointer;
         background-color: #564BC6dd;
       }
-    }
+    
+
+  
+  @media screen and (max-width: 750px) {
+    width: 100%;
+    margin: auto;
   }
 `;
 

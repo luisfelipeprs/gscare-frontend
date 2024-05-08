@@ -14,6 +14,9 @@ import { FraseDeEfeito } from "../components/FraseDeEfeito";
 import { PrincipaisRecursos } from "../components/PrincipaisRecursos";
 import LeadCaptureModal from "../components/LeadCaptureModal";
 import { useState } from "react";
+import { FeedbacksClients } from "../components/FeedbacksClients";
+import { PerguntasFrequentes } from "../components/PerguntasFrequentes";
+import Planos from "../Planos";
 
 function Home () {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,16 +36,19 @@ function Home () {
       <HomeContainer>
         <Homepage handleOpenModal={handleOpenModal} />
         <OverViewRecursos />
-        <MobileRecursos />
-        <BoxCardsNewTools />
-        <BotAcompanhamentoRecurso />
+        {/* <MobileRecursos /> */}
+        {/* <BoxCardsNewTools /> */}
+        {/* <BotAcompanhamentoRecurso /> */}
         {/* <BoxCardsServices /> */}
         <PrincipaisRecursos />
         <BoxCardsTools />
-        <FraseDeEfeito />
+        {/* <FraseDeEfeito /> */}
+        <FeedbacksClients />
+        <Planos />
         <QuestionCard />
+        <PerguntasFrequentes />
       </HomeContainer>
-      <PreFooter />
+      {/* <PreFooter /> */}
       <Footer />
     </>
   )

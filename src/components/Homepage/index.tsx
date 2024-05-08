@@ -44,7 +44,9 @@ export default function Homepage ({ handleOpenModal }: IProps) {
           <ContainerButtons>
             <ButtonTesteGratis onClick={handleOpenModal}>Faca o teste gratis</ButtonTesteGratis>
             <ButtonSaibaMais>
-              <EyeOpenIcon />
+              <div>
+                <EyeOpenIcon />
+              </div>
               <span>Vídeo demonstrativo</span>
             </ButtonSaibaMais>
           </ContainerButtons>

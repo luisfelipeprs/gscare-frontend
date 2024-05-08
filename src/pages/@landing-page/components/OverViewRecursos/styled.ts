@@ -56,7 +56,8 @@ export const OpcoesMedicamento = styled.div`
 `;
 
 export const DivContainerListaComfirma = styled.div`
-    margin-top: 30px;
+    margin: auto;
+    /* margin-top: 30px; */
     justify-content: start;
     flex: 1;
     text-align: start;
@@ -64,9 +65,18 @@ export const DivContainerListaComfirma = styled.div`
     flex-direction: column;
     gap: 20px;
 
+    h2 {
+      color: #000;
+    }
+
     h6 {
-      font-size: 1.1rem;
-      color: #092580c9;
+
+      color: var(--cool-gray);
+      font-weight: 500;
+      line-height: 1.8;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #8d8bac;
     }
 `;
 
@@ -88,9 +98,12 @@ export const DivContainerDivMed = styled.div`
 
 export const ListaConfirma = styled.ul`
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   
   li {
-
+    display: flex;
   }
 `;
 
@@ -153,5 +166,20 @@ export const DivMed = styled.div`
     max-height: 10em;
     /* width: 80%; */
     margin: 0 auto;
+  }
+`;
+
+export const SvgDivMed = styled.div`
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+
+  svg {
+    background: #746AE1;
+    padding: 10px;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
   }
 `;

@@ -1,6 +1,52 @@
 import styled from "styled-components";
 
 
+export const Container = styled.div`
+  width: 95%;
+  /* background-color: #fff; */
+  padding-bottom: 100px;
+  margin: auto;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: auto;
+  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30); */
+  border-radius: 12px;
+  /* height: 452px; */
+
+  
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+`;
+
+export const BannerPrice = styled.div`
+  text-align: center;
+  /* justify-content: center;
+  display: flex; */
+  /* margin: auto; */
+
+  div {
+    background-color: #3652cd;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    
+    p {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+    }
+  }
+`;
+
 export const PricingContainer = styled.div`
   margin: 50px auto;
   max-width: 1280px;

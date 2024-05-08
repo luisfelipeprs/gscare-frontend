@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`  
-  background-color: #1e22a3;
+  background-color: #3652cd;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  padding: 50px 0px;
+  /* padding: 50px 0px; */
   width: 100%;
   text-align: center;
   /* background-color: #ffff; */
@@ -70,6 +70,7 @@ export const Functionalities = styled.div`
 `
 
 export const Leftdiv = styled.div`
+  flex: 2;
   display: flex;
   flex-direction: column;
   max-width: 768px;
@@ -141,6 +142,7 @@ export const ButtonTesteGratis = styled.button`
 `
 
 export const ButtonSaibaMais = styled.button`
+  display: flex;
   border: none;
   border-radius: 5px;
   height: 50px;
@@ -151,6 +153,10 @@ export const ButtonSaibaMais = styled.button`
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 5px 15px;
+
+  div, span {
+    margin: auto;
+  }
   
   svg {  
     width: 18px;
@@ -166,6 +172,7 @@ export const ButtonSaibaMais = styled.button`
 `
 
 export const Rightdiv = styled.div`
+  flex: 2;
   margin: auto;
   align-items: end;
   position: relative;
