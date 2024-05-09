@@ -29,19 +29,36 @@ function Home() {
       <Navbar handleOpenModal={handleOpenModal} />
       <LeadCaptureModal isOpen={isModalOpen} onClose={handleCloseModal} />
       <HomeContainer>
-        <Homepage handleOpenModal={handleOpenModal} />
-        <OverViewRecursos />
+        <div id="home">
+          <Homepage handleOpenModal={handleOpenModal} />
+        </div>
+        <div id="overview-recursos">
+          <OverViewRecursos />
+        </div>
+        <div id="principais-recursos">
+          <PrincipaisRecursos />
+        </div>
+        <div id="box-cards-tools">
+          <BoxCardsTools />
+        </div>
+        <div id="feedbacks-clients">
+          <FeedbacksClients />
+        </div>
+        <div id="planos">
+          <Planos />
+        </div>
+        <div id="question-card">
+          <QuestionCard />
+        </div>
+        <div id="perguntas-frequentes">
+          <PerguntasFrequentes />
+        </div>
+
         {/* <MobileRecursos /> */}
         {/* <BoxCardsNewTools /> */}
         {/* <BotAcompanhamentoRecurso /> */}
         {/* <BoxCardsServices /> */}
-        <PrincipaisRecursos />
-        <BoxCardsTools />
         {/* <FraseDeEfeito /> */}
-        <FeedbacksClients />
-        <Planos />
-        <QuestionCard />
-        <PerguntasFrequentes />
       </HomeContainer>
       {/* <PreFooter /> */}
       <Footer />

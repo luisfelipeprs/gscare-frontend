@@ -46,7 +46,7 @@ export const Contact = styled.div`
     color: #2f368c;
   }
 
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `
@@ -63,21 +63,25 @@ export const Action = styled.div`
     border: none;
     border-radius: 10px;
     height: 50px;
-    color: #fff;
-    background-color: #137d00;
+    color: #000;
+    /* background-color: #137d00; */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding: 5px 15px;
     text-decoration: none;
     margin: auto;
+
+    span {
+      font-size: 30px;
+    }
     
     &:hover {
       cursor: pointer;
-      background-color: #238615;
-      color: #e5e5e5;
+      /* background-color: #238615; */
+      color: #404040;
     }
     
-    @media screen and (max-width: 920px) {
+    @media screen and (max-width: 1000px) {
       display: flex;
     }
   }
@@ -103,7 +107,7 @@ export const Action = styled.div`
       color: #e5e5e5;
     }
 
-    @media screen and (max-width: 920px) {
+    @media screen and (max-width: 1000px) {
       display: none;
     }
   }
@@ -134,7 +138,7 @@ export const Action = styled.div`
       color: #130c69;
     }
 
-    @media screen and (max-width: 920px) {
+    @media screen and (max-width: 1000px) {
       display: none;
     }
   }
@@ -142,14 +146,14 @@ export const Action = styled.div`
 `
 export const ImageLogo = styled.div`
   display: block;
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1200px) {
       display: none;
   }
 `
 
 export const ImageIconLogo = styled.div`
   display: none;
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1200px) {
       display: block;
   }
 `
@@ -194,7 +198,7 @@ export const Infos = styled.div`
     }
   }
   
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1000px) {
     ul {
       display: none;
     }
@@ -215,7 +219,7 @@ export const Notification = styled.div`
     /* max-width: 100%; */
     padding: 0 20px;
   }
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `
