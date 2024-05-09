@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -151,26 +150,29 @@ function RouteSelector({ onClose, onSelect }: RouteSelectorProps): JSX.Element {
         <Link className='buttonNavigation' to="#home" onClick={onSelect}>
           Home
         </Link>
-        <Link className='buttonNavigation' to="#overview-recursos" onClick={onSelect}>
+        {/* <Link className='buttonNavigation' to="#overview-recursos" onClick={onSelect}>
           Recursos
-        </Link>
+        </Link> */}
         <Link className='buttonNavigation' to="#principais-recursos" onClick={onSelect}>
           Principais Recursos
         </Link>
         <Link className='buttonNavigation' to="#box-cards-tools" onClick={onSelect}>
           Ferramentas
         </Link>
-        <Link className='buttonNavigation' to="#feedbacks-clients" onClick={onSelect}>
+        {/* <Link className='buttonNavigation' to="#feedbacks-clients" onClick={onSelect}>
           Feedbacks
-        </Link>
+        </Link> */}
         <Link className='buttonNavigation' to="#planos" onClick={onSelect}>
           Planos
         </Link>
-        <Link className='buttonNavigation' to="#question-card" onClick={onSelect}>
+        {/* <Link className='buttonNavigation' to="#question-card" onClick={onSelect}>
           Perguntas
-        </Link>
+        </Link> */}
         <Link className='buttonNavigation' to="#perguntas-frequentes" onClick={onSelect}>
           Perguntas Frequentes
+        </Link>
+        <Link className='gotoLoginButton' to="/login">
+          Login
         </Link>
       </RouteOptionsContent>
       {/* <CloseButton onClick={onClose}>Fechar</CloseButton> */}
