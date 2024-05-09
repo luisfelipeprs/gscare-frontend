@@ -73,10 +73,18 @@ flex-direction: column;
 justify-content: space-between;
 transition: all 0.50s;
 
+@media (max-width: 768px) {
+  width: 80%;
+}
+
 &:hover {
   box-shadow: 2px 1px 8px 6px rgba(0, 0, 0, 0.1);
   width: calc(30% + 5px);
   height: 510px;
+
+  @media (max-width: 768px) {
+    width: calc(80% + 5px);
+  }
 }
 
 

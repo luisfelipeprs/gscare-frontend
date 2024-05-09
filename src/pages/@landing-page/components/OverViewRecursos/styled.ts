@@ -92,7 +92,7 @@ export const DivContainerDivMed = styled.div`
   @media screen and (max-width: 600px) {
     flex-direction: column;
     margin: auto;
-    width: 80%;
+    /* width: 80%; */
   }
 `;
 

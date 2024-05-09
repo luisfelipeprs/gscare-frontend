@@ -1390,12 +1390,19 @@ footer .logo {
   }
 
   #testimonials_content {
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
+
+
+/* @media scren and (max-width: 768px) {
+  #testimonials_content {
+    width: 100%;
+  }
+} */
 
 @media screen and (max-width: 600px) {
   #testimonials .section-subtitle {

@@ -1,9 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import imgScreen1 from "../../../../assets/screen1.jpg"
+import imgScreen2 from "../../../../assets/screen2.jpg"
 
 const HelpSection = styled.section`
   text-align: center;
   padding: 75px 20px 100px 20px;
+
+  @media (max-width: 1000px) {
+    padding: 75px 0px 100px 0px;
+  }
 
   h2 {
     color: #564BC6;
@@ -70,17 +76,20 @@ const HelpOptionsContainer = styled.div`
   }
 `;
 
-const HelpOption = styled.div`
+interface HelpOptionProps {
+  backgroundImage: string;
+}
+
+const HelpOption = styled.div<HelpOptionProps>`
   text-align: center;
-  /* padding: 20px; */
   min-height: 100%;
   min-width: 100%;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  background-image: url(/src/assets/images-services/screen1.jpg);
-    background-size: cover;
-    background-position: center;
+  background-image: url(${props => props.backgroundImage});
+  background-size: cover;
+  background-position: center;
 
   img {
     width: 50%;
@@ -138,6 +147,10 @@ const HelpOptionH3AndP = styled.div`
 
   @media (max-width: 1000px) {
     padding: 10px 0px;
+
+    h3 {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -159,9 +172,9 @@ const LimitedParagraph = styled.p`
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 7;
+    -webkit-line-clamp: 6;
     text-overflow: ellipsis;
-    max-height: 8em;
+    max-height: 9em;
   }
 `;
 
@@ -206,7 +219,7 @@ const HelpComponent = () => {
         <NextButton onClick={() => handleScroll(scrollStep)}>&#10095;</NextButton>
 
         <HelpOptionsContainer ref={scrollContainerRef}>
-          <HelpOption style={{ backgroundColor: '#E8D1AE' }}>
+          <HelpOption style={{ backgroundColor: '#E8D1AE' }} backgroundImage={imgScreen1}>
             <ShadowDiv>
               <HelpOptionH3AndP>
                 <h3>Negativa de Tratamento</h3>
@@ -217,7 +230,7 @@ const HelpComponent = () => {
               </HelpOptionH3AndP>
             </ShadowDiv>
           </HelpOption>
-          <HelpOption style={{ backgroundColor: '#E8D1AE' }}>
+          <HelpOption style={{ backgroundColor: '#E8D1AE' }} backgroundImage={imgScreen2}>
             <ShadowDiv>
               <HelpOptionH3AndP>
                 <h3>Negativa de Tratamento</h3>
