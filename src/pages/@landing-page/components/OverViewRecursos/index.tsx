@@ -1,5 +1,5 @@
-import { Alarm, Check, ThumbsUp, TrendUp, Warning } from "phosphor-react"
-import { BtnRecursos, Container, ContainerDivMed, ContainerDivMed2, Content, DivContainerDivMed, DivContainerListaComfirma, DivMed, ListaConfirma, OpcoesMedicamento, SvgDivMed } from "./styled"
+import { Alarm, ThumbsUp, TrendUp, Warning } from "phosphor-react"
+import { BtnRecursos, Container, ContainerDivMed, ContainerDivMed2, Content, DivContainerDivMed, DivContainerListaComfirma, DivMed, OpcoesMedicamento, SvgDivMed } from "./styled"
 
 export const OverViewRecursos = () => {
   return (

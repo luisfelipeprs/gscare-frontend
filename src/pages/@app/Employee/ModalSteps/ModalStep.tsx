@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
-import { EyeOpenIcon } from '@radix-ui/react-icons';
 import {
   ActionButtonsStepThree,
   ActionButtonsStepTwo,
@@ -15,25 +14,8 @@ import {
   ContainerStepTwo,
   DialogContent,
   DialogOverlay,
-  DialogTitle,
-  EditModal,
-  Fieldset,
-  IconButton,
-  Input,
-  InputGroupStepOne,
-  InputRowStepOne,
-  Label,
-  LabelThree,
-  SideBySide,
-  StepThreeContainer,
-  StepTwoCategoryItem,
-  StepTwoCategoryList,
-  StepTwoFieldset,
-  StepTwoLabel,
-  SwitchRoot,
-  SwitchThumb,
-  UserItem,
-  UserList
+  DialogTitle, IconButton, InputGroupStepOne,
+  InputRowStepOne
 } from './styledcss';
 import { CaretLeft, CaretRight, Plus } from 'phosphor-react';
 
@@ -167,6 +149,9 @@ interface StepTwoProps {
 }
 
 const StepTwo: React.FC<StepTwoProps> = ({ onPrev, onNext, categories }) => {
+
+  console.log(categories)
+
   return (
     <>
       {/* Conteúdo do segundo passo */}
@@ -312,6 +297,7 @@ interface StepThreeProps {
 
 const StepThree: React.FC<StepThreeProps> = ({ onPrev, onSave, users }) => (
   <>
+    {users}
     {/* Conteúdo do terceiro passo */}
     <ContainerStepThree>
       <h1>Medicamentos Registrados</h1>

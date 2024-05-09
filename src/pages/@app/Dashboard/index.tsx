@@ -1,16 +1,15 @@
 import { ApexOptions } from "apexcharts";
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import { Card, CardInner, Container, Content, Icons, MainCards, ContentGrafico, GridWrapper, GraficsFirstLine, GraficsSecondLine } from "./styled";
+import { Container, Content, ContentGrafico, GridWrapper, GraficsFirstLine, GraficsSecondLine } from "./styled";
 import ApexCharts from 'react-apexcharts';
 
-import { CalendarX, CalendarCheck, CalendarBlank, ArrowURightUp, Money } from 'phosphor-react';
 import CardAmountAndTile from "../../../components/CardAmountAndTile";
 
-const calendarxIcons = <CalendarX size={24} />;
-const calendarCheckIcons = <CalendarCheck size={24} />;
-const calendarBlankIcons = <CalendarBlank size={24} />;
-const arrowURightUpIcons = <ArrowURightUp size={24} />;
-const moneyIcons = <Money size={24} />;
+// const calendarxIcons = <CalendarX size={24} />;
+// const calendarCheckIcons = <CalendarCheck size={24} />;
+// const calendarBlankIcons = <CalendarBlank size={24} />;
+// const arrowURightUpIcons = <ArrowURightUp size={24} />;
+// const moneyIcons = <Money size={24} />;
 
 interface ReportScreenState {
     patientsScheduledData: {
@@ -48,7 +47,7 @@ interface ReportScreenState {
 
 }
 
-function Dashboard () {
+function Dashboard() {
     const patientsScheduledData: ReportScreenState["patientsScheduledData"] = {
         series: [{
             name: 'Atendimentos',

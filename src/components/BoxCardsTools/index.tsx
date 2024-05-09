@@ -3,10 +3,6 @@ import Title from '../Title';
 import { CardsContainer, Container, Content } from './styled';
 
 
-import func1Atend from './../../assets/func1Atend.png'
-import func2Atend from './../../assets/func2Atend.png'
-import func3Atend from './../../assets/func3Atend.png'
-import func4Atend from './../../assets/func4Atend.png'
 import { AddressBook, ForkKnife, Heartbeat, Pill } from 'phosphor-react';
 
 function BoxCardsTools() {

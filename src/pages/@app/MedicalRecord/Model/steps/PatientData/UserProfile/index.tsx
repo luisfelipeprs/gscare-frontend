@@ -1,7 +1,7 @@
-import { Avatar, Button, Checkbox, TextField } from "@radix-ui/themes";
-import { UserInfo, Container, Contact, InputField, InputLabel, GeneralInformation, Adress } from "./styled";
+import { TextField } from "@radix-ui/themes";
+import { Container, InputField, InputLabel, Adress } from "./styled";
 
-function UserProfile () {
+function UserProfile() {
 
     return (
         <>

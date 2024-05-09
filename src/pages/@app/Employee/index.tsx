@@ -1,44 +1,25 @@
 import {
-  Container,
-  Action,
-  Table,
-  Content,
-  ContainerSearch_Filter_Pagination,
-  InputSearch,
-  Filter,
-  ContainerFilterAndPagination,
-  PaginationContainer,
+  Container, Content, PaginationContainer,
   NavigationButton,
-  PageIndicator,
-  TableContainer,
-  TableRow,
-  TableCell,
-  Header,
+  PageIndicator, Header,
   LeftHeader,
   SearchInput,
   FilterSelect,
   FilterButton,
-  RightHeader,
-  Pagination,
-  PaginationButton,
-  CurrentPageDiv,
+  RightHeader
 } from './styled';
-import { Select, TextField } from "@radix-ui/themes";
-import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import { CaretLeft, CaretRight, DotsThreeVertical, Funnel, MagnifyingGlass } from "phosphor-react";
-import Toggle from '../../../components/ToggleButton';
+import { CaretLeft, CaretRight, MagnifyingGlass } from "phosphor-react";
 
-import Modal from "./Modal/modal.tsx";
 import ModalStep from './ModalSteps/ModalStep.tsx';
-import React, { FC } from 'react';
+import React from 'react';
 import PatientTable from '../../../components/TableUI/index.tsx';
 
-export function Employee () {
+export function Employee() {
 
-  function handleEdit (string: string) {
-    console.log(string)
-  }
+  // function handleEdit(string: string) {
+  //   console.log(string)
+  // }
 
   // function radixFunc() {
   //   console.log('clicou pra abrir um modal radix')
@@ -245,12 +226,12 @@ export function Employee () {
 
   const [currentPage, setCurrentPage] = React.useState(1);
 
-  function onPrevClick () {
+  function onPrevClick() {
     console.log('voltar paginacao')
     setCurrentPage(currentPage - 1);
   }
 
-  function onNextClick () {
+  function onNextClick() {
     console.log('avancar paginacao')
     setCurrentPage(currentPage + 1);
   }

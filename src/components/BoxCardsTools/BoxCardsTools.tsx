@@ -1,7 +1,6 @@
 import ClientCard from '../ClientCard';
 import Title from '../Title';
 import { CardsContainer, Container, Content } from './styled';
-import func3Atend from './../../assets/func3Atend.png';
 import { ForkKnife, Heartbeat, Pill } from 'phosphor-react';
 
 export function BoxCardsTools() {

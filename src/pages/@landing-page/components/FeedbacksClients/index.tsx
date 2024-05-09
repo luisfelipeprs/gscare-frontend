@@ -1,7 +1,7 @@
 import './styles.css';
 
 import workpc2 from '../../../../assets/workpc2.png'
-import avatar from '../../../../../public/avatar.png'
+import avatar from '../../../../assets/avatar.png'
 
 export const FeedbacksClients = () => {
   return (

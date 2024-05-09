@@ -1,6 +1,5 @@
 import { A, Container } from "./styled";
 import * as React from "react";
-import { Heartbeat } from "phosphor-react";
 
 type Props = {
   img: React.ReactNode; // Alterando o tipo da prop img para React.ReactNode

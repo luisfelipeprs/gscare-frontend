@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Container, Infos, ContentIcon, StyledFloatingMenu, MenuIcon, ImageLogo, MenuButton, LeftContainer, RightContainer, IconAndInfos } from './styled';
 // import { SignOut } from 'phosphor-react';
 
-import logo from './../../assets/logo.svg'
+import logo from './../../assets/logo.svg';
 import { AvatarIconAndOption } from '../AvatarIconAndOption';
-import { BellIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
+import { BellIcon } from '@radix-ui/react-icons';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -12,11 +12,11 @@ interface IProps {
   handleIsOpen: () => void;
 }
 
-function FloatingMenu ({ handleIsOpen }: IProps) {
+function FloatingMenu({ handleIsOpen }: IProps) {
 
   const navigate = useNavigate();
 
-  function goToHome () {
+  function goToHome() {
     navigate('/')
   }
 

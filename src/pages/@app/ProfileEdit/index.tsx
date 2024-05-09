@@ -1,27 +1,25 @@
-import { useState } from 'react';
-import { AddPicture, Container, Content, InfoProfile, LeftContainer, RightContainer, ProfileImage, ProfileInfoContainer, CardInfoAboutAccount, HeaderCardInfoAboutAccount, CardInfoAccountDatas, ContentCardInfoAboutAccount, CardInfoAccount, CardInfo, CardData, CardInfoAboutAccountDatas, RegistrationData, ContainerNameAndNumberTel, ContainerEmail, InfoProfileText, InfoProfileDatas, ContainerCustomerTrackingEnabled, ContainerButtonEditAccount, TwoContainer, ContainerIconName, ContentName, ContainerDataFloat, ContentImgAndName, ContainerRight, ContainerRightFirst, ContainerRightSecond } from './styled';
+import { AddPicture, Container, Content, InfoProfile, ProfileInfoContainer, CardInfoAboutAccount, HeaderCardInfoAboutAccount, CardInfoAccountDatas, ContentCardInfoAboutAccount, CardInfoAccount, CardInfo, CardData, CardInfoAboutAccountDatas, RegistrationData, ContainerNameAndNumberTel, ContainerEmail, InfoProfileText, InfoProfileDatas, ContainerCustomerTrackingEnabled, ContainerButtonEditAccount, ContainerIconName, ContentName, ContainerDataFloat, ContainerRight, ContainerRightFirst, ContainerRightSecond } from './styled';
 import { RouterIndicator } from '../../../components/RouterIndicator';
-import { DotsThreeVertical, PencilSimple, Plus } from 'phosphor-react';
-import { AvatarIconAndOption } from '../../../components/AvatarIconAndOption';
+import { DotsThreeVertical, PencilSimple } from 'phosphor-react';
 import { Avatar, Flex } from '@radix-ui/themes';
 import { Care, Gs } from '../../../components/TextGscare/styled';
 
-function ProfileEdit () {
-  const [name] = useState('Fernando');
-  const [phone] = useState('40028922');
-  const [email] = useState('fernando@example.com');
-  const [image] = useState('https://bootdey.com/img/Content/avatar/avatar7.png');
-  const [birthdate] = useState('1992-02-05');
-  const [description] = useState('Dev');
+function ProfileEdit() {
+  // const [name] = useState('Fernando');
+  // const [phone] = useState('40028922');
+  // const [email] = useState('fernando@example.com');
+  // const [image] = useState('https://bootdey.com/img/Content/avatar/avatar7.png');
+  // const [birthdate] = useState('1992-02-05');
+  // const [description] = useState('Dev');
 
-  const [editedProfile] = useState({
-    name,
-    phone,
-    email,
-    image,
-    birthdate,
-    description,
-  });
+  // const [editedProfile] = useState({
+  //   name,
+  //   phone,
+  //   email,
+  //   image,
+  //   birthdate,
+  //   description,
+  // });
 
 
   return (

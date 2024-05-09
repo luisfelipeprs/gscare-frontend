@@ -1,16 +1,11 @@
 // import BoxInfo from "../../components/BoxInfo";
-import BoxCardsNewTools from "../../../components/BoxCardsNewTools";
 import Footer from "../../../components/Footer";
-import PreFooter from "../../../components/PreFooter";
 import Homepage from "../../../components/Homepage";
 import Navbar from "../../../components/Navbar";
 import QuestionCard from "../../../components/QuestionCard";
 import { HomeContainer } from "./styled";
 import { BoxCardsTools } from '../../../components/BoxCardsTools/BoxCardsTools';
 import { OverViewRecursos } from "../components/OverViewRecursos";
-import { MobileRecursos } from "../components/MobileRecursos";
-import { BotAcompanhamentoRecurso } from "../components/BotAcompanhamentoRecurso";
-import { FraseDeEfeito } from "../components/FraseDeEfeito";
 import { PrincipaisRecursos } from "../components/PrincipaisRecursos";
 import LeadCaptureModal from "../components/LeadCaptureModal";
 import { useState } from "react";

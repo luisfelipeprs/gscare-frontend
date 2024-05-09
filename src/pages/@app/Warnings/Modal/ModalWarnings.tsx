@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
-import { EyeOpenIcon } from '@radix-ui/react-icons';
 import {
   AgroupInput,
   ButtonPlus,
@@ -59,7 +58,7 @@ const Select: React.FC<SelectProps> = ({ options, onChange }) => {
 };
 
 const ModalWarnings: React.FC = () => {
-  const [selectedValue, setSelectedValue] = useState<string>('');
+  // const [selectedValue, setSelectedValue] = useState<string>('');
 
   const options: Option[] = [
     { value: 'option1', label: 'Urgente' },

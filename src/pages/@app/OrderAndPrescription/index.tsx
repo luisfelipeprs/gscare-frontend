@@ -1,10 +1,9 @@
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import PatientTable from "../../../components/TableUI";
 import Modal from "./Modal/modal";
 import { Container, Content } from "./styled";
 
 
-export default function OrderAndPrescription () {
+export default function OrderAndPrescription() {
 
 
     return (

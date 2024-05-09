@@ -15,17 +15,16 @@ import { PaginationContainer, NavigationButton, PageIndicator } from "../Employe
 import { useState } from "react";
 import PatientTable from "../../../components/TableUI/index.tsx";
 import UserDialog from "../MedicalRecord/Model/index.tsx";
-import ModalStep from "./ModalSteps/ModalStep.tsx";
 
-function Patient () {
+function Patient() {
 
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage] = useState(1);
 
-  function onPrevClick () {
+  function onPrevClick() {
     console.log('voltar paginacao')
   }
 
-  function onNextClick () {
+  function onNextClick() {
     console.log('avancar paginacao')
   }
 
