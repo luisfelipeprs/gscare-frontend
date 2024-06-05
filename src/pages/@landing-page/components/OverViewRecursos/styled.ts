@@ -77,9 +77,48 @@ export const DivContainerListaComfirma = styled.div`
       font-size: 1rem;
       margin-bottom: 20px;
       color: #8d8bac;
+
+      @media screen and (max-width: 1120px) {
+        max-width: 65%;
+        margin: auto;
+      }
+    }
+
+     @media screen and (max-width: 1120px) {
+      & {
+        text-align: center;
+      }
     }
 `;
 
+export const Functionalities = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* align-items: start; */
+  gap: 0;
+  span {
+    color: #8d8bac;
+    text-align: start;
+
+    svg {  
+      transform: translateY(20%);
+      margin-right: 2px;
+    }
+  }
+
+  @media screen and (max-width: 1120px) {
+    span {
+        text-align: center;
+      }
+    }
+
+  @media screen and (max-width: 320px) {
+    & {
+      gap: 10px;
+    }
+  }
+  
+`
 
 export const DivContainerDivMed = styled.div`
   justify-content: center;
@@ -116,6 +155,10 @@ border: none;
   width: 60%;
   text-align: center;
   border-radius: 8px;
+
+  @media screen and (max-width: 1120px) {
+    margin: auto;
+}
 `;
 
 export const ContainerDivMed = styled.div`

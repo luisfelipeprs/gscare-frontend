@@ -1,20 +1,37 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import Image from "./../../assets/background-home.webp";
 
 export const Container = styled.div`  
-  background-color: #3652cd;
+  /* background-color: var(--secondary-color); */
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  /* padding: 50px 0px; */
   width: 100%;
   text-align: center;
-  /* background-color: #ffff; */
   height: 100%;
   padding-bottom: 50px;
+  position: relative;
+
+  /* Adicionando uma imagem de fundo */
+  background-image: url(${Image}); /* Use a expressão JavaScript para interpolar a URL da imagem */
+  background-size: cover; /* Faz a imagem cobrir todo o contêiner */
+  background-position: center; /* Centraliza a imagem no contêiner */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
   
   @media screen and (max-width: 400px) {
     padding: 150px 0px;
   }
 `
+
+export const Overlay = styled.div`
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6); /* Cor preta com 50% de opacidade */
+z-index: 0; /* Garante que fique sobre a imagem */
+`;
+
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
@@ -171,22 +188,44 @@ export const ButtonSaibaMais = styled.button`
   }
 `
 
+const float = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+export const CircleBackImage = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background-color: #435bf57a;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2);
+`;
+
 export const Rightdiv = styled.div`
   flex: 2;
   margin: auto;
   align-items: end;
   position: relative;
-  max-width: 640px;
-  img{
+  max-width: 400px;
+
+  img {
     width: 100%;
+    animation: ${float} 3s ease-in-out infinite;
   }
   
   @media screen and (max-width: 1280px) {
-    /* background-color: red; */
     margin: auto;
-    /* height: 350px; */
-    /* max-width: 100%; */
-    /* padding: 0 20px; */
   }
 `
 

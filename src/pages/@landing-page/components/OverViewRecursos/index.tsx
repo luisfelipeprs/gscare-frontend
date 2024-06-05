@@ -1,5 +1,5 @@
 import { Alarm, Check, ThumbsUp, TrendUp, Warning } from "phosphor-react"
-import { BtnRecursos, Container, ContainerDivMed, ContainerDivMed2, Content, DivContainerDivMed, DivContainerListaComfirma, DivMed, ListaConfirma, OpcoesMedicamento, SvgDivMed } from "./styled"
+import { BtnRecursos, Container, ContainerDivMed, ContainerDivMed2, Content, DivContainerDivMed, DivContainerListaComfirma, DivMed, Functionalities, ListaConfirma, OpcoesMedicamento, SvgDivMed } from "./styled"
 
 export const OverViewRecursos = () => {
   return (
@@ -12,6 +12,24 @@ export const OverViewRecursos = () => {
               de onde
               estiver. Alguns dos
               recursos:</h6>
+            <Functionalities>
+              <span>
+                <Check size={20} color="#ffa500" weight="bold" />
+                Definir Horários e Dose dos Medicamentos:
+              </span>
+              <span>
+                <Check size={20} color="#ffa500" weight="bold" />
+                Definir Patologias do Cliente:
+              </span>
+              <span>
+                <Check size={20} color="#ffa500" weight="bold" />
+                Relatório Diário e Eventos Inesperados:
+              </span>
+              <span>
+                <Check size={20} color="#ffa500" weight="bold" />
+                Gestão de Documentos do Paciente:
+              </span>
+            </Functionalities>
 
 
             {/* <ListaConfirma>

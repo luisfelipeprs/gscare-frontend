@@ -1,3 +1,29 @@
+:root {
+  --primary-color: #4C9ED9;
+  --secondary-color: #2C3E50;
+  --accent-color: #66CC99;
+  --background-color: #E5E5E5;
+  --text-color: #FFFFFF;
+
+  /* --primary-color: #4C9ED9;
+  --secondary-color: #7ED6A6;
+  --accent-color: #FFA500;
+  --background-color: #FFFFFF;
+  --text-color: #333333; */
+
+  /* color: #4C9ED9;
+  color: #2C3E50;
+  color: #66CC99;
+  color: #E5E5E5;
+  color: #FFFFFF;
+  
+  color: #4C9ED9;
+  color: #7ED6A6;
+  color: #FFA500;
+  color: #FFFFFF;
+  color: #E5E5E5; */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +40,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body, input, textarea, button {
+body,
+input,
+textarea,
+button {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   font-size: 1rem;

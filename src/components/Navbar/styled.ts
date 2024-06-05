@@ -1,24 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  height: 80px;
   width: 100%;
   text-align: center;
   /* background-color: #fff; */
-  padding: 10px 0;
+  /* padding: 10px 0; */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff; /* cor de fundo da navbar */
-  z-index: 1000;
-  /* background-color: #4047d0; */
+  background-color: #ffffffc4; /* cor de fundo da navbar */
+  z-index: 1000; 
+  backdrop-filter: blur(6px);
 `
 
 export const Navigationbar = styled.nav`
+  height: 80px;
   display: flex;
   justify-content: space-between;
   max-width: 1280px;
-  margin: auto;
+  margin: 0 auto;
 
   &:hover{
     /* cursor: pointer; */
@@ -142,6 +144,10 @@ export const Action = styled.div`
 `
 export const ImageLogo = styled.div`
   display: block;
+  margin: auto;
+  img {
+  border-radius: 50%;
+  }
   @media screen and (max-width: 920px) {
       display: none;
   }

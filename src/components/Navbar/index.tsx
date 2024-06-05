@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Action, Contact, Container, ContainerLinks, ContentWrapper, ImageIconLogo, ImageLogo, Infos, Navigationbar, Notification, RouteOptionsContent, RouteSelectorContainer } from './styled';
 import { User } from 'phosphor-react';
-import logo from './../../assets/logo.svg';
+import logo from './../../assets/logo-gs-care.png';
 import iconLogo from './../../assets/iconLogo.png';
 
 interface IProps {
@@ -32,7 +32,7 @@ const Navbar = ({ handleOpenModal }: IProps) => {
         <Navigationbar>
           <Infos>
             <ImageLogo>
-              <img src={logo} alt="logo" width='200px' />
+              <img src={logo} alt="logo" width='50px' />
             </ImageLogo>
             <ImageIconLogo>
               <img src={iconLogo} alt="icone Logo" height='50px' />

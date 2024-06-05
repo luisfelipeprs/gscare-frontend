@@ -1,6 +1,7 @@
 // import Button from '../Button'
-import { ButtonSaibaMais, ButtonTesteGratis, Container, ContainerButtons, Content, Functionalities, Leftdiv, Rightdiv } from './styled'
-import saasPhoto from './../../assets/saasPhotoWithoutBack.png'
+import { ButtonSaibaMais, ButtonTesteGratis, CircleBackImage, Container, ContainerButtons, Content, Functionalities, Leftdiv, Overlay, Rightdiv } from './styled'
+import saasPhoto from './../../assets/mobile-preview-layout.png'
+// import saasPhoto from './../../assets/saasPhotoWithoutBack.png'
 import { Check } from 'phosphor-react'
 import { EyeOpenIcon } from '@radix-ui/react-icons'
 
@@ -11,6 +12,7 @@ interface IProps {
 export default function Homepage ({ handleOpenModal }: IProps) {
   return (
     <Container>
+      <Overlay></Overlay >
       <Content>
         <Leftdiv>
           <h1>O Seu Aliado no Cuidado Domiciliar.</h1>
@@ -52,6 +54,7 @@ export default function Homepage ({ handleOpenModal }: IProps) {
           </ContainerButtons>
         </Leftdiv>
         <Rightdiv>
+          <CircleBackImage> </CircleBackImage>
           <img src={saasPhoto} alt="home-page-image" />
           {/* <video width="100%" controls>
             <source src={videoInfos} type="video/mp4" />

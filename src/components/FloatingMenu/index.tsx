@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Container, Infos, ContentIcon, StyledFloatingMenu, MenuIcon, ImageLogo, MenuButton, LeftContainer, RightContainer, IconAndInfos } from './styled';
 // import { SignOut } from 'phosphor-react';
 
-import logo from './../../assets/logo.svg'
+import logo from './../../assets/logo-gs-care.png'
 import { AvatarIconAndOption } from '../AvatarIconAndOption';
 import { BellIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
 import { useNavigate } from 'react-router-dom';

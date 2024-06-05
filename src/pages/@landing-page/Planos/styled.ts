@@ -6,6 +6,8 @@ export const Container = styled.div`
   /* background-color: #fff; */
   padding-bottom: 100px;
   margin: auto;
+
+
 `;
 
 export const Content = styled.div`
@@ -54,9 +56,14 @@ export const PricingContainer = styled.div`
   display: flex;
   gap: 30px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
+    margin: 20px 0;
     flex-direction: column;
   }
+
+  /* @media screen and (max-width: 768px) {
+    flex-direction: column;
+  } */
 `;
 
 export const PricingCard = styled.div`
@@ -72,6 +79,11 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 transition: all 0.50s;
+
+
+@media screen and (max-width: 1000px) {
+  width: 100%;
+}
 
 &:hover {
   box-shadow: 2px 1px 8px 6px rgba(0, 0, 0, 0.1);

@@ -17,7 +17,7 @@ export const Content = styled.div`
     font-size: 2.8rem;
     color: #FFA500;
     max-width: 1000px;
-    line-height: 0.7;
+    line-height: 1;
   }
   p{
     font-size: 1.2rem;
