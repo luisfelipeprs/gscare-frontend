@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { House, Calendar, IdentificationCard, BellRinging, UserGear, CalendarCheck, ChartPieSlice, ChatCenteredText, WhatsappLogo, UsersThree, ClipboardText, Gauge, User } from 'phosphor-react';
+import { useState } from 'react';
+import { House, Calendar, IdentificationCard, BellRinging, CalendarCheck, ChartPieSlice, UsersThree, User } from 'phosphor-react';
 import { Icons, LinkText, Logo, Menu, NavLinkStyled, Overlay, SidebarContainer } from './styled';
 
 const HomeIcon = <House size={24} />;
 const CalendarIcon = <Calendar size={24} />;
 const EmployeeIcon = <IdentificationCard size={24} />;
 const PatientsIcon = <UsersThree size={24} />;
-const FeedbackIcon = <ChatCenteredText size={24} />;
+// const FeedbackIcon = <ChatCenteredText size={24} />;
 const BellRingingIcon = <BellRinging size={24} />
-const UserGearIcon = <UserGear size={24} />
+// const UserGearIcon = <UserGear size={24} />
 const CalendarCheckIcon = <CalendarCheck size={24} />
 const ChartPieSliceIcon = <ChartPieSlice size={24} />
-const WhatsappLogoIcon = <WhatsappLogo size={24} />
-const GaugeIcon = <Gauge size={24} />
+// const WhatsappLogoIcon = <WhatsappLogo size={24} />
+// const GaugeIcon = <Gauge size={24} />
 
 
-const CripboardTextIcon = <ClipboardText size={24} />
+// const CripboardTextIcon = <ClipboardText size={24} />
 const UserIcon = <User size={24} />
 
 

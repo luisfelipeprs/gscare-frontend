@@ -1,20 +1,20 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Avatar, Flex } from "@radix-ui/themes";
 import { DropdownMenuContent, DropdownMenuItem, IconButton, RightSlot } from "./styled";
-import { SignOut, Gear, User } from "phosphor-react";
-import { Link, useNavigate } from "react-router-dom";
+import { SignOut, User } from "phosphor-react";
+import { useNavigate } from "react-router-dom";
 
 // import './styles.css';
 
-export function AvatarIconAndOption () {
+export function AvatarIconAndOption() {
 
   const navigate = useNavigate();
 
-  function handleSubmitData () {
+  function handleSubmitData() {
     navigate('/')
   }
 
-  function goToProfile () {
+  function goToProfile() {
     navigate('/admin/profile')
   }
 

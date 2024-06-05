@@ -4,7 +4,7 @@ import { Container, Infos, ContentIcon, StyledFloatingMenu, MenuIcon, ImageLogo,
 
 import logo from './../../assets/logo-gs-care.png'
 import { AvatarIconAndOption } from '../AvatarIconAndOption';
-import { BellIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
+import { BellIcon } from '@radix-ui/react-icons';
 import { useNavigate } from 'react-router-dom';
 
 

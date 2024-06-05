@@ -29,7 +29,7 @@ export const ContainerMensagemPrincipal = styled.div`
 `;
 
 export const ContainerMensagem = styled.div`
-  width: 80%;
+  /* width: 80%; */
   display: flex;
   justify-content: right;
   flex-direction: column;
@@ -38,7 +38,10 @@ export const ContainerMensagem = styled.div`
 `;
 
 export const ContainerButton = styled.div`
+    width: 100%;
+    margin: 0 auto;
   button {
+    width: 100%;
     font-weight: bold;
     color: #fff;
     border: none;
@@ -57,6 +60,7 @@ export const ContainerButton = styled.div`
 export const ContainerMensagemPrincipalLeft = styled.div`
   flex: 1;
   flex-direction: column;
+  display: flex;
 
   @media screen and (max-width: 1280px) {
     order: 1;
@@ -78,7 +82,7 @@ export const ContainerMensagemPrincipalRight = styled.div`
     display: flex;
     padding: 8px 15px;
     border: none;
-    width: 50%
+    /* width: 50% */
   }
 
   h4 {
@@ -119,6 +123,10 @@ export const ContainerTitulos = styled.div`
 
 
 export const ContainerInformacoesFooter = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -174,7 +182,7 @@ export const DetailsContainer = styled.details`
 `;
 
 export const ContainerFormRight = styled.div`
-  max-height: 550px;
+  /* max-height: 550px; */ 
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -183,7 +191,8 @@ export const ContainerFormRight = styled.div`
   text-align: center;
   margin: auto 0;
   box-shadow: 1px 1px 10px 5px #ddd;
-  padding: 20px;
+  justify-content: space-evenly;
+  padding: 20px 25px;
   border-radius: 8px;
 
   input, textarea {
@@ -191,7 +200,7 @@ export const ContainerFormRight = styled.div`
     background-color: #F2F3fB;
     margin: 0 auto;
     border: none;
-    width: 80%;
+    /* width: 80%; */
     padding: 15px;
     border-radius: 8px;
     color: #8285B0;

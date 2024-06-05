@@ -1,12 +1,12 @@
-import { Checkbox, RadioGroup, TextArea, TextField } from "@radix-ui/themes";
-import { InputField, InputLabel, Container, AdditionalInfoContainer, Contact, Adress } from "./styled";
+import { RadioGroup, TextArea, TextField } from "@radix-ui/themes";
+import { InputField, InputLabel, Container } from "./styled";
 import UserProfile from "./UserProfile";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
 
-function PatientData () {
+function PatientData() {
 
     const [startDate, setStartDate] = useState(new Date());
 

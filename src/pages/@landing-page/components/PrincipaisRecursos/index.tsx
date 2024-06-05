@@ -1,5 +1,5 @@
 import HelpComponent from "./HelpComponent.tsx"
-import { Container, ContainerColumn, ContainerRow, ContainersRecursos, Content, PrincipaisRecursosContainer } from "./styled.ts"
+import { Container, Content } from "./styled.ts"
 
 export const PrincipaisRecursos = () => {
   return (

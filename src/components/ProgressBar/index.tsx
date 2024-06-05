@@ -1,5 +1,4 @@
 import { Progress, ProgressBarContainer, ProgressBarInner, ProgressText } from "./styled";
-import styled from "styled-components";
 
 interface IProps {
   percentage: number;

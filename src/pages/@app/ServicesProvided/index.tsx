@@ -1,8 +1,7 @@
-import { Container, Content, FilterButton, FilterSelect, Header, LeftHeader, NavigationButton, PageIndicator, PaginationContainer, RightHeader, SearchInput, Title } from "./styled";
+import { Container, Content, FilterButton, FilterSelect, Header, LeftHeader, NavigationButton, PageIndicator, PaginationContainer, RightHeader, SearchInput } from "./styled";
 // import { SelectContainer, StyledSelect } from "../Warnings/styled";
 // import { useState } from "react";
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import ModalCalendar from "./ModalCalendar/ModalServices";
 import { CaretLeft, CaretRight, MagnifyingGlass } from "phosphor-react";
 import { useState } from "react";
 import PatientTable from "./TableUI";
@@ -45,7 +44,7 @@ import ModalServices from "./ModalCalendar/ModalServices";
 // };
 
 
-function ServicesProvided () {
+function ServicesProvided() {
   // const options: Option[] = [
   //   { value: 'option1', label: 'Atendido' },
   //   { value: 'option2', label: 'Não atendido' },
@@ -148,12 +147,12 @@ function ServicesProvided () {
 
 
 
-  function onPrevClick () {
+  function onPrevClick() {
     console.log('voltar paginacao')
     setCurrentPage(currentPage - 1);
   }
 
-  function onNextClick () {
+  function onNextClick() {
     console.log('avancar paginacao')
     setCurrentPage(currentPage + 1);
   }

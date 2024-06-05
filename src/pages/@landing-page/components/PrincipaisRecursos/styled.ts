@@ -12,13 +12,13 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 1100px;
+  max-width: 1280px;
   margin: auto;
   gap: 50px;
 
   @media screen and (max-width: 1280px) {
     margin: auto;
-    width: 80%;
+    width: 90%;
   }
 `;
 

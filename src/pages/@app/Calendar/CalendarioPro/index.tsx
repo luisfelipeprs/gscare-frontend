@@ -1,43 +1,30 @@
 import React, { useState } from 'react';
 import { DotsThreeVertical } from 'phosphor-react';
 import {
-  Appointment,
-  Availability,
   ButtonInfos,
-  CalendarContainer,
-  CloseButton,
-  Container,
-  DayDivInfos,
-  DayDivInfosFirstSpan,
-  DayDivInfosSecondSpan,
-  DayStyled,
+  CalendarContainer, Container,
+  DayDivInfos, DayStyled,
   DayWeekStyled,
   DivInfos,
-  HeaderInfos,
-  Hour,
-  HourSlot,
-  HourSlotContainer,
-  Main,
+  HeaderInfos, Main,
   Modal,
-  ModalContent,
-  ModalContentDays,
-  ModalTable,
+  ModalContent, ModalTable,
   ModalTd,
   ModalTh,
   Month,
-  MonthsContainer,
+  MonthsContainer
 } from './styled';
 
 const CalendarioPro: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentYear] = useState(new Date().getFullYear());
   const [currentMonth, setCurrentMonth] = useState<number>(0);
-  const [selectedDay, setSelectedDay] = useState<number | null>(null);
+  const [_, setSelectedDay] = useState<number | null>(null);
   const [months] = useState([
     "Jan", "Feb", "Mar", "Abr", "Mai", "Jun",
     "Jul", "Agos", "Set", "Out", "Nov", "Dez"
   ]);
-  const [appointments, setAppointments] = useState<{ [key: string]: string | null }>({});
+  // const [appointments] = useState<{ [key: string]: string | null }>({});
 
   const openModal = (day: number) => {
     setSelectedDay(day);
@@ -53,40 +40,40 @@ const CalendarioPro: React.FC = () => {
     e.stopPropagation();
   };
 
-  const renderHourSlot = (hour: number, minute: number) => {
-    const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
-    const info = appointments[time];
-    return (
-      <HourSlot key={time}>
-        <Hour>{time}</Hour>
-        {info === null ? (
-          <Availability>Disponível</Availability>
-        ) : (
-          <Appointment>
-            <p>nome do paciente1</p>
-            <p>profissional</p>
-            <p>local da consulta</p>
-            <p>inicio</p>
-            <p>fim</p>
-            <p>motivo da consulta</p>
-            <p>contato</p>
-            <p>patologia</p>
-            <p>obs: paciente está com inchaco nas pernas</p>
-          </Appointment>
-        )}
-      </HourSlot>
-    );
-  };
+  // const renderHourSlot = (hour: number, minute: number) => {
+  //   const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+  //   const info = appointments[time];
+  //   return (
+  //     <HourSlot key={time}>
+  //       <Hour>{time}</Hour>
+  //       {info === null ? (
+  //         <Availability>Disponível</Availability>
+  //       ) : (
+  //         <Appointment>
+  //           <p>nome do paciente1</p>
+  //           <p>profissional</p>
+  //           <p>local da consulta</p>
+  //           <p>inicio</p>
+  //           <p>fim</p>
+  //           <p>motivo da consulta</p>
+  //           <p>contato</p>
+  //           <p>patologia</p>
+  //           <p>obs: paciente está com inchaco nas pernas</p>
+  //         </Appointment>
+  //       )}
+  //     </HourSlot>
+  //   );
+  // };
 
-  const renderHourSlots = () => {
-    const hourSlots: JSX.Element[] = [];
-    for (let hour = 0; hour < 24; hour++) {
-      for (let minute = 0; minute < 60; minute += 30) {
-        hourSlots.push(renderHourSlot(hour, minute));
-      }
-    }
-    return hourSlots;
-  };
+  // const renderHourSlots = () => {
+  //   const hourSlots: JSX.Element[] = [];
+  //   for (let hour = 0; hour < 24; hour++) {
+  //     for (let minute = 0; minute < 60; minute += 30) {
+  //       hourSlots.push(renderHourSlot(hour, minute));
+  //     }
+  //   }
+  //   return hourSlots;
+  // };
 
   const weekDays = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 
@@ -156,7 +143,7 @@ const CalendarioPro: React.FC = () => {
                     <ModalTd>{employee}</ModalTd>
                     {/* Mapeia e renderiza as células vazias para os horários */}
                     {timeSlots.map((time: string, index: string) => (
-                      <ModalTd key={index}></ModalTd>
+                      <ModalTd id={time} key={index}></ModalTd>
                     ))}
                   </tr>
                 ))}

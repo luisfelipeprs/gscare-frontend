@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Cross2Icon } from '@radix-ui/react-icons';
-import { EyeOpenIcon } from '@radix-ui/react-icons';
 import {
   ActionButtonsStepThree,
   ActionButtonsStepTwo,
@@ -15,25 +14,8 @@ import {
   ContainerStepTwo,
   DialogContent,
   DialogOverlay,
-  DialogTitle,
-  EditModal,
-  Fieldset,
-  IconButton,
-  Input,
-  InputGroupStepOne,
-  InputRowStepOne,
-  Label,
-  LabelThree,
-  SideBySide,
-  StepThreeContainer,
-  StepTwoCategoryItem,
-  StepTwoCategoryList,
-  StepTwoFieldset,
-  StepTwoLabel,
-  SwitchRoot,
-  SwitchThumb,
-  UserItem,
-  UserList
+  DialogTitle, IconButton, InputGroupStepOne,
+  InputRowStepOne
 } from './styledcss';
 import { CaretLeft, CaretRight, Plus } from 'phosphor-react';
 
@@ -167,6 +149,8 @@ interface StepTwoProps {
 }
 
 const StepTwo: React.FC<StepTwoProps> = ({ onPrev, onNext, categories }) => {
+
+  console.log(categories)
   return (
     <>
       {/* Conteúdo do segundo passo */}
@@ -311,151 +295,155 @@ interface StepThreeProps {
 
 // ...
 
-const StepThree: React.FC<StepThreeProps> = ({ onPrev, onSave, users }) => (
-  <>
-    {/* Conteúdo do terceiro passo */}
-    <ContainerStepThree>
-      <h1>CRUD de Medicamentos</h1>
-      <AddFormStepThree>
-        <input type="text" id="medication-name" placeholder="Nome do Medicamento" />
-        <input type="time" id="medication-time" />
-        <input type="number" id="medication-dose" placeholder="Dose" />
-        <select id="dose-type">
-          <option value="ml">ml</option>
-          <option value="gota">Gota</option>
-        </select>
-        <button id="AddMedicationStepThree">Adicionar Medicamento</button>
-      </AddFormStepThree>
-      <h2>Medicamentos Registrados</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Nome do Medicamento</th>
-            <th>Hora do Medicamento</th>
-            <th>Dose</th>
-            <th>Tipo de Dose</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Paracetamol</td>
-            <td>08:00</td>
-            <td>500</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-          <tr>
-            <td>Ibuprofeno</td>
-            <td>12:00</td>
-            <td>200</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-          <tr>
-            <td>Dipirona</td>
-            <td>16:00</td>
-            <td>1000</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-          <tr>
-            <td>Aspirina</td>
-            <td>20:00</td>
-            <td>300</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-          <tr>
-            <td>Ranitidina</td>
-            <td>10:00</td>
-            <td>150</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-          <tr>
-            <td>Amoxicilina</td>
-            <td>14:00</td>
-            <td>250</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-          <tr>
-            <td>Paracetamol</td>
-            <td>08:00</td>
-            <td>500</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-          <tr>
-            <td>Ibuprofeno</td>
-            <td>12:00</td>
-            <td>200</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-          <tr>
-            <td>Dipirona</td>
-            <td>16:00</td>
-            <td>1000</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-          <tr>
-            <td>Aspirina</td>
-            <td>20:00</td>
-            <td>300</td>
-            <td>ml</td>
-            <ActionButtonsStepThree>
-              <button>Editar</button>
-              <button>Excluir</button>
-            </ActionButtonsStepThree>
-          </tr>
-        </tbody>
-      </table>
-    </ContainerStepThree>
+const StepThree: React.FC<StepThreeProps> = ({ onPrev, onSave, users }) => {
+  console.log(users)
 
-    {/* Botão para navegar de volta */}
-    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-      <Button typebutton='goback' onClick={onPrev}>
-        <CaretLeft size={22} />
-        Anterior
-      </Button>
-      <BottonSave onClick={onSave}>
-        Próximo
-        <CaretRight size={22} />
-      </BottonSave>
-    </div>
+  return (
+    <>
+      {/* Conteúdo do terceiro passo */}
+      <ContainerStepThree>
+        <h1>CRUD de Medicamentos</h1>
+        <AddFormStepThree>
+          <input type="text" id="medication-name" placeholder="Nome do Medicamento" />
+          <input type="time" id="medication-time" />
+          <input type="number" id="medication-dose" placeholder="Dose" />
+          <select id="dose-type">
+            <option value="ml">ml</option>
+            <option value="gota">Gota</option>
+          </select>
+          <button id="AddMedicationStepThree">Adicionar Medicamento</button>
+        </AddFormStepThree>
+        <h2>Medicamentos Registrados</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome do Medicamento</th>
+              <th>Hora do Medicamento</th>
+              <th>Dose</th>
+              <th>Tipo de Dose</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Paracetamol</td>
+              <td>08:00</td>
+              <td>500</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+            <tr>
+              <td>Ibuprofeno</td>
+              <td>12:00</td>
+              <td>200</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+            <tr>
+              <td>Dipirona</td>
+              <td>16:00</td>
+              <td>1000</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+            <tr>
+              <td>Aspirina</td>
+              <td>20:00</td>
+              <td>300</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+            <tr>
+              <td>Ranitidina</td>
+              <td>10:00</td>
+              <td>150</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+            <tr>
+              <td>Amoxicilina</td>
+              <td>14:00</td>
+              <td>250</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+            <tr>
+              <td>Paracetamol</td>
+              <td>08:00</td>
+              <td>500</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+            <tr>
+              <td>Ibuprofeno</td>
+              <td>12:00</td>
+              <td>200</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+            <tr>
+              <td>Dipirona</td>
+              <td>16:00</td>
+              <td>1000</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+            <tr>
+              <td>Aspirina</td>
+              <td>20:00</td>
+              <td>300</td>
+              <td>ml</td>
+              <ActionButtonsStepThree>
+                <button>Editar</button>
+                <button>Excluir</button>
+              </ActionButtonsStepThree>
+            </tr>
+          </tbody>
+        </table>
+      </ContainerStepThree>
 
-  </>
-);
+      {/* Botão para navegar de volta */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
+        <Button typebutton='goback' onClick={onPrev}>
+          <CaretLeft size={22} />
+          Anterior
+        </Button>
+        <BottonSave onClick={onSave}>
+          Próximo
+          <CaretRight size={22} />
+        </BottonSave>
+      </div>
+
+    </>
+  );
+}
 
 // ...
 
