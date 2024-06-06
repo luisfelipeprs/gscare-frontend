@@ -5,7 +5,6 @@ export const ConteinarGscare = styled.div`
   margin: 0;
   padding: 0;
   justify-content: center;
-  /* all: unset; */
 `;
 
 export const Gs = styled.span`

@@ -2,7 +2,6 @@ import { AddPicture, Container, Content, InfoProfile, ProfileInfoContainer, Card
 import { RouterIndicator } from '../../../components/RouterIndicator';
 import { DotsThreeVertical, PencilSimple } from 'phosphor-react';
 import { Avatar, Flex } from '@radix-ui/themes';
-import { Care, Gs } from '../../../components/TextGscare/styled';
 import TextGscare from '../../../components/TextGscare';
 
 function ProfileEdit () {
