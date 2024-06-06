@@ -1,8 +1,8 @@
 import { ButtonContato, Container, ContainerAction, ContainerImage, Content, DivSujestoesText } from './styled';
-import Image1 from "./../../assets/financial-668x772 (1).webp";
+import Image1 from "./../../assets/ctaImageLandingPage.png";
 
 
-function QuestionCard() {
+function QuestionCard () {
   return (
     <Container>
       <Content>

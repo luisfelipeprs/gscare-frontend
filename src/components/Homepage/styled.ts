@@ -2,6 +2,8 @@ import styled, { keyframes } from "styled-components";
 import Image from "./../../assets/background-home.webp";
 
 export const Container = styled.div`  
+  display: flex;
+  min-height: calc(100vh - 91px);
   /* background-color: var(--secondary-color); */
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -206,7 +208,7 @@ export const CircleBackImage = styled.div`
     left: 50%;
     width: 80%;
     height: 80%;
-    background-color: #435bf57a;
+    background-color: #071a25a8;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2);

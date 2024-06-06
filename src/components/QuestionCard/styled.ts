@@ -43,7 +43,7 @@ export const ContainerAction = styled.div`
     
     h1 {
       width: 100%;
-      color: #032D60;
+      color: #071a25a8;
       font-size: 2.5rem;
     }
   }
@@ -59,7 +59,7 @@ export const DivSujestoesText = styled.div`
 
   h2 {
       width: 100%;
-      color: #032D60;
+      color: #071a25a8;
       font-size: 2rem;
     }  
 
@@ -80,7 +80,7 @@ export const ButtonContato = styled.div`
   
       border: none;
       padding: 15px;
-      background-color: #564BC6;
+      background-color: #FFA500;
       font-weight: 800;
       color: #fff;
       /* width: 60%; */
@@ -89,7 +89,7 @@ export const ButtonContato = styled.div`
 
       &:hover {
         cursor: pointer;
-        background-color: #564BC6dd;
+        background-color: #FFA500;
       }
     
 

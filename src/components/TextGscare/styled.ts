@@ -4,7 +4,8 @@ export const ConteinarGscare = styled.div`
   display: flex;
   margin: 0;
   padding: 0;
-  all: unset;
+  justify-content: center;
+  /* all: unset; */
 `;
 
 export const Gs = styled.span`
@@ -16,5 +17,5 @@ export const Gs = styled.span`
 export const Care = styled.span`
   font-weight: bold;
   font-family: revert;
-  color: #1C13E9;
+  color: #071a25a8;
 `;

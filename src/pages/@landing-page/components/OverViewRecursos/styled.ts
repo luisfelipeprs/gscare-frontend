@@ -17,7 +17,7 @@ export const Content = styled.div`
 
   h1 {
     text-align: center;
-    color: rgb(8, 8, 116);
+    color: #000;
     font-size: 45px;
     margin-top: 30px;
     font-family: inherit;
@@ -26,7 +26,7 @@ export const Content = styled.div`
   h2 {
 
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: rgb(8, 8, 116);
+    color: #000;
     font-size: 33px !important;
     margin-top: 30px;
 
@@ -66,7 +66,7 @@ export const DivContainerListaComfirma = styled.div`
     gap: 20px;
 
     h2 {
-      color: #000;
+      color: #071a25a8;
     }
 
     h6 {
@@ -76,7 +76,7 @@ export const DivContainerListaComfirma = styled.div`
       line-height: 1.8;
       font-size: 1rem;
       margin-bottom: 20px;
-      color: #8d8bac;
+      color: #000;
 
       @media screen and (max-width: 1120px) {
         max-width: 65%;
@@ -97,7 +97,7 @@ export const Functionalities = styled.div`
   /* align-items: start; */
   gap: 0;
   span {
-    color: #8d8bac;
+    color: #000;
     text-align: start;
 
     svg {  
@@ -149,7 +149,7 @@ export const ListaConfirma = styled.ul`
 export const BtnRecursos = styled.button`
 border: none;
   padding: 15px;
-  background-color: #564BC6;
+  background-color: #FFA500;
   font-weight: 800;
   color: #fff;
   width: 60%;
@@ -194,7 +194,7 @@ export const DivMed = styled.div`
   }
 
   h4 {
-    color: rgb(8, 8, 116);
+    color: #000;
     font-size: 1.1rem;
     font-family: sans-serif;
   }
@@ -219,10 +219,12 @@ export const SvgDivMed = styled.div`
   display: flex;
 
   svg {
-    background: #746AE1;
+    background: #3fb8ff9e;
+    color: #fff;
     padding: 10px;
     border-radius: 50%;
     height: 45px;
     width: 45px;
+    box-shadow: 0px 0px 10px #a6a6a6;
   }
 `;

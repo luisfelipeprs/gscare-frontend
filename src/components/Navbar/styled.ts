@@ -40,12 +40,12 @@ export const Contact = styled.div`
 
   a {
     font-size: 0.9rem;
-    color: #2f368c;
+    color: #28343B;
   }
 
   p {
     font-size: 1rem;
-    color: #2f368c;
+    color: #28343B;
   }
 
   @media screen and (max-width: 1000px) {
@@ -121,23 +121,24 @@ export const Action = styled.div`
     border: none;
     border-radius: 10px;
     height: 50px;
-    color: #0000a0;
+    color: #28343B;
     background-color: transparent;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding: 5px 15px;
     text-decoration: none;
     margin: auto;
+    background-color: #4a8dae30;
 
     svg {
-      color:"#0000a0";
+      color:"#28343B";
       font-weight: 700;
     }
     
     &:hover {
       cursor: pointer;
       background-color: #6fd0ff30;
-      color: #130c69;
+      color: #2e7ba7;
     }
 
     @media screen and (max-width: 1000px) {
@@ -157,10 +158,22 @@ export const ImageLogo = styled.div`
   }
 `
 
-export const ImageIconLogo = styled.div`
+export const NameSaas = styled.div`
   display: none;
-  @media screen and (max-width: 1200px) {
-      display: block;
+  margin: auto;
+
+  h3:nth-child(1) {
+    color: #FFA500;
+    font-size: 2rem;
+  }
+
+  h3:nth-child(2) {
+    color: #3FB8FF;
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 920px) {
+      display: flex;
   }
 `
 
@@ -168,7 +181,7 @@ export const ContainerLinks = styled.ul`
 
   .buttonNavigation {
     text-decoration: none;
-    color: #130C69;
+    color: #28343B;
     font-weight: bold;
     font-size: 1rem;
     padding: 0px 10px;
@@ -176,7 +189,7 @@ export const ContainerLinks = styled.ul`
     transition: color .3s;
 
     &:hover {
-      color: #130C6950;
+      color: #28343B50;
     }
   }
 `
@@ -192,7 +205,7 @@ export const Infos = styled.div`
     list-style: none;
 
     li{
-      color: #130C69;
+      color: #28343B;
       font-weight: bold;
       font-size: 1.1rem;
       padding: 0px 10px;
@@ -212,7 +225,7 @@ export const Infos = styled.div`
 `
 
 export const Notification = styled.div`
-  background-color: #3652cd;
+  background-color: #071a25a8;
   text-align: center;
   font-size: 0.8rem;
   h2 {
@@ -251,7 +264,7 @@ export const RouteOptionsContent = styled.div`
 
   h1 {
     font-family: sans-serif;
-    color: #454545;
+    color: #2d1d00;
   }
 
   button {
@@ -268,15 +281,15 @@ export const RouteOptionsContent = styled.div`
     background-color: #fff;
     border-radius: 8px;
     text-decoration: none;
-    color: #ddd;
+    color: #eee;
     width: 100%;
     font-weight: bold;
     font-family: sans-serif;
-    background: #1E22A3;
+    background: #3FB8FF;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #262be0; /* cor de fundo ao passar o mouse */
+      background-color: #009bf9; /* cor de fundo ao passar o mouse */
     }
   }
 `;

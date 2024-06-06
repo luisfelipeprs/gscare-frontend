@@ -13,7 +13,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
   max-width: 1280px;
-  width: 80%;
+  width: 95%;
   margin: auto;
   gap: 50px;
 `;
@@ -29,6 +29,10 @@ export const ContainerMensagemPrincipal = styled.div`
 `;
 
 export const ContainerMensagem = styled.div`
+
+  h6 {
+    color: #000;
+  }
   /* width: 80%; */
   display: flex;
   justify-content: right;
@@ -45,14 +49,14 @@ export const ContainerButton = styled.div`
     font-weight: bold;
     color: #fff;
     border: none;
-    background-color: #3652CD;
+    background-color: #FFA500;
     padding: 12px 24px;
     transition: background-color 0.3s;
     border-radius: 8px;
 
     &:hover {
       cursor: pointer;
-      background-color: #1E22A3;
+      background-color: #FFA500;
     }
   }
 `;
@@ -89,7 +93,7 @@ export const ContainerMensagemPrincipalRight = styled.div`
     font-size: 1.5rem;
     font-family: sans-serif;
     font-weight: bold;
-    color: #171f6a;
+    color: #071a25a8;
     text-align: center;
     width: 100%;
     padding: 20px 0;
@@ -98,7 +102,7 @@ export const ContainerMensagemPrincipalRight = styled.div`
   h6 {
     font-size: 16px;
     font-weight: 400;
-    color: #445781;
+    color: #000;
   }
 
 `;
@@ -107,7 +111,7 @@ export const ContainerTitulos = styled.div`
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   h2 {
-    color: #1e266d;
+    color: #071a25a8;
     font-size: 32px;
     font-weight: 700;
     text-align: center;
@@ -116,7 +120,7 @@ export const ContainerTitulos = styled.div`
   h6 {
     font-size: 17px;
     font-weight: 400;
-    color: midnightblue;
+    color: #000;
     margin-bottom: 80px;
   }
 `;
@@ -156,7 +160,7 @@ export const DetailsContainer = styled.details`
   }
 
   p {
-    color: #1E266D;
+    color: #071a25a8;
     font-family: monospace;
   }
 

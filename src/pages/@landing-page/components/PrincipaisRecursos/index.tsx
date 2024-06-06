@@ -1,84 +1,74 @@
-import HelpComponent from "./HelpComponent.tsx"
-import { Container, Content } from "./styled.ts"
+import { useEffect, useRef, useState } from 'react';
+import {
+  CardContentServices, CardDivider, Container, ContainerButtonCard, Content, FeedbackCardFeedbackCard, FeedbackCardQuote,
+  HeaderContainer, HelpOptionsContainer, HelpSection, LimitedParagraph, NextButton,
+  Overlay, PrevButton, SectionContainer, SectionDivider
+} from "./styled";
 
 export const PrincipaisRecursos = () => {
-  return (
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollAmount, setScrollAmount] = useState<number>(0);
+  const [scrollStep, setScrollStep] = useState<number>(0);
 
+  useEffect(() => {
+    const updateScrollStep = () => {
+      const containerWidth = scrollContainerRef.current?.offsetWidth || 0;
+      setScrollStep(window.innerWidth <= 1000 ? containerWidth : containerWidth + 20);
+    };
+
+    updateScrollStep();
+
+    window.addEventListener('resize', updateScrollStep);
+
+    return () => window.removeEventListener('resize', updateScrollStep);
+  }, []);
+
+  const handleScroll = (amount: number) => {
+    const newScrollAmount = Math.min(
+      Math.max(scrollAmount + amount, 0),
+      (scrollContainerRef.current?.scrollWidth || 0) - (scrollContainerRef.current?.clientWidth || 0)
+    );
+    setScrollAmount(newScrollAmount);
+    scrollContainerRef.current?.scrollTo({
+      top: 0,
+      left: newScrollAmount,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
     <Container>
       <Content>
-        {/* <PrincipaisRecursosContainer>
-          <div>
-            <h2>Principais recursos</h2>
-            <h6>Hoje a Stenci conta com inúmeros recursos para auxiliar sua clínica nas tarefas do dia a dia.
-              Listamos
-              alguns deles.</h6>
-          </div>
-          <ContainerColumn>
-            <ContainerRow>
-              <ContainersRecursos>
-                <h5>Agenda</h5>
-                <p>
-                  Confirmação por WhatsApp
-                  Lista de espera
-                  Agendamento online para os paciente
-                  Central de agendamentos (Call center)
-                </p>
-              </ContainersRecursos>
-              <ContainersRecursos>
-                <h5>Prontuário</h5>
-                <p>
-                  Confirmação por WhatsApp
-                  Lista de espera
-                  Agendamento online para os paciente
-                  Central de agendamentos (Call center)
-                </p>
-              </ContainersRecursos>
-              <ContainersRecursos>
-                <h5>Laudo</h5>
-                <p>
-                  Confirmação por WhatsApp
-                  Lista de espera
-                  Agendamento online para os paciente
-                  Central de agendamentos (Call center)
-                </p>
-              </ContainersRecursos>
-            </ContainerRow>
-            <ContainerRow>
-              <ContainersRecursos>
-                <h5>Faturamento</h5>
-                <p>
-                  Confirmação por WhatsApp
-                  Lista de espera
-                  Agendamento online para os paciente
-                  Central de agendamentos (Call center)
-                </p>
-              </ContainersRecursos>
-              <ContainersRecursos>
-                <h5>
-                  Financeiro
-                </h5>
-                <p>
-                  Confirmação por WhatsApp
-                  Lista de espera
-                  Agendamento online para os paciente
-                  Central de agendamentos (Call center)
-                </p>
-              </ContainersRecursos>
-              <ContainersRecursos>
-                <h5>Outros</h5>
-                <p>
-                  Confirmação por WhatsApp
-                  Lista de espera
-                  Agendamento online para os paciente
-                  Central de agendamentos (Call center)
-                </p>
-              </ContainersRecursos>
-            </ContainerRow>
-
-          </ContainerColumn>
-        </PrincipaisRecursosContainer> */}
-        <HelpComponent />
+        <HelpSection>
+          <HeaderContainer>
+            <h2>Nossos serviços:</h2>
+            <SectionDivider />
+          </HeaderContainer>
+          <SectionContainer>
+            <PrevButton onClick={() => handleScroll(-scrollStep)}>&#10094;</PrevButton>
+            <NextButton onClick={() => handleScroll(scrollStep)}>&#10095;</NextButton>
+            <HelpOptionsContainer ref={scrollContainerRef}>
+              {[...Array(4)].map((_, index) => (
+                <FeedbackCardFeedbackCard key={index}>
+                  <Overlay></Overlay>
+                  <CardContentServices>
+                    <FeedbackCardQuote>
+                      <h3>Servico De:</h3>
+                    </FeedbackCardQuote>
+                    <CardDivider />
+                    <LimitedParagraph>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis sit, at culpa corporis veniam eos officiis iusto reprehenderit consequuntur quisquam quis vero in odit repellat voluptate. Fugiat reiciendis molestiae aliquid.
+                    </LimitedParagraph>
+                    <ContainerButtonCard>
+                      <button>Saber mais sobre</button>
+                    </ContainerButtonCard>
+                  </CardContentServices>
+                </FeedbackCardFeedbackCard>
+              ))}
+            </HelpOptionsContainer>
+          </SectionContainer>
+        </HelpSection>
       </Content>
     </Container>
-  )
-}
+  );
+};

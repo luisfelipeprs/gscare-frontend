@@ -29,11 +29,11 @@ export const Container = styled.section`
             font-size: 1rem;
             text-decoration: none;
             font-weight: bold;
-            color: #032d60;
+            color: #071a25a8;
         }
 
         a:last-child {
-            color: #032d60;
+            color: #071a25a8;
             font-size: 1rem;
             font-weight: bold;
         }

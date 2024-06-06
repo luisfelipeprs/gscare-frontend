@@ -266,7 +266,7 @@ export const WelcomeContaint = styled.div`
   }
 `;
 
-export const WelcomeTitle = styled.h3`
+export const WelcomeTitle = styled.div`
   color: #0061F2;
   font-size: 1.7rem;
   font-weight: 500;

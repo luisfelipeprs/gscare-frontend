@@ -33,7 +33,7 @@ export const NavContainerRecursos = styled.div`
       text-decoration: none;
       padding: 20px;
       font-size: 1.1rem;
-      color: #564BC6;
+      color: #071a25a8;
       font-weight: bold;
       font-family: sans-serif;
     }
@@ -109,13 +109,13 @@ export const TextParagrafoContentDemostrationSistem = styled.div`
     font-size: 35px;
     font-weight: 700;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #1e266d;
+    color: #071a25a8;
 
   }
 
   p {
     font-size: 18px;
-    color: #445781;
+    color: #071a25a8;
     font-weight: 400;
   }
 
@@ -168,7 +168,7 @@ export const TextFaleConosco = styled.div`
     margin: auto;
     border: none;
     padding: 15px;
-    background-color: #564BC6;
+    background-color: #071a25a8;
     font-weight: 800;
     color: #fff;
     width: 60%;

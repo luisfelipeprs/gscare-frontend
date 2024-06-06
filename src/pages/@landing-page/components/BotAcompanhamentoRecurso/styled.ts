@@ -47,7 +47,7 @@ export const MaisResultados = styled.div`
   h1 {
     font-size: 28px;
     font-weight: 700;
-    color: #1e266d;
+    color: #071a25a8;
     margin-bottom: 30px;
   }
 
@@ -57,7 +57,7 @@ export const MaisResultados = styled.div`
     margin: 0;
     font-size: 19px;
     font-weight: 400;
-    color: #445781;
+    color: #071a25a8;
     letter-spacing: 0.01em;
   }
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import HomemImg from './../../assets/homem.png';
-import MulherImg from './../../assets/mulher.png';
+import HomemImg from './../../assets/icon-masc.png';
+import MulherImg from './../../assets/icon-fem.png';
 import { Eye, Funnel } from 'phosphor-react';
 
 interface IPatient {

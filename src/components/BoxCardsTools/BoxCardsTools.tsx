@@ -3,7 +3,7 @@ import Title from '../Title';
 import { CardsContainer, Container, Content } from './styled';
 import { ForkKnife, Heartbeat, Pill } from 'phosphor-react';
 
-export function BoxCardsTools() {
+export function BoxCardsTools () {
     return (
         <Container>
             <Content>
@@ -17,25 +17,25 @@ export function BoxCardsTools() {
                 <CardsContainer>
                     <ClientCard
                         description='relatorio diário e avisos de imprevistos do dia.'
-                        img={<ForkKnife size={50} />}
+                        img={<ForkKnife size={50} color='#fff' />}
                         link='/'
                         title='Relatórios'
                         type='ocorridos' />
                     <ClientCard
                         description='patologia, alergias, medicacoes e subrimentos.'
-                        img={<Pill size={50} />}
+                        img={<Pill size={50} color='#fff' />}
                         link='/'
                         title='Informações do Paciente'
                         type='paciente' />
                     <ClientCard
                         description='lembretes de consultas e medicacoes .'
-                        img={<Heartbeat size={50} />} // Passando um ícone SVG
+                        img={<Heartbeat size={50} color='#fff' />} // Passando um ícone SVG
                         link='/'
                         title='Lembretes'
                         type='avisos' />
                     <ClientCard
                         description='Numeros emergencias.'
-                        img={<ForkKnife size={50} />}
+                        img={<ForkKnife size={50} color='#fff' />}
                         link='/'
                         title='Contatos'
                         type='auxilios' />

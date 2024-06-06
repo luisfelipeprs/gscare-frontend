@@ -1,5 +1,5 @@
 import { Container, Content } from "./styled";
-import logoImg from "../../../assets/logo.png";
+import logoImg from "../../../assets/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { CaretLeft } from "phosphor-react";
 import { useForm } from "react-hook-form";
@@ -18,7 +18,7 @@ const forgotPasswordFormSchema = z.object({
 
 type ForgotPasswordFormData = z.infer<typeof forgotPasswordFormSchema>
 
-export function ForgotPassword() {
+export function ForgotPassword () {
   const { register, handleSubmit, formState: { errors } } = useForm<ForgotPasswordFormData>({
     resolver: zodResolver(forgotPasswordFormSchema)
   });
@@ -29,7 +29,7 @@ export function ForgotPassword() {
     navigate(-1);
   };
 
-  function handleSubmitData({ email }: ForgotPasswordFormData) {
+  function handleSubmitData ({ email }: ForgotPasswordFormData) {
     password(email);
     // raphael.rrj@gmail.com
   }

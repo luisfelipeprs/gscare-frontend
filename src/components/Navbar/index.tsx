@@ -3,10 +3,9 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
-import { Action, Contact, Container, ContainerLinks, ContentWrapper, ImageIconLogo, ImageLogo, Infos, Navigationbar, Notification, RouteOptionsContent, RouteSelectorContainer } from './styled';
+import { Action, Contact, Container, ContainerLinks, ContentWrapper, NameSaas, ImageLogo, Infos, Navigationbar, Notification, RouteOptionsContent, RouteSelectorContainer } from './styled';
 import { User } from 'phosphor-react';
-import logo from './../../assets/logo-gs-care.png';
-import iconLogo from './../../assets/iconLogo.png';
+import logo from './../../assets/icon-gscare-logo.png';
 
 const handleScrollToSection = (sectionId: string) => {
   const section = document.getElementById(sectionId);
@@ -53,9 +52,10 @@ const Navbar = ({ handleOpenModal }: IProps) => {
             <ImageLogo>
               <img src={logo} alt="logo" width='50px' />
             </ImageLogo>
-            <ImageIconLogo>
-              <img src={iconLogo} alt="icone Logo" height='50px' />
-            </ImageIconLogo>
+            <NameSaas>
+              <h3>Gs</h3>
+              <h3>Care</h3>
+            </NameSaas>
             <ContainerLinks>
               <Link className='buttonNavigation' to="#home">
                 Home
@@ -132,7 +132,7 @@ interface RouteSelectorProps {
 }
 
 // Componente para a tela de seleção de rota
-function RouteSelector({ onClose, onSelect }: RouteSelectorProps): JSX.Element {
+function RouteSelector ({ onClose, onSelect }: RouteSelectorProps): JSX.Element {
   console.log(onClose, onSelect)
   // const handleRouteSelection = (route: string) => {
   //   onSelect(route);

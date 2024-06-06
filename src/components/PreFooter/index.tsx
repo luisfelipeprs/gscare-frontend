@@ -1,6 +1,6 @@
 import { About, Container, Content, Demo, FooterContact, Links, Logos } from './styled'
 import { InstagramLogo } from "phosphor-react";
-import logoSaas from './../../assets/logoPng.png'
+import logoSaas from './../../assets/icon-gscare-logo.png'
 
 
 function PreFooter () {

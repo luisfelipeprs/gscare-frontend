@@ -13,7 +13,7 @@ import { FeedbacksClients } from "../components/FeedbacksClients";
 import { PerguntasFrequentes } from "../components/PerguntasFrequentes";
 import Planos from "../Planos";
 
-function Home() {
+function Home () {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -32,11 +32,11 @@ function Home() {
         <div id="home">
           <Homepage handleOpenModal={handleOpenModal} />
         </div>
-        <div id="overview-recursos">
-          <OverViewRecursos />
-        </div>
         <div id="principais-recursos">
           <PrincipaisRecursos />
+        </div>
+        <div id="overview-recursos">
+          <OverViewRecursos />
         </div>
         <div id="box-cards-tools">
           <BoxCardsTools />

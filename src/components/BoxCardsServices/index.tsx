@@ -1,7 +1,7 @@
 import ServiceCard from "../ServiceCard";
 import Title from "../Title";
 import { CardsContainer, Container, Content } from "./styled";
-import screenTelaAdm from './../../assets/screenAdm.png'
+import screenTelaAdm from './../../assets/screensistem1.webp'
 
 function BoxCardsServices () {
   return (

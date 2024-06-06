@@ -178,7 +178,7 @@ export const TituloFeedbackCliente = styled.div`
   h1 {
     font-size: 34px;
     font-weight: 700;
-    color: #1e266d;
+    color: #071a25a8;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -228,7 +228,7 @@ export const ContainerFeedbackCaixa = styled.div`
   padding: 35px;
 
   p {
-    color: #1e266d;
+    color: #071a25a8;
     font-size: inherit;
     line-height: 1.6;
     font-size: 18px;
@@ -237,5 +237,5 @@ export const ContainerFeedbackCaixa = styled.div`
 `;
 
 export const Nome = styled.span`
-  color: #564BC6;
+  color: #3FB8FF;
 `;

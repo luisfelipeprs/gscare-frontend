@@ -1,5 +1,5 @@
 import { Container, Content } from "./styled";
-import logoImg from "../../../assets/logo.png";
+import logoImg from "../../../assets/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { House } from "phosphor-react";
 import { useForm } from "react-hook-form";
@@ -23,7 +23,7 @@ const loginAttendantFormSchema = z.object({
 
 type LoginAttendatFormData = z.infer<typeof loginAttendantFormSchema>
 
-export function Login() {
+export function Login () {
 
   const navigate = useNavigate();
 
@@ -40,7 +40,7 @@ export function Login() {
   };
 
   // function handleSubmitData ({ token, email, password }: LoginAttendatFormData) {
-  function handleSubmitData() {
+  function handleSubmitData () {
     // authenticateUser({ token, email, password })
     // 64bfed1ee252092818948502
     // feh@gmail.com

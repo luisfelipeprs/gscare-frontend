@@ -3,8 +3,9 @@ import { RouterIndicator } from '../../../components/RouterIndicator';
 import { DotsThreeVertical, PencilSimple } from 'phosphor-react';
 import { Avatar, Flex } from '@radix-ui/themes';
 import { Care, Gs } from '../../../components/TextGscare/styled';
+import TextGscare from '../../../components/TextGscare';
 
-function ProfileEdit() {
+function ProfileEdit () {
   // const [name] = useState('Fernando');
   // const [phone] = useState('40028922');
   // const [email] = useState('fernando@example.com');
@@ -44,7 +45,7 @@ function ProfileEdit() {
                     </Flex>
                     <ContentName>
                       <h4>Fernando Franco</h4>
-                      <p>bem vido a <Gs>GS</Gs><Care>Care</Care></p>
+                      <div><span>bem vido a </span> <TextGscare /></div>
                     </ContentName>
                     {/* </ContentImgAndName> */}
 
@@ -69,7 +70,7 @@ function ProfileEdit() {
 
                   <ContainerEmail>
                     <div>
-                      <input type="text" disabled value="Fernando Alexandre xavier coelho" placeholder="digite seu nome" />
+                      <input type="text" disabled value="Fernando Xavier Coelho De Silva" placeholder="digite seu nome" />
                     </div>
                   </ContainerEmail>
                   <ContainerNameAndNumberTel>
@@ -142,7 +143,7 @@ function ProfileEdit() {
                         <p>f123f12-3f123f-21f3sav-cvqd1</p>
                       </CardInfo>
                       <CardData>
-                        <span style={{ background: 'linear-gradient(166deg, rgb(142, 255, 99), rgb(19, 156, 0))' }}>
+                        <span style={{ background: 'linear-gradient(166deg, rgb(119 213 84), rgb(19, 156, 0))' }}>
                           Conta ativa
                         </span>
                       </CardData>

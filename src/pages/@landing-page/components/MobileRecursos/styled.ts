@@ -76,7 +76,7 @@ export const ContainerSujestoes = styled.div`
   max-width: 100%;
   /* height: 600px; */
   margin-top: 100px;
-  background-color: #3652CD20;
+  background-color: #071a25a8;
   border-radius: 18px;
 
   @media screen and (max-width: 1280px) {
@@ -89,7 +89,7 @@ export const ContainerSujestoes = styled.div`
 
 h6 {
   letter-spacing: 0.01em;
-  color: #445781;
+  color: #071a25a8;
   font-size: 18px;
   font-weight: 400;
 
@@ -98,7 +98,7 @@ h6 {
 h2 {
   display: block;
   font-size: 35px;
-  color: #1e266d;
+  color: #071a25a8;
   font-weight: 600;
   margin-bottom: 30px;
   letter-spacing: -0.01em;
@@ -112,7 +112,7 @@ export const PrincipaisRecursos = styled.div`
   h1 {
   font-weight: 700;
   font-size: 34px;
-  color: #1e266d;
+  color: #071a25a8;
   text-align: center;
   margin-top: 20px;
   letter-spacing: 0.01em;
@@ -120,7 +120,7 @@ export const PrincipaisRecursos = styled.div`
 }
 
 h6 {
-  color: #445781;
+  color: #071a25a8;
   letter-spacing: 0.01;
   font-weight: 400;
   font-size: 18px;
@@ -129,7 +129,7 @@ h6 {
 h2 {
   font-size: 28px;
   margin-bottom: 30px;
-  color: #1e266d;
+  color: #071a25a8;
   margin-top: 40px;
   letter-spacing: 0.01em;
   line-height: 1.3;
@@ -172,7 +172,7 @@ button:hover {
 
 export const ButtonContato = styled.div`
   padding: 15px;
-  background-color: #564BC6;
+  background-color: #3FB8FF;
   font-weight: 800;
   color: #fff;
   width: 50%;

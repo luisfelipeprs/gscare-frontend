@@ -1,4 +1,4 @@
-import Image1 from "./assets/financial-668x772 (1).webp"
+import Image1 from "./assets/ctaImageLandingPage.png"
 import { ButtonContato, Container, ContainerSujestoes, Content, DivContainerSujestoesText, DivSujestoesImg, DivSujestoesText } from "./styled"
 
 export const MobileRecursos = () => {

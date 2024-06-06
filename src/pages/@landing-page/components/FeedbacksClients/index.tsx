@@ -1,7 +1,8 @@
 import './styles.css';
 
 import workpc2 from '../../../../assets/workpc2.png'
-import avatar from '../../../../assets/avatar.png'
+import ImgFem from '../../../../assets/icon-fem.png'
+import ImgMasc from '../../../../assets/icon-masc.png'
 
 export const FeedbacksClients = () => {
   return (
@@ -22,7 +23,7 @@ export const FeedbacksClients = () => {
 
             <div id="feedbacks">
               <div className="feedback">
-                <img src={avatar} className="feedback-avatar" alt="" />
+                <img src={ImgFem} className="feedback-avatar" alt="" width={50} height={50} />
 
                 <div className="feedback-content">
                   <p>
@@ -43,7 +44,7 @@ export const FeedbacksClients = () => {
               </div>
 
               <div className="feedback">
-                <img src={avatar} className="feedback-avatar" alt="" />
+                <img src={ImgMasc} className="feedback-avatar" alt="" />
 
                 <div className="feedback-content">
                   <p>

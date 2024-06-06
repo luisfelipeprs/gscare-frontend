@@ -63,7 +63,7 @@ const Home: React.FC = () => {
       <ContainerSectionsInfos>
         <SectionInfos>
           <WelcomeContaint>
-            <WelcomeTitle>Bem vindos ao <TextGscare />!</WelcomeTitle>
+            <WelcomeTitle>Bem vindos ao <TextGscare /></WelcomeTitle>
             <WelcomeParagraph>
               Bem-vindos ao líder em gestão de saúde! Oferecemos cuidados superiores e satisfação total, para sua empresa e seus clientes
             </WelcomeParagraph>

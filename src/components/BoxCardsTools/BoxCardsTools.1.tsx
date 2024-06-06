@@ -3,7 +3,7 @@ import Title from '../Title';
 import { CardsContainer, Container, Content } from './styled';
 import { AddressBook, ForkKnife, Heartbeat, Pill } from 'phosphor-react';
 
-export function BoxCardsTools() {
+export function BoxCardsTools () {
     return (
         <Container>
             <Content>

@@ -88,7 +88,7 @@ export const Container = styled.main`
 
   .titulo {
     padding-right: 40px;
-    color: #032d60;
+    color: #071a25a8;
     font-size: 42px;
   }
 

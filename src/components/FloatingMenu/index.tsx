@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Container, Infos, ContentIcon, StyledFloatingMenu, MenuIcon, ImageLogo, MenuButton, LeftContainer, RightContainer, IconAndInfos } from './styled';
 // import { SignOut } from 'phosphor-react';
 
-import logo from './../../assets/logo-gs-care.png'
 import { AvatarIconAndOption } from '../AvatarIconAndOption';
 import { BellIcon } from '@radix-ui/react-icons';
 import { useNavigate } from 'react-router-dom';
+import TextGscare from '../TextGscare';
 
 
 interface IProps {
@@ -37,7 +37,7 @@ function FloatingMenu ({ handleIsOpen }: IProps) {
           </ContentIcon>
 
           <ImageLogo onClick={goToHome}>
-            <img src={logo} alt="logo" width='200px' />
+            <TextGscare />
           </ImageLogo>
         </LeftContainer>
 

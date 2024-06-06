@@ -1,4 +1,4 @@
-import { A, Container } from "./styled";
+import { A, Container, SvgDivMed, Title } from "./styled";
 import * as React from "react";
 
 type Props = {
@@ -9,14 +9,17 @@ type Props = {
   link: string;
 };
 
-export default function ClientCard(props: Props) {
+export default function ClientCard (props: Props) {
   return (
     <Container>
       <div>
-        {props.img} {/* Renderizando a prop img */}
+
+        <SvgDivMed>
+          {props.img} {/* Renderizando a prop img */}
+        </SvgDivMed>
         <div>
           <a href={props.link}>
-            <h3>{props.title}</h3>
+            <Title>{props.title}</Title>
           </a>
           <p>{props.description}</p>
           <p>{props.type}</p>

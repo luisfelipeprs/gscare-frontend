@@ -62,9 +62,37 @@ export const Container = styled.section`
     }
 `;
 
+export const Title = styled.h3`
+    color: #000;
+`;
+
 export const A = styled.a`
+
+color: #FFA500;
+    text-decoration: underline;
+    font-weight: 500;
+    font-family: system-ui;
+
     margin-top: 32px;
     text-align: center;
-    color: #032D60;
-    font-weight: 700;
+    /* color: #032D60; */
+    /* font-weight: 700; */
+    /* text-decoration: underline; */
+`;
+
+export const SvgDivMed = styled.div`
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+
+  svg {
+    background: #3fb8ff9e;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    box-shadow: 0px 0px 10px #a6a6a6;
+  }
 `;

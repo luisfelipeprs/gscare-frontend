@@ -1,5 +1,5 @@
 import { Container, Content } from "./styled";
-import logoImg from "../../../assets/logo.png";
+import logoImg from "../../../assets/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { CaretLeft } from "phosphor-react";
 import { useForm } from "react-hook-form";
@@ -20,7 +20,7 @@ const loginAdminFormSchema = z.object({
 
 type LoginAttendatFormData = z.infer<typeof loginAdminFormSchema>
 
-export function LoginAdmin() {
+export function LoginAdmin () {
 
   const navigate = useNavigate();
 
@@ -32,7 +32,7 @@ export function LoginAdmin() {
     navigate(-1);
   };
 
-  function handleSubmitData({ email, password }: LoginAttendatFormData) {
+  function handleSubmitData ({ email, password }: LoginAttendatFormData) {
     const AuthData = authenticateAdmin({ email, password })
     console.log("dados auth: ", AuthData)
     // raphael.rrj@gmail.com

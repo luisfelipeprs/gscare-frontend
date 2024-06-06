@@ -49,7 +49,7 @@ export const OverViewRecursos = () => {
             <ContainerDivMed>
               <DivMed>
                 <SvgDivMed>
-                  <ThumbsUp size={32} color="#d6d6d6" weight="fill" />
+                  <ThumbsUp size={32} color="#ffffff" weight="fill" />
                 </SvgDivMed>
                 <h4>Laudos online</h4>
                 <p>Possibilite a retirada dos laudos de forma online para dar mais comodidade
@@ -60,7 +60,7 @@ export const OverViewRecursos = () => {
               <DivMed>
 
                 <SvgDivMed>
-                  <Alarm size={32} color="#d6d6d6" weight="fill" />
+                  <Alarm size={32} color="#ffffff" weight="fill" />
                 </SvgDivMed>
                 <h4>Medicina</h4>
                 <p>Gere atestados de saúde ocupacional (ASO) integrado ao e-Social testeteste testeteste</p>
@@ -70,7 +70,7 @@ export const OverViewRecursos = () => {
 
               <DivMed>
                 <SvgDivMed>
-                  <TrendUp size={32} color="#d6d6d6" weight="fill" />
+                  <TrendUp size={32} color="#ffffff" weight="fill" />
                 </SvgDivMed>
                 <h4>Confirmação</h4>
                 <p>Realize a confirmação de suas agendas por WhatsApp e mantenha um contato mais próximo com
@@ -80,7 +80,7 @@ export const OverViewRecursos = () => {
               </DivMed>
               <DivMed>
                 <SvgDivMed>
-                  <Warning size={32} color="#d6d6d6" weight="fill" />
+                  <Warning size={32} color="#ffffff" weight="fill" />
                 </SvgDivMed>
                 <h4>Call center</h4>
                 <p>Recurso exclusivo para marcação de consultas e exames na sua central de agendamentos</p>

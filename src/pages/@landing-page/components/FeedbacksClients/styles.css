@@ -66,7 +66,23 @@
 
 }
 
+.btn-default {
 
+  padding: 15px;
+  background-color: #FFA500;
+  font-weight: 800;
+  color: #fff;
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+    margin: auto;
+  }
+
+}
 
 
 
@@ -199,7 +215,8 @@ body {
 }
 
 .section-title {
-  text-align: center;
+  color: #071a25a8;
+  text-align: start;
 }
 
 .section-text {
@@ -1337,6 +1354,10 @@ footer .logo {
   font-size: 3rem;
 }
 
+.section-subtitle {
+  color: #071a25a8;
+}
+
 #testimonials_content {
   width: 50%;
 }
@@ -1360,8 +1381,8 @@ footer .logo {
 }
 
 .feedback-avatar {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   object-fit: cover;
 }
@@ -1396,6 +1417,7 @@ footer .logo {
     align-items: center;
   }
 }
+
 
 
 /* @media scren and (max-width: 768px) {

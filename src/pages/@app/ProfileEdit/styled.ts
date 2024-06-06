@@ -211,7 +211,11 @@ export const ContentImgAndName = styled.div`
 `;
 
 export const ContentName = styled.div`
-
+  
+  & > div {
+   gap: 3px;
+  display: flex;
+ }
 `;
 
 export const InfoProfile = styled.div`

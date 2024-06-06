@@ -36,6 +36,7 @@ export const ImageLogo = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+  font-size: 1.5rem;
 
   img {
     height: 35px;
