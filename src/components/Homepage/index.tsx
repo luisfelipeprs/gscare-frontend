@@ -8,7 +8,7 @@ interface IProps {
   handleOpenModal: () => void
 }
 
-export default function Homepage ({ handleOpenModal }: IProps) {
+export default function Homepage({ handleOpenModal }: IProps) {
   return (
     <Container>
       <Overlay></Overlay >
@@ -46,9 +46,11 @@ export default function Homepage ({ handleOpenModal }: IProps) {
             <ButtonTesteGratis onClick={handleOpenModal}>Faca o teste gratis</ButtonTesteGratis>
             <ButtonSaibaMais>
               <div>
-                <EyeOpenIcon />
+                <div>
+                  <EyeOpenIcon />
+                </div>
+                <span>Vídeo demonstrativo</span>
               </div>
-              <span>Vídeo demonstrativo</span>
             </ButtonSaibaMais>
           </ContainerButtons>
         </Leftdiv>

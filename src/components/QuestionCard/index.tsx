@@ -2,7 +2,7 @@ import { ButtonContato, Container, ContainerAction, ContainerImage, Content, Div
 import Image1 from "./../../assets/ctaImageLandingPage.png";
 
 
-function QuestionCard () {
+function QuestionCard() {
   return (
     <Container>
       <Content>

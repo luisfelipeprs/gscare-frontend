@@ -175,6 +175,7 @@ export const ButtonSaibaMais = styled.button`
 
   div, span {
     margin: auto;
+    display: flex;
   }
   
   svg {  

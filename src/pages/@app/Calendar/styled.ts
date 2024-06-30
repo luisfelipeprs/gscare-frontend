@@ -8,7 +8,6 @@ export const Container = styled.div`
   align-items: center;
   /* max-width: 100%; Ajustado para não ultrapassar 100% da largura da tela */
   margin: 0 auto; /* Centraliza o conteúdo */
-  /* height: 100vh; */
   overflow-x: hidden; /* Adicionado para esconder a barra de rolagem horizontal */
 `;
 

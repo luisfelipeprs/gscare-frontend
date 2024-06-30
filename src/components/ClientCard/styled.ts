@@ -5,8 +5,8 @@ export const Container = styled.section`
         box-sizing: border-box;
     }
 
-    width: 270px;
-    height: 402px;
+    width: 100%;
+    height: 100%;
     padding: 40px 24px 50px;
     
     display: flex;

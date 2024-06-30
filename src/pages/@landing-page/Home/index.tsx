@@ -13,7 +13,7 @@ import { FeedbacksClients } from "../components/FeedbacksClients";
 import { PerguntasFrequentes } from "../components/PerguntasFrequentes";
 import Planos from "../Planos";
 
-function Home () {
+function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {

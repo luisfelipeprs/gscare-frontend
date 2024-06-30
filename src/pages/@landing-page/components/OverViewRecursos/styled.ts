@@ -4,7 +4,8 @@ export const Container = styled.div`
   width: 100%;
   text-align: center;
   /* background-color: #fff; */
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
+  display: flex;
 `
 
 export const Content = styled.div`
@@ -27,7 +28,7 @@ export const Content = styled.div`
 
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000;
-    font-size: 33px !important;
+    /* font-size: 33px !important; */
     margin-top: 30px;
 
   }
@@ -56,27 +57,29 @@ export const OpcoesMedicamento = styled.div`
 `;
 
 export const DivContainerListaComfirma = styled.div`
-    margin: auto;
-    /* margin-top: 30px; */
-    justify-content: start;
-    flex: 1;
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  margin: auto;
+  justify-content: start;
+  flex: 2;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
     h2 {
       color: #071a25a8;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      color: #000;
+      font-size: 2.8rem;
+      margin-top: 30px;
     }
 
     h6 {
 
-      color: var(--cool-gray);
       font-weight: 500;
       line-height: 1.8;
-      font-size: 1rem;
+      font-size: 1.5rem;
       margin-bottom: 20px;
-      color: #000;
+      color: #676767;
 
       @media screen and (max-width: 1120px) {
         max-width: 65%;
@@ -97,8 +100,9 @@ export const Functionalities = styled.div`
   /* align-items: start; */
   gap: 0;
   span {
-    color: #000;
+    color: #1c1c1c;
     text-align: start;
+    font-size: 1.3rem;
 
     svg {  
       transform: translateY(20%);
@@ -125,7 +129,7 @@ export const DivContainerDivMed = styled.div`
   flex-direction: column;
   display: flex;
   flex-direction: row;
-  flex: 1;
+  flex: 3;
   gap: 30px;
 
   @media screen and (max-width: 600px) {
@@ -166,12 +170,15 @@ export const ContainerDivMed = styled.div`
   display: flex;
   margin-top: 50px;
   gap: 30px;
+  flex: 1;
 `;
 
 export const ContainerDivMed2 = styled.div`
   flex-direction: column;
   display: flex;
+  margin-bottom: 50px;
   gap: 30px;
+  flex: 1;
 `;
 
 export const DivMed = styled.div`
@@ -179,9 +186,8 @@ export const DivMed = styled.div`
   flex-direction: column;
   flex: 1;
   gap: 20px;
-  min-height: 250px;
-  max-height: 250px;
-  width: 250px;
+  min-height: 300px;
+  max-height: 350px;
   /* padding: 20px; */
   box-sizing: border-box;
   box-shadow: 1px 1px 25px 10px #88888850;

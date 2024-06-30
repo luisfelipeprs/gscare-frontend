@@ -464,6 +464,8 @@ body {
 
 #feadback-section {
   background-color: #fff;
+  display: flex;
+  margin: auto;
 }
 
 .features .section-title {

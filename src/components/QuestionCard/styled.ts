@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 95%;
   /* background-color: #fff; */
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   margin: auto;
+  display: flex;
 `;
 
 export const Content = styled.div`

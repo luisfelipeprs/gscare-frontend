@@ -14,7 +14,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 1280px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   margin: auto;
   gap: 50px;
   width: 100%;

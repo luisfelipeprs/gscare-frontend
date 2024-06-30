@@ -305,5 +305,5 @@ export const CloseButton = styled.button`
 `;
 
 export const ContentWrapper = styled.div`
-  margin-top: 80px; /* altura da navbar */
+  padding-top: 80px; /* altura da navbar */
 `;

@@ -2,7 +2,7 @@
 // import { PagePreview } from "../components/PagePreview";
 import { BannerPrice, BtnSelect, Container, Content, Features, HighLight, Price, PricingCard, PricingContainer } from "./styled";
 
-function Planos () {
+function Planos() {
   return (
     <Container>
       <Content>

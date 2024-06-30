@@ -7,7 +7,7 @@ export const OverViewRecursos = () => {
       <Content>
         <OpcoesMedicamento>
           <DivContainerListaComfirma>
-            <h2>Porque escolher-nos ?</h2>
+            <h2>Porque escolher o melhor sistema para gestao de saude</h2>
             <h6>Comece a utilizar o sistema hoje mesmo e tenha o controle da sua clínica
               de onde
               estiver. Alguns dos

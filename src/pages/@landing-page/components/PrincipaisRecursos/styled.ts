@@ -5,8 +5,9 @@ import ImageScreenThree from "./../../../../assets/screensistem3.webp";
 import ImageScreenFor from "./../../../../assets/screensistem4.webp";
 
 export const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  display: flex;
 `;
 
 export const Content = styled.div`
@@ -26,6 +27,7 @@ export const Content = styled.div`
 
 export const HelpSection = styled.section`
   text-align: center;
+  margin: auto 0;
 
   @media (max-width: 1000px) {
     padding: 75px 0px 100px 0px;
@@ -47,7 +49,7 @@ export const SectionContainer = styled.div`
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
-  height: calc(100vh - 150px);
+  height: 80vh;
   display: flex;
   flex-direction: column;
 `;

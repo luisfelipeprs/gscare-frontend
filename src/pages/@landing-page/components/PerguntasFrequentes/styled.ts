@@ -5,7 +5,8 @@ export const Container = styled.div`
   width: 100%;
   text-align: center;
   /* background-color: #fff; */
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
+  display: flex;
 `
 
 export const Content = styled.div`
