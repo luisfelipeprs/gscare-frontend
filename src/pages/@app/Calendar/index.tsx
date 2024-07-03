@@ -1,7 +1,8 @@
 import { RouterIndicator } from "../../../components/RouterIndicator";
-import CalendarioPro from "./CalendarioPro";
 import ModalCalendar from "./Modal/ModalCalendar";
 import { Container, Content } from "./styled";
+import CalendarFull from "./CalendarFull";
+import CalendarioPro from "./CalendarioPro";
 
 
 export function Calendar () {
@@ -15,7 +16,8 @@ export function Calendar () {
         onButtonClick={ModalCalendar}
       >
         <Content>
-          <CalendarioPro />
+          {/* <CalendarioPro /> */}
+          <CalendarFull />
         </Content>
       </RouterIndicator >
     </Container>

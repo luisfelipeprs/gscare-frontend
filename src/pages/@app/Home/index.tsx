@@ -202,11 +202,11 @@ const Home: React.FC = () => {
             <ButtonInfos><DotsThreeVertical size={20} /></ButtonInfos>
           </HeaderInfos>
           <Information>
-            <ProgressBar percentage={28} name="Atendimentos do Mês" showText={true} barColor="#b50f00" />
-            <ProgressBar percentage={71} name="Atendimentos do Mês" showText={true} barColor="#F4A100" />
-            <ProgressBar percentage={13} name="Atendimentos do Mês" showText={true} barColor="#324a83" />
-            <ProgressBar percentage={94} name="Atendimentos do Mês" showText={true} barColor="#00CED4" />
-            <ProgressBar percentage={72} name="Atendimentos do Mês" showText={true} barColor="#00AC69" />
+            <ProgressBar percentage={28} name="Atendimentos do Mês" showText={true} barColor="#b50f00bf" />
+            <ProgressBar percentage={71} name="Atendimentos do Mês" showText={true} barColor="#F4A100bf" />
+            <ProgressBar percentage={13} name="Atendimentos do Mês" showText={true} barColor="#324a83bf" />
+            <ProgressBar percentage={94} name="Atendimentos do Mês" showText={true} barColor="#00CED4bf" />
+            <ProgressBar percentage={72} name="Atendimentos do Mês" showText={true} barColor="#00AC69bf" />
 
           </Information>
         </SectionInfos>

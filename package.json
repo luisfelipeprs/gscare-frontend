@@ -10,6 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.14",
+    "@fullcalendar/daygrid": "^6.1.14",
+    "@fullcalendar/interaction": "^6.1.14",
+    "@fullcalendar/list": "^6.1.14",
+    "@fullcalendar/react": "^6.1.14",
+    "@fullcalendar/timegrid": "^6.1.14",
     "@hookform/resolvers": "^3.3.2",
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -28,6 +34,7 @@
     "react-datepicker": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.49.2",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^6.16.0",
     "styled-components": "^6.0.8",
     "sweetalert2": "^11.10.1",
@@ -37,6 +44,7 @@
     "@types/react": "^18.2.79",
     "@types/react-datepicker": "^6.0.1",
     "@types/react-dom": "^18.2.25",
+    "@types/react-modal": "^3.16.3",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
