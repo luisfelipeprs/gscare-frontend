@@ -9,7 +9,8 @@ export const Container = styled.div`
 `;
 
 export const ContainerBlueBar = styled.div`
-  background: linear-gradient(to right, #1146ff, #682fff);
+  /* background: linear-gradient(to right, #1146ff, #682fff); */
+  background: linear-gradient(to right, #202d58, #1d2b4b);
   /* color: #682fff; */
   height: 250px;
   width: 100%;
@@ -112,6 +113,7 @@ export const StyledDateContainer = styled.div`
 
 export const DateText = styled.p`
   font-size: 0.8rem;
+  display: flex;
   color: #6a6a6a;
   font-family: monospace;
   font-weight: 500;
@@ -188,7 +190,7 @@ export const HeaderInfos = styled.div`
 `;
 
 export const TitleInfos = styled.h2`
-  color: #0061f2;
+  color: #324a83;
   font-size: 1.05rem;
   font-weight: 500;
 `;
@@ -216,7 +218,7 @@ export const Information = styled.div`
 
   /* Estilo do polegar da barra de rolagem */
   &::-webkit-scrollbar-thumb {
-      background-color: #111dff; /* cor do polegar */
+      background-color: #1F2C53; /* cor do polegar */
       border-radius: 5px; /* borda arredondada do polegar */
   }
 `;
@@ -262,12 +264,13 @@ export const WelcomeContaint = styled.div`
   img {
     margin: auto;
     width: 90%;
+    max-width: 200px;
     height: 200px;
   }
 `;
 
 export const WelcomeTitle = styled.div`
-  color: #0061F2;
+  color: #324a83;
   font-size: 1.7rem;
   font-weight: 500;
   font-family: sans-serif;
@@ -302,19 +305,23 @@ export const GridWrapper = styled.div`
   justify-content: space-between;
   
   & > :nth-child(1) {
-    background-color: #0061F2;
+    background-color: #6884a7;
+    /* background-color: #324a83; */
   }
 
   & > :nth-child(2) {
-    background-color: #F4A100;
+    background-color: #6884a7;
+    /* background-color: #F4A100; */
   }
 
   & > :nth-child(3) {
-    background-color: #00AC69;
+    background-color: #6884a7;
+    /* background-color: #00AC69; */
   }
 
   & > :nth-child(4) {
-    background-color: #E81500;
+    background-color: #6884a7;
+    /* background-color: #E81500; */
   }
 `;
 

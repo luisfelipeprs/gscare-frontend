@@ -87,7 +87,7 @@ export const RightSectionContent = styled.div`
 
 /* Título do Formulário */
 export const H2 = styled.h2`
-  color: #007bff;
+  color: #1F2C53;
   /* margin-bottom: 20px; */
 `;
 
@@ -119,7 +119,7 @@ export const FormGroupSelect = styled.select`
 
 /* Estilo para os botões do formulário */
 export const Button = styled.button`
-  background-color: #007bff;
+  background-color: #1F2C53;
   color: #fff;
   padding: 15px 20px;
   border-radius: 16px;
@@ -200,7 +200,7 @@ export const StyledClose = styled.div`
 
 /* Styled Button */
 export const StyledButton = styled.button`
-  background-color: #007bff;
+  background-color: #1F2C53;
   color: #fff;
   padding: 10px;
   cursor: pointer;
@@ -257,7 +257,7 @@ export const StyledCalendar = styled.div`
 export const StyledDayOfWeek = styled.div`
   text-align: center;
   font-weight: bold;
-  color: #007bff;
+  color: #1F2C53;
   
 `;
 
@@ -331,19 +331,19 @@ export const CalendarNavButtonGerenciadorConsulta = styled.button`
 export const StyledDayOfWeekDefineConsulta = styled.div`
   text-align: center;
   font-weight: bold;
-  color: #007bff;
+  color: #1F2C53;
 `
 
 export const StyledDayOfWeekGerenciadorConsulta = styled.div`
   text-align: center;
   font-weight: bold;
-  color: #007bff;
+  color: #1F2C53;
   height: 0;
 `;
 
 export const ToggleButton = styled.button`
   z-index: 1;
-  background-color: #007bff;
+  background-color: #1F2C53;
   color: #fff;
   padding: 10px;
   cursor: pointer;
@@ -420,7 +420,7 @@ export const StyledCalendarGerenciadorConsulta = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #007bff;
+    background-color: #1F2C53;
     border-radius: 6px;
     border: 3px solid #fff;
   }

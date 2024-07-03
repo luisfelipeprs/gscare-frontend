@@ -1,4 +1,4 @@
-import { Container, Content } from "./styled";
+import { Container, ContainerForm, Content, HeaderForm } from "./styled";
 import logoImg from "../../../assets/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { CaretLeft } from "phosphor-react";
@@ -42,15 +42,18 @@ export function LoginAdmin () {
   return (
     <Container>
       <Content>
-        <button className="btn-top-left">
-          <CaretLeft size={32} color="#777777" weight="light" onClick={goBackToPreviousScreen} />
-        </button>
+        <HeaderForm>
+          <button className="btn-top-left">
+            <CaretLeft size={32} color="#777777" weight="light" onClick={goBackToPreviousScreen} />
+            <span>Voltar</span>
+          </button>
+        </HeaderForm>
 
-        <div className="container">
-          <header className="header">
+        <ContainerForm>
+          {/* <header className="header">
             <img src={logoImg} width='100px' alt="Workflow" className="logoImg" />
             <p>Acesso Administrativo</p>
-          </header>
+          </header> */}
 
           <form onSubmit={handleSubmit(handleSubmitData)}>
             <div className="inputContainer">
@@ -91,7 +94,7 @@ export function LoginAdmin () {
               <Link to="/login">Acesso de Atendente</Link>
             </div>
           </form>
-        </div>
+        </ContainerForm>
       </Content>
     </Container>
   )

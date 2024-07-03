@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Funnel } from 'phosphor-react';
 
-interface IPatient {
+interface IWarning {
   id: number;
   titulo: String,
   tipo: String,
@@ -12,7 +12,7 @@ interface IPatient {
 }
 
 interface Props {
-  patients: IPatient[];
+  warnings: IWarning[];
 }
 const Container = styled.div`
   /* max-width: 1200px; */
@@ -93,6 +93,20 @@ const Td = styled.td`
   width: 12%;
 `;
 
+const TdTableType = styled.div`
+  
+  
+  display: table-cell;
+    background: #b9000080;
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    padding: 4px 10px;
+  box-shadow: 0 0 5px 1px #00000038;
+
+`;
+
 const Tbody = styled.tbody`
   & tr:nth-child(even) {
     background-color: #f9f9ff;
@@ -102,12 +116,12 @@ const Tbody = styled.tbody`
   }
 `;
 
-const PatientTable: React.FC<Props> = ({ patients }) => {
+const WarningTable: React.FC<Props> = ({ warnings }) => {
   return (
     <>
       <Container>
         <ContainerTable>
-          <Table id="patientTable">
+          <Table id="warningTable">
             <thead>
               <tr>
                 <Th>
@@ -133,13 +147,17 @@ const PatientTable: React.FC<Props> = ({ patients }) => {
               </tr>
             </thead>
             <Tbody id="tableBody">
-              {patients.map(patient => (
-                <tr key={patient.id}>
-                  <Td>{patient.titulo}</Td>
-                  <Td>{patient.tipo}</Td>
-                  <Td>{patient.inicio}</Td>
-                  <Td>{patient.fim}</Td>
-                  <Td>{patient.mensagem}</Td>
+              {warnings.map(warning => (
+                <tr key={warning.id}>
+                  <Td>{warning.titulo}</Td>
+                  <Td>
+                    <TdTableType>
+                      {warning.tipo}
+                    </TdTableType>
+                  </Td>
+                  <Td>{warning.inicio}</Td>
+                  <Td>{warning.fim}</Td>
+                  <Td>{warning.mensagem}</Td>
                 </tr>
               ))}
             </Tbody>
@@ -150,4 +168,4 @@ const PatientTable: React.FC<Props> = ({ patients }) => {
   );
 };
 
-export default PatientTable;
+export default WarningTable;

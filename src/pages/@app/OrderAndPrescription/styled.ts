@@ -12,10 +12,16 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     flex: 1;
-    margin-top: -170px;
+    margin-top: -180px;
     width: 80%;
     display: flex;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
+
+    
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    margin-top: -170px;
+  }
 `;

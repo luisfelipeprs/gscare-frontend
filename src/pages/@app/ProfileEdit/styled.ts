@@ -67,6 +67,7 @@ export const ContainerRight = styled.div`
 `;
 
 export const ContainerDataFloat = styled.div`
+  
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -163,14 +164,17 @@ export const RightContainer = styled.div`
 `;
 
 export const AddPicture = styled.div`
-  padding: 15px;
-  width: 100%;
   display: flex;
   flex-direction: row;
-  position: relative;
-  box-shadow: 0px 10px 38px -10px #00000030;
-  border-radius: 8px;
+  align-items: center;
+  text-align: center;
   justify-content: space-between;
+  margin-bottom: 10px;
+  background: #F8F8F9;
+  border-bottom: 1px solid #dddddd7a;
+  padding: 15px 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 
   button {  
     text-align: center;
@@ -228,7 +232,7 @@ export const InfoProfileText = styled.div`
   color: #ddd;
 
   h3 {
-    color: #1345FF;
+    color: #324a83;
     font-size: 1.3rem;
   }
 `;
@@ -282,7 +286,7 @@ export const CardData = styled.div`
   span {
     /* background: linear-gradient(166deg, #FFCE3A, #FFA700); */
     /* background: linear-gradient(166deg, rgb(0, 68, 203), rgb(44, 0, 156)); */
-    background: #1346FF;
+    background: #324a83;
     padding: 10px;
     border-radius: 8px;
     font-weight: 500;
@@ -346,17 +350,17 @@ export const ContainerEmail = styled.div`
 
 
 export const CardInfoAccountDatas = styled.div`
-justify-content: space-between;
+position: relative;
+/* justify-content: space-between; */
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  /* gap: 30px; */
   margin-bottom: 20px;
   background-color: #fff;
   box-sizing: border-box;
   flex: 1;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 40px;
 `;
 
 export const CardInfoAboutAccountDatas = styled.div`
@@ -391,7 +395,7 @@ export const HeaderCardInfoAboutAccount = styled.div`
   border-top-right-radius: 8px;
 
   h2 {
-  color: #0061f2;
+  color: #324a83;
   font-size: 1.05rem;
   font-weight: 500;
   }
@@ -422,7 +426,7 @@ export const ContentCardInfoAboutAccount = styled.div`
 
   /* Estilo do polegar da barra de rolagem */
   &::-webkit-scrollbar-thumb {
-      background-color: #111dff; /* cor do polegar */
+      background-color: #1F2C53; /* cor do polegar */
       border-radius: 5px; /* borda arredondada do polegar */
   }
 

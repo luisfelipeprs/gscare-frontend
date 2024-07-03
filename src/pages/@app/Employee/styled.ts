@@ -81,8 +81,10 @@ export const PaginationContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  /* background-color: #f0f0f0; */
+  border-radius: 8px;
+  height: 40px;
+  background: #1E2C4F;
+  width: 100%;
 `;
 
 export const NavigationButton = styled.button`
@@ -134,7 +136,7 @@ export const PageIndicator = styled.div`
 
 
 export const Button = styled.button`
-  background-color: #007bff;
+  background-color: #1F2C53;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -194,7 +196,7 @@ export const EmployeeImageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #007bff;
+  background-color: #1F2C53;
   color: #fff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -213,7 +215,7 @@ export const Action = styled.div`
   justify-content: center;
   button {
     background-color: transparent;
-    color: #007bff;
+    color: #1F2C53;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -243,7 +245,7 @@ export const Table = styled.table`
   }
 
   th {
-    background-color: #007bff;
+    background-color: #1F2C53;
     color: #fff;
   }
 
@@ -294,17 +296,32 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  gap: 15px;
+  
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftHeader = styled.div`
   display: flex;
   align-items: center;
   gap: 15px;
+  
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const RightHeader = styled.div`
   display: flex;
   align-items: center;
+
+  
+  @media screen and (max-width: 780px) {
+    width: 100%;
+  }
 `;
 
 export const SearchInput = styled.input`
@@ -313,6 +330,11 @@ export const SearchInput = styled.input`
   border: 1px solid #ddd;
   border-radius: 5px;
   /* margin-left: 10px; */
+
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const FilterSelect = styled.select`
@@ -321,10 +343,16 @@ export const FilterSelect = styled.select`
   border: 1px solid #ddd;
   border-radius: 5px;
   /* margin-left: 10px; */
+
+  
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const FilterButton = styled.button`
-
+  display: flex;
   text-align: center;
   justify-content: center;
   display: flex;
@@ -342,6 +370,20 @@ export const FilterButton = styled.button`
   &:hover {
     color: #5c5c5c;
   }
+
+  span {
+    display: none;
+  }
+  
+  @media screen and (max-width: 780px) {
+    justify-content: space-between;
+    
+    span {
+      display: flex;
+    }
+
+    width: 100%;
+  }
 `;
 
 export const Pagination = styled.div`
@@ -352,7 +394,7 @@ export const Pagination = styled.div`
 export const PaginationButton = styled.button`
   padding: 5px 10px;
   font-size: 14px;
-  background-color: #007bff;
+  background-color: #1F2C53;
   color: #fff;
   border: none;
   border-radius: 5px;

@@ -78,19 +78,23 @@ export const GridWrapper = styled.div`
   justify-content: space-between;
   
   & > :nth-child(1) {
-    background-color: #0061F2;
+    background-color: #2f406d;
+    /* background-color: #324a83; */
   }
 
   & > :nth-child(2) {
-    background-color: #F4A100;
+    background-color: #2f406d;
+    /* background-color: #F4A100; */
   }
 
   & > :nth-child(3) {
-    background-color: #00AC69;
+    background-color: #2f406d;
+    /* background-color: #00AC69; */
   }
 
   & > :nth-child(4) {
-    background-color: #E81500;
+    background-color: #2f406d;
+    /* background-color: #E81500; */
   }
 `;
 
@@ -108,6 +112,12 @@ export const GraficsFirstLine = styled.div`
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   
   }
+
+  
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const GraficsSecondLine = styled.div`
@@ -123,5 +133,11 @@ export const GraficsSecondLine = styled.div`
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+  }
+
+  
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    width: 100%;
   }
 `;

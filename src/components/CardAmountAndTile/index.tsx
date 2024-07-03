@@ -1,6 +1,6 @@
 // src/components/CardAmountAndTile.tsx
 import { ChevronRightIcon } from '@radix-ui/react-icons';
-import { Calendar } from 'phosphor-react';
+import { Calendar, CalendarCheck, IdentificationCard, UsersThree } from 'phosphor-react';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -10,11 +10,11 @@ const CardAmountAndTileWrapper = styled.div`
   /* border: 1px solid #ccc; */
   border-radius: 8px;
   color: #fff;
-  /* background-color: #0061F2; */
+  /* background-color: #324a83; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px rgb(109 109 109 / 49%);
 
   @media (max-width: 1440px) {
     width: calc(50% - 18px);
@@ -26,6 +26,7 @@ const CardAmountAndTileWrapper = styled.div`
   }
 
   &:hover {
+    box-shadow: 2px 4px 4px rgb(109 109 109 / 49%);
     div {
       svg {
         transform: scale(1.1);
@@ -39,7 +40,7 @@ const CardAmountAndTileContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #0061F2; */
+  /* background-color: #324a83; */
   background-color: #00000010;
   padding: 20px;
   border-top-left-radius: 8px;
@@ -60,6 +61,16 @@ const Footer = styled.div`
 const Message = styled.div`
   font-size: 16px;
   font-weight: bold;
+`;
+
+const MessageGoDetails = styled.div`
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `;
 
 const Amount = styled.div`
@@ -84,11 +95,12 @@ const ArrowIcon = styled(ChevronRightIcon)`
 `;
 
 interface CardAmountAndTileProps {
+  type: "base-patient" | "base-employee" | "base-consultas-feitas-mes" | "base-consultas-abertas-mes";
   title: string;
   amount: string;
 }
 
-const CardAmountAndTile: React.FC<CardAmountAndTileProps> = ({ title, amount }) => {
+const CardAmountAndTile: React.FC<CardAmountAndTileProps> = ({ type, title, amount }) => {
   return (
     <CardAmountAndTileWrapper>
       <CardAmountAndTileContent>
@@ -96,10 +108,13 @@ const CardAmountAndTile: React.FC<CardAmountAndTileProps> = ({ title, amount }) 
           <Message>{title}</Message>
           <Amount>{amount}</Amount>
         </div>
-        <CalendarIcon />
+        {type === "base-consultas-feitas-mes" && <CalendarCheck size={44} />}
+        {type === "base-consultas-abertas-mes" && <Calendar size={44} />}
+        {type === "base-employee" && <IdentificationCard size={44} />}
+        {type === "base-patient" && <UsersThree size={44} />}
       </CardAmountAndTileContent>
       <Footer>
-        <Message>View Report</Message>
+        <MessageGoDetails>Ir para detalhes</MessageGoDetails>
         <ArrowIcon />
       </Footer>
     </CardAmountAndTileWrapper>

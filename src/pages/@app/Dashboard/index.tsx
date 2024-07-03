@@ -47,7 +47,7 @@ interface ReportScreenState {
 
 }
 
-function Dashboard() {
+function Dashboard () {
     const patientsScheduledData: ReportScreenState["patientsScheduledData"] = {
         series: [{
             name: 'Atendimentos',
@@ -199,11 +199,17 @@ function Dashboard() {
     };
 
 
-    const data = [
-        { title: 'Earnings (Monthly)', amount: '$40,000' },
-        { title: 'Earnings (Monthly)', amount: '$40,000' },
-        { title: 'Earnings (Monthly)', amount: '$40,000' },
-        { title: 'Earnings (Monthly)', amount: '$40,000' },
+    interface CardAmountAndTileProps {
+        type: "base-patient" | "base-employee" | "base-consultas-feitas-mes" | "base-consultas-abertas-mes";
+        title: string;
+        amount: string;
+    }
+
+    const data: CardAmountAndTileProps[] = [
+        { type: 'base-consultas-abertas-mes', title: 'Nº Consultas a fazer no mês', amount: '78' },
+        { type: 'base-consultas-feitas-mes', title: 'Nº Consultas feitas no mês', amount: '22' },
+        { type: 'base-employee', title: 'Nº Funcionários', amount: '29' },
+        { type: 'base-patient', title: 'Nº Pacientes', amount: '132' },
     ];
 
     return (
@@ -219,7 +225,7 @@ function Dashboard() {
                     {/* divs com dados de faturamento e outros numeros importantes */}
                     <GridWrapper>
                         {data.map((item, index) => (
-                            <CardAmountAndTile key={index} title={item.title} amount={item.amount} />
+                            <CardAmountAndTile key={index} type={item.type} title={item.title} amount={item.amount} />
                         ))}
                     </GridWrapper>
 

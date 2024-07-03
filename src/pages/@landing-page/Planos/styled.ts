@@ -75,7 +75,7 @@ export const PricingCard = styled.div`
   margin: auto;
   text-align: center;
   width: 30%;
-  height: 500px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,9 +87,9 @@ export const PricingCard = styled.div`
   }
 
   &:hover {
-    box-shadow: 2px 1px 8px 6px rgba(0, 0, 0, 0.1);
-    width: calc(30% + 5px);
-    height: 510px;
+    box-shadow: 2px 1px 8px 6px rgba(0, 0, 0, 0.2);
+    /* width: calc(30% + 5px); */
+    /* height: 610px; */
 
     @media (max-width: 1000px) {
       width: calc(100% + 5px);
@@ -125,7 +125,7 @@ export const PricingCard = styled.div`
   .recommended .highlight {
     background-color: #071a25a8;
     color: #fff;
-    color: #007bff;
+    color: #1F2C53;
     font-weight: bold;
   }
 

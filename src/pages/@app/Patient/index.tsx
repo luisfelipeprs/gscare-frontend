@@ -16,15 +16,15 @@ import { useState } from "react";
 import PatientTable from "../../../components/TableUI/index.tsx";
 import UserDialog from "../MedicalRecord/Model/index.tsx";
 
-function Patient() {
+function Patient () {
 
   const [currentPage] = useState(1);
 
-  function onPrevClick() {
+  function onPrevClick () {
     console.log('voltar paginacao')
   }
 
-  function onNextClick() {
+  function onNextClick () {
     console.log('avancar paginacao')
   }
 
@@ -38,18 +38,12 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
+      email: 'teste@gmail.com',
       celular: '(11) 99999-9999',
       tipoEscala: 'Período Integral',
       valorMensal: '1500.00',
       valorPlantao: '200.00',
-      sexo: 'homem'
+      sexo: 'mulher'
     },
     {
       id: 2,
@@ -57,7 +51,7 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
+      email: 'teste@gmail.com',
       // responsavel: 'Maria Silva',
       // formaPagamento: 'Cartão de Crédito',
       // parentesco: 'Esposa',
@@ -76,7 +70,7 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
+      email: 'teste@gmail.com',
       // responsavel: 'Maria Silva',
       // formaPagamento: 'Cartão de Crédito',
       // parentesco: 'Esposa',
@@ -95,7 +89,7 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
+      email: 'teste@gmail.com',
       // responsavel: 'Maria Silva',
       // formaPagamento: 'Cartão de Crédito',
       // parentesco: 'Esposa',
@@ -114,7 +108,7 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
+      email: 'teste@gmail.com',
       // responsavel: 'Maria Silva',
       // formaPagamento: 'Cartão de Crédito',
       // parentesco: 'Esposa',
@@ -133,7 +127,7 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
+      email: 'teste@gmail.com',
       // responsavel: 'Maria Silva',
       // formaPagamento: 'Cartão de Crédito',
       // parentesco: 'Esposa',
@@ -152,7 +146,7 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
+      email: 'teste@gmail.com',
       // responsavel: 'Maria Silva',
       // formaPagamento: 'Cartão de Crédito',
       // parentesco: 'Esposa',
@@ -171,7 +165,7 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
+      email: 'teste@gmail.com',
       // responsavel: 'Maria Silva',
       // formaPagamento: 'Cartão de Crédito',
       // parentesco: 'Esposa',
@@ -190,7 +184,7 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
+      email: 'teste@gmail.com',
       // responsavel: 'Maria Silva',
       // formaPagamento: 'Cartão de Crédito',
       // parentesco: 'Esposa',
@@ -209,7 +203,7 @@ function Patient() {
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
+      email: 'teste@gmail.com',
       // responsavel: 'Maria Silva',
       // formaPagamento: 'Cartão de Crédito',
       // parentesco: 'Esposa',
@@ -246,6 +240,7 @@ function Patient() {
                 <option value="medicamento">Medicamento Prescrito</option>
               </FilterSelect>
               <FilterButton id="filterButton">
+                <span>Filtrar</span>
                 <MagnifyingGlass size={20} weight="bold" />
               </FilterButton>
             </LeftHeader>

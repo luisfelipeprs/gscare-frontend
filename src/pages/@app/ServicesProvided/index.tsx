@@ -44,7 +44,7 @@ import ModalServices from "./ModalCalendar/ModalServices";
 // };
 
 
-function ServicesProvided() {
+function ServicesProvided () {
   // const options: Option[] = [
   //   { value: 'option1', label: 'Atendido' },
   //   { value: 'option2', label: 'Não atendido' },
@@ -147,12 +147,12 @@ function ServicesProvided() {
 
 
 
-  function onPrevClick() {
+  function onPrevClick () {
     console.log('voltar paginacao')
     setCurrentPage(currentPage - 1);
   }
 
-  function onNextClick() {
+  function onNextClick () {
     console.log('avancar paginacao')
     setCurrentPage(currentPage + 1);
   }
@@ -176,6 +176,7 @@ function ServicesProvided() {
                 <option value="medicamento">Medicamento Prescrito</option>
               </FilterSelect>
               <FilterButton id="filterButton">
+                <span>Filtrar</span>
                 <MagnifyingGlass size={20} weight="bold" />
               </FilterButton>
             </LeftHeader>

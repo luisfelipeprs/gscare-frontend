@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import HomemImg from './../../assets/icon-masc.png';
 import MulherImg from './../../assets/icon-fem.png';
-import { Eye, Funnel } from 'phosphor-react';
+import { DotsThreeVertical, Eye, Funnel } from 'phosphor-react';
 
 interface IPatient {
   id: number;
   nome: string;
-  idade: number;
   patologia: string;
+  email: string;
+  idade: number;
   endereco: string;
   celular: string;
   tipoEscala: string;
@@ -99,6 +100,17 @@ const Td = styled.td`
   /* width: 12%; */
 `;
 
+const TdFlagPatologia = styled.div`
+  display: table-cell;
+  background: #9f8737af;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 4px 10px;
+  box-shadow: 0 0 5px 1px #00000038;
+`;
+
 const ButtonViewTd = styled.button`
   text-align: center;
   justify-content: center;
@@ -106,7 +118,6 @@ const ButtonViewTd = styled.button`
   margin: auto;
   padding: 10px;
   border: none;
-  background-color: #7a97ff5c;
   border-radius: 8px;
 
   &:hover {
@@ -132,22 +143,7 @@ const PatientTable: React.FC<Props> = ({ patients }) => {
             <thead>
               <tr>
                 <Th>
-                  detalhes
-                </Th>
-                <Th>
                   Nome
-                  <Funnel size={18} />
-                </Th>
-                <Th>
-                  Idade
-                  <Funnel size={18} />
-                </Th>
-                <Th>
-                  Patologia
-                  <Funnel size={18} />
-                </Th>
-                <Th>
-                  Endereço
                   <Funnel size={18} />
                 </Th>
                 <Th>
@@ -155,7 +151,19 @@ const PatientTable: React.FC<Props> = ({ patients }) => {
                   <Funnel size={18} />
                 </Th>
                 <Th>
+                  Endereço
+                  <Funnel size={18} />
+                </Th>
+                <Th>
+                  Idade
+                  <Funnel size={18} />
+                </Th>
+                <Th>
                   Escala
+                  <Funnel size={18} />
+                </Th>
+                <Th>
+                  Patologia
                   <Funnel size={18} />
                 </Th>
                 <Th>
@@ -166,28 +174,37 @@ const PatientTable: React.FC<Props> = ({ patients }) => {
                   Valor Plantão
                   <Funnel size={18} />
                 </Th>
+                <Th>
+                  {/* detalhes */}
+                </Th>
               </tr>
             </thead>
             <Tbody id="tableBody">
               {patients.map(patient => (
                 <tr key={patient.id}>
                   <Td>
-                    <ButtonViewTd>
-                      <Eye size={20} color="#272727" weight="light" />
-                    </ButtonViewTd>
+                    <div style={{ display: "flex", gap: "10" }}>
+                      {patient.sexo === 'homem' && <img src={HomemImg} alt="Homem" style={{ marginRight: '5px', width: 'auto', height: '20px', borderRadius: '50%' }} />}
+                      {patient.sexo === 'mulher' && <img src={MulherImg} alt="Mulher" style={{ marginRight: '5px', width: 'auto', height: '20px', borderRadius: '50%' }} />}
+                      {patient.nome}
+                    </div>
                   </Td>
-                  <Td>
-                    {patient.sexo === 'homem' && <img src={HomemImg} alt="Homem" style={{ marginRight: '5px', width: '15px', borderRadius: '50%' }} />}
-                    {patient.sexo === 'mulher' && <img src={MulherImg} alt="Mulher" style={{ marginRight: '5px', width: '15px', borderRadius: '50%' }} />}
-                    {patient.nome}
-                  </Td>
-                  <Td>{patient.idade}</Td>
-                  <Td>{patient.patologia}</Td>
-                  <Td>{patient.endereco}</Td>
                   <Td>{patient.celular}</Td>
+                  <Td>{patient.endereco}</Td>
+                  <Td>{patient.idade}</Td>
                   <Td>{patient.tipoEscala}</Td>
+                  <Td>
+                    <TdFlagPatologia>
+                      {patient.patologia}
+                    </TdFlagPatologia>
+                  </Td>
                   <Td>{patient.valorMensal}</Td>
                   <Td>{patient.valorPlantao}</Td>
+                  <Td>
+                    <ButtonViewTd>
+                      <DotsThreeVertical size={20} color="#272727" weight="bold" />
+                    </ButtonViewTd>
+                  </Td>
                 </tr>
               ))}
             </Tbody>

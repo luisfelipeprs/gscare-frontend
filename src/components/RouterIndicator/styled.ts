@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const ContainerBlueBar = styled.div`
-  background: linear-gradient(to right, #1146ff, #682fff);
+  /* background: linear-gradient(to right, #1146ff, #682fff); */
+  background: linear-gradient(to right, #202d58, #1d2b4b);
   /* color: #682fff; */
   height: 300px;
   width: 100%;
@@ -53,13 +54,14 @@ export const StyledNameContainer = styled.div`
     flex-direction: row;
     align-items: center; /* Adicionado para centralizar verticalmente */
     text-align: center;
+    gap: 8px;
 
     p {
-      margin-left: 8px;
       font-size: 1.8rem;
       font-weight: 500;
       font-family: monospace;
     }
+
   }
 
   p.info-text {
@@ -69,10 +71,14 @@ export const StyledNameContainer = styled.div`
   }
 
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 600px) {
     div {
       p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+      }
+
+      svg {
+        display: none;
       }
     }
   }
@@ -123,12 +129,13 @@ export const StyledDateContainer = styled.div`
 
 export const ContainerSectionsInfos = styled.div`
   flex: 1;
-  margin-top: -170px;
+  margin-top: -180px;
   width: 90%;
   display: flex;
   justify-content: space-between;
   gap: 20px; /* Distância igual entre as três seções */
   flex-wrap: wrap; /* Quebra para a próxima linha em telas menores */
+  margin-bottom: 50px;
   
   @media screen and (max-width: 780px) {
     flex-direction: column;

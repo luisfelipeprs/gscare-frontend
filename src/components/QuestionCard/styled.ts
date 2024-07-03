@@ -6,12 +6,14 @@ export const Container = styled.div`
   /* padding-bottom: 100px; */
   margin: auto;
   display: flex;
+  padding: 20px 0;
 `;
 
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 1280px;
+  min-height: 600px;
   margin: auto;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
   border-radius: 12px;

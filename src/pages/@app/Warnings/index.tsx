@@ -3,7 +3,7 @@ import { RouterIndicator } from "../../../components/RouterIndicator";
 import ModalWarnings from "./Modal/ModalWarnings";
 import { CaretLeft, CaretRight, MagnifyingGlass } from "phosphor-react";
 import { useState } from "react";
-import PatientTable from "./TableUI";
+import WarningTable from "./TableUI";
 
 // titulo
 // tipo de aviso
@@ -13,7 +13,7 @@ import PatientTable from "./TableUI";
 
 function Warnings () {
 
-  const patients = [
+  const warnings = [
     {
       id: 1,
       titulo: 'nova regra',
@@ -133,6 +133,7 @@ function Warnings () {
                 <option value="medicamento">Medicamento Prescrito</option>
               </FilterSelect>
               <FilterButton id="filterButton">
+                <span>Filtrar</span>
                 <MagnifyingGlass size={20} weight="bold" />
               </FilterButton>
             </LeftHeader>
@@ -151,7 +152,7 @@ function Warnings () {
             </RightHeader>
           </Header>
 
-          <PatientTable patients={patients} />
+          <WarningTable warnings={warnings} />
         </Content>
       </RouterIndicator>
     </Container>

@@ -63,6 +63,27 @@ export const FeedbacksClients = () => {
                   </p>
                 </div>
               </div>
+
+              <div className="feedback">
+                <img src={ImgMasc} className="feedback-avatar" alt="" />
+
+                <div className="feedback-content">
+                  <p>
+                    Fulana de Tal
+                    <span>
+                      <i className="fa-solid fa-star"> ⭐</i>
+                      <i className="fa-solid fa-star"> ⭐</i>
+                      <i className="fa-solid fa-star"> ⭐</i>
+                      <i className="fa-solid fa-star"> ⭐</i>
+                      <i className="fa-solid fa-star"> ⭐</i>
+                    </span>
+                  </p>
+                  <p>
+                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Repellat voluptatibus cumque dolor ea est quae alias necessitatibus"
+                  </p>
+                </div>
+              </div>
             </div>
 
             <button className="btn-default">

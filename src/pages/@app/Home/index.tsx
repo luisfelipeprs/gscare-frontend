@@ -2,19 +2,24 @@ import React from 'react';
 import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerCharts, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, InformationCard, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeParagraph, WelcomeTitle } from './styled';
 import { CaretRight, DotsThreeVertical, House } from 'phosphor-react';
 import helloWork from '../../../assets/helloWork.svg'
+import rocketGscare from '../../../assets/rocket-gscare2.png'
 import CardAmountAndTile from '../../../components/CardAmountAndTile';
 import LineChart from '../../../components/ChatsHomeAdmin/LineChart';
 import ColumnChart from '../../../components/ChatsHomeAdmin/ColumnChart';
 import { ProgressBar } from '../../../components/ProgressBar';
 import TextGscare from '../../../components/TextGscare';
 
+interface CardAmountAndTileProps {
+  type: "base-patient" | "base-employee" | "base-consultas-feitas-mes" | "base-consultas-abertas-mes";
+  title: string;
+  amount: string;
+}
 
-
-const data = [
-  { title: 'Earnings (Monthly)', amount: '$40,000' },
-  { title: 'Earnings (Monthly)', amount: '$40,000' },
-  { title: 'Earnings (Monthly)', amount: '$40,000' },
-  { title: 'Earnings (Monthly)', amount: '$40,000' },
+const data: CardAmountAndTileProps[] = [
+  { type: 'base-consultas-abertas-mes', title: 'Nº Consultas a fazer no mês', amount: '78' },
+  { type: 'base-consultas-feitas-mes', title: 'Nº Consultas feitas no mês', amount: '22' },
+  { type: 'base-employee', title: 'Nº Funcionários', amount: '29' },
+  { type: 'base-patient', title: 'Nº Pacientes', amount: '132' },
 ];
 
 
@@ -67,7 +72,8 @@ const Home: React.FC = () => {
             <WelcomeParagraph>
               Bem-vindos ao líder em gestão de saúde! Oferecemos cuidados superiores e satisfação total, para sua empresa e seus clientes
             </WelcomeParagraph>
-            <img src={helloWork} alt="" />
+            <img src={rocketGscare} alt="" />
+            {/* <img src={helloWork} alt="" /> */}
           </WelcomeContaint>
         </SectionInfos>
 
@@ -196,9 +202,9 @@ const Home: React.FC = () => {
             <ButtonInfos><DotsThreeVertical size={20} /></ButtonInfos>
           </HeaderInfos>
           <Information>
-            <ProgressBar percentage={28} name="Atendimentos do Mês" showText={true} barColor="#E81500" />
+            <ProgressBar percentage={28} name="Atendimentos do Mês" showText={true} barColor="#b50f00" />
             <ProgressBar percentage={71} name="Atendimentos do Mês" showText={true} barColor="#F4A100" />
-            <ProgressBar percentage={13} name="Atendimentos do Mês" showText={true} barColor="#0061F2" />
+            <ProgressBar percentage={13} name="Atendimentos do Mês" showText={true} barColor="#324a83" />
             <ProgressBar percentage={94} name="Atendimentos do Mês" showText={true} barColor="#00CED4" />
             <ProgressBar percentage={72} name="Atendimentos do Mês" showText={true} barColor="#00AC69" />
 
@@ -209,7 +215,7 @@ const Home: React.FC = () => {
       {/* divs com dados de faturamento e outros numeros importantes */}
       <GridWrapper>
         {data.map((item, index) => (
-          <CardAmountAndTile key={index} title={item.title} amount={item.amount} />
+          <CardAmountAndTile key={index} type={item.type} title={item.title} amount={item.amount} />
         ))}
       </GridWrapper>
 

@@ -7,7 +7,7 @@ interface IProps {
   barColor?: string;
 }
 
-export const ProgressBar = ({ percentage, name, showText = true, barColor = "#007bff" }: IProps) => {
+export const ProgressBar = ({ percentage, name, showText = true, barColor = "#1F2C53" }: IProps) => {
 
   return (
     <ProgressBarContainer>

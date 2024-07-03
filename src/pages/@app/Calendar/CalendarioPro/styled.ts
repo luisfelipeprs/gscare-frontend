@@ -27,7 +27,7 @@ export const HeaderInfos = styled.div`
 `;
 
 export const DivInfos = styled.div`
-  color: #0061f2;
+  color: #324a83;
   font-size: 0.8rem;
   font-weight: 500;
   display: flex;
@@ -189,12 +189,12 @@ export const DayDivInfosSecondSpan = styled.span`
 export const DayWeekStyled = styled.div`
   text-align: center;
   font-weight: bold;
-  color: #007bff;
+  color: #1F2C53;
   padding: 15px 0;
   border-bottom: 2px solid transparent;
 
   &:hover {
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #1F2C53;
   }
 `;
 

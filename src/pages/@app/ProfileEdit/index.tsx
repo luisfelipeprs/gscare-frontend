@@ -55,54 +55,58 @@ function ProfileEdit () {
                   </ContainerButtonEditAccount>
                 </AddPicture>
 
-                <InfoProfile>
-                  <InfoProfileText>
-                    <h3>Seu Perfil</h3>
-                  </InfoProfileText>
-                  <InfoProfileDatas>
-                    <p>
-                      primeiro acesso: 10-10-2010
-                    </p>
-                  </InfoProfileDatas>
-                </InfoProfile>
-                <RegistrationData>
+                <div style={{
+                  padding: '40px',
+                }}>
 
-                  <ContainerEmail>
-                    <div>
-                      <input type="text" disabled value="Fernando Xavier Coelho De Silva" placeholder="digite seu nome" />
-                    </div>
-                  </ContainerEmail>
-                  <ContainerNameAndNumberTel>
-                    <div>
-                      <input type="text" disabled value="123.456.789-90" placeholder="digite seu CPF" />
-                    </div>
-                    <div>
-                      <input type="tel" disabled value="20040-001" placeholder="digite seu CEP" />
-                    </div>
-                  </ContainerNameAndNumberTel>
-                  <ContainerNameAndNumberTel>
-                    <div>
-                      <input type="text" disabled value="12.345.678/0001-00" placeholder="digite seu CNPJ" />
-                    </div>
-                    <div>
-                      <input type="tel" disabled value="(00) 12345-6789" placeholder="(xx) xxxxx-xxxx" />
-                    </div>
-                  </ContainerNameAndNumberTel>
-                  <ContainerEmail>
-                    <div>
-                      <input type="email" disabled value="seuemail@email.com" placeholder="digite seu email" />
-                    </div>
-                  </ContainerEmail>
+                  <InfoProfile>
+                    <InfoProfileText>
+                      <h3>Seu Perfil</h3>
+                    </InfoProfileText>
+                    <InfoProfileDatas>
+                      <p>
+                        primeiro acesso: 10-10-2010
+                      </p>
+                    </InfoProfileDatas>
+                  </InfoProfile>
+                  <RegistrationData>
 
-                  <ContainerNameAndNumberTel>
-                    <div>
-                      <input type="password" value="Fernando Franco" placeholder="digite seu nome" />
-                    </div>
-                    <div>
-                      <input type="password" placeholder="digite nova senha" />
-                    </div>
-                  </ContainerNameAndNumberTel>
-                  {/* 
+                    <ContainerEmail>
+                      <div>
+                        <input type="text" disabled value="Fernando Xavier Coelho De Silva" placeholder="digite seu nome" />
+                      </div>
+                    </ContainerEmail>
+                    <ContainerNameAndNumberTel>
+                      <div>
+                        <input type="text" disabled value="123.456.789-90" placeholder="digite seu CPF" />
+                      </div>
+                      <div>
+                        <input type="tel" disabled value="20040-001" placeholder="digite seu CEP" />
+                      </div>
+                    </ContainerNameAndNumberTel>
+                    <ContainerNameAndNumberTel>
+                      <div>
+                        <input type="text" disabled value="12.345.678/0001-00" placeholder="digite seu CNPJ" />
+                      </div>
+                      <div>
+                        <input type="tel" disabled value="(00) 12345-6789" placeholder="(xx) xxxxx-xxxx" />
+                      </div>
+                    </ContainerNameAndNumberTel>
+                    <ContainerEmail>
+                      <div>
+                        <input type="email" disabled value="seuemail@email.com" placeholder="digite seu email" />
+                      </div>
+                    </ContainerEmail>
+
+                    <ContainerNameAndNumberTel>
+                      <div>
+                        <input type="password" value="Fernando Franco" placeholder="digite seu nome" />
+                      </div>
+                      <div>
+                        <input type="password" placeholder="digite nova senha" />
+                      </div>
+                    </ContainerNameAndNumberTel>
+                    {/* 
                     NOME COMPLETO [x]
                     CPF E IDENTIDADE [x]
                     ENDEREÇO COM CEP [x]
@@ -116,14 +120,15 @@ function ProfileEdit () {
                   */}
 
 
-                </RegistrationData>
-                {/* <a href="#"><h2>Profile</h2></a>
+                  </RegistrationData>
+                  {/* <a href="#"><h2>Profile</h2></a>
                 <a href="#"><h2>Task</h2></a>
                 <a href="#"><h2>Calendar</h2></a>
                 <a href="#"><h2>Files</h2></a> */}
-                <ContainerCustomerTrackingEnabled>
-                  Rastreamento de cliente ativado
-                </ContainerCustomerTrackingEnabled>
+                  <ContainerCustomerTrackingEnabled>
+                    Rastreamento de cliente ativado
+                  </ContainerCustomerTrackingEnabled>
+                </div>
 
               </CardInfoAccountDatas>
             </ContainerDataFloat>
@@ -142,7 +147,7 @@ function ProfileEdit () {
                         <p>f123f12-3f123f-21f3sav-cvqd1</p>
                       </CardInfo>
                       <CardData>
-                        <span style={{ background: 'linear-gradient(166deg, rgb(119 213 84), rgb(19, 156, 0))' }}>
+                        <span style={{ background: 'linear-gradient(166deg, rgb(46 101 165), rgb(11 28 67))' }}>
                           Conta ativa
                         </span>
                       </CardData>
@@ -153,7 +158,7 @@ function ProfileEdit () {
                         <p>01/10/2023 - 01/10/2024</p>
                       </CardInfo>
                       <CardData>
-                        <span style={{ background: 'linear-gradient(166deg, #FFCE3A, #FFA700)' }}>
+                        <span style={{ background: 'linear-gradient(166deg, rgb(255 191 0), rgb(229 150 0))' }}>
                           Assinatura Premiun
                         </span>
                       </CardData>

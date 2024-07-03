@@ -93,6 +93,28 @@ const Td = styled.td`
   width: 12%;
 `;
 
+const TdFlagInicio = styled.div`
+  display: table-cell;
+  background: #0f45a892;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 4px 10px;
+  box-shadow: 0 0 5px 1px #00000038;
+`;
+
+const TdFlagFim = styled.div`
+  display: table-cell;
+  background: #b7343493;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 4px 10px;
+  box-shadow: 0 0 5px 1px #00000038;
+`;
+
 const Tbody = styled.tbody`
   & tr:nth-child(even) {
     background-color: #f9f9ff;
@@ -111,11 +133,11 @@ const PatientTable: React.FC<Props> = ({ patients }) => {
             <thead>
               <tr>
                 <Th>
-                  nameEmployee
+                  Funcionário
                   <Funnel size={18} />
                 </Th>
                 <Th>
-                  namePatient
+                  Paciente
                   <Funnel size={18} />
                 </Th>
                 <Th>
@@ -137,8 +159,16 @@ const PatientTable: React.FC<Props> = ({ patients }) => {
                 <tr key={patient.id}>
                   <Td>{patient.nameEmployee}</Td>
                   <Td>{patient.namePatient}</Td>
-                  <Td>{patient.inicio}</Td>
-                  <Td>{patient.fim}</Td>
+                  <Td>
+                    <TdFlagInicio>
+                      {patient.inicio}
+                    </TdFlagInicio>
+                  </Td>
+                  <Td>
+                    <TdFlagFim>
+                      {patient.fim}
+                    </TdFlagFim>
+                  </Td>
                   <Td>{patient.valor}</Td>
                 </tr>
               ))}

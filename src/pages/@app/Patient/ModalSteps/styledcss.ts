@@ -419,7 +419,7 @@ export const ContainerStepTwo = styled.div`
   
   h1, h2 {
     text-align: center;
-    color: #007bff;
+    color: #1F2C53;
   }
   table {
       width: 100%;
@@ -432,7 +432,7 @@ export const ContainerStepTwo = styled.div`
       text-align: left;
   }
   th {
-      background-color: #007bff;
+      background-color: #1F2C53;
       color: #fff;
   }
 `;
@@ -486,7 +486,7 @@ export const AddFormStepTwo = styled.div`
 
   button {
     padding: 8px 15px;
-    background-color: #007bff;
+    background-color: #1F2C53;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -501,7 +501,7 @@ export const ActionButtonsStepTwo = styled.td`
   button {
     margin: 5px;
     padding: 8px 15px;
-    background-color: #007bff;
+    background-color: #1F2C53;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -524,7 +524,7 @@ export const ContainerStepThree = styled.div`
 
   h1, h2 {
     text-align: center;
-    color: #007bff;
+    color: #1F2C53;
   }
 
   table {
@@ -540,7 +540,7 @@ export const ContainerStepThree = styled.div`
   }
 
   th {
-      background-color: #007bff;
+      background-color: #1F2C53;
       color: #fff;
   }
 `;
@@ -558,7 +558,7 @@ export const AddFormStepThree = styled.div`
 
   button {
     padding: 8px 15px;
-    background-color: #007bff;
+    background-color: #1F2C53;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -573,7 +573,7 @@ export const ActionButtonsStepThree = styled.td`
   button {
     margin: 5px;
     padding: 8px 15px;
-    background-color: #007bff;
+    background-color: #1F2C53;
     color: #fff;
     border: none;
     border-radius: 5px;

@@ -196,7 +196,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  background-color: #007bff;
+  background-color: #1F2C53;
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -348,7 +348,7 @@ export const ButtonSubmitForm = styled.button`
 `;
 
 export const H2 = styled.h2`
-  color: #007bff;
+  color: #1F2C53;
   /* margin-bottom: 20px; */
 `;
 
@@ -390,7 +390,7 @@ export const FormGroupSelect = styled.select`
 
 /* Estilo para os botões do formulário */
 // const Button = styled.button`
-//   background-color: #007bff;
+//   background-color: #1F2C53;
 //   color: #fff;
 //   padding: 15px 20px;
 //   border-radius: 16px;
@@ -418,7 +418,7 @@ export const FormGroup = styled.div`
 export const StyledDayOfWeekDefineConsulta = styled.div`
   text-align: center;
   font-weight: bold;
-  color: #007bff;
+  color: #1F2C53;
 `
 
 

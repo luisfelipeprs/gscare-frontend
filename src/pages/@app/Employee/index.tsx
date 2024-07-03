@@ -1,258 +1,157 @@
 import {
-  Container, Content, PaginationContainer,
-  NavigationButton,
-  PageIndicator, Header,
-  LeftHeader,
-  SearchInput,
-  FilterSelect,
+  Container,
+  Content,
   FilterButton,
-  RightHeader
-} from './styled';
-import { RouterIndicator } from "../../../components/RouterIndicator";
-import { CaretLeft, CaretRight, MagnifyingGlass } from "phosphor-react";
+  FilterSelect,
+  Header,
+  LeftHeader,
+  RightHeader,
+  SearchInput,
+} from "./styled";
 
-import ModalStep from './ModalSteps/ModalStep.tsx';
-import React from 'react';
-import PatientTable from '../../../components/TableUI/index.tsx';
+import { RouterIndicator } from "../../../components/RouterIndicator/index.tsx";
+import { MagnifyingGlass, CaretLeft, CaretRight } from "phosphor-react";
+import { PaginationContainer, NavigationButton, PageIndicator } from "../Employee/styled.ts";
+import { useState } from "react";
+import UserDialog from "../MedicalRecord/Model/index.tsx";
+import EmployeeTable from "../../../components/TableUI/EmployeeTable.tsx";
 
-export function Employee() {
+function Employee () {
 
-  // function handleEdit(string: string) {
-  //   console.log(string)
-  // }
+  const [currentPage] = useState(1);
 
-  // function radixFunc() {
-  //   console.log('clicou pra abrir um modal radix')
-  // }
+  function onPrevClick () {
+    console.log('voltar paginacao')
+  }
+
+  function onNextClick () {
+    console.log('avancar paginacao')
+  }
+
+  const totalPages = 10
 
 
-
-
-  const patients = [
+  const employees = [
     {
       id: 1,
       nome: 'João Silva',
+      profissao: 'Veterinario',
+      email: "joao@gmail.com",
+      endereco: 'string',
       idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
+      celular: 'Rua ABC, 123',
+      tipoEscala: 'Aberto',
+      valorStatus: '1500.00',
       sexo: 'homem'
     },
     {
       id: 2,
       nome: 'João Silva',
+      profissao: 'Veterinario',
+      email: "joao@gmail.com",
+      endereco: 'string',
       idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
-      sexo: 'mulher'
+      celular: 'Rua ABC, 123',
+      tipoEscala: 'Aberto',
+      valorStatus: '1500.00',
+      sexo: 'homem'
     },
     {
       id: 3,
       nome: 'João Silva',
+      profissao: 'Veterinario',
+      email: "joao@gmail.com",
+      endereco: 'string',
       idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
-      sexo: 'mulher'
+      celular: 'Rua ABC, 123',
+      tipoEscala: 'Aberto',
+      valorStatus: '1500.00',
+      sexo: 'homem'
     },
     {
       id: 4,
       nome: 'João Silva',
+      profissao: 'Veterinario',
+      email: "joao@gmail.com",
+      endereco: 'string',
       idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
-      sexo: 'mulher'
+      celular: 'Rua ABC, 123',
+      tipoEscala: 'Aberto',
+      valorStatus: '1500.00',
+      sexo: 'homem'
     },
     {
       id: 5,
       nome: 'João Silva',
+      profissao: 'Veterinario',
+      email: "joao@gmail.com",
+      endereco: 'string',
       idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
-      sexo: 'mulher'
+      celular: 'Rua ABC, 123',
+      tipoEscala: 'Aberto',
+      valorStatus: '1500.00',
+      sexo: 'homem'
     },
     {
       id: 6,
       nome: 'João Silva',
+      profissao: 'Veterinario',
+      email: "joao@gmail.com",
+      endereco: 'string',
       idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
-      sexo: 'mulher'
+      celular: 'Rua ABC, 123',
+      tipoEscala: 'Aberto',
+      valorStatus: '1500.00',
+      sexo: 'homem'
     },
     {
       id: 7,
       nome: 'João Silva',
+      profissao: 'Veterinario',
+      email: "joao@gmail.com",
+      endereco: 'string',
       idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
-      sexo: 'mulher'
+      celular: 'Rua ABC, 123',
+      tipoEscala: 'Aberto',
+      valorStatus: '1500.00',
+      sexo: 'homem'
     },
     {
       id: 8,
       nome: 'João Silva',
+      profissao: 'Veterinario',
+      email: "joao@gmail.com",
+      endereco: "string",
       idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
-      sexo: 'mulher'
+      celular: 'Rua ABC, 123',
+      tipoEscala: 'Aberto',
+      valorStatus: '1500.00',
+      sexo: 'homem'
     },
     {
       id: 9,
       nome: 'João Silva',
+      profissao: 'Veterinario',
+      email: "joao@gmail.com",
+      endereco: "string",
       idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
-      sexo: 'mulher'
+      celular: 'Rua ABC, 123',
+      tipoEscala: 'Aberto',
+      valorStatus: '1500.00',
+      sexo: 'homem'
     },
-    {
-      id: 10,
-      nome: 'João Silva',
-      idade: 45,
-      patologia: 'Hipertensão',
-      endereco: 'Rua ABC, 123',
-      dataPagamento: '01/04/2024',
-      // responsavel: 'Maria Silva',
-      // formaPagamento: 'Cartão de Crédito',
-      // parentesco: 'Esposa',
-      // identidade: '1234567',
-      // cpf: '123.456.789-00',
-      // email: 'joao@example.com',
-      celular: '(11) 99999-9999',
-      tipoEscala: 'Período Integral',
-      valorMensal: '1500.00',
-      valorPlantao: '200.00',
-      sexo: 'mulher'
-    },
-    // Adicione mais pacientes conforme necessário
   ];
-
-  const totalPages = 10
-
-  const [currentPage, setCurrentPage] = React.useState(1);
-
-  function onPrevClick() {
-    console.log('voltar paginacao')
-    setCurrentPage(currentPage - 1);
-  }
-
-  function onNextClick() {
-    console.log('avancar paginacao')
-    setCurrentPage(currentPage + 1);
-  }
-
-  // const handleNextPage = () => {
-  //   setCurrentPage(currentPage + 1);
-  // };
-
-  // const handlePrevPage = () => {
-  //   setCurrentPage(currentPage - 1);
-  // };
-
 
   return (
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="Listagem de funcionários"
-        routerText="Funcionarios"
-        onButtonClick={ModalStep}
+        descText="Listagem de employees"
+        routerText="Employee"
+        onButtonClick={UserDialog}
       >
+        {/* <UserDialog /> */}
+
         <Content>
 
           <Header>
@@ -264,6 +163,7 @@ export function Employee() {
                 <option value="medicamento">Medicamento Prescrito</option>
               </FilterSelect>
               <FilterButton id="filterButton">
+                <span>Filtrar</span>
                 <MagnifyingGlass size={20} weight="bold" />
               </FilterButton>
             </LeftHeader>
@@ -282,9 +182,12 @@ export function Employee() {
             </RightHeader>
           </Header>
 
-          <PatientTable patients={patients} />
+          <EmployeeTable employees={employees} />
         </Content>
       </RouterIndicator>
     </Container>
   );
 }
+
+
+export default Employee;

@@ -17,8 +17,7 @@ import Patient from "./pages/@app/Patient/index.tsx";
 import { Login } from "./pages/@auth/Login/index.tsx";
 import { LoginAdmin } from "./pages/@auth/LoginAdmin/index.tsx";
 import { Register } from "./pages/@auth/Register/index.tsx";
-import { ForgotPassword } from "./pages/@auth/ForgetPassword/index.tsx";
-import { Employee } from "./pages/@app/Employee/index.tsx";
+import { ForgetPassword } from "./pages/@auth/ForgetPassword/index.tsx";
 import Sobre from "./pages/@landing-page/Sobre/index.tsx";
 import Recursos from "./pages/@landing-page/Recursos/index.tsx";
 import Planos from "./pages/@landing-page/Planos/index.tsx";
@@ -26,6 +25,7 @@ import Contact from "./pages/@landing-page/Contact/index.tsx";
 import Dashboard from "./pages/@app/Dashboard/index.tsx";
 import MedicalRecord from "./pages/@app/MedicalRecord/index.tsx";
 import OrderAndPrescription from "./pages/@app/OrderAndPrescription/index.tsx";
+import Employee from "./pages/@app/Employee/index.tsx";
 
 
 export function Router () {
@@ -41,7 +41,7 @@ export function Router () {
             <Route path="/login" element={<Login />} />
             <Route path="/login-admin" element={<LoginAdmin />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/forgot-password" element={<ForgetPassword />} />
 
 
             <Route path="/admin" element={<DefaultLayout />}>

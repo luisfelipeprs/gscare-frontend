@@ -1,67 +1,44 @@
-import { Container, Content } from "./styled";
-import logoImg from "../../../assets/logo.svg";
-import { Link, useNavigate } from "react-router-dom";
-import { House } from "phosphor-react";
-import { useForm } from "react-hook-form";
+import React from 'react';
+import { Container, ContainerForm, Content, HeaderForm } from './styled';
+import { Link, useNavigate } from 'react-router-dom';
+import { House } from 'phosphor-react';
+import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-
 const loginAttendantFormSchema = z.object({
-  token:
-    z.string()
-      .min(1, 'O campo token não pode ser nulo ou vazio.'),
-  email:
-    z.string()
-      .min(1, 'O campo email não pode ser nulo ou vazio.')
-      .email('Formato de e-mail inválido')
-      .toLowerCase(),
-  password:
-    z.string()
-      .min(6, 'A senha precisa de no mínimo 6 caracteres.'),
-})
+  token: z.string().min(1, 'O campo token não pode ser nulo ou vazio.'),
+  email: z.string().min(1, 'O campo email não pode ser nulo ou vazio.').email('Formato de e-mail inválido').toLowerCase(),
+  password: z.string().min(6, 'A senha precisa de no mínimo 6 caracteres.')
+});
 
-type LoginAttendatFormData = z.infer<typeof loginAttendantFormSchema>
+type LoginAttendatFormData = z.infer<typeof loginAttendantFormSchema>;
 
 export function Login () {
-
   const navigate = useNavigate();
-
   const { register, handleSubmit, formState: { errors } } = useForm<LoginAttendatFormData>({
     resolver: zodResolver(loginAttendantFormSchema)
   });
 
-  // const goBackToPreviousScreen = () => {
-  //   navigate(-1);
-  // };
-
   const goBackToHome = () => {
-    navigate('/')
+    navigate('/');
   };
 
-  // function handleSubmitData ({ token, email, password }: LoginAttendatFormData) {
-  function handleSubmitData () {
-    // authenticateUser({ token, email, password })
-    // 64bfed1ee252092818948502
-    // feh@gmail.com
-    // Feh12345
-    navigate('/admin')
-  }
-
+  const handleSubmitData = () => {
+    navigate('/admin');
+  };
 
   return (
     <Container>
       <Content>
-        <button className="btn-top-left">
-          <House size={26} color="#000000" weight="thin" onClick={goBackToHome} />
-        </button>
+        <HeaderForm>
+          <button className="btn-top-left">
+            <House size={26} color="#000000" weight="thin" onClick={goBackToHome} />
+            <span>HOME</span>
+          </button>
+        </HeaderForm>
 
-        <div className="container">
-          <header className="header">
-            <img src={logoImg} width='100px' alt="Workflow" className="logoImg" />
-            <p>Acesso Atendente</p>
-          </header>
-
+        <ContainerForm>
           <form onSubmit={handleSubmit(handleSubmitData)}>
             <div className="inputContainer">
               <label htmlFor="token">Token</label>
@@ -96,26 +73,18 @@ export function Login () {
               {errors.password && <span>{errors.password.message}</span>}
             </div>
 
-            <button className="button"
-              onClick={handleSubmitData}
-            >
-              Entrar
-            </button>
+            <button className="button">Entrar</button>
             <div className="footer">
               <p>Você não tem uma conta?</p>
               <Link to="/register">Crie a sua conta aqui</Link>
             </div>
             <div className="footer">
-              <Link to="/forgot-password">Esqueceu sua senha ?</Link>
+              <Link to="/forgot-password">Esqueceu sua senha?</Link>
               <Link to="/login-admin">Acesso Administrativo</Link>
             </div>
           </form>
-        </div>
+        </ContainerForm>
       </Content>
     </Container>
-  )
+  );
 }
-
-// 64bfed1ee252092818948502
-// feh@gmail.com
-// Feh12345

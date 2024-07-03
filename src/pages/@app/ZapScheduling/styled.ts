@@ -281,7 +281,7 @@ export const Table = styled.table`
   }
 
   th {
-    background-color: #007bff;
+    background-color: #1F2C53;
     color: #fff;
   }
 

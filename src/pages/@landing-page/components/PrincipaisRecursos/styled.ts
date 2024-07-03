@@ -174,9 +174,9 @@ export const Overlay = styled.div`
   height: 100%;
   /* background-color: #123f5a9e; */
   /* background-color: #0a26379e; */
-  background-color: #071a25a8;
+  background-color: #3c516cbd;
   z-index: 0;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
 `;
 
 export const CardContentServices = styled.div`
@@ -186,6 +186,11 @@ export const CardContentServices = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  
+  @media (max-width: 1000px) {
+    width: 70%;
+  }
 `;
 
 export const FeedbackCardQuote = styled.div`
@@ -197,6 +202,14 @@ export const FeedbackCardQuote = styled.div`
   font-size: 1.5rem;
   color: #eee;
 
+  h3 {
+    
+    font-size: 2rem;
+    font-family: system-ui;
+    font-weight: 500;
+
+  }
+
   img {
     width: 50px;
   }
@@ -205,7 +218,7 @@ export const FeedbackCardQuote = styled.div`
 export const LimitedParagraph = styled.p`
   /* border-top: 3px solid #ffffff; */
   
-  font-size: 1.3rem;
+  font-size: 1.15rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -223,7 +236,7 @@ export const ContainerButtonCard = styled.div`
     
     color: #FFA500;
     text-decoration: underline;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-family: system-ui;
   }
 `;

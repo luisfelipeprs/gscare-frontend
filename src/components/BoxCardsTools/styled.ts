@@ -6,6 +6,7 @@ export const Container = styled.div`
   /* background-color: #fff; */
   /* padding-bottom: 100px; */
   display: flex;
+  padding: 10px 0;
 `;
 
 export const Content = styled.div`
