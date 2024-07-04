@@ -13,25 +13,88 @@ import { DateSelectArg, EventClickArg, EventInput } from '@fullcalendar/core/ind
 // Define o elemento principal para fins de acessibilidade
 Modal.setAppElement('#root');
 
+
 const CalendarWrapper = styled.div`
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* max-height: 100vh; */
+  overflow-y: auto;
 
-  .fc .fc-toolbar-title {
-    font-size: 1.5em;
-    color: #1d2b4c;
+  .fc-view-harness {
+    height: 500px;
+  }
+
+  .fc-header-toolbar {
+    display: flex;    
+  
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 5px;
+
+      .fc-toolbar-chunk {
+        width: 100%;
+        gap: 20px;    
+        
+        .fc-button-group {
+          width: 100%;
+        }
+
+        &:nth-child(1) {
+          order: 1;
+          width: 100%;
+        }
+
+        &:nth-child(2) {
+          order: 0;
+          width: 100%;
+        }
+
+        &:nth-child(3) {
+          order: 2;
+          width: 100%;
+        }
+
+        /* width: 100%; */
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .fc .fc-daygrid-day {
+    padding: 0;
+    height: 80px; /* Ajuste a altura conforme necessário */
+    border: 1px solid #ebebeb;
+  }
+
+  .fc-toolbar-title {
+    margin: auto;
   }
 
   .fc .fc-daygrid-event {
     background-color: #1d2b4c;
     color: white;
     border: none;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-bottom: 2px;
+    font-size: 0.9em;
+  }
+
+  .fc .fc-daygrid-event-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .fc .fc-daygrid-day-number {
     color: #1d2b4c;
+  }
+
+  .fc-toolbar-chunk {
+    display: flex;
+    gap: 10px;
   }
 
   .fc .fc-button {
@@ -40,7 +103,7 @@ const CalendarWrapper = styled.div`
     border: none;
     border-radius: 4px;
     padding: 8px 16px;
-    margin: 0 4px;
+    margin: 0;
     cursor: pointer;
     font-size: 0.9em;
 
@@ -248,9 +311,18 @@ const CalendarFull: React.FC = () => {
             list: 'Lista'
           }}
           events={filteredEvents}
-          selectable={true}
-          select={handleDateClick}
-          eventClick={handleEventClick}
+          // selectable={true}
+          // select={handleDateClick}
+          // eventClick={handleEventClick}
+          editable={true} // Permite arrastar e redimensionar eventos
+          selectable={true} // Permite selecionar dias/timeslots no calendário
+          select={handleDateClick} // Manipula a seleção de datas
+          eventClick={handleEventClick} // Manipula o clique em eventos
+          eventResize={(resizeInfo) => console.log('Evento redimensionado:', resizeInfo)}
+          eventDrop={(dropInfo) => console.log('Evento movido:', dropInfo)}
+          eventTextColor="#ffffff" // Cor do texto do evento
+          slotLabelFormat={{ hour: 'numeric', minute: '2-digit', omitZeroMinute: false, meridiem: 'short' }} // Formato do rótulo do timeslot
+          height="auto" // Altura do calendário
         />
 
         <Modal
@@ -276,7 +348,7 @@ const CalendarFull: React.FC = () => {
             <div>
               <label>Data Fim</label>
               <DatePicker
-                selected={newEvent.end ?? null}  // Ensures the value is Date | null | undefined
+                selected={newEvent.end}
                 onChange={(date) => handleDateChange(date, 'end')}
                 showTimeSelect
                 dateFormat="Pp"
