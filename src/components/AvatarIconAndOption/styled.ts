@@ -75,11 +75,11 @@ export const IconButton = styled.button`
   justify-content: center;
   color: var(--violet-11);
   background-color: #fff;
-  box-shadow: 0 2px 10px var(--black-a7);
   &:hover {
-    background-color: var(--violet-3);
+    /* background-color: var(--violet-3); */
+    /* box-shadow: 1px 1px 1px 1px #97979d30;  */
   }
   &:focus {
-    box-shadow: 0 0 0 2px black;
+    /* box-shadow: 0 0 0 2px black; */
   }
 `;

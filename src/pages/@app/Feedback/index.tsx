@@ -3,12 +3,12 @@ import { Container, Content, ListCards } from './styled';
 import CardFeedback from '../../../components/CardFeedback';
 import { RouterIndicator } from '../../../components/RouterIndicator';
 
-function Feedback() {
+function Feedback () {
   return (
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="listagem de atendimentos"
+        descText="Listagem de atendimentos"
         routerText="Atendimentos"
       >
         <Content>

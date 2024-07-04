@@ -90,7 +90,7 @@ export const ModalButton = styled(Button)`
 
   &:hover {
     cursor: pointer;
-    background-color: #FFA500;
+    background-color: #ef9000;
   }
 `;
 
@@ -107,7 +107,7 @@ export const StartCampaignButton = styled(Button)`
   margin-top: 20px;
   width: 100%;
   padding: 20px;
-  background-color: #FFA500;
+  background-color: #ef9000;
   color: #fff;
   border-radius: 8px;
   font-weight: bold;

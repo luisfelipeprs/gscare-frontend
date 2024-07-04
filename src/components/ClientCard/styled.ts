@@ -68,7 +68,7 @@ export const Title = styled.h3`
 
 export const A = styled.a`
 
-color: #FFA500;
+color: #ef9000;
     text-decoration: underline;
     font-weight: 500;
     font-family: system-ui;

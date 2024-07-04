@@ -163,7 +163,7 @@ export const NameSaas = styled.div`
   margin: auto;
 
   h3:nth-child(1) {
-    color: #FFA500;
+    color: #ef9000;
     font-size: 2rem;
   }
 

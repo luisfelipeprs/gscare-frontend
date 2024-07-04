@@ -103,7 +103,7 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
             >
               <Icons>{CalendarCheckIcon}</Icons>
               <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                atendimentos
+                Atendimentos
               </LinkText>
             </NavLinkStyled>
           </div>
@@ -136,7 +136,7 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
             >
               <Icons>{BellRingingIcon}</Icons>
               <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                avisos
+                Avisos
               </LinkText>
             </NavLinkStyled>
           </div>
@@ -155,7 +155,7 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
             >
               <Icons>{ChartPieSliceIcon}</Icons>
               <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                relatorios
+                Relatorios
               </LinkText>
             </NavLinkStyled>
 
@@ -253,7 +253,7 @@ const Sidebar = ({ isOpenSideBar, toggleSidebar }: IProps) => {
             >
               <Icons>{UserIcon}</Icons>
               <LinkText style={{ display: isOpenSideBar ? 'flex' : 'none' }} isopen={isOpenSideBar}>
-                profile
+                Profile
               </LinkText>
             </NavLinkStyled>
           </div>

@@ -150,8 +150,8 @@ export const ButtonTesteGratis = styled.button`
   height: 50px;
   color: #fff;
   margin: auto;
-  background-color: #FFA500;
-  border: solid 2px #FFA500;
+  background-color: #ef9000;
+  border: solid 2px #ef9000;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 5px 15px;

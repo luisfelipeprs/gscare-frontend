@@ -74,7 +74,7 @@ export const CaixaRecursosTextParte2 = styled.div`
     border: none;
     border-radius: 8px;
     padding: 10px;
-    background-color: #FFA500;
+    background-color: #ef9000;
     color: #fff;
     font-weight: bold;
 

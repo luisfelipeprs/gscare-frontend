@@ -107,6 +107,10 @@ const CalendarWrapper = styled.div`
     cursor: pointer;
     font-size: 0.9em;
 
+    @media screen and (max-width: 768px) {
+      padding: 8px 8px;
+    }
+
     &:hover {
       background-color: #162a40;
     }

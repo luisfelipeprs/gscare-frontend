@@ -26,7 +26,7 @@ function ProfileEdit () {
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="detalhes do seu perfil"
+        descText="Detalhes do seu perfil"
         routerText="Perfil"
       >
         <Content>
@@ -44,7 +44,7 @@ function ProfileEdit () {
                     </Flex>
                     <ContentName>
                       <h4>Fernando Franco</h4>
-                      <div><span>bem vido a </span> <TextGscare /></div>
+                      <div><span>Bem vido a </span> <TextGscare /></div>
                     </ContentName>
                     {/* </ContentImgAndName> */}
 
@@ -57,6 +57,9 @@ function ProfileEdit () {
 
                 <div style={{
                   padding: '40px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '20px',
                 }}>
 
                   <InfoProfile>
@@ -65,7 +68,7 @@ function ProfileEdit () {
                     </InfoProfileText>
                     <InfoProfileDatas>
                       <p>
-                        primeiro acesso: 10-10-2010
+                        Primeiro acesso: 10-10-2010
                       </p>
                     </InfoProfileDatas>
                   </InfoProfile>
@@ -147,7 +150,7 @@ function ProfileEdit () {
                         <p>f123f12-3f123f-21f3sav-cvqd1</p>
                       </CardInfo>
                       <CardData>
-                        <span style={{ background: 'linear-gradient(166deg, rgb(46 101 165), rgb(11 28 67))' }}>
+                        <span style={{ background: '#324a83' }}>
                           Conta ativa
                         </span>
                       </CardData>
@@ -158,7 +161,7 @@ function ProfileEdit () {
                         <p>01/10/2023 - 01/10/2024</p>
                       </CardInfo>
                       <CardData>
-                        <span style={{ background: 'linear-gradient(166deg, rgb(255 191 0), rgb(229 150 0))' }}>
+                        <span style={{ background: '#ef9000' }}>
                           Assinatura Premiun
                         </span>
                       </CardData>
@@ -187,7 +190,7 @@ function ProfileEdit () {
                     <CardInfoAccount>
                       <CardInfo>
                         <h3>Numero agendamentos marcados:</h3>
-                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                        <p>Gerencie, monitore e preste um melhor atendimento</p>
                       </CardInfo>
                       <CardData>
                         <span>
@@ -198,7 +201,7 @@ function ProfileEdit () {
                     <CardInfoAccount>
                       <CardInfo>
                         <h3>Numero agendamentos marcados:</h3>
-                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                        <p>Gerencie, monitore e preste um melhor atendimento</p>
                       </CardInfo>
                       <CardData>
                         <span>
@@ -209,7 +212,7 @@ function ProfileEdit () {
                     <CardInfoAccount>
                       <CardInfo>
                         <h3>Numero agendamentos marcados:</h3>
-                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                        <p>Gerencie, monitore e preste um melhor atendimento</p>
                       </CardInfo>
                       <CardData>
                         <span>
@@ -220,7 +223,7 @@ function ProfileEdit () {
                     <CardInfoAccount>
                       <CardInfo>
                         <h3>Numero agendamentos marcados:</h3>
-                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                        <p>Gerencie, monitore e preste um melhor atendimento</p>
                       </CardInfo>
                       <CardData>
                         <span>
@@ -231,7 +234,7 @@ function ProfileEdit () {
                     <CardInfoAccount>
                       <CardInfo>
                         <h3>Numero agendamentos marcados:</h3>
-                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                        <p>Gerencie, monitore e preste um melhor atendimento</p>
                       </CardInfo>
                       <CardData>
                         <span>
@@ -242,7 +245,7 @@ function ProfileEdit () {
                     <CardInfoAccount>
                       <CardInfo>
                         <h3>Numero agendamentos marcados:</h3>
-                        <p>gerencie, monitore e preste um melhor atendimento</p>
+                        <p>Gerencie, monitore e preste um melhor atendimento</p>
                       </CardInfo>
                       <CardData>
                         <span>

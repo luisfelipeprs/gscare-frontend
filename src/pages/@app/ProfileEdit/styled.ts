@@ -215,6 +215,10 @@ export const ContentImgAndName = styled.div`
 `;
 
 export const ContentName = styled.div`
+
+  h4 {
+    text-align: start;
+  }
   
   & > div {
    gap: 3px;
@@ -242,6 +246,11 @@ export const InfoProfileDatas = styled.div`
   font-size: 0.9rem;
   font-family: monospace;
   font-weight: bold;
+
+  p {
+    color: #0000008f;
+    margin-bottom: 15px;
+  }
 `;
 
 export const RegistrationData = styled.div`
@@ -308,7 +317,7 @@ export const ContainerButtonEditAccount = styled.div`
   color: #fff;
   border: none;
   border-radius: 50%;
-  background-color: rgb(255, 167, 0);
+  background-color: #ef9000;
   cursor: pointer;
 `;
 
@@ -326,6 +335,7 @@ export const ContainerNameAndNumberTel = styled.div`
       flex: 1;
       width: 100%;
       border: none;
+      padding: 10px 15px;
     }
   }
 `;
@@ -344,6 +354,7 @@ export const ContainerEmail = styled.div`
       flex: 1;
       width: 100%;
       border: none;
+      padding: 10px 15px;
     }
   }
 `;

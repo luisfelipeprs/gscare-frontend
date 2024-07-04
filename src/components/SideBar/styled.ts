@@ -83,12 +83,12 @@ interface INavLinkStyledProps extends IsOpen {
   isactive?: boolean;
 }
 
-export const NavLinkStyled = styled(NavLink)<INavLinkStyledProps>`
+export const NavLinkStyled = styled(NavLink) <INavLinkStyledProps>`
   text-decoration: none;
   /* color: ${(props) => (props.isactive ? '#5e9bf7' : '#000')};
   div{svg{color:${(props) => (props.isactive ? '#5e9bf7' : '#A7AEB8')};}} */
-  color: ${(props) => (props.isactive ? '#FFA500' : '#000')};
-  div{svg{color:${(props) => (props.isactive ? '#FFA500' : '#A7AEB8')};}}
+  color: ${(props) => (props.isactive ? '#ef9000' : '#000')};
+  div{svg{color:${(props) => (props.isactive ? '#ef9000' : '#A7AEB8')};}}
   display: flex;
   align-items: center;
   padding: 10px 0;
@@ -112,9 +112,9 @@ export const NavLinkStyled = styled(NavLink)<INavLinkStyledProps>`
   }
   
   &:hover {
-    color: #FFA500;
-    div{color: #FFA500;}
-    div{svg{color:#FFA500}}
+    color: #ef9000;
+    div{color: #ef9000;}
+    div{svg{color:#ef9000}}
   } 
   /* @media screen and (max-width: 600px) {
     padding: 30px;

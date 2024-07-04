@@ -83,7 +83,7 @@ export const ButtonContato = styled.div`
   
       border: none;
       padding: 15px;
-      background-color: #FFA500;
+      background-color: #ef9000;
       font-weight: 800;
       color: #fff;
       /* width: 60%; */
@@ -92,7 +92,7 @@ export const ButtonContato = styled.div`
 
       &:hover {
         cursor: pointer;
-        background-color: #FFA500;
+        background-color: #ef9000;
       }
     
 

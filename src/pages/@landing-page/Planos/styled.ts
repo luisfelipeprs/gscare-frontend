@@ -171,7 +171,7 @@ export const BtnSelect = styled.button`
   width: 100%;
   text-align: center;
 
-  background-color: #FFA500;
+  background-color: #ef9000;
   border: none;
   color: #fff;
   padding: 10px 20px;

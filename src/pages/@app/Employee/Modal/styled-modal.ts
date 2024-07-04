@@ -245,8 +245,8 @@ export const UserLimit = styled.input`
 
 export const ButtonPlus = styled.button`
   display: flex;
-  background-color: #FFA500;
-  border: 2px solid #FFA500;
+  background-color: #ef9000;
+  border: 2px solid #ef9000;
   border-radius: 8px;
   border: none;
   text-align: center;

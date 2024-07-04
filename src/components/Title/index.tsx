@@ -7,7 +7,7 @@ interface IProps {
   description?: string;
   textButton?: string;
   color?: 'blue' | 'orange'
-  // color: '#FFA500' | '#FFA500'
+  // color: '#ef9000' | '#ef9000'
   typebutton?: "withBorder" | "withBg"
 }
 function Title ({ title, description, textButton, typebutton = 'withBg', color = 'blue' }: IProps) {

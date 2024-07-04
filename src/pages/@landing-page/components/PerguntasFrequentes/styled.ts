@@ -50,14 +50,14 @@ export const ContainerButton = styled.div`
     font-weight: bold;
     color: #fff;
     border: none;
-    background-color: #FFA500;
+    background-color: #ef9000;
     padding: 12px 24px;
     transition: background-color 0.3s;
     border-radius: 8px;
 
     &:hover {
       cursor: pointer;
-      background-color: #FFA500;
+      background-color: #ef9000;
     }
   }
 `;

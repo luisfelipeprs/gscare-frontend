@@ -215,7 +215,7 @@ function Dashboard () {
     return (
         <Container>
             <RouterIndicator
-                descText="dados para análise da sua empresa"
+                descText="Dados para análise da sua empresa"
                 routerText="Relatórios"
             >
                 <Content>

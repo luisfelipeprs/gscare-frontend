@@ -151,7 +151,7 @@ export const TextFaleConosco = styled.div`
   h1{
     font-family: inherit;
     font-size: 2.8rem;
-    color: #FFA500;
+    color: #ef9000;
     max-width: 80%;
     margin: auto;
   }

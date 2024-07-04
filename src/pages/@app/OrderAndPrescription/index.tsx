@@ -3,7 +3,7 @@ import Modal from "./Modal/modal";
 import { Container, Content } from "./styled";
 
 
-export default function OrderAndPrescription() {
+export default function OrderAndPrescription () {
 
 
     return (
@@ -11,7 +11,7 @@ export default function OrderAndPrescription() {
             <RouterIndicator
                 //buttonText="Criar"
                 children=""
-                descText="listagem de prescrição médica"
+                descText="Listagem de prescrição médica"
                 routerText="Prescrição"
                 onButtonClick={Modal}
             />

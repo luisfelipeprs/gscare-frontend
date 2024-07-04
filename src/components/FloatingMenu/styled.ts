@@ -94,7 +94,11 @@ export const ContentIcon = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+  position: relative;
+  border: none;
 `
+
+
 export const Container = styled.div`
 width: 100%;
 display: flex;
