@@ -83,7 +83,7 @@ export const PaginationContainer = styled.div`
   align-items: center;
   border-radius: 8px;
   height: 40px;
-  background: #1E2C4F;
+  background: #324a83;
   width: 100%;
 `;
 

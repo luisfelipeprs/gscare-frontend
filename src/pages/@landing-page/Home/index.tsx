@@ -12,8 +12,9 @@ import { useState } from "react";
 import { FeedbacksClients } from "../components/FeedbacksClients";
 import { PerguntasFrequentes } from "../components/PerguntasFrequentes";
 import Planos from "../Planos";
+import PreFooter from "../../../components/PreFooter";
 
-function Home() {
+function Home () {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {

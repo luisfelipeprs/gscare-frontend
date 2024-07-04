@@ -34,7 +34,7 @@ function ZapCampaign () {
     <Container>
       <RouterIndicator
         // buttonText="Criar"
-        descText="listagem de atendimentos"
+        descText="Listagem de atendimentos"
         routerText="Atendimentos"
       >
         <Content>

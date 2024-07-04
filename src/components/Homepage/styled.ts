@@ -20,7 +20,7 @@ export const Container = styled.div`
   background-repeat: no-repeat; /* Evita que a imagem se repita */
   
   @media screen and (max-width: 400px) {
-    padding: 150px 0px;
+    /* padding: 150px 0px; */
   }
 `
 

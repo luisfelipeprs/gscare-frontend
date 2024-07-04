@@ -85,8 +85,8 @@ interface INavLinkStyledProps extends IsOpen {
 
 export const NavLinkStyled = styled(NavLink) <INavLinkStyledProps>`
   text-decoration: none;
-  /* color: ${(props) => (props.isactive ? '#5e9bf7' : '#000')};
-  div{svg{color:${(props) => (props.isactive ? '#5e9bf7' : '#A7AEB8')};}} */
+  /* color: ${(props) => (props.isactive ? '#324a83' : '#000')};
+  div{svg{color:${(props) => (props.isactive ? '#324a83' : '#A7AEB8')};}} */
   color: ${(props) => (props.isactive ? '#ef9000' : '#000')};
   div{svg{color:${(props) => (props.isactive ? '#ef9000' : '#A7AEB8')};}}
   display: flex;

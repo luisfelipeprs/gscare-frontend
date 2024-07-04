@@ -78,22 +78,22 @@ export const GridWrapper = styled.div`
   justify-content: space-between;
   
   & > :nth-child(1) {
-    background-color: #2f406d;
+    background-color: #354163;
     /* background-color: #324a83; */
   }
 
   & > :nth-child(2) {
-    background-color: #2f406d;
+    background-color: #354163;
     /* background-color: #F4A100; */
   }
 
   & > :nth-child(3) {
-    background-color: #2f406d;
+    background-color: #354163;
     /* background-color: #00AC69; */
   }
 
   & > :nth-child(4) {
-    background-color: #2f406d;
+    background-color: #354163;
     /* background-color: #E81500; */
   }
 `;
