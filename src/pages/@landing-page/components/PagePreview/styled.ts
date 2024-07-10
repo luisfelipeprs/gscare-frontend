@@ -1,11 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import Image from "./../../../../assets/background-home.webp";
-import Image1 from "./../../../../assets/background-home1.png";
-import Image2 from "./../../../../assets/background-home2.png";
 import Image3 from "./../../../../assets/background-home3.png";
-import Image4 from "./../../../../assets/background-home4.png";
-import Image5 from "./../../../../assets/background-home5.png";
-import Image6 from "./../../../../assets/background-home6.png";
 
 export const Container = styled.div`  
   display: flex;

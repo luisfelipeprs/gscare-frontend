@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import imageTool1 from "./../../../assets/images-tools-saas/tools1.png";
 import imageTool2 from "./../../../assets/images-tools-saas/tools2.png";

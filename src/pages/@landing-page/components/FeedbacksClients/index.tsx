@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import workpc2 from '../../../../assets/workpc2.png';
-import workpc3 from '../../../../assets/workpc3.png';
 import workpc4 from '../../../../assets/workpc4.png';
 import ImgFem from '../../../../assets/icon-fem.png';
 import ImgMasc from '../../../../assets/icon-masc.png';

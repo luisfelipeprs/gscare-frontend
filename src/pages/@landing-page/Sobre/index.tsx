@@ -12,7 +12,7 @@ function Sobre () {
     <>
       <Navbar />
 
-      <PagePreview title="Sobre" description="Saiba mais sobre nossa empresa!" />
+      <PagePreview />
 
       <ContainerSectionSobre>
         <ContainerSobre>

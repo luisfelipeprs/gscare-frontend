@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HomemImg from './../../assets/icon-masc.png';
 import MulherImg from './../../assets/icon-fem.png';
-import { DotsThreeVertical, Eye, Funnel } from 'phosphor-react';
+import { DotsThreeVertical, Funnel } from 'phosphor-react';
 
 interface IPatient {
   id: number;

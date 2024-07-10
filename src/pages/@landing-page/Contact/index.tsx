@@ -10,7 +10,7 @@ function Contact () {
       <Navbar />
       <Content>
 
-        <PagePreview title="Contato" description="Entre em contato conosco para saber mais!" />
+        <PagePreview />
 
 
         <PerguntasFrequentes />

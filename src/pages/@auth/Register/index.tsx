@@ -1,6 +1,5 @@
-import React from 'react';
 import { Container, ContainerForm, Content, HeaderForm } from './styled';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CaretLeft } from 'phosphor-react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';

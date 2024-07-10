@@ -6,14 +6,11 @@ import QuestionCard from "../../../components/QuestionCard";
 import { HomeContainer } from "./styled";
 import { BoxCardsTools } from '../../../components/BoxCardsTools/BoxCardsTools';
 import { OverViewRecursos } from "../components/OverViewRecursos";
-import { PrincipaisRecursos } from "../components/PrincipaisRecursos";
 import LeadCaptureModal from "../components/LeadCaptureModal";
 import { useState } from "react";
 import { FeedbacksClients } from "../components/FeedbacksClients";
 import { PerguntasFrequentes } from "../components/PerguntasFrequentes";
 import Planos from "../Planos";
-import PreFooter from "../../../components/PreFooter";
-import ToolsOfSystem from "../../../components/ToolsOfSystem";
 import Recursos from "../Recursos";
 
 function Home () {

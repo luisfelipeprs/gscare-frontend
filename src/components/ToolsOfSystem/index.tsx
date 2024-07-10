@@ -1,5 +1,4 @@
 import { ButtonContato, Container, ContainerAction, ContainerImage, Content, DivSujestoesText, Functionalities } from './styled';
-import Image1 from "./../../assets/ctaImageLandingPage.png";
 import ImageDEMO from "./../../assets/demo-print-sistema.png";
 import { Check } from 'phosphor-react';
 import { Link } from 'react-router-dom';

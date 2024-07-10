@@ -1,8 +1,4 @@
 import { ButtonContato, Container, ContainerAction, ContainerImage, Content, DivSujestoesText } from './styled';
-import Image1 from "./../../assets/ctaImageLandingPage.png";
-import Image2 from "./../../assets/ImgSaasHealth.png";
-import Image3 from "./../../assets/ImgSaasHealth2.png";
-import Image4 from "./../../assets/ImgSaasHealth3.png";
 import Image5 from "./../../assets/ImgSaasHealth4.png";
 
 

@@ -7,11 +7,6 @@ import { EyeOpenIcon } from "@radix-ui/react-icons";
 import { Check } from "phosphor-react";
 import { ButtonSaibaMais, ButtonTesteGratis, CircleBackImage, Container, ContainerButtons, Content, Functionalities, Leftdiv, Overlay, Rightdiv } from "./styled"
 
-interface IProps {
-  title: string;
-  description: string;
-}
-
 export const PagePreview = () => {
 
   const handleOpenModal = () => {

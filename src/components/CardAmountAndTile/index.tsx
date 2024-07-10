@@ -77,15 +77,6 @@ const Amount = styled.div`
   font-size: 20px;
 `;
 
-const CalendarIcon = styled(Calendar)`
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  height: 50px;
-  width: 50px;
-  color: #dedede;
-  /* color: #97979770; */
-`;
-
 const ArrowIcon = styled(ChevronRightIcon)`
   cursor: pointer;
   height: 25px;

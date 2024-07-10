@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, ContainerForm, Content, HeaderForm } from './styled';
 import { Link, useNavigate } from 'react-router-dom';
 import { CaretLeft } from 'phosphor-react';

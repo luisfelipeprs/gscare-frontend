@@ -1,6 +1,5 @@
 // import Button from '../Button'
 import { ButtonSaibaMais, ButtonTesteGratis, CircleBackImage, Container, ContainerButtons, Content, Functionalities, Leftdiv, Overlay, Rightdiv } from './styled'
-import saasPhoto from './../../assets/mobile-preview-layout.png'
 import saasPhoto2 from './../../assets/mobile-preview-layout2.png'
 import { Check } from 'phosphor-react'
 import { EyeOpenIcon } from '@radix-ui/react-icons'

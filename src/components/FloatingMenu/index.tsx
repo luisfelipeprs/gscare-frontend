@@ -6,7 +6,6 @@ import { AvatarIconAndOption } from '../AvatarIconAndOption';
 import { BellIcon } from '@radix-ui/react-icons';
 import { useNavigate } from 'react-router-dom';
 import TextGscare from '../TextGscare';
-import { CaretDown } from 'phosphor-react';
 
 
 interface IProps {

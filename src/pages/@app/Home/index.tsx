@@ -1,8 +1,7 @@
 import React from 'react';
 import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerCharts, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, InformationCard, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeTextContent, WelcomeParagraph, WelcomeTitle, WelcomeImgContent } from './styled';
 import { CaretRight, DotsThreeVertical, House } from 'phosphor-react';
-import helloWork from '../../../assets/helloWork.svg'
-import rocketGscare from '../../../assets/rocket-gscare2.png'
+import rocketGscare from '../../../assets/rocket-gscare2.png';
 import CardAmountAndTile from '../../../components/CardAmountAndTile';
 import LineChart from '../../../components/ChatsHomeAdmin/LineChart';
 import ColumnChart from '../../../components/ChatsHomeAdmin/ColumnChart';

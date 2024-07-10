@@ -1,9 +1,8 @@
 import { Container, ContainerForm, Content, HeaderForm } from "./styled";
-import logoImg from "../../../assets/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { CaretLeft } from "phosphor-react";
 import { useForm } from "react-hook-form";
-import { z } from 'zod'
+import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { authenticateAdmin } from "../../../controllers/login-admin";
 
