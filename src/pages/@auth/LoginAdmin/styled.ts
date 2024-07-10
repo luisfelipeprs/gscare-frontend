@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #242e6a;
+  background-color: #1E2C50;
   min-height: 100vh;
   padding: 20px;
 
@@ -58,7 +58,7 @@ export const Content = styled.main`
   .button {
     width: 100%;
     height: 48px;
-    background: #4763E4;
+    background: #1E2C50;
     border-radius: 12px;
     color: #fff;
     border: none;

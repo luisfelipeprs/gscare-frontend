@@ -62,7 +62,7 @@ export const DivSujestoesText = styled.div`
 
   h2 {
       width: 100%;
-      color: #071a25a8;
+      color: #242938;
       font-size: 2rem;
     }  
 
@@ -83,7 +83,7 @@ export const ButtonContato = styled.div`
   
       border: none;
       padding: 15px;
-      background-color: #ef9000;
+      background-color: #e28800;
       font-weight: 800;
       color: #fff;
       /* width: 60%; */
@@ -92,7 +92,7 @@ export const ButtonContato = styled.div`
 
       &:hover {
         cursor: pointer;
-        background-color: #ef9000;
+        background-color: #e28800;
       }
     
 

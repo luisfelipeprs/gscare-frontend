@@ -161,7 +161,7 @@ function ProfileEdit () {
                         <p>01/10/2023 - 01/10/2024</p>
                       </CardInfo>
                       <CardData>
-                        <span style={{ background: '#ef9000' }}>
+                        <span style={{ background: '#e28800' }}>
                           Assinatura Premiun
                         </span>
                       </CardData>

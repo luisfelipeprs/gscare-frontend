@@ -269,6 +269,14 @@ export const WelcomeContaint = styled.div`
   }
 `;
 
+export const WelcomeTextContent = styled.div`
+  flex: 1;
+`
+
+export const WelcomeImgContent = styled.div`
+  flex: 1;
+`;
+
 export const WelcomeTitle = styled.div`
   color: #324a83;
   font-size: 1.7rem;
@@ -305,22 +313,22 @@ export const GridWrapper = styled.div`
   justify-content: space-between;
   
   & > :nth-child(1) {
-    background-color: #6884a7;
+    background-color: #354163;
     /* background-color: #324a83; */
   }
 
   & > :nth-child(2) {
-    background-color: #6884a7;
+    background-color: #354163;
     /* background-color: #F4A100; */
   }
 
   & > :nth-child(3) {
-    background-color: #6884a7;
+    background-color: #354163;
     /* background-color: #00AC69; */
   }
 
   & > :nth-child(4) {
-    background-color: #6884a7;
+    background-color: #354163;
     /* background-color: #E81500; */
   }
 `;

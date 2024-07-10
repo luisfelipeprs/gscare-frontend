@@ -1,20 +1,26 @@
 import styled, { keyframes } from "styled-components";
 import Image from "./../../assets/background-home.webp";
+import Image1 from "./../../assets/background-home1.png";
+import Image2 from "./../../assets/background-home2.png";
+import Image3 from "./../../assets/background-home3.png";
+import Image4 from "./../../assets/background-home4.png";
+import Image5 from "./../../assets/background-home5.png";
+import Image6 from "./../../assets/background-home6.png";
 
 export const Container = styled.div`  
   display: flex;
-  min-height: calc(100vh - 91px);
+  min-height: 100vh;
   /* background-color: var(--secondary-color); */
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  /* border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
   width: 100%;
   text-align: center;
   height: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   position: relative;
 
   /* Adicionando uma imagem de fundo */
-  background-image: url(${Image}); /* Use a expressão JavaScript para interpolar a URL da imagem */
+  background-image: url(${Image3}); /* Use a expressão JavaScript para interpolar a URL da imagem */
   background-size: cover; /* Faz a imagem cobrir todo o contêiner */
   background-position: center; /* Centraliza a imagem no contêiner */
   background-repeat: no-repeat; /* Evita que a imagem se repita */
@@ -30,7 +36,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(0, 0, 0, 0.6); /* Cor preta com 50% de opacidade */
+background-color: rgb(3 10 30 / 85%);
 z-index: 0; /* Garante que fique sobre a imagem */
 `;
 
@@ -71,8 +77,9 @@ export const Functionalities = styled.div`
   flex-direction: column;
   align-items: start;
   gap: 0;
+
   span {
-    color: #f0f0f0;
+    color: #dddddd;
     text-align: start;
 
     svg {  
@@ -80,6 +87,11 @@ export const Functionalities = styled.div`
       margin-right: 2px;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    font-size: 0.9rem;
+  }
+
   @media screen and (max-width: 320px) {
     & {
       gap: 10px;
@@ -150,8 +162,8 @@ export const ButtonTesteGratis = styled.button`
   height: 50px;
   color: #fff;
   margin: auto;
-  background-color: #ef9000;
-  border: solid 2px #ef9000;
+  background-color: #e28800;
+  border: solid 2px #e28800;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 5px 15px;

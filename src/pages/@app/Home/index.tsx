@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerCharts, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, InformationCard, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeParagraph, WelcomeTitle } from './styled';
+import { ButtonInfos, CalendarIcon, Container, ContainerBlueBar, ContainerCharts, ContainerSectionsInfos, ContentBlueBar, DateText, GridWrapper, HeaderInfos, Information, InformationCard, SectionInfos, StyledDateContainer, StyledNameContainer, TitleInfos, WelcomeContaint, WelcomeTextContent, WelcomeParagraph, WelcomeTitle, WelcomeImgContent } from './styled';
 import { CaretRight, DotsThreeVertical, House } from 'phosphor-react';
 import helloWork from '../../../assets/helloWork.svg'
 import rocketGscare from '../../../assets/rocket-gscare2.png'
@@ -68,11 +68,15 @@ const Home: React.FC = () => {
       <ContainerSectionsInfos>
         <SectionInfos>
           <WelcomeContaint>
-            <WelcomeTitle>Bem vindos ao <TextGscare /></WelcomeTitle>
-            <WelcomeParagraph>
-              Bem-vindos ao líder em gestão de saúde! Oferecemos cuidados superiores e satisfação total, para sua empresa e seus clientes
-            </WelcomeParagraph>
-            <img src={rocketGscare} alt="" />
+            <WelcomeTextContent>
+              <WelcomeTitle>Bem vindos ao <TextGscare /></WelcomeTitle>
+              <WelcomeParagraph>
+                Bem-vindos ao líder em gestão de saúde! Oferecemos cuidados superiores e satisfação total, para sua empresa e seus clientes
+              </WelcomeParagraph>
+            </WelcomeTextContent>
+            <WelcomeImgContent>
+              <img src={rocketGscare} alt="" />
+            </WelcomeImgContent>
             {/* <img src={helloWork} alt="" /> */}
           </WelcomeContaint>
         </SectionInfos>

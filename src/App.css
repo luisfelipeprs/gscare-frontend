@@ -2,12 +2,12 @@
   --primary-color: #4C9ED9;
   --secondary-color: #2C3E50;
   --accent-color: #66CC99;
-  --background-color: #E5E5E5;
+  --background-color: #EAEEF4;
   --text-color: #FFFFFF;
 
   /* --primary-color: #4C9ED9;
   --secondary-color: #7ED6A6;
-  --accent-color: #ef9000;
+  --accent-color: #e28800;
   --background-color: #FFFFFF;
   --text-color: #333333; */
 
@@ -19,7 +19,7 @@
   
   color: #4C9ED9;
   color: #7ED6A6;
-  color: #ef9000;
+  color: #e28800;
   color: #FFFFFF;
   color: #E5E5E5; */
 }

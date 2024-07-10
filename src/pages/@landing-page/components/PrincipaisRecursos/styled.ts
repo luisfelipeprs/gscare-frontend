@@ -234,7 +234,7 @@ export const LimitedParagraph = styled.p`
 export const ContainerButtonCard = styled.div`
   button {
     
-    color: #ef9000;
+    color: #e28800;
     text-decoration: underline;
     /* font-weight: bold; */
     font-family: system-ui;

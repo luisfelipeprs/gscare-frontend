@@ -10,7 +10,7 @@ export const ConteinarGscare = styled.div`
 export const Gs = styled.span`
   font-weight: bold;
   font-family: revert;
-  color: #ef9000;
+  color: #e28800;
 `;
 
 export const Care = styled.span`

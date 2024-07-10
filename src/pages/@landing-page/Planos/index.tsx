@@ -1,37 +1,44 @@
-// import Navbar from "../../../components/Navbar";
-// import { PagePreview } from "../components/PagePreview";
-import { BannerPrice, BtnSelect, Container, Content, Features, HighLight, Price, PricingCard, PricingContainer } from "./styled";
+import {
+  Container,
+  Content,
+  BannerPrice,
+  PricingContainer,
+  PricingCard,
+  RecommendedTag,
+  HighLight,
+  Price,
+  Features,
+  BtnSelect
+} from "./styled";
 
 function Planos () {
   return (
     <Container>
       <Content>
-        {/* <Navbar /> */}
-
-        {/* <PagePreview title="Planos" description="Veja nossos planos e preços!" /> */}
         <BannerPrice>
           <div>
-            <p>Os planos ideias para cada tipo de empresa!</p>
+            <p>Os planos ideais para cada tipo de empresa!</p>
           </div>
         </BannerPrice>
         <PricingContainer>
           <PricingCard>
             <h2>Plano Básico</h2>
             <HighLight>Ideal para iniciantes</HighLight>
-            <Price>$19.99/mês</Price>
+            <Price>R$157,90/mês</Price>
             <Features>
-              <li>Recursos básicos</li>
+              <li>Acesso aos recursos básicos</li>
               <li>Atendimento ao cliente padrão</li>
               <li>Armazenamento limitado</li>
             </Features>
             <BtnSelect>Selecionar</BtnSelect>
           </PricingCard>
           <PricingCard className="recommended">
+            <RecommendedTag>Recomendado</RecommendedTag>
             <h2>Plano Premium</h2>
             <HighLight>Nosso melhor valor</HighLight>
-            <Price>$49.99/mês</Price>
+            <Price emphasis>R$257,90/mês</Price>
             <Features>
-              <li>Recursos avançados</li>
+              <li>Acesso a todos os recursos</li>
               <li>Atendimento ao cliente prioritário</li>
               <li>Armazenamento ilimitado</li>
             </Features>
@@ -40,9 +47,9 @@ function Planos () {
           <PricingCard>
             <h2>Plano Empresarial</h2>
             <HighLight>Para empresas em crescimento</HighLight>
-            <Price>$99.99/mês</Price>
+            <Price>R$327,90/mês</Price>
             <Features>
-              <li>Todos os recursos</li>
+              <li>Todos os recursos avançados</li>
               <li>Suporte personalizado</li>
               <li>Armazenamento ilimitado</li>
             </Features>
@@ -51,6 +58,7 @@ function Planos () {
         </PricingContainer>
       </Content>
     </Container>
-  )
+  );
 }
+
 export default Planos;

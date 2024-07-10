@@ -28,8 +28,8 @@ export const Filter = styled.div`
 
 export const ButtonPlus = styled.button`
   display: flex;
-  background-color: #ef9000;
-  border: 2px solid #ef9000;
+  background-color: #e28800;
+  border: 2px solid #e28800;
   border-radius: 8px;
   border: none;
   text-align: center;

@@ -42,7 +42,7 @@ export const ButtonSubmitOptionBot = styled(Button)`
 
   &:hover {
     cursor: pointer;
-    background-color: #ef9000;
+    background-color: #e28800;
   }
 `;
 
@@ -54,7 +54,7 @@ export const LeftDiv = styled.div`
 `;
 
 export const TitleDivDescription = styled(Text)`
-  color: #ef9000;
+  color: #e28800;
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 10px;
@@ -137,7 +137,7 @@ export const HeaderContainerRight = styled.div`
     padding: 10px;
     border: none;
     border-radius: 8px;
-    background-color: #ef9000;
+    background-color: #e28800;
     color: #fff;
     font-weight: 600;
   }

@@ -87,8 +87,8 @@ export const NavLinkStyled = styled(NavLink) <INavLinkStyledProps>`
   text-decoration: none;
   /* color: ${(props) => (props.isactive ? '#324a83' : '#000')};
   div{svg{color:${(props) => (props.isactive ? '#324a83' : '#A7AEB8')};}} */
-  color: ${(props) => (props.isactive ? '#ef9000' : '#000')};
-  div{svg{color:${(props) => (props.isactive ? '#ef9000' : '#A7AEB8')};}}
+  color: ${(props) => (props.isactive ? '#e28800' : '#000')};
+  div{svg{color:${(props) => (props.isactive ? '#e28800' : '#A7AEB8')};}}
   display: flex;
   align-items: center;
   padding: 10px 0;
@@ -112,9 +112,9 @@ export const NavLinkStyled = styled(NavLink) <INavLinkStyledProps>`
   }
   
   &:hover {
-    color: #ef9000;
-    div{color: #ef9000;}
-    div{svg{color:#ef9000}}
+    color: #e28800;
+    div{color: #e28800;}
+    div{svg{color:#e28800}}
   } 
   /* @media screen and (max-width: 600px) {
     padding: 30px;

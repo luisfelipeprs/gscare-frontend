@@ -13,6 +13,8 @@ import { FeedbacksClients } from "../components/FeedbacksClients";
 import { PerguntasFrequentes } from "../components/PerguntasFrequentes";
 import Planos from "../Planos";
 import PreFooter from "../../../components/PreFooter";
+import ToolsOfSystem from "../../../components/ToolsOfSystem";
+import Recursos from "../Recursos";
 
 function Home () {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,13 +36,15 @@ function Home () {
           <Homepage handleOpenModal={handleOpenModal} />
         </div>
         <div id="principais-recursos">
-          <PrincipaisRecursos />
-        </div>
-        <div id="overview-recursos">
-          <OverViewRecursos />
+          <Recursos />
+          {/* <ToolsOfSystem /> */}
+          {/* <PrincipaisRecursos /> */}
         </div>
         <div id="box-cards-tools">
           <BoxCardsTools />
+        </div>
+        <div id="overview-recursos">
+          <OverViewRecursos />
         </div>
         <div id="feedbacks-clients">
           <FeedbacksClients />

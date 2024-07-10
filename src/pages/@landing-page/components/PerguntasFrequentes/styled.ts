@@ -50,14 +50,14 @@ export const ContainerButton = styled.div`
     font-weight: bold;
     color: #fff;
     border: none;
-    background-color: #ef9000;
+    background-color: #e28800;
     padding: 12px 24px;
     transition: background-color 0.3s;
     border-radius: 8px;
 
     &:hover {
       cursor: pointer;
-      background-color: #ef9000;
+      background-color: #e28800;
     }
   }
 `;
@@ -94,7 +94,7 @@ export const ContainerMensagemPrincipalRight = styled.div`
     font-size: 1.5rem;
     font-family: sans-serif;
     font-weight: bold;
-    color: #071a25a8;
+    color: #242938;
     text-align: center;
     width: 100%;
     padding: 20px 0;
@@ -112,7 +112,7 @@ export const ContainerTitulos = styled.div`
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   h2 {
-    color: #071a25a8;
+    color: #242938;
     font-size: 32px;
     font-weight: 700;
     text-align: center;
@@ -203,7 +203,7 @@ export const ContainerFormRight = styled.div`
   input, textarea {
     resize: none;
     background-color: #F2F3fB;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border: none;
     /* width: 80%; */
     padding: 15px;

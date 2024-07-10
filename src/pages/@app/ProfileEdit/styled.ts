@@ -317,7 +317,7 @@ export const ContainerButtonEditAccount = styled.div`
   color: #fff;
   border: none;
   border-radius: 50%;
-  background-color: #ef9000;
+  background-color: #e28800;
   cursor: pointer;
 `;
 

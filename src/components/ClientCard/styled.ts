@@ -68,7 +68,7 @@ export const Title = styled.h3`
 
 export const A = styled.a`
 
-color: #ef9000;
+color: #e28800;
     text-decoration: underline;
     font-weight: 500;
     font-family: system-ui;
@@ -87,7 +87,7 @@ export const SvgDivMed = styled.div`
   display: flex;
 
   svg {
-    background: #3fb8ff9e;
+    background: #1e2c50eb;
     color: #fff;
     padding: 10px;
     border-radius: 50%;

@@ -163,7 +163,7 @@ export const NameSaas = styled.div`
   margin: auto;
 
   h3:nth-child(1) {
-    color: #ef9000;
+    color: #e28800;
     font-size: 2rem;
   }
 
@@ -225,7 +225,7 @@ export const Infos = styled.div`
 `
 
 export const Notification = styled.div`
-  background-color: #071a25a8;
+  background-color: #242938;
   text-align: center;
   font-size: 0.8rem;
   h2 {

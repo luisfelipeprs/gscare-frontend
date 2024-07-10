@@ -17,7 +17,7 @@ interface ThemeContextType {
 const initialTheme: Theme = {
   primaryColor: '#4C9ED9',
   secondaryColor: '#7ED6A6',
-  accentColor: '#ef9000',
+  accentColor: '#e28800',
   backgroundColor: '#FFFFFF',
   textColor: '#333333',
 };

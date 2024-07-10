@@ -12,7 +12,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 1280px;
+  max-width: 1100px;
   margin: auto;
   gap: 50px;
 
@@ -66,10 +66,10 @@ export const DivContainerListaComfirma = styled.div`
   gap: 20px;
 
     h2 {
-      color: #071a25a8;
+      color: #242938;
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
       color: #000;
-      font-size: 2.8rem;
+      font-size: 2.3rem;
       margin-top: 30px;
     }
 
@@ -77,7 +77,7 @@ export const DivContainerListaComfirma = styled.div`
 
       font-weight: 500;
       line-height: 1.8;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-bottom: 20px;
       color: #676767;
 
@@ -102,7 +102,7 @@ export const Functionalities = styled.div`
   span {
     color: #1c1c1c;
     text-align: start;
-    font-size: 1.3rem;
+    font-size: 1rem;
 
     svg {  
       transform: translateY(20%);
@@ -153,7 +153,7 @@ export const ListaConfirma = styled.ul`
 export const BtnRecursos = styled.button`
 border: none;
   padding: 15px;
-  background-color: #ef9000;
+  background-color: #e28800;
   font-weight: 800;
   color: #fff;
   width: 60%;
@@ -187,7 +187,7 @@ export const DivMed = styled.div`
   flex: 1;
   gap: 20px;
   min-height: 300px;
-  max-height: 350px;
+  max-height: 300px;
   /* padding: 20px; */
   box-sizing: border-box;
   box-shadow: 1px 1px 25px 10px #88888850;
@@ -225,7 +225,7 @@ export const SvgDivMed = styled.div`
   display: flex;
 
   svg {
-    background: #3fb8ff9e;
+    background: #1e2c50eb;
     color: #fff;
     padding: 10px;
     border-radius: 50%;

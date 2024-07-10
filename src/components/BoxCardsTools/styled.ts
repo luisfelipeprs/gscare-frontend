@@ -1,29 +1,45 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  width: 100%;
-  text-align: center;
-  /* background-color: #fff; */
-  /* padding-bottom: 100px; */
-  display: flex;
-  padding: 10px 0;
-`;
 
 export const Content = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 1280px;
+  max-width: 1100px;
   margin: auto;
   gap: 50px;
   
-
   @media screen and (max-width: 1280px) {
     width: 80%;
     margin: auto;
   }
+`
+
+
+export const Container = styled.div`
+  width: 100%;
+  text-align: center;
+  /* background-color: #fff; */
+  /* padding-bottom: 100px; */
+  display: flex;
 `;
+
+// export const Content = styled.div`
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   max-width: 1280px;
+//   margin: auto;
+//   gap: 50px;
+
+
+//   @media screen and (max-width: 1280px) {
+//     width: 80%;
+//     margin: auto;
+//   }
+// `;
 
 export const CardsContainer = styled.div`
   width: 100%;

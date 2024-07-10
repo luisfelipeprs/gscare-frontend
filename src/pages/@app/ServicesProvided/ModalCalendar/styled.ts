@@ -44,8 +44,8 @@ export const ContentShow = keyframes`
 
 export const ButtonPlus = styled.button`
   display: flex;
-  background-color: #ef9000;
-  border: 2px solid #ef9000;
+  background-color: #e28800;
+  border: 2px solid #e28800;
   border-radius: 8px;
   border: none;
   text-align: center;
@@ -227,7 +227,7 @@ export const ContentInputDate = styled.div`
 
 
 export const ButtonStyled = styled(Button)`
-  background-color: #ef9000;
+  background-color: #e28800;
   color: #fff;
   padding: 20px 20px;
   font-weight: bold;

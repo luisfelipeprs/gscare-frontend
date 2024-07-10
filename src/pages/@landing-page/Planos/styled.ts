@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   width: 95%;
   /* background-color: #fff; */
@@ -28,19 +27,14 @@ export const Content = styled.div`
     height: auto;
   }
 `;
-
 export const BannerPrice = styled.div`
   text-align: center;
-  /* justify-content: center;
-  display: flex; */
-  /* margin: auto; */
-
+  margin-bottom: 50px;
   div {
-    background-color: #071a25a8;
+    background-color: #242938;
     padding: 20px;
     border-radius: 12px;
     width: 100%;
-    
     p {
       text-align: center;
       font-size: 1.4rem;
@@ -51,135 +45,107 @@ export const BannerPrice = styled.div`
 `;
 
 export const PricingContainer = styled.div`
-  margin: 50px 0;
   max-width: 1280px;
-  justify-content: center;
   display: flex;
   gap: 30px;
+  justify-content: center;
 
   @media screen and (max-width: 1000px) {
-    margin: 20px 0;
     flex-direction: column;
+    gap: 20px;
   }
-
-  /* @media screen and (max-width: 768px) {
-    flex-direction: column;
-  } */
 `;
 
 export const PricingCard = styled.div`
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 2px 1px 8px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin: auto;
   text-align: center;
   width: 30%;
   height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.50s;
-
+  position: relative;
+  transition: all 0.3s ease-in-out;
 
   @media screen and (max-width: 1000px) {
     width: 100%;
   }
 
   &:hover {
-    box-shadow: 2px 1px 8px 6px rgba(0, 0, 0, 0.2);
-    /* width: calc(30% + 5px); */
-    /* height: 610px; */
-
-    @media (max-width: 1000px) {
-      width: calc(100% + 5px);
-    }
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
-  .recommended .btn-select {
-    background-color: #fff;
-    color: #0056b3;
-    font-weight: bold;
+  &.recommended {
+    border: 2px solid #e28800;
+    /* &:before {
+      content: "RECOMENDADO";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background-color: #e28800;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 3px;
+      transform: rotate(-45deg);
+      z-index: 1;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    } */
   }
-
-  .recommended .btn-select:hover {
-    background-color: #e2e2e2;
-    border-radius: 7px;
-  }
-
-  .recommended {
-    transition: all 0.50s;
-    box-shadow: 2px 1px 8px 2px rgba(0, 0, 0, 0.1);
-    width: 310px;
-    height: 510px;
-  }
-
-  .recommended:hover {
-    box-shadow: 2px 1px 10px 6px rgba(0, 0, 0, 0.2);
-    width: 320px;
-    height: 520px;
-  }
-
-  .recommended,
-  .recommended h2,
-  .recommended .highlight {
-    background-color: #071a25a8;
-    color: #fff;
-    color: #1F2C53;
-    font-weight: bold;
-  }
-
-
-  h2 {
-    color: #333;
-  }
-
 `;
+
+export const RecommendedTag = styled.div`
+  background-color: #e28800;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 35px;
+  position: absolute;
+  top: 43px;
+  left: 6px;
+  transform: translate(-25%, -25%) rotate(-45deg);
+  z-index: 1;
+  clip-path: polygon(19% 0, 81% 0, 100% 100%, 100% 50%, 100% 100%, 10% 100%, 0 100%, 0 100%);
+`;
+
 
 export const HighLight = styled.p`
-/* background-color: #071a25a8; */
-color: #071a25a8;
-font-weight: 700;
-
+  color: #071a25a8;
+  font-weight: 700;
+  margin-bottom: 20px;
 `;
 
-
-export const Price = styled.p`
-  font-size: 24px;
-  margin: 10px 0;
+export const Price = styled.p<{ emphasis?: boolean }>`
+  font-size: ${({ emphasis }) => (emphasis ? "32px" : "28px")};
+  margin: 15px 0;
+  color: ${({ emphasis }) => (emphasis ? "#e28800" : "#1F2C53")};
 `;
-
-
 
 export const Features = styled.ul`
-list-style: none;
-padding: 0;
-text-align: center;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-gap: 20px;
-
-li {
-}
-
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 `;
-
 
 export const BtnSelect = styled.button`
   font-weight: 800;
   width: 100%;
   text-align: center;
-
-  background-color: #ef9000;
+  background-color: #e28800;
   border: none;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 
   &:hover {
-  background-color: #0056b3;
-}
+    background-color: #d47300;
+  }
 `;

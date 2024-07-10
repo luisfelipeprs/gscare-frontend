@@ -45,8 +45,8 @@ export const ContentShow = keyframes`
 
 export const ButtonPlus = styled.button`
   display: flex;
-  background-color: #ef9000;
-  border: 2px solid #ef9000;
+  background-color: #e28800;
+  border: 2px solid #e28800;
   border-radius: 8px;
   border: none;
   text-align: center;
@@ -337,7 +337,7 @@ export const ContainerFormAndCalendar = styled.div`
 export const ButtonSubmitForm = styled.button`
   width: 100%;
   margin-top: 20px;
-  background-color: #ef9000;
+  background-color: #e28800;
   color: #fff;
   padding: 15px 20px;
   font-weight: bold;

@@ -15,7 +15,7 @@ export const Content = styled.div`
   h1{
     font-family: inherit;
     font-size: 2.8rem;
-    color: #071a25a8;
+    color: #242938;
     max-width: 1000px;
     line-height: 1;
   }
