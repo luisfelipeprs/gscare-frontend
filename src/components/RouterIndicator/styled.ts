@@ -95,6 +95,7 @@ export const ContentInput = styled.div`
 `;
 
 export const StyledDateContainer = styled.div`
+  z-index: 2;
   max-height: 40px;
   display: flex;
   align-items: center;
