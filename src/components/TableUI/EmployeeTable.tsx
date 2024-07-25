@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import HomemImg from './../../assets/icon-masc.png';
 import MulherImg from './../../assets/icon-fem.png';
-import { DotsThreeVertical, Funnel } from 'phosphor-react';
+import { Funnel } from 'phosphor-react';
+import { EditModalInfo } from '../../pages/@app/MedicalRecord/Model/editModal';
 
 interface IEmployee {
   id: number;
@@ -98,7 +99,7 @@ const TdFlagType = styled.div`
   box-shadow: 0 0 5px 1px #00000038;
 `;
 
-const ButtonViewTd = styled.button`
+export const ButtonViewTd = styled.button`
   text-align: center;
   justify-content: center;
   display: flex;
@@ -196,9 +197,7 @@ const EmployeeTable: React.FC<Props> = ({ employees }) => {
                 <Td>{employee.valorStatus}</Td>
                 <Td>{employee.sexo}</Td>
                 <Td>
-                  <ButtonViewTd>
-                    <DotsThreeVertical size={20} color="#272727" weight="bold" />
-                  </ButtonViewTd>
+                  <EditModalInfo employees={employees}/>
                 </Td>
               </tr>
             ))}
