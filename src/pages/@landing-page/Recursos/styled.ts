@@ -107,9 +107,12 @@ export const ContainerImageContentDemostrationSistem = styled.div`
   width: 100%;
   position: relative;
   text-align: center;
-
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 20px 5px;
+  border-radius: 8px;
+  
   img {
     width: 100%;
+    border-radius: 8px;
   }
 `;
 
