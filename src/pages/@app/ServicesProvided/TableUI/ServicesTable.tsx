@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Funnel } from 'phosphor-react';
-import ModalServicesTable from '../../ServicesProvided/ModalCalendar/ModalServicesTable';
-import ModalWarningsTable from './ModalWarningsTable';
+import ModalServicesTable from '../ModalCalendar/ModalServicesTable';
 
-interface IWarning {
+interface IServices {
   id: number;
-  titulo: String,
-  tipo: String,
-  inicio: String,
-  fim: String,
-  mensagem: String,
+  paciente: string,
+  funcionario: string,
+  inicio: string,
+  fim: string,
+  local: string,
+  duracao: string,
 }
 
 interface Props {
-  warnings: IWarning[];
+  services: IServices[];
 }
 const Container = styled.div`
   /* max-width: 1200px; */
@@ -95,18 +95,26 @@ const Td = styled.td`
   width: 12%;
 `;
 
-const TdTableType = styled.div`
-  
-  
+const TdFlagInicio = styled.div`
   display: table-cell;
-    background: #b9000080;
-    text-align: center;
-    color: white;
-    font-size: 0.9rem;
-    border-radius: 8px;
-    padding: 4px 10px;
+  background: #0f45a892;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 4px 10px;
   box-shadow: 0 0 5px 1px #00000038;
+`;
 
+const TdFlagFim = styled.div`
+  display: table-cell;
+  background: #b7343493;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 4px 10px;
+  box-shadow: 0 0 5px 1px #00000038;
 `;
 
 const Tbody = styled.tbody`
@@ -118,20 +126,20 @@ const Tbody = styled.tbody`
   }
 `;
 
-const WarningTable: React.FC<Props> = ({ warnings }) => {
+const ServicesTable: React.FC<Props> = ({ services }) => {
   return (
     <>
       <Container>
         <ContainerTable>
-          <Table id="warningTable">
+          <Table id="servicesTable">
             <thead>
               <tr>
                 <Th>
-                  Titulo
+                  Paciente
                   <Funnel size={18} />
                 </Th>
                 <Th>
-                  Tipo
+                  Funcionário
                   <Funnel size={18} />
                 </Th>
                 <Th>
@@ -143,7 +151,11 @@ const WarningTable: React.FC<Props> = ({ warnings }) => {
                   <Funnel size={18} />
                 </Th>
                 <Th>
-                  Mensagem
+                  Local
+                  <Funnel size={18} />
+                </Th>
+                <Th>
+                  Duração
                   <Funnel size={18} />
                 </Th>
                 <Th>
@@ -152,19 +164,24 @@ const WarningTable: React.FC<Props> = ({ warnings }) => {
               </tr>
             </thead>
             <Tbody id="tableBody">
-              {warnings.map(warning => (
-                <tr key={warning.id}>
-                  <Td>{warning.titulo}</Td>
+              {services.map(services => (
+                <tr key={services.id}>
+                  <Td>{services.paciente}</Td>
+                  <Td>{services.funcionario}</Td>
                   <Td>
-                    <TdTableType>
-                      {warning.tipo}
-                    </TdTableType>
+                    <TdFlagInicio>
+                      {services.inicio}
+                    </TdFlagInicio>
                   </Td>
-                  <Td>{warning.inicio}</Td>
-                  <Td>{warning.fim}</Td>
-                  <Td>{warning.mensagem}</Td>
                   <Td>
-                    <ModalWarningsTable warning={warnings} />
+                    <TdFlagFim>
+                      {services.fim}
+                    </TdFlagFim>
+                  </Td>
+                  <Td>{services.local}</Td>
+                  <Td>{services.duracao}</Td>
+                  <Td>
+                     <ModalServicesTable services={services}/> 
                   </Td>
                 </tr>
               ))}
@@ -176,4 +193,4 @@ const WarningTable: React.FC<Props> = ({ warnings }) => {
   );
 };
 
-export default WarningTable;
+export default ServicesTable;

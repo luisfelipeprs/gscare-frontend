@@ -34,7 +34,7 @@ function Patient () {
   const patients = [
     {
       id: 1,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
@@ -47,7 +47,7 @@ function Patient () {
     },
     {
       id: 2,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
@@ -66,7 +66,7 @@ function Patient () {
     },
     {
       id: 3,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
@@ -85,7 +85,7 @@ function Patient () {
     },
     {
       id: 4,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
@@ -104,7 +104,7 @@ function Patient () {
     },
     {
       id: 5,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
@@ -123,7 +123,7 @@ function Patient () {
     },
     {
       id: 6,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
@@ -142,7 +142,7 @@ function Patient () {
     },
     {
       id: 7,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
@@ -161,7 +161,7 @@ function Patient () {
     },
     {
       id: 8,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
@@ -180,7 +180,7 @@ function Patient () {
     },
     {
       id: 9,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',
@@ -199,7 +199,7 @@ function Patient () {
     },
     {
       id: 10,
-      nome: 'João Silva',
+      nome: 'Luís Felipe Silva',
       idade: 45,
       patologia: 'Hipertensão',
       endereco: 'Rua ABC, 123',

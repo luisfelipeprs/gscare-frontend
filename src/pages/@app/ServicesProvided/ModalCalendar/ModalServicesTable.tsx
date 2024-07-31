@@ -17,9 +17,9 @@ import {
   SelectContent,
   StyledSelect,
 } from './styled';
-import { Plus } from 'phosphor-react';
+import { DotsThreeVertical, Plus } from 'phosphor-react';
 import { Flex, Text, TextArea, TextField } from "@radix-ui/themes";
-
+import { ButtonViewTd } from '../../../../components/TableUI/EmployeeTable';
 
 type Option = {
   value: string;
@@ -30,7 +30,6 @@ interface SelectProps {
   options: Option[];
   onChange: (value: string) => void;
 }
-
 
 const Select: React.FC<SelectProps> = ({ options, onChange }) => {
   const [selectedValue, setSelectedValue] = useState<string>('');
@@ -44,9 +43,6 @@ const Select: React.FC<SelectProps> = ({ options, onChange }) => {
   return (
     <SelectContainer>
       <StyledSelect value={selectedValue} onChange={handleSelectChange}>
-        <option value="" disabled hidden>
-          Selecione o tipo de aviso
-        </option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
@@ -57,9 +53,22 @@ const Select: React.FC<SelectProps> = ({ options, onChange }) => {
   );
 };
 
-const ModalServices: React.FC = () => {
-  // const [selectedValue, setSelectedValue] = useState<string>('');
+interface IServices {
+  id: number;
+  paciente: string,
+  funcionario: string,
+  inicio: string,
+  fim: string,
+  local: string,
+  duracao: string,
+}
 
+interface ModalServicesTableProps {
+  services: IServices;
+}
+
+const ModalServicesTable: React.FC<ModalServicesTableProps> = ({ services }) => {
+  
   const options: Option[] = [
     { value: 'option1', label: 'Urgente' },
     { value: 'option2', label: 'Importante' },
@@ -70,79 +79,69 @@ const ModalServices: React.FC = () => {
     console.log('Opção selecionada:', value);
   };
 
-
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <ButtonPlus>
-          <span>criar</span>
-          <Plus size={19} weight="bold" />
-        </ButtonPlus>
+        <ButtonViewTd>
+          <DotsThreeVertical size={20} color="#272727" weight="bold" />
+        </ButtonViewTd>
       </Dialog.Trigger>
       <Dialog.Portal>
         <DialogOverlay />
         <DialogContent>
-          <DialogTitle>Defina seu atendimento:</DialogTitle>
-
-
+          <DialogTitle>Veja seu atendimento:</DialogTitle>
           <Content>
-
             <AgroupInput>
               <InputContent>
                 <Text as="div" size="2" mb="1" weight="bold">
-                  Título
+                  Paciente
                 </Text>
                 <TextField.Input
                   placeholder="Digite o título do aviso."
+                  value={services.paciente}
                 />
               </InputContent>
-
               <InputContent>
                 <Text as="div" size="2" mb="1" weight="bold">
-                  Tipo de Aviso
+                  Funcionário
                 </Text>
-                <SelectContent>
-                  <Select options={options} onChange={handleChange} />
-                </SelectContent>
+                <TextField.Input
+                  placeholder="Digite o título do aviso."
+                  value={services.funcionario}
+                />
               </InputContent>
             </AgroupInput>
             <DateContainer>
               <ContentInputDate>
                 <Text as="div" size="2" mb="1" weight="bold">
-                  Data de Início do Aviso
+                  Data de Início do Atendimento
                 </Text>
-                <input type="date" />
+                <input type="date" value={services.inicio} />
               </ContentInputDate>
               <ContentInputDate>
                 <Text as="div" size="2" mb="1" weight="bold">
-                  Data de Fim do Aviso
+                  Data de Fim do Atendimento
                 </Text>
-                <input type="date" />
+                <input type="date" value={services.fim} />
               </ContentInputDate>
-
             </DateContainer>
             <div>
               <Flex direction="column" gap="3">
                 <InputContent>
                   <Text as="div" size="2" mb="1" weight="bold">
-                    Mensagem
+                    Duração
                   </Text>
-                  <TextArea
-                    style={
-                      {
-                        height: "140px"
-                      }
-                    }
-                    // defaultValue="Fernando Franco"
-                    placeholder="Digite sua mensagem aqui."
-                  />
+                  <div style={{ width: "20%"}}>
+                    <TextField.Input
+                      placeholder="Digite o título do aviso."
+                      value={services.duracao}
+                    />
+                  </div>
                 </InputContent>
               </Flex>
             </div>
-
           </Content>
           <ButtonStyled style={{ width: "100%", marginTop: "20px" }}> Salvar</ButtonStyled>
-
           <Dialog.Close asChild>
             <IconButton aria-label="Close">
               <Cross2Icon />
@@ -154,4 +153,4 @@ const ModalServices: React.FC = () => {
   );
 };
 
-export default ModalServices;
+export default ModalServicesTable;

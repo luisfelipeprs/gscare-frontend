@@ -2,7 +2,6 @@
 import Footer from "../../../components/Footer";
 import Homepage from "../../../components/Homepage";
 import Navbar from "../../../components/Navbar";
-import QuestionCard from "../../../components/QuestionCard";
 import { HomeContainer } from "./styled";
 import { BoxCardsTools } from '../../../components/BoxCardsTools/BoxCardsTools';
 import { OverViewRecursos } from "../components/OverViewRecursos";
@@ -12,6 +11,7 @@ import { FeedbacksClients } from "../components/FeedbacksClients";
 import { PerguntasFrequentes } from "../components/PerguntasFrequentes";
 import Planos from "../Planos";
 import Recursos from "../Recursos";
+import QuestionCard from "../../../components/QuestionCard";
 
 function Home () {
   const [isModalOpen, setIsModalOpen] = useState(false);

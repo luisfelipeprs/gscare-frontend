@@ -6,26 +6,17 @@ import {
   DialogContent,
   DialogOverlay,
   DialogTitle, IconButton,
-  ButtonSubmitForm,
-  CalendarContainer,
-  CalendarNavButton,
-  CalendarNavigation,
-  ContainerFormAndCalendar,
-  CurrentMonthYear,
-  Form,
+  ButtonSubmitForm, ContainerFormAndCalendar, Form,
   FormGroup,
   FormGroupContainer,
   FormGroupInput,
   FormGroupLabel,
   FormGroupSelect,
-  StyledCalendar,
-  StyledContainer,
-  StyledDayOfWeekDefineConsulta,
-  StyledHeader,
-  StyledModal
+  DataPickerStyled
 } from './styled';
 import { Plus } from 'phosphor-react';
-
+import DatePicker from 'react-datepicker';
+import { DateSelectArg, EventClickArg, EventInput } from '@fullcalendar/core/index.js';
 
 
 interface Day {
@@ -39,8 +30,19 @@ interface Day {
 //   atendimentos: number;
 //   onClick: () => void;
 // }
-
+interface ExtendedEventInput extends EventInput {
+  employee: string;
+  patient: string;
+  start: Date;
+  end: Date;
+}
 const ModalCalendar: React.FC = () => {
+  const [events, setEvents] = useState<ExtendedEventInput[]>([
+    { id: '1', title: 'Consulta A', start: new Date('2024-07-01T10:00:00'), end: new Date('2024-07-01T11:00:00'), employee: 'Dr. João', patient: 'Maria' },
+    { id: '2', title: 'Consulta B', start: new Date('2024-07-10T14:00:00'), end: new Date('2024-07-10T15:00:00'), employee: 'Dr. Ana', patient: 'Pedro' }
+  ]);
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const [calendarDays, setCalendarDays] = useState<Day[]>([]);
   const [, setYearCurrent] = useState<number>(
@@ -158,6 +160,104 @@ const ModalCalendar: React.FC = () => {
 
     setCalendarDays(generateCalendar());
   }, [currentMonth, currentYear]);
+  const [newEvent, setNewEvent] = useState<ExtendedEventInput>({
+    id: '',
+    title: '',
+    start: new Date(),
+    end: new Date(),
+    employee: '',
+    patient: ''
+  });
+
+  const [filterOption, setFilterOption] = useState<'all' | 'patient' | 'employee' | 'title'>('all');
+  const [filterValue, setFilterValue] = useState<string>('');
+
+  const handleDateClick = (selectInfo: DateSelectArg) => {
+    setNewEvent({
+      id: '',
+      title: '',
+      start: selectInfo.start,
+      end: selectInfo.end,
+      employee: '',
+      patient: ''
+    });
+    setModalIsOpen(true);
+    selectInfo.view.calendar.unselect();
+  };
+
+  const handleEventClick = (clickInfo: EventClickArg) => {
+    const eventData = clickInfo.event.extendedProps as ExtendedEventInput;
+    setNewEvent({
+      id: clickInfo.event.id,
+      title: clickInfo.event.title,
+      start: clickInfo.event.start as Date,
+      end: clickInfo.event.end as Date,
+      employee: eventData.employee,
+      patient: eventData.patient
+    });
+    setModalIsOpen(true);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setNewEvent({
+      ...newEvent,
+      [name]: value
+    });
+  };
+
+  const handleDateChange = (date: Date | null, field: 'start' | 'end') => {
+    if (date) {
+      setNewEvent({
+        ...newEvent,
+        [field]: date
+      });
+    }
+  };
+
+  const handleAddEvent = () => {
+    if (!isEventOverlap(newEvent)) {
+      const id = newEvent.id || String(events.length + 1);
+      const updatedEvents = newEvent.id
+        ? events.map(event => (event.id === newEvent.id ? newEvent : event))
+        : [...events, { ...newEvent, id }];
+      setEvents(updatedEvents);
+      setModalIsOpen(false);
+      setNewEvent({
+        id: '',
+        title: '',
+        start: new Date(),
+        end: new Date(),
+        employee: '',
+        patient: ''
+      });
+      console.log('Lista de Eventos Atualizada:', updatedEvents);
+    } else {
+      alert('Já existe uma consulta marcada para o mesmo funcionário ou paciente no mesmo horário.');
+    }
+  };
+
+  const isEventOverlap = (newEvent: ExtendedEventInput) => {
+    const eventStart = (newEvent.start as Date).getTime();
+    const eventEnd = (newEvent.end as Date).getTime();
+    const existingEvents = events.filter(event =>
+      event.id !== newEvent.id &&
+      (event.start as Date).getTime() < eventEnd && (event.end as Date).getTime() > eventStart &&
+      (event.employee === newEvent.employee || event.patient === newEvent.patient)
+    );
+    return existingEvents.length > 0;
+  };
+
+  const filteredEvents = events.filter(event => {
+    if (filterOption === 'patient') {
+      return event.patient.toLowerCase().includes(filterValue.toLowerCase());
+    } else if (filterOption === 'employee') {
+      return event.employee.toLowerCase().includes(filterValue.toLowerCase());
+    } else if (filterOption === 'title') {
+      return event.title?.toLowerCase().includes(filterValue.toLowerCase()) ?? false;
+    }
+    return true;
+  });
 
   return (
     <Dialog.Root>
@@ -170,13 +270,22 @@ const ModalCalendar: React.FC = () => {
       <Dialog.Portal>
         <DialogOverlay />
         <DialogContent>
-          <DialogTitle>Defina seu atendimento1:</DialogTitle>
+          <DialogTitle>Adicionar Consult1:</DialogTitle>
 
 
           <div>
             {/* <H2>Formulário de Agendamento2</H2> */}
             <ContainerFormAndCalendar>
               <Form id="appointmentForm">
+                <FormGroup>
+                  <FormGroupLabel htmlFor="titulo">Título:</FormGroupLabel>
+                  <FormGroupInput
+                    type="titulo"
+                    id="titulo"
+                    name="titulo"
+                    required={true}
+                  />
+                </FormGroup>
                 <FormGroupContainer>
                   <FormGroup>
                     <FormGroupLabel htmlFor="selectFuncionario">
@@ -197,52 +306,37 @@ const ModalCalendar: React.FC = () => {
                     </FormGroupSelect>
                   </FormGroup>
                 </FormGroupContainer>
-
                 <FormGroupContainer>
                   <FormGroup>
-                    <FormGroupLabel htmlFor="phone">Telefone:</FormGroupLabel>
-                    <FormGroupInput
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
-                      placeholder="(11) 11111-1111"
-                      required={true}
-                    />
-                  </FormGroup>
-                  <FormGroup>
-                    <FormGroupLabel htmlFor="email">E-mail:</FormGroupLabel>
-                    <FormGroupInput
-                      type="email"
-                      id="email"
-                      name="email"
-                      required={true}
-                    />
-                  </FormGroup>
-                </FormGroupContainer>
-
-                <FormGroupContainer>
-                  <FormGroup>
-                    <FormGroupLabel htmlFor="selectClinica">
-                      Endereço da Clínica:
+                    <FormGroupLabel htmlFor="selectFuncionario">
+                      Data Início:
                     </FormGroupLabel>
-                    <FormGroupSelect id="selectClinica" name="clinica">
-                      <option value="clinica1">Clínica 1</option>
-                      <option value="clinica2">Clínica 2</option>
-                    </FormGroupSelect>
+                    <DataPickerStyled>
+                      <DatePicker
+                        selected={newEvent.start}
+                        onChange={(date) => handleDateChange(date, 'start')}
+                        showTimeSelect
+                        dateFormat="Pp"
+
+                      />
+                    </DataPickerStyled>
                   </FormGroup>
                   <FormGroup>
-                    <FormGroupLabel htmlFor="horario">Horário:</FormGroupLabel>
-                    <FormGroupInput
-                      type="time"
-                      id="horario"
-                      name="horario"
-                      required={true}
-                    />
+                    <FormGroupLabel htmlFor="selectPaciente">
+                      Data Fim:
+                    </FormGroupLabel>
+                    <DataPickerStyled>
+                      <DatePicker
+                        selected={newEvent.start}
+                        onChange={(date) => handleDateChange(date, 'start')}
+                        showTimeSelect
+                        dateFormat="Pp"
+                      />
+                    </DataPickerStyled>
                   </FormGroup>
                 </FormGroupContainer>
               </Form>
-              <CalendarContainer>
+              {/* <CalendarContainer>
                 <StyledContainer>
                   <StyledHeader>
                     <CalendarNavigation>
@@ -342,7 +436,7 @@ const ModalCalendar: React.FC = () => {
                     </div>
                   </StyledModal>
                 </StyledContainer>
-              </CalendarContainer>
+              </CalendarContainer>*/}
             </ContainerFormAndCalendar>
             <ButtonSubmitForm onClick={() => marcarAtendimento()}>
               Marcar Atendimento
@@ -356,7 +450,7 @@ const ModalCalendar: React.FC = () => {
           </Dialog.Close>
         </DialogContent>
       </Dialog.Portal>
-    </Dialog.Root>
+    </Dialog.Root >
   );
 };
 

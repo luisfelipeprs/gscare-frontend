@@ -6,6 +6,7 @@ import { CaretLeft, CaretRight, MagnifyingGlass } from "phosphor-react";
 import { useState } from "react";
 import PatientTable from "./TableUI";
 import ModalServices from "./ModalCalendar/ModalServices";
+import ServicesTable from "./TableUI/ServicesTable";
 
 // type Option = {
 //   value: string;
@@ -56,89 +57,98 @@ function ServicesProvided () {
   //   console.log('Opção selecionada:', value);
   // };
 
-  const patients = [
+  const services = [
     {
       id: 1,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
+      paciente: 'Ana Silva',
+      funcionario: 'Dr. João Pereira',
+      inicio: '01/08/2023',
+      fim: '01/08/2023',
+      local: 'Av. Paulista, 1000, São Paulo, SP',
+      duracao: '2H'
     },
     {
       id: 2,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
+      paciente: 'Carlos Souza',
+      funcionario: 'Dra. Maria Oliveira',
+      inicio: '02/08/2023',
+      fim: '02/08/2023',
+      local: 'Rua das Flores, 200, Rio de Janeiro, RJ',
+      duracao: '3H'
     },
     {
       id: 3,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
+      paciente: 'Fernanda Lima',
+      funcionario: 'Dr. Pedro Costa',
+      inicio: '03/08/2023',
+      fim: '03/08/2023',
+      local: 'Rua das Acácias, 300, Belo Horizonte, MG',
+      duracao: '1H30M'
     },
     {
       id: 4,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
+      paciente: 'Gabriel Santos',
+      funcionario: 'Dra. Laura Mendes',
+      inicio: '04/08/2023',
+      fim: '04/08/2023',
+      local: 'Av. Independência, 400, Porto Alegre, RS',
+      duracao: '4H'
     },
     {
       id: 5,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
+      paciente: 'Isabela Ferreira',
+      funcionario: 'Dr. Rafael Lima',
+      inicio: '05/08/2023',
+      fim: '05/08/2023',
+      local: 'Rua dos Ipês, 500, Curitiba, PR',
+      duracao: '3H30M'
     },
     {
       id: 6,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
+      paciente: 'João Almeida',
+      funcionario: 'Dra. Sofia Braga',
+      inicio: '06/08/2023',
+      fim: '06/08/2023',
+      local: 'Rua das Palmeiras, 600, Salvador, BA',
+      duracao: '2H45M'
     },
     {
       id: 7,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
+      paciente: 'Lucas Pinto',
+      funcionario: 'Dr. Daniel Martins',
+      inicio: '07/08/2023',
+      fim: '07/08/2023',
+      local: 'Av. Brasil, 700, Recife, PE',
+      duracao: '3H15M'
     },
     {
       id: 8,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
+      paciente: 'Mariana Rodrigues',
+      funcionario: 'Dra. Camila Costa',
+      inicio: '08/08/2023',
+      fim: '08/08/2023',
+      local: 'Rua das Laranjeiras, 800, Fortaleza, CE',
+      duracao: '1H'
     },
     {
       id: 9,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
+      paciente: 'Nicolas Dias',
+      funcionario: 'Dr. Henrique Alves',
+      inicio: '09/08/2023',
+      fim: '09/08/2023',
+      local: 'Av. Getúlio Vargas, 900, Manaus, AM',
+      duracao: '2H30M'
     },
     {
       id: 10,
-      nameEmployee: 'Funcionário',
-      namePatient: 'Paciente',
-      inicio: '10/08/2022',
-      fim: '13/08/2022',
-      valor: '120.20',
-    },
-    // Adicione mais pacientes conforme necessário
-  ];
+      paciente: 'Olivia Carvalho',
+      funcionario: 'Dra. Ana Paula Silva',
+      inicio: '10/08/2023',
+      fim: '10/08/2023',
+      local: 'Rua das Mangueiras, 1000, Brasília, DF',
+      duracao: '4H'
+    }
+];
 
 
   const totalPages = 10
@@ -195,7 +205,7 @@ function ServicesProvided () {
             </RightHeader>
           </Header>
 
-          <PatientTable patients={patients} />
+          <ServicesTable services={services}/>
         </Content>
       </RouterIndicator>
     </Container>

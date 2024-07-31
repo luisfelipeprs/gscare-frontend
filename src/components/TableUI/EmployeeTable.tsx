@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import HomemImg from './../../assets/icon-masc.png';
 import MulherImg from './../../assets/icon-fem.png';
 import { Funnel } from 'phosphor-react';
-import { EditModalInfo } from '../../pages/@app/MedicalRecord/Model/editModal';
+import { EditModalEmployee } from '../../pages/@app/MedicalRecord/Model/editModalEmployee';
 
 interface IEmployee {
   id: number;
@@ -197,7 +197,7 @@ const EmployeeTable: React.FC<Props> = ({ employees }) => {
                 <Td>{employee.valorStatus}</Td>
                 <Td>{employee.sexo}</Td>
                 <Td>
-                  <EditModalInfo employees={employees}/>
+                  <EditModalEmployee data={employees}/>
                 </Td>
               </tr>
             ))}

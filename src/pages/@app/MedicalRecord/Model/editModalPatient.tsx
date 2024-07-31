@@ -3,33 +3,31 @@ import MedicalInformation from "./steps/MedicalInformation";
 import SchedulesAndConsultations from "./steps/SchedulesAndConsultations";
 import HealthInsurance from "./steps/HealthInsurance";
 import AdditionalNotes from "./steps/AdditionalNotes";
-import PatientData from "./steps/PatientData";
 import { ButtonSubmitContainer } from "./steps/PatientData/styled";
 import { DotsThreeVertical } from "phosphor-react";
 import { ButtonViewTd } from "../../../../components/TableUI/EmployeeTable";
 import PatientEdit from "./steps/PatientData/patientEdit";
 
-interface IEmployee {
+interface IPatient {
   id: number;
   nome: string;
-  profissao: string;
+  patologia: string;
   email: string;
-  endereco: string;
   idade: number;
+  endereco: string;
   celular: string;
   tipoEscala: string;
-  valorStatus: string;
+  valorMensal: string;
+  valorPlantao: string;
   sexo: string; // Corrigido para aceitar apenas 'homem' ou 'mulher'
 }
 
 interface Props {
-  employees: IEmployee[];
+  data: IPatient[];
 }
 
 
-export const EditModalInfo: React.FC<Props> = ({ employees }) => {
-  console.log(employees,'employees here');
-  
+export const EditModalPatient: React.FC<Props> = ({ data }) => {  
   return (
     <>
       <Dialog.Root>
@@ -54,7 +52,7 @@ export const EditModalInfo: React.FC<Props> = ({ employees }) => {
 
             <Box px="2" pt="2" pb="2">
               <Tabs.Content value="patientData">
-                <PatientEdit employee={employees[0]}/>
+                <PatientEdit data={data[0]}/>
               </Tabs.Content>
 
               <Tabs.Content value="medicalInformation">

@@ -71,7 +71,6 @@ export const DialogContent = styled(Dialog.Content)`
   pointer-events: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: white;
   border-radius: 6px;
   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
@@ -81,8 +80,9 @@ export const DialogContent = styled(Dialog.Content)`
   transform: translate(-50%, -50%);
   width: 90%;
   /* max-width: 90%; */
-  max-height: 90vh;
-  min-height: 90vh;
+  max-height: 30vh;
+  min-height: 60vh;
+  max-width: 1000px;
   padding: 25px;
   animation: ${ContentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1);
   scrollbar-width: thin; /* largura da barra de rolagem */
@@ -336,7 +336,7 @@ export const ContainerFormAndCalendar = styled.div`
 
 export const ButtonSubmitForm = styled.button`
   width: 100%;
-  margin-top: 20px;
+  margin-top: 80px;
   background-color: #e28800;
   color: #fff;
   padding: 15px 20px;
@@ -344,7 +344,6 @@ export const ButtonSubmitForm = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 20px;
 `;
 
 export const H2 = styled.h2`
@@ -411,8 +410,23 @@ export const FormGroupContainer = styled.div`
 `;
 
 export const FormGroup = styled.div`
+  div{
+    
+  }
   flex: 1;
   margin-right: 10px;
+`;
+
+export const DataPickerStyled = styled.div`
+width: 100%;
+input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 40px;
+  }
 `;
 
 export const StyledDayOfWeekDefineConsulta = styled.div`

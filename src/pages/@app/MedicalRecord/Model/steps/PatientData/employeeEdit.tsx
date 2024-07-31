@@ -6,25 +6,24 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState, useEffect } from "react";
 
-interface IPatient {
+interface IEmployee {
     id: number;
     nome: string;
-    patologia: string;
+    profissao: string;
     email: string;
-    idade: number;
     endereco: string;
+    idade: number;
     celular: string;
     tipoEscala: string;
-    valorMensal: string;
-    valorPlantao: string;
+    valorStatus: string;
     sexo: string; // Corrigido para aceitar apenas 'homem' ou 'mulher'
   }
 
 interface Props {
-    data?: IPatient;
+    data?: IEmployee;
 }
 
-export const PatientEdit: React.FC<Props> = ({ data }) => {
+export const EmployeeEdit: React.FC<Props> = ({ data }) => {
     const [startDate, setStartDate] = useState(new Date());
     const [gender, setGender] = useState('');
 
@@ -136,4 +135,4 @@ export const PatientEdit: React.FC<Props> = ({ data }) => {
     );
 }
 
-export default PatientEdit;
+export default EmployeeEdit;

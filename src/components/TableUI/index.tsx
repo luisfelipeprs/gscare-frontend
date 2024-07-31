@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import HomemImg from './../../assets/icon-masc.png';
 import MulherImg from './../../assets/icon-fem.png';
-import { DotsThreeVertical, Funnel } from 'phosphor-react';
+import { Funnel } from 'phosphor-react';
+import { EditModalPatient } from '../../pages/@app/MedicalRecord/Model/editModalPatient';
 
 interface IPatient {
   id: number;
@@ -111,19 +112,19 @@ const TdFlagPatologia = styled.div`
   box-shadow: 0 0 5px 1px #00000038;
 `;
 
-const ButtonViewTd = styled.button`
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  margin: auto;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
+// const ButtonViewTd = styled.button`
+//   text-align: center;
+//   justify-content: center;
+//   display: flex;
+//   margin: auto;
+//   padding: 10px;
+//   border: none;
+//   border-radius: 8px;
 
-  &:hover {
-    cursor: pointer;
-  }
-`;
+//   &:hover {
+//     cursor: pointer;
+//   }
+// `;
 
 const Tbody = styled.tbody`
   & tr:nth-child(even) {
@@ -135,6 +136,8 @@ const Tbody = styled.tbody`
 `;
 
 const PatientTable: React.FC<Props> = ({ patients }) => {
+  console.log('patients > ',patients);
+  
   return (
     <>
       <Container>
@@ -201,9 +204,7 @@ const PatientTable: React.FC<Props> = ({ patients }) => {
                   <Td>{patient.valorMensal}</Td>
                   <Td>{patient.valorPlantao}</Td>
                   <Td>
-                    <ButtonViewTd>
-                      <DotsThreeVertical size={20} color="#272727" weight="bold" />
-                    </ButtonViewTd>
+                  <EditModalPatient data={patients}/>
                   </Td>
                 </tr>
               ))}
