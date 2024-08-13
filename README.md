@@ -164,7 +164,25 @@ Nós utilizamos [SemVer](http://semver.org/) para controle de versão. Atualment
 
 ## 📄 Licença
 
-Este projeto está em processo de validação e não é permitida a venda, comércio ou uso sem autorização expressa. Para mais detalhes, consulte o arquivo [LICENSE.md](LICENSE.md).
+Este projeto está em processo de validação e não é permitida a venda, comércio ou uso sem autorização expressa. Para mais detalhes, consulte o arquivo abaixo:
+
+<details>
+  <summary style="cursor: pointer; font-weight: bold; color: #007BFF;">Licença</summary>
+  <div style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; padding: 15px; margin-top: 10px;">
+    <pre style="background-color: #e9ecef; border: 1px solid #ced4da; border-radius: 5px; padding: 10px; overflow: auto;">
+      <code>
+      LICENÇA PRIVADA
+      Este projeto está licenciado sob uma licença privada. As seguintes condições se aplicam:
+         1. Uso Restrito: O código-fonte deste projeto é fornecido para uso pessoal e acadêmico apenas. Qualquer uso comercial, incluindo, mas não se limitando a, venda, distribuição, ou implementação do código com o objetivo de obter lucro financeiro, é estritamente proibido.
+         2. Proibição de Comercialização: O código-fonte não pode ser comercializado de nenhuma forma. Isso inclui, mas não se limita a, vender, licenciar, ou sublicenciar o código para terceiros.
+         3. Sem Lucros Financeiros: O código não deve ser utilizado para qualquer atividade que gere lucros financeiros diretos ou indiretos. Qualquer forma de monetização ou ganho financeiro resultante do uso do código é proibida.
+         4. Permissões Especiais: Qualquer uso do código fora das condições acima requer autorização expressa por escrito do detentor dos direitos autorais. Para obter permissões especiais, entre em contato com o detentor dos direitos autorais.
+         5. Contato: Para dúvidas sobre a licença ou solicitações de permissões especiais, entre em contato pelo e-mail:  <a href="mailto:fernandofv1110@gmail.com">fernandofv1110@gmail.com</a> ou <a href="mailto:luisfelipeprsilva@gmail.com">luisfelipeprsilva@gmail.com</a>..
+      Qualquer violação dos termos acima pode resultar em ações legais para proteger os direitos autorais do detentor.      
+     </code>
+    </pre>
+  </div>
+</details>
 
 ---
 
