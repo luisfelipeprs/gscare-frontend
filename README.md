@@ -177,13 +177,9 @@ Este projeto está em processo de validação e não é permitida a venda, comé
          2. Proibição de Comercialização: O código-fonte não pode ser comercializado de nenhuma forma. Isso inclui, mas não se limita a, vender, licenciar, ou sublicenciar o código para terceiros.
          3. Sem Lucros Financeiros: O código não deve ser utilizado para qualquer atividade que gere lucros financeiros diretos ou indiretos. Qualquer forma de monetização ou ganho financeiro resultante do uso do código é proibida.
          4. Permissões Especiais: Qualquer uso do código fora das condições acima requer autorização expressa por escrito do detentor dos direitos autorais. Para obter permissões especiais, entre em contato com o detentor dos direitos autorais.
-         5. Contato: Para dúvidas sobre a licença ou solicitações de permissões especiais, entre em contato pelo e-mail:  <a href="mailto:fernandofv1110@gmail.com">fernandofv1110@gmail.com</a> ou <a href="mailto:luisfelipeprsilva@gmail.com">luisfelipeprsilva@gmail.com</a>..
+         5. Contato: Para dúvidas sobre a licença ou solicitações de permissões especiais, entre em contato pelo e-mail:  <a href="mailto:luisfelipeprsilva@gmail.com">luisfelipeprsilva@gmail.com</a> ou <a href="mailto:fernandofv1110@gmail.com">fernandofv1110@gmail.com</a>.
       Qualquer violação dos termos acima pode resultar em ações legais para proteger os direitos autorais do detentor.      
      </code>
     </pre>
   </div>
 </details>
-
----
-
-⌨️ Por: [Luís Felipe Silva](https://www.linkedin.com/in/luisfelipeprs/) 😊
